@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Villkor – Your Skin Clinic. Läs om bokningsvillkor, avbokning, betalning och ansvar vid behandlingar.">
+  <title>Villkor – Your Skin Clinic</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>✦</text></svg>">
+
+  <style>
+    /* ---- Policy page ---- */
+    .policy-hero {
+      padding: 7rem 0 3rem;
+      text-align: center;
+      background: var(--bg-secondary);
+    }
+    .policy-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .policy-hero .policy-updated {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .policy-content {
+      padding: 3rem 0 5rem;
+    }
+    .policy-inner {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .policy-inner h2 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-inner h2:first-child {
+      margin-top: 0;
+    }
+
+    .policy-inner p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--text-body);
+      margin-bottom: 1rem;
+    }
+
+    .policy-inner ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.25rem;
+    }
+    .policy-inner ul li {
+      position: relative;
+      padding-left: 1.25rem;
+      margin-bottom: 0.4rem;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-body);
+    }
+    .policy-inner ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .policy-inner a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color var(--transition);
+    }
+    .policy-inner a:hover {
+      color: var(--gold);
+    }
+
+    .policy-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 2.5rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--accent);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .policy-back:hover {
+      color: var(--gold);
+    }
+    .policy-back svg {
+      width: 18px;
+      height: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-main">YOUR SKIN</span>
+        <span class="logo-sub">CLINIC</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Huvudnavigation">
+        <ul>
+          <li><a href="index.html#behandlingar">Behandlingar</a></li>
+          <li><a href="index.html#resultat">Resultat</a></li>
+          <li><a href="index.html#omdomen">Omdömen</a></li>
+          <li><a href="index.html#om-oss">Om oss</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary header-cta">Boka tid</a>
+
+      <button class="hamburger" aria-label="Öppna meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <nav class="nav-mobile" aria-label="Mobilnavigation">
+      <ul>
+        <li><a href="index.html#behandlingar">Behandlingar</a></li>
+        <li><a href="index.html#resultat">Resultat</a></li>
+        <li><a href="index.html#omdomen">Omdömen</a></li>
+        <li><a href="index.html#om-oss">Om oss</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
+        <li><a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 0.5rem;">Boka tid</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- ========== HERO ========== -->
+  <section class="policy-hero">
+    <div class="container">
+      <h1>Villkor</h1>
+      <p class="policy-updated">Senast uppdaterad: 2026-05-03</p>
+    </div>
+  </section>
+
+
+  <!-- ========== CONTENT ========== -->
+  <section class="policy-content">
+    <div class="policy-inner">
+
+      <h2>1. Allmänt</h2>
+      <p>Dessa villkor gäller för alla bokningar och behandlingar hos Your Skin Clinic.</p>
+      <p>Genom att boka en tid godkänner du dessa villkor.</p>
+
+      <h2>2. Bokning</h2>
+      <p>Bokning sker via vårt bokningssystem BokaDirekt eller enligt överenskommelse.</p>
+      <p>Konsultation ingår alltid inför din första behandling och behöver inte bokas separat.</p>
+
+      <h2>3. Avbokning &amp; ombokning</h2>
+      <p>Avbokning eller ombokning ska ske senast <strong>24 timmar</strong> före bokad tid.</p>
+      <ul>
+        <li>Vid sen avbokning (mindre än 24 timmar): <strong>100 % debitering</strong></li>
+        <li>Vid uteblivet besök (no-show): <strong>100 % debitering</strong></li>
+        <li>Gäller oavsett anledning (inkl. sjukdom)</li>
+      </ul>
+      <p>Avbokning ska göras via bokningssystemet eller direkt till kliniken.</p>
+
+      <h2>4. Sen ankomst</h2>
+      <p>Vid sen ankomst kan behandlingstiden behöva kortas ned eller avbokas. Full debitering kan då ske.</p>
+
+      <h2>5. Betalning</h2>
+      <p>Betalning sker i samband med behandling om inget annat överenskommits.</p>
+      <p>Kliniken förbehåller sig rätten att kräva <strong>förskottsbetalning/deposition</strong> för vissa behandlingar eller kunder med upprepade sena avbokningar.</p>
+
+      <h2>6. Behandling &amp; ansvar</h2>
+      <p>Alla behandlingar anpassas individuellt. Resultat varierar och kan inte garanteras.</p>
+      <p>Kunden ansvarar för att lämna korrekt information om hälsa, medicinering och hudtillstånd.</p>
+      <p>Kliniken förbehåller sig rätten att <strong>avstå från behandling</strong> om det bedöms olämpligt ur medicinsk eller säkerhetsmässig synpunkt.</p>
+
+      <h2>7. Eftervård</h2>
+      <p>Kunden ansvarar för att följa givna eftervårdsråd. Avvikelser kan påverka resultatet och ligger utanför klinikens ansvar.</p>
+
+      <h2>8. Reklamation</h2>
+      <p>Eventuella synpunkter ska meddelas inom rimlig tid efter behandlingen. Bedömning sker individuellt.</p>
+
+      <h2>9. Åldersgräns</h2>
+      <p>Du måste vara minst 18 år eller ha målsmans godkännande.</p>
+
+      <h2>10. Personuppgifter</h2>
+      <p>Personuppgifter behandlas enligt vår <a href="integritetspolicy.html">integritetspolicy</a>.</p>
+
+      <h2>11. Ändringar</h2>
+      <p>Your Skin Clinic förbehåller sig rätten att uppdatera dessa villkor.</p>
+
+      <h2>12. Kontakt</h2>
+      <p>
+        <a href="mailto:info@yourskinclinic.se">info@yourskinclinic.se</a><br>
+        <a href="tel:+46730412589">073-041 25 89</a>
+      </p>
+
+      <a href="index.html" class="policy-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Tillbaka till startsidan
+      </a>
+
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-main">YOUR SKIN</span>
+            <span class="logo-sub">CLINIC</span>
+          </a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Gallerian, Stockholm</h4>
+          <ul>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Your+Skin+Clinic+Hamngatan+37+Gallerian+Stockholm" target="_blank" rel="noopener">Hamngatan 37 (Gallerian)<br>Stockholm City</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="tel:+46701234567">073-123 45 67</a></li>
+            <li><a href="mailto:info@yourskinclinic.se">info@yourskinclinic.se</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Länkar</h4>
+          <ul>
+            <li><a href="index.html#behandlingar">Behandlingar</a></li>
+            <li><a href="index.html#resultat">Resultat</a></li>
+            <li><a href="index.html#omdomen">Omdömen</a></li>
+            <li><a href="index.html#om-oss">Om oss</a></li>
+            <li><a href="index.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="integritetspolicy.html">Integritetspolicy</a></li>
+            <li><a href="villkor.html">Villkor</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Följ oss</h4>
+          <div class="footer-social-links">
+            <a href="https://www.instagram.com/your.skin.clinic.pmu" target="_blank" rel="noopener" class="footer-ig-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <span><small>PMU</small>@your.skin.clinic.pmu</span>
+            </a>
+            <a href="https://www.instagram.com/your.skin.clinic" target="_blank" rel="noopener" class="footer-ig-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <span><small>Skincare</small>@your.skin.clinic</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Your Skin Clinic. Alla rättigheter förbehållna.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

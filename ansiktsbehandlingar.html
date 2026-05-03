@@ -1,0 +1,1651 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Avancerade ansiktsbehandlingar hos Your Skin Clinic i Stockholm. Signature Glow, Collagen Boost, Nano Infusion, Acne Detox och mer. Boka tid idag.">
+  <title>Avancerade ansiktsbehandlingar – Your Skin Clinic Stockholm</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="treatment.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>✦</text></svg>">
+
+  <style>
+    /* --- Hero enhancements --- */
+    .tx-hero-label {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: .75rem;
+    }
+    .tx-hero-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      margin-top: 1rem;
+      font-size: .85rem;
+      color: rgba(255,255,255,.85);
+    }
+    .tx-hero-rating .stars {
+      color: var(--gold);
+      letter-spacing: .05em;
+    }
+
+    /* --- Treatment Guide Grid --- */
+    .tx-guide {
+      padding: clamp(2.5rem, 5vw, 4rem) 0;
+      background: var(--white);
+    }
+    .tx-guide-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .tx-guide-header h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: .5rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .tx-guide-header p {
+      font-size: .9rem;
+      color: var(--text-muted);
+    }
+    .tx-guide-grid {
+      display: grid;
+      gap: 1rem;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    @media (min-width: 600px) {
+      .tx-guide-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (min-width: 400px) and (max-width: 599px) {
+      .tx-guide-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .tx-guide-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.5rem 1.25rem;
+      text-align: center;
+      transition: box-shadow var(--transition), border-color var(--transition);
+      cursor: pointer;
+    }
+    .tx-guide-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 4px 20px rgba(0,0,0,.06);
+    }
+    .tx-guide-icon {
+      width: 36px;
+      height: 36px;
+      margin: 0 auto .65rem;
+      color: var(--gold);
+    }
+    .tx-guide-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    .tx-guide-label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: .95rem;
+      color: var(--accent);
+      margin-bottom: .4rem;
+    }
+    .tx-guide-desc {
+      font-size: .78rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-bottom: .6rem;
+    }
+    .tx-guide-rec {
+      font-size: .72rem;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+    .tx-guide-rec a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color var(--transition);
+    }
+    .tx-guide-rec a:hover { border-color: var(--gold); }
+
+    /* --- Treatment List (Row-based) --- */
+    .tl-section {
+      padding: clamp(3rem, 5vw, 4.5rem) 0;
+      background: var(--bg-primary);
+    }
+    .tl-section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .tl-section-header h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.3rem, 2.5vw, 1.7rem);
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: .5rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .tl-section-header p {
+      font-size: .88rem;
+      color: var(--text-muted);
+    }
+    .tl-list {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* Row */
+    .tl-row {
+      border-bottom: 1px solid var(--border);
+    }
+    .tl-row:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    /* Row header (collapsed bar) */
+    .tl-row-header {
+      display: grid;
+      grid-template-columns: 2.2rem 1fr auto;
+      align-items: center;
+      gap: .5rem;
+      padding: 1.1rem 0;
+      cursor: pointer;
+      user-select: none;
+      transition: background var(--transition);
+    }
+    .tl-row-header:hover {
+      background: rgba(198,162,126,.04);
+    }
+
+    .tl-num {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: .85rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    .tl-main {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: .25rem .75rem;
+      min-width: 0;
+    }
+    .tl-name {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .tl-duration {
+      font-size: .8rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .tl-desc {
+      width: 100%;
+      font-size: .82rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-top: .15rem;
+    }
+
+    .tl-actions {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      flex-shrink: 0;
+      padding-left: .5rem;
+    }
+    .tl-price {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: .95rem;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .tl-boka {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .5rem 1.25rem;
+      font-size: .78rem;
+      font-weight: 600;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      background: var(--accent);
+      color: var(--white);
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background var(--transition);
+      white-space: nowrap;
+    }
+    .tl-boka:hover { background: #3d3733; }
+
+    .tl-toggle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .15rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: .25rem;
+      color: var(--text-muted);
+      transition: color var(--transition);
+    }
+    .tl-toggle:hover { color: var(--accent); }
+    .tl-toggle svg {
+      transition: transform .3s ease;
+    }
+    .tl-toggle-text {
+      font-size: .65rem;
+      letter-spacing: .03em;
+      color: var(--text-muted);
+    }
+    .tl-row.is-open .tl-toggle svg {
+      transform: rotate(180deg);
+    }
+
+    /* Expanded panel */
+    .tl-panel {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease, padding .3s ease;
+      background: var(--bg-secondary);
+      border-radius: 0 0 var(--radius-md) var(--radius-md);
+    }
+    .tl-row.is-open .tl-panel {
+      max-height: 800px;
+      padding: 1.5rem 0;
+    }
+    .tl-panel-inner {
+      display: grid;
+      gap: 1.5rem;
+      padding: 0 1.5rem;
+    }
+    @media (min-width: 700px) {
+      .tl-panel-inner {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+      }
+    }
+    .tl-detail h4 {
+      font-family: var(--font-heading);
+      font-size: .78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--accent);
+      margin-bottom: .6rem;
+    }
+    .tl-detail ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .tl-detail ul li {
+      font-size: .82rem;
+      color: var(--text-body);
+      line-height: 1.6;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .tl-detail ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+    }
+    .tl-detail p {
+      font-size: .82rem;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    /* Trust bar */
+    .tl-trust {
+      padding: 2.5rem 0;
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+    }
+    .tl-trust-grid {
+      display: grid;
+      gap: 1.5rem;
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    @media (min-width: 600px) {
+      .tl-trust-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+    .tl-trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .4rem;
+    }
+    .tl-trust-icon {
+      width: 28px;
+      height: 28px;
+      color: var(--gold);
+    }
+    .tl-trust-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+    .tl-trust-label {
+      font-family: var(--font-heading);
+      font-weight: 600;
+      font-size: .85rem;
+      color: var(--accent);
+    }
+    .tl-trust-desc {
+      font-size: .75rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Consultation CTA */
+    .tl-consult-cta {
+      padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+      background: var(--accent);
+      text-align: center;
+    }
+    .tl-consult-cta h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: .5rem;
+    }
+    .tl-consult-cta p {
+      font-size: .9rem;
+      color: rgba(255,255,255,.8);
+      margin-bottom: 1.5rem;
+    }
+    .tl-consult-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .75rem 2rem;
+      font-size: .85rem;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      background: var(--white);
+      color: var(--accent);
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .tl-consult-btn:hover { background: var(--bg-secondary); transform: translateY(-1px); }
+
+    /* Mobile adjustments */
+    @media (max-width: 699px) {
+      .tl-row-header {
+        grid-template-columns: 1.5rem 1fr;
+        gap: .4rem;
+      }
+      .tl-actions {
+        grid-column: 1 / -1;
+        justify-content: space-between;
+        padding-left: 1.9rem;
+        padding-top: .4rem;
+      }
+      .tl-desc {
+        font-size: .78rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-main">YOUR SKIN</span>
+        <span class="logo-sub">CLINIC</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Huvudnavigation">
+        <ul>
+          <li class="nav-dropdown">
+            <a href="index.html#behandlingar">Behandlingar</a>
+            <div class="dropdown-menu">
+              <a href="ansiktsbehandlingar.html">Avancerade ansiktsbehandlingar</a>
+              <a href="kemisk-peeling.html">Kemisk peeling</a>
+              <a href="microneedling.html">Microneedling</a>
+              <a href="index.html#behandlingar">Laser hårborttagning</a>
+              <a href="index.html#behandlingar">PMU – Bryn &amp; Läppar</a>
+              <a href="index.html#behandlingar">PMU borttagning</a>
+              <a href="index.html#behandlingar">Borttagning av hudförändringar</a>
+              <a href="index.html#behandlingar">Fransar &amp; Bryn</a>
+            </div>
+          </li>
+          <li><a href="index.html#resultat">Resultat</a></li>
+          <li><a href="index.html#priser">Priser</a></li>
+          <li><a href="index.html#om-oss">Om oss</a></li>
+          <li><a href="index.html#omdomen">Omdömen</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm header-cta">Boka tid</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Öppna meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#behandlingar">Behandlingar</a>
+    <a href="index.html#resultat">Resultat</a>
+    <a href="index.html#priser">Priser</a>
+    <a href="index.html#om-oss">Om oss</a>
+    <a href="index.html#omdomen">Omdömen</a>
+    <a href="index.html#kontakt">Kontakt</a>
+    <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary">Boka tid</a>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="tx-hero">
+    <div class="tx-hero-bg">
+      <div style="background: linear-gradient(135deg, var(--accent) 0%, #4a4340 100%); width:100%; height:100%;"></div>
+    </div>
+    <div class="tx-hero-overlay"></div>
+    <div class="container">
+      <div class="tx-hero-content fade-in">
+        <span class="tx-hero-label">Resultat &amp; Glow</span>
+        <h1>Avancerade ansiktsbehandlingar</h1>
+        <p>Skräddarsydda behandlingar för din hud – med fokus på resultat, balans och långsiktig hudhälsa.</p>
+        <div class="tx-hero-rating">
+          <span class="stars">★★★★★</span> 4.9/5 från 600+ kunder
+        </div>
+        <div class="tx-hero-btns">
+          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-white">Boka tid</a>
+          <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/konsultation-hud-laser-harborttagning-2170427" target="_blank" rel="noopener" class="btn btn-outline-white">Boka konsultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== GUIDE: VILKEN BEHANDLING PASSAR DIG? ========== -->
+  <section class="tx-guide">
+    <div class="container">
+      <div class="tx-guide-header fade-in">
+        <h2>Vilken behandling passar dig?</h2>
+        <p>Välj kategori för att hitta rätt behandling för just din hud.</p>
+      </div>
+      <div class="tx-guide-grid fade-in">
+
+        <div class="tx-guide-card" data-scroll="glow">
+          <div class="tx-guide-icon">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2v4M18 30v4M2 18h4M30 18h4M6.3 6.3l2.8 2.8M26.9 26.9l2.8 2.8M6.3 29.7l2.8-2.8M26.9 9.1l2.8-2.8"/>
+              <circle cx="18" cy="18" r="7" fill="none"/>
+            </svg>
+          </div>
+          <div class="tx-guide-label">Glow &amp; lyster</div>
+          <div class="tx-guide-desc">Strålande hud, jämn hudton och maximal lyster.</div>
+          <div class="tx-guide-rec"><a href="#behandlingar">Se behandlingar →</a></div>
+        </div>
+
+        <div class="tx-guide-card" data-scroll="antiage">
+          <div class="tx-guide-icon">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 3a15 15 0 1 0 15 15"/>
+              <path d="M18 3v15h15"/>
+              <circle cx="18" cy="18" r="4" fill="none"/>
+            </svg>
+          </div>
+          <div class="tx-guide-label">Anti-age &amp; kvalitet</div>
+          <div class="tx-guide-desc">Spänst, elasticitet och förbättrad hudkvalitet.</div>
+          <div class="tx-guide-rec"><a href="#behandlingar">Se behandlingar →</a></div>
+        </div>
+
+        <div class="tx-guide-card" data-scroll="akne">
+          <div class="tx-guide-icon">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 4C10 4 6 12 6 18c0 8 5 14 12 14s12-6 12-14c0-6-4-14-12-14z"/>
+              <path d="M14 22c0-2 1.5-3 4-3s4 1 4 3"/>
+              <circle cx="13" cy="16" r="1.5" fill="currentColor"/>
+              <circle cx="23" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="tx-guide-label">Akne &amp; orenheter</div>
+          <div class="tx-guide-desc">Djuprengöring, balans och färre utbrott.</div>
+          <div class="tx-guide-rec"><a href="#behandlingar">Se behandlingar →</a></div>
+        </div>
+
+        <div class="tx-guide-card" data-scroll="kanslig">
+          <div class="tx-guide-icon">
+            <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 6C12 6 8 11 8 16c0 7 10 16 10 16s10-9 10-16c0-5-4-10-10-10z"/>
+              <path d="M18 14v6M18 24h.01"/>
+            </svg>
+          </div>
+          <div class="tx-guide-label">Känslig hud</div>
+          <div class="tx-guide-desc">Lugnande, barriärstärkande och antiinflammatorisk vård.</div>
+          <div class="tx-guide-rec"><a href="#behandlingar">Se behandlingar →</a></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== TREATMENT LIST ========== -->
+  <section class="tl-section" id="behandlingar">
+    <div class="container">
+      <div class="tl-section-header fade-in">
+        <h2>Alla ansiktsbehandlingar</h2>
+        <p>12 skräddarsydda behandlingar – klicka på en rad för att läsa mer.</p>
+      </div>
+      <div class="tl-list">
+
+        <!-- 1. Signature Glow Facial -->
+        <div class="tl-row" id="glow">
+          <div class="tl-row-header" onclick="toggleRow(this)">
+            <span class="tl-num">01</span>
+            <div class="tl-main">
+              <span class="tl-name">Signature Glow Facial</span>
+              <span class="tl-duration">80 min</span>
+              <span class="tl-desc">Maximal lyster och jämn hudstruktur – utan downtime.</span>
+            </div>
+            <div class="tl-actions">
+              <span class="tl-price">1 795 kr</span>
+              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
+              <button class="tl-toggle" aria-label="Visa detaljer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <span class="tl-toggle-text">Info</span>
+              </button>
+            </div>
+          </div>
+          <div class="tl-panel">
+            <div class="tl-panel-inner">
+              <div class="tl-detail">
+                <h4>Passar dig som</h4>
+                <ul>
+                  <li>Har trött, glåmig eller torr hud</li>
+                  <li>Vill ha glow inför event</li>
+                  <li>Har ojämn hudton eller struktur</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Så fungerar behandlingen</h4>
+                <p>Kombinerar mekanisk exfoliering (dermaplaning) och kemisk peeling för att avlägsna döda hudceller och stimulera cellförnyelse. Samtidigt tillförs aktiva ingredienser och cirkulationen ökar genom massage och ljusterapi.</p>
+              </div>
+              <div class="tl-detail">
+                <h4>Resultat</h4>
+                <ul>
+                  <li>Direkt glow</li>
+                  <li>Slätare hud</li>
+                  <li>Jämnare hudstruktur</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Ej lämplig vid</h4>
+                <ul>
+                  <li>Aktiv akne</li>
+                  <li>Irritation</li>
+                  <li>Retinoidkur</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Collagen Boost Deluxe -->
+        <div class="tl-row" id="antiage">
+          <div class="tl-row-header" onclick="toggleRow(this)">
+            <span class="tl-num">02</span>
+            <div class="tl-main">
+              <span class="tl-name">Collagen Boost Deluxe</span>
+              <span class="tl-duration">75 min</span>
+              <span class="tl-desc">Resultatinriktad behandling för spänst, struktur och lyster.</span>
+            </div>
+            <div class="tl-actions">
+              <span class="tl-price">2 195 kr</span>
+              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
+              <button class="tl-toggle" aria-label="Visa detaljer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <span class="tl-toggle-text">Info</span>
+              </button>
+            </div>
+          </div>
+          <div class="tl-panel">
+            <div class="tl-panel-inner">
+              <div class="tl-detail">
+                <h4>Passar dig som</h4>
+                <ul>
+                  <li>Upplever förlust av spänst och elasticitet</li>
+                  <li>Vill förbättra hudkvaliteten långsiktigt</li>
+                  <li>Söker anti-age utan injektioner</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Så fungerar behandlingen</h4>
+                <p>Kombinerar exfoliering, aktiva ingredienser och cirkulationsökande massage för att stimulera hudens cellförnyelse och kollagenproduktion.</p>
+              </div>
+              <div class="tl-detail">
+                <h4>Resultat</h4>
+                <ul>
+                  <li>Fastare hud</li>
+                  <li>Förbättrad struktur</li>
+                  <li>Ökad lyster</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Ej lämplig vid</h4>
+                <ul>
+                  <li>Aktiv hudinfektion</li>
+                  <li>Irriterad eller öppen hud</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Collagen Boost Deluxe – 90 min -->
+        <div class="tl-row">
+          <div class="tl-row-header" onclick="toggleRow(this)">
+            <span class="tl-num">03</span>
+            <div class="tl-main">
+              <span class="tl-name">Collagen Boost Deluxe – 90 min</span>
+              <span class="tl-duration">90 min</span>
+              <span class="tl-desc">Mer tid för djupare arbete och mer långvarigt resultat.</span>
+            </div>
+            <div class="tl-actions">
+              <span class="tl-price">2 395 kr</span>
+              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
+              <button class="tl-toggle" aria-label="Visa detaljer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <span class="tl-toggle-text">Info</span>
+              </button>
+            </div>
+          </div>
+          <div class="tl-panel">
+            <div class="tl-panel-inner">
+              <div class="tl-detail">
+                <h4>Passar dig som</h4>
+                <ul>
+                  <li>Vill ha ett djupare och mer långvarigt anti-age-resultat</li>
+                  <li>Uppskattar en längre, mer avkopplande session</li>
+                  <li>Söker maximal kollagenstimulering</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Så fungerar behandlingen</h4>
+                <p>Samma beprövade metod som 75-minutersversionen, med utökad tid för djupare serum-penetration, extra massage och förlängd ljusterapi för maximalt resultat.</p>
+              </div>
+              <div class="tl-detail">
+                <h4>Resultat</h4>
+                <ul>
+                  <li>Fastare hud</li>
+                  <li>Förbättrad struktur</li>
+                  <li>Ökad lyster</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Ej lämplig vid</h4>
+                <ul>
+                  <li>Aktiv hudinfektion</li>
+                  <li>Irriterad eller öppen hud</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Nano Infusion Skin Booster (Salmon DNA) -->
+        <div class="tl-row">
+          <div class="tl-row-header" onclick="toggleRow(this)">
+            <span class="tl-num">04</span>
+            <div class="tl-main">
+              <span class="tl-name">Nano Infusion Skin Booster (Salmon DNA)</span>
+              <span class="tl-duration">60 min</span>
+              <span class="tl-desc">Djup återfuktning och hudförbättring utan nålar eller downtime.</span>
+            </div>
+            <div class="tl-actions">
+              <span class="tl-price">2 095 kr</span>
+              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
+              <button class="tl-toggle" aria-label="Visa detaljer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <span class="tl-toggle-text">Info</span>
+              </button>
+            </div>
+          </div>
+          <div class="tl-panel">
+            <div class="tl-panel-inner">
+              <div class="tl-detail">
+                <h4>Passar dig som</h4>
+                <ul>
+                  <li>Vill ha djup återfuktning utan nålar</li>
+                  <li>Har uttorkad, trött eller åldrad hud</li>
+                  <li>Söker hudförbättring utan downtime</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Så fungerar behandlingen</h4>
+                <p>Genom nano-infusion skapas mikroskopiska kanaler i hudytan som möjliggör effektiv leverans av aktiva ingredienser, vilket förbättrar hudens fuktnivå och struktur.</p>
+              </div>
+              <div class="tl-detail">
+                <h4>Resultat</h4>
+                <ul>
+                  <li>Ökad lyster</li>
+                  <li>Jämnare hud</li>
+                  <li>Förbättrad återfuktning</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Ej lämplig vid</h4>
+                <ul>
+                  <li>Aktiv hudinfektion</li>
+                  <li>Irriterad eller öppen hud</li>
+                  <li>Allergi mot fiskprotein</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Advanced Acne Detox (60 min) -->
+        <div class="tl-row" id="akne">
+          <div class="tl-row-header" onclick="toggleRow(this)">
+            <span class="tl-num">05</span>
+            <div class="tl-main">
+              <span class="tl-name">Advanced Acne Detox (60 min)</span>
+              <span class="tl-duration">60 min</span>
+              <span class="tl-desc">Djuprengörande behandling för akne, porer och obalanserad hud.</span>
+            </div>
+            <div class="tl-actions">
+              <span class="tl-price">1 895 kr</span>
+              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
+              <button class="tl-toggle" aria-label="Visa detaljer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <span class="tl-toggle-text">Info</span>
+              </button>
+            </div>
+          </div>
+          <div class="tl-panel">
+            <div class="tl-panel-inner">
+              <div class="tl-detail">
+                <h4>Passar dig som</h4>
+                <ul>
+                  <li>Har akne, tilltäppta porer eller utbrott</li>
+                  <li>Upplever obalanserad eller oljig hud</li>
+                  <li>Söker en djuprengörande behandling</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Så fungerar behandlingen</h4>
+                <p>Kombinerar kemisk exfoliering, portömning och antibakteriell behandling för att rengöra porerna på djupet och minska inflammation.</p>
+              </div>
+              <div class="tl-detail">
+                <h4>Resultat</h4>
+                <ul>
+                  <li>Renare hud</li>
+                  <li>Mindre porer</li>
+                  <li>Färre utbrott</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Ej lämplig vid</h4>
+                <ul>
+                  <li>Aktiv hudinfektion (ej akne)</li>
+                  <li>Kraftigt irriterad hud</li>
+                  <li>Pågående isotretinoin-behandling</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Advanced Acne Detox – 75 min -->
+        <div class="tl-row">
+          <div class="tl-row-header" onclick="toggleRow(this)">
+            <span class="tl-num">06</span>
+            <div class="tl-main">
+              <span class="tl-name">Advanced Acne Detox – 75 min</span>
+              <span class="tl-duration">75 min</span>
+              <span class="tl-desc">Fördjupad aknebehandling – mer tid för djupare rengöring och bättre resultat.</span>
+            </div>
+            <div class="tl-actions">
+              <span class="tl-price">2 095 kr</span>
+              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
+              <button class="tl-toggle" aria-label="Visa detaljer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <span class="tl-toggle-text">Info</span>
+              </button>
+            </div>
+          </div>
+          <div class="tl-panel">
+            <div class="tl-panel-inner">
+              <div class="tl-detail">
+                <h4>Passar dig som</h4>
+                <ul>
+                  <li>Har utbredd akne eller många tilltäpptheter</li>
+                  <li>Vill ha ett djupare, mer genomgående resultat</li>
+                  <li>Behöver extra tid för portömning</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Så fungerar behandlingen</h4>
+                <p>Samma metod som 60-minutersversionen med utökad tid för grundligare portömning, extra exfoliering och längre antibakteriell behandling.</p>
+              </div>
+              <div class="tl-detail">
+                <h4>Resultat</h4>
+                <ul>
+                  <li>Renare hud</li>
+                  <li>Mindre porer</li>
+                  <li>Färre utbrott</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Ej lämplig vid</h4>
+                <ul>
+                  <li>Aktiv hudinfektion (ej akne)</li>
+                  <li>Kraftigt irriterad hud</li>
+                  <li>Pågående isotretinoin-behandling</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Glass Skin Hydration -->
+        <div class="tl-row">
+          <div class="tl-row-header" onclick="toggleRow(this)">
+            <span class="tl-num">07</span>
+            <div class="tl-main">
+              <span class="tl-name">Glass Skin Hydration</span>
+              <span class="tl-duration">60 min</span>
+              <span class="tl-desc">Intensiv fuktboost för plumpad hud och maximal lyster.</span>
+            </div>
+            <div class="tl-actions">
+              <span class="tl-price">1 795 kr</span>
+              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
+              <button class="tl-toggle" aria-label="Visa detaljer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <span class="tl-toggle-text">Info</span>
+              </button>
+            </div>
+          </div>
+          <div class="tl-panel">
+            <div class="tl-panel-inner">
+              <div class="tl-detail">
+                <h4>Passar dig som</h4>
+                <ul>
+                  <li>Har torr eller uttorkad hud</li>
+                  <li>Vill ha plumpad, daggfrisk look</li>
+                  <li>Söker intensiv återfuktning</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Så fungerar behandlingen</h4>
+                <p>Arbetar i flera lager med återfuktande ingredienser som binder fukt i huden och stärker hudbarriären.</p>
+              </div>
+              <div class="tl-detail">
+                <h4>Resultat</h4>
+                <ul>
+                  <li>Mjukare hud</li>
+                  <li>Ökad spänst</li>
+                  <li>Jämn glow</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Ej lämplig vid</h4>
+                <ul>
+                  <li>Aktiv hudinfektion</li>
+                  <li>Öppen eller irriterad hud</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Skin Reset Facial -->
+        <div class="tl-row">
+          <div class="tl-row-header" onclick="toggleRow(this)">
+            <span class="tl-num">08</span>
+            <div class="tl-main">
+              <span class="tl-name">Skin Reset Facial</span>
+              <span class="tl-duration">60 min</span>
+              <span class="tl-desc">Grundläggande hudförbättring med direkt resultat.</span>
+            </div>
+            <div class="tl-actions">
+              <span class="tl-price">1 695 kr</span>
+              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
+              <button class="tl-toggle" aria-label="Visa detaljer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <span class="tl-toggle-text">Info</span>
+              </button>
+            </div>
+          </div>
+          <div class="tl-panel">
+            <div class="tl-panel-inner">
+              <div class="tl-detail">
+                <h4>Passar dig som</h4>
+                <ul>
+                  <li>Vill ge huden en grundläggande restart</li>
+                  <li>Har matt, trött eller obalanserad hud</li>
+                  <li>Är ny till ansiktsbehandlingar</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Så fungerar behandlingen</h4>
+                <p>Kombinerar rengöring, exfoliering och återfuktning för att balansera huden och förbättra dess struktur.</p>
+              </div>
+              <div class="tl-detail">
+                <h4>Resultat</h4>
+                <ul>
+                  <li>Fräschare hud</li>
+                  <li>Jämnare hudton</li>
+                  <li>Mer lyster</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Ej lämplig vid</h4>
+                <ul>
+                  <li>Aktiv hudinfektion</li>
+                  <li>Öppen eller kraftigt irriterad hud</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Chemical Glow Peel -->
+        <div class="tl-row">
+          <div class="tl-row-header" onclick="toggleRow(this)">
+            <span class="tl-num">09</span>
+            <div class="tl-main">
+              <span class="tl-name">Chemical Glow Peel</span>
+              <span class="tl-duration">45 min</span>
+              <span class="tl-desc">Resultatinriktad peeling för lyster och hudförnyelse.</span>
+            </div>
+            <div class="tl-actions">
+              <span class="tl-price">1 695 kr</span>
+              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
+              <button class="tl-toggle" aria-label="Visa detaljer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <span class="tl-toggle-text">Info</span>
+              </button>
+            </div>
+          </div>
+          <div class="tl-panel">
+            <div class="tl-panel-inner">
+              <div class="tl-detail">
+                <h4>Passar dig som</h4>
+                <ul>
+                  <li>Vill ha klarare, mer strålande hud</li>
+                  <li>Har ojämn hudton eller matt hy</li>
+                  <li>Söker resultatinriktad peeling</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Så fungerar behandlingen</h4>
+                <p>Kemiska syror exfolierar huden, stimulerar cellförnyelse och förbättrar hudens struktur och klarhet.</p>
+              </div>
+              <div class="tl-detail">
+                <h4>Resultat</h4>
+                <ul>
+                  <li>Klarare hud</li>
+                  <li>Jämnare ton</li>
+                  <li>Förbättrad struktur</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Ej lämplig vid</h4>
+                <ul>
+                  <li>Graviditet eller amning</li>
+                  <li>Aktiv hudinfektion eller irriterad hud</li>
+                  <li>Nylig solexponering</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10. Barrier Repair Therapy -->
+        <div class="tl-row" id="kanslig">
+          <div class="tl-row-header" onclick="toggleRow(this)">
+            <span class="tl-num">10</span>
+            <div class="tl-main">
+              <span class="tl-name">Barrier Repair Therapy</span>
+              <span class="tl-duration">60 min</span>
+              <span class="tl-desc">Återuppbyggande behandling för känslig och stressad hud.</span>
+            </div>
+            <div class="tl-actions">
+              <span class="tl-price">1 795 kr</span>
+              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
+              <button class="tl-toggle" aria-label="Visa detaljer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <span class="tl-toggle-text">Info</span>
+              </button>
+            </div>
+          </div>
+          <div class="tl-panel">
+            <div class="tl-panel-inner">
+              <div class="tl-detail">
+                <h4>Passar dig som</h4>
+                <ul>
+                  <li>Har känslig, reaktiv eller stressad hud</li>
+                  <li>Upplever rodnad, stramhet eller obehag</li>
+                  <li>Söker en behandling som lugnar och stärker</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Så fungerar behandlingen</h4>
+                <p>Fokuserar på att stärka hudbarriären genom lugnande och återfuktande ingredienser som minskar inflammation och återställer balansen.</p>
+              </div>
+              <div class="tl-detail">
+                <h4>Resultat</h4>
+                <ul>
+                  <li>Mindre rodnad</li>
+                  <li>Starkare hud</li>
+                  <li>Ökad komfort</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Ej lämplig vid</h4>
+                <ul>
+                  <li>Aktiv hudinfektion</li>
+                  <li>Öppen hud eller sår</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11. Rosacea Calm Therapy -->
+        <div class="tl-row">
+          <div class="tl-row-header" onclick="toggleRow(this)">
+            <span class="tl-num">11</span>
+            <div class="tl-main">
+              <span class="tl-name">Rosacea Calm Therapy</span>
+              <span class="tl-duration">60 min</span>
+              <span class="tl-desc">Lugnande behandling för rosacea och reaktiv hud.</span>
+            </div>
+            <div class="tl-actions">
+              <span class="tl-price">1 695 kr</span>
+              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
+              <button class="tl-toggle" aria-label="Visa detaljer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <span class="tl-toggle-text">Info</span>
+              </button>
+            </div>
+          </div>
+          <div class="tl-panel">
+            <div class="tl-panel-inner">
+              <div class="tl-detail">
+                <h4>Passar dig som</h4>
+                <ul>
+                  <li>Har rosacea eller kronisk rodnad</li>
+                  <li>Upplever reaktiv och lättirriterad hud</li>
+                  <li>Söker en behandling utan irriterande ingredienser</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Så fungerar behandlingen</h4>
+                <p>Arbetar med kylande och barriärstärkande ingredienser för att minska rodnad och stabilisera huden utan irritation.</p>
+              </div>
+              <div class="tl-detail">
+                <h4>Resultat</h4>
+                <ul>
+                  <li>Mindre rodnad</li>
+                  <li>Stabilare hud</li>
+                  <li>Ökad återfuktning</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Ej lämplig vid</h4>
+                <ul>
+                  <li>Aktiv hudinfektion</li>
+                  <li>Öppen hud eller sår</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12. Teen Skin Clear -->
+        <div class="tl-row">
+          <div class="tl-row-header" onclick="toggleRow(this)">
+            <span class="tl-num">12</span>
+            <div class="tl-main">
+              <span class="tl-name">Teen Skin Clear (Ungdomsbehandling)</span>
+              <span class="tl-duration">45 min</span>
+              <span class="tl-desc">Skonsam behandling för ungdomshud med orenheter.</span>
+            </div>
+            <div class="tl-actions">
+              <span class="tl-price">1 295 kr</span>
+              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
+              <button class="tl-toggle" aria-label="Visa detaljer">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                <span class="tl-toggle-text">Info</span>
+              </button>
+            </div>
+          </div>
+          <div class="tl-panel">
+            <div class="tl-panel-inner">
+              <div class="tl-detail">
+                <h4>Passar dig som</h4>
+                <ul>
+                  <li>Är ung och har orenheter eller pormaskar</li>
+                  <li>Söker en skonsam behandling utan starka syror</li>
+                  <li>Vill ha renare och mer balanserad hud</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Så fungerar behandlingen</h4>
+                <p>Rengör porerna, balanserar talgproduktionen och förebygger nya tilltäpptheter.</p>
+              </div>
+              <div class="tl-detail">
+                <h4>Resultat</h4>
+                <ul>
+                  <li>Renare hud</li>
+                  <li>Mindre pormaskar</li>
+                  <li>Bättre balans</li>
+                </ul>
+              </div>
+              <div class="tl-detail">
+                <h4>Ej lämplig vid</h4>
+                <ul>
+                  <li>Aktiv hudinfektion</li>
+                  <li>Öppen eller kraftigt irriterad hud</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== TRUST BAR ========== -->
+  <section class="tl-trust">
+    <div class="container">
+      <div class="tl-trust-grid fade-in">
+
+        <div class="tl-trust-item">
+          <div class="tl-trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+              <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+          </div>
+          <span class="tl-trust-label">Trygg bokning</span>
+          <span class="tl-trust-desc">Enkel avbokning upp till 24h innan</span>
+        </div>
+
+        <div class="tl-trust-item">
+          <div class="tl-trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+          </div>
+          <span class="tl-trust-label">Resultat &amp; kvalitet</span>
+          <span class="tl-trust-desc">Beprövade metoder och premium-produkter</span>
+        </div>
+
+        <div class="tl-trust-item">
+          <div class="tl-trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+          </div>
+          <span class="tl-trust-label">Hudhälsa i fokus</span>
+          <span class="tl-trust-desc">Individanpassat utifrån din hud</span>
+        </div>
+
+        <div class="tl-trust-item">
+          <div class="tl-trust-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <span class="tl-trust-label">Frågor?</span>
+          <span class="tl-trust-desc">Kontakta oss – vi hjälper dig gärna</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CONSULTATION CTA ========== -->
+  <section class="tl-consult-cta">
+    <div class="container fade-in">
+      <h2>Osäker på vilken behandling som passar dig?</h2>
+      <p>Boka en kostnadsfri konsultation så hjälper vi dig att hitta rätt behandling för just din hud.</p>
+      <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/konsultation-hud-laser-harborttagning-2170427" target="_blank" rel="noopener" class="tl-consult-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Boka konsultation
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ========== INFO & FAQ ========== -->
+  <section class="tx-info">
+    <div class="container">
+      <div class="tx-info-block fade-in">
+        <h2>Viktig information &amp; vanliga frågor</h2>
+
+        <h3 class="tx-info-section-title">Viktig information <span>(läs innan du bokar)</span></h3>
+
+        <div class="tx-accordion tx-accordion--wide">
+          <button class="tx-accordion-trigger" aria-expanded="false">
+            <span>Resultat &amp; förväntningar</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="tx-accordion-panel">
+            <ul>
+              <li>Resultat varierar beroende på hudtyp och behandling</li>
+              <li>Många upplever synlig skillnad redan efter första behandlingen</li>
+              <li>Bäst resultat uppnås ofta med en serie behandlingar</li>
+              <li>Vi anpassar alltid behandlingen efter din hud</li>
+            </ul>
+          </div>
+
+          <button class="tx-accordion-trigger" aria-expanded="false">
+            <span>Ej lämpligt vid</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="tx-accordion-panel">
+            <ul>
+              <li>Graviditet eller amning (meddela alltid)</li>
+              <li>Aktiv hudinfektion, eksem eller svår rosacea i behandlingsområdet</li>
+              <li>Pågående isotretinoin/Accutane-behandling</li>
+              <li>Aktiv retinoidkur (meddela alltid vilka produkter du använder)</li>
+              <li>Öppna sår eller kraftigt irriterad hud</li>
+            </ul>
+          </div>
+
+          <button class="tx-accordion-trigger" aria-expanded="false">
+            <span>Eftervård</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="tx-accordion-panel">
+            <ul>
+              <li>Använd SPF 30+ dagligen efter behandling</li>
+              <li>Undvik starka aktiva ingredienser i 24–48 timmar</li>
+              <li>Håll huden återfuktad</li>
+              <li>Undvik bastu och intensiv träning samma dag</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="tx-info-section-title">Vanliga frågor</h3>
+
+        <div class="tx-accordion tx-accordion--wide">
+          <button class="tx-accordion-trigger" aria-expanded="false">
+            <span>Vilken behandling passar mig?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="tx-accordion-panel">
+            <p>Det beror på ditt hudtillstånd och dina mål. Vi hjälper dig alltid att välja rätt behandling vid konsultation. Se även guiden ovan för en snabb rekommendation.</p>
+          </div>
+
+          <button class="tx-accordion-trigger" aria-expanded="false">
+            <span>Hur ofta bör jag göra en ansiktsbehandling?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="tx-accordion-panel">
+            <p>Generellt rekommenderar vi var 4:e till 6:e vecka för underhåll. Vid specifika hudproblem kan tätare intervall vara aktuellt. Vi lägger upp en plan efter din första behandling.</p>
+          </div>
+
+          <button class="tx-accordion-trigger" aria-expanded="false">
+            <span>Gör ansiktsbehandlingar ont?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="tx-accordion-panel">
+            <p>De flesta behandlingar är behagliga och avkopplande. Vid exfoliering eller portömning kan du uppleva en lätt stickande känsla, men den är kortvarig.</p>
+          </div>
+
+          <button class="tx-accordion-trigger" aria-expanded="false">
+            <span>Kan jag sminka mig efter behandlingen?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="tx-accordion-panel">
+            <p>Vi rekommenderar att du låter huden andas och undviker makeup samma dag. Dagen efter kan du sminka dig som vanligt om huden känns bra.</p>
+          </div>
+
+          <button class="tx-accordion-trigger" aria-expanded="false">
+            <span>Behöver jag konsultation först?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="tx-accordion-panel">
+            <p>Konsultation ingår alltid inför din första behandling och behöver inte bokas separat. Vi bedömer din hud och rekommenderar den bäst lämpade behandlingen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== BOTTOM CTA ========== -->
+  <section class="tx-bottom-cta">
+    <div class="container">
+      <div class="tx-bottom-cta-content fade-in">
+        <h2>Redo att boka din behandling?</h2>
+        <div class="tx-hero-btns">
+          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary">Boka tid</a>
+          <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/konsultation-hud-laser-harborttagning-2170427" target="_blank" rel="noopener" class="btn btn-outline">Boka konsultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <span class="logo-main">YOUR SKIN</span>
+            <span class="logo-sub">CLINIC</span>
+          </a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Gallerian, Stockholm</h4>
+          <ul>
+            <li><a href="https://www.google.com/maps/search/?api=1&query=Your+Skin+Clinic+Hamngatan+37+Gallerian+Stockholm" target="_blank" rel="noopener">Hamngatan 37 (Gallerian)<br>Stockholm City</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="tel:+46701234567">073-123 45 67</a></li>
+            <li><a href="mailto:info@yourskinclinic.se">info@yourskinclinic.se</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Länkar</h4>
+          <ul>
+            <li><a href="index.html#behandlingar">Behandlingar</a></li>
+            <li><a href="index.html#resultat">Resultat</a></li>
+            <li><a href="index.html#omdomen">Omdömen</a></li>
+            <li><a href="index.html#om-oss">Om oss</a></li>
+            <li><a href="index.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Information</h4>
+          <ul>
+            <li><a href="#" data-modal="modal-kontakt">Kontakt</a></li>
+            <li><a href="#" data-modal="modal-integritetspolicy">Integritetspolicy</a></li>
+            <li><a href="#" data-modal="modal-villkor">Villkor</a></li>
+            <li><a href="#" data-modal="modal-cookies">Cookies</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Följ oss</h4>
+          <div class="footer-social-links">
+            <a href="https://www.instagram.com/your.skin.clinic.pmu" target="_blank" rel="noopener" class="footer-ig-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <span><small>PMU</small>@your.skin.clinic.pmu</span>
+            </a>
+            <a href="https://www.instagram.com/your.skin.clinic" target="_blank" rel="noopener" class="footer-ig-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              <span><small>Skincare</small>@your.skin.clinic</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Your Skin Clinic. Alla rättigheter förbehållna.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script src="treatment.js" defer></script>
+
+  <!-- Row toggle script -->
+  <script>
+    function toggleRow(header) {
+      var row = header.closest('.tl-row');
+      var wasOpen = row.classList.contains('is-open');
+
+      // Close all open rows
+      document.querySelectorAll('.tl-row.is-open').forEach(function(r) {
+        r.classList.remove('is-open');
+      });
+
+      // If wasn't open, open it
+      if (!wasOpen) {
+        row.classList.add('is-open');
+        // Smooth scroll into view
+        setTimeout(function() {
+          row.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
+    }
+
+    // Guide card scroll
+    document.querySelectorAll('.tx-guide-card[data-scroll]').forEach(function(card) {
+      card.addEventListener('click', function() {
+        var target = document.getElementById(this.dataset.scroll);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          // Open the first row in that category
+          setTimeout(function() {
+            var header = target.querySelector('.tl-row-header');
+            if (header && !target.classList.contains('is-open')) {
+              toggleRow(header);
+            }
+          }, 400);
+        }
+      });
+    });
+  </script>
+
+  <!-- ========== INFO MODALS ========== -->
+
+  <!-- Integritetspolicy -->
+  <div class="info-modal-overlay" id="modal-integritetspolicy">
+    <div class="info-modal">
+      <button class="info-modal-close" aria-label="Stäng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      <h2>Integritetspolicy</h2>
+      <span class="modal-updated">Senast uppdaterad: 2026-05-03</span>
+
+      <h3>1. Inledning</h3>
+      <p>Your Skin Clinic värnar om din personliga integritet. Denna integritetspolicy förklarar hur vi samlar in, behandlar och skyddar dina personuppgifter i enlighet med Europaparlamentets och rådets dataskyddsförordning (EU) 2016/679 (&ldquo;GDPR&rdquo;).</p>
+      <p>Genom att använda våra tjänster godkänner du behandlingen av dina personuppgifter i enlighet med denna policy.</p>
+
+      <h3>2. Personuppgiftsansvarig</h3>
+      <p><strong>Your Skin Clinic</strong><br>Gallerian, Hamngatan 37, Stockholm<br>Telefon: <a href="tel:+46730412589">073-041 25 89</a><br>E-post: <a href="mailto:info@yourskinclinic.se">info@yourskinclinic.se</a></p>
+      <p>Your Skin Clinic är personuppgiftsansvarig för behandlingen av dina personuppgifter.</p>
+
+      <h3>3. Vilka personuppgifter vi behandlar</h3>
+      <p>Vi kan behandla följande kategorier av personuppgifter:</p>
+      <ul><li>Namn</li><li>Telefonnummer</li><li>E-postadress</li><li>Bokningsinformation</li><li>Uppgifter som lämnas vid konsultation eller behandling</li></ul>
+      <p>Endast uppgifter som är nödvändiga för ändamålet samlas in.</p>
+
+      <h3>4. Ändamål och rättslig grund</h3>
+      <p>Vi behandlar dina personuppgifter för följande ändamål:</p>
+      <ul><li>Hantera bokningar och behandlingar</li><li>Kommunicera inför och efter behandling</li><li>Säkerställa en trygg och individanpassad behandling</li><li>Uppfylla rättsliga förpliktelser</li></ul>
+      <p>Den rättsliga grunden för behandlingen är:</p>
+      <ul><li>Avtal (bokning av tjänst)</li><li>Rättslig förpliktelse</li><li>Berättigat intresse</li></ul>
+
+      <h3>5. Bokningssystem och tredjepart</h3>
+      <p>Vi använder externa bokningssystem såsom BokaDirekt. När du bokar via dessa system behandlas dina personuppgifter även enligt respektive leverantörs integritetspolicy.</p>
+
+      <h3>6. Lagring av personuppgifter</h3>
+      <p>Dina personuppgifter lagras endast så länge det är nödvändigt för att uppfylla ändamålet med behandlingen eller enligt gällande lagstiftning.</p>
+
+      <h3>7. Utlämnande av uppgifter</h3>
+      <p>Vi lämnar inte ut dina personuppgifter till tredje part, annat än när det krävs enligt lag eller är nödvändigt för att tillhandahålla våra tjänster.</p>
+
+      <h3>8. Dina rättigheter</h3>
+      <p>Du har rätt att:</p>
+      <ul><li>Begära tillgång till dina personuppgifter</li><li>Begära rättelse av felaktiga uppgifter</li><li>Begära radering av dina uppgifter</li><li>Invända mot behandling</li><li>Begära begränsning av behandling</li></ul>
+      <p>För att utöva dina rättigheter, kontakta oss via e-post. Du har även rätt att lämna klagomål till Integritetsskyddsmyndigheten (IMY).</p>
+
+      <h3>9. Säkerhet</h3>
+      <p>Vi vidtar lämpliga tekniska och organisatoriska säkerhetsåtgärder för att skydda dina personuppgifter mot obehörig åtkomst, förlust eller missbruk.</p>
+
+      <h3>10. Ändringar i policyn</h3>
+      <p>Your Skin Clinic förbehåller sig rätten att uppdatera denna policy vid behov. Den senaste versionen finns alltid tillgänglig på vår hemsida.</p>
+
+      <h3>11. Kontakt</h3>
+      <p><a href="mailto:info@yourskinclinic.se">info@yourskinclinic.se</a><br><a href="tel:+46730412589">073-041 25 89</a></p>
+      <button class="info-modal-close-bottom" aria-label="Stäng">Stäng</button>
+    </div>
+  </div>
+
+  <!-- Villkor -->
+  <div class="info-modal-overlay" id="modal-villkor">
+    <div class="info-modal">
+      <button class="info-modal-close" aria-label="Stäng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      <h2>Villkor</h2>
+      <span class="modal-updated">Senast uppdaterad: 2026-05-03</span>
+
+      <h3>1. Allmänt</h3>
+      <p>Dessa villkor gäller för alla bokningar och behandlingar hos Your Skin Clinic. Genom att boka en tid godkänner du dessa villkor.</p>
+
+      <h3>2. Bokning</h3>
+      <p>Bokning sker via vårt bokningssystem BokaDirekt eller enligt överenskommelse. Konsultation ingår alltid inför din första behandling och behöver inte bokas separat.</p>
+
+      <h3>3. Avbokning &amp; ombokning</h3>
+      <p>Avbokning eller ombokning ska ske senast <strong>24 timmar</strong> före bokad tid.</p>
+      <ul><li>Vid sen avbokning (mindre än 24 timmar): <strong>100 % debitering</strong></li><li>Vid uteblivet besök (no-show): <strong>100 % debitering</strong></li><li>Gäller oavsett anledning (inkl. sjukdom)</li></ul>
+      <p>Avbokning ska göras via bokningssystemet eller direkt till kliniken.</p>
+
+      <h3>4. Sen ankomst</h3>
+      <p>Vid sen ankomst kan behandlingstiden behöva kortas ned eller avbokas. Full debitering kan då ske.</p>
+
+      <h3>5. Betalning</h3>
+      <p>Betalning sker i samband med behandling om inget annat överenskommits. Kliniken förbehåller sig rätten att kräva <strong>förskottsbetalning/deposition</strong> för vissa behandlingar eller kunder med upprepade sena avbokningar.</p>
+
+      <h3>6. Behandling &amp; ansvar</h3>
+      <p>Alla behandlingar anpassas individuellt. Resultat varierar och kan inte garanteras. Kunden ansvarar för att lämna korrekt information om hälsa, medicinering och hudtillstånd. Kliniken förbehåller sig rätten att <strong>avstå från behandling</strong> om det bedöms olämpligt ur medicinsk eller säkerhetsmässig synpunkt.</p>
+
+      <h3>7. Eftervård</h3>
+      <p>Kunden ansvarar för att följa givna eftervårdsråd. Avvikelser kan påverka resultatet och ligger utanför klinikens ansvar.</p>
+
+      <h3>8. Reklamation</h3>
+      <p>Eventuella synpunkter ska meddelas inom rimlig tid efter behandlingen. Bedömning sker individuellt.</p>
+
+      <h3>9. Åldersgräns</h3>
+      <p>Du måste vara minst 18 år eller ha målsmans godkännande.</p>
+
+      <h3>10. Personuppgifter</h3>
+      <p>Personuppgifter behandlas enligt vår integritetspolicy.</p>
+
+      <h3>11. Ändringar</h3>
+      <p>Your Skin Clinic förbehåller sig rätten att uppdatera dessa villkor.</p>
+
+      <h3>12. Kontakt</h3>
+      <p><a href="mailto:info@yourskinclinic.se">info@yourskinclinic.se</a><br><a href="tel:+46730412589">073-041 25 89</a></p>
+      <button class="info-modal-close-bottom" aria-label="Stäng">Stäng</button>
+    </div>
+  </div>
+
+  <!-- Cookies -->
+  <div class="info-modal-overlay" id="modal-cookies">
+    <div class="info-modal">
+      <button class="info-modal-close" aria-label="Stäng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      <h2>Cookies (kakor)</h2>
+      <span class="modal-updated">Senast uppdaterad: 2026-05-03</span>
+
+      <h3>1. Vad är cookies?</h3>
+      <p>Cookies är små textfiler som lagras i din webbläsare för att webbplatsen ska fungera korrekt och för att förbättra användarupplevelsen.</p>
+
+      <h3>2. Vilka cookies vi använder</h3>
+      <ul><li>Nödvändiga cookies (funktionalitet och säkerhet)</li><li>Analyscookies (för att förstå användning av webbplatsen)</li></ul>
+
+      <h3>3. Tredjepart</h3>
+      <p>Vi kan använda tredjepartstjänster som Google Analytics och BokaDirekt.</p>
+
+      <h3>4. Hantering av cookies</h3>
+      <p>Du kan blockera eller radera cookies via din webbläsare. Vissa funktioner kan då påverkas.</p>
+
+      <h3>5. Samtycke</h3>
+      <p>Genom att använda webbplatsen samtycker du till användningen av cookies.</p>
+      <button class="info-modal-close-bottom" aria-label="Stäng">Stäng</button>
+    </div>
+  </div>
+
+  <!-- Kontakt -->
+  <div class="info-modal-overlay" id="modal-kontakt">
+    <div class="info-modal">
+      <button class="info-modal-close" aria-label="Stäng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+      <h2>Kontakt</h2>
+      <p>Har du frågor eller vill boka en tid? Kontakta oss – vi hjälper dig gärna.</p>
+
+      <h3>Kontaktuppgifter</h3>
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="contact-item-text"><h4>Adress</h4><p>Your Skin Clinic<br>Salong ZAX City<br>Gallerian, Hamngatan 37<br>111 53 Stockholm</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="contact-item-text"><h4>Telefon</h4><p><a href="tel:+46730698591">073-069 85 91</a><br><small style="color:var(--text-muted)">Snabbast svar via SMS</small></p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="contact-item-text"><h4>E-post</h4><p><a href="mailto:info@yourskinclinic.se">info@yourskinclinic.se</a></p></div>
+        </div>
+      </div>
+
+      <h3>Hitta till oss</h3>
+      <p>Du hittar oss i Gallerian i Stockholm city, hos Salong ZAX City, nära Sergels torg.</p>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.0!2d18.0710!3d59.3325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d5f5e5e5e5d%3A0x0!2sGallerian%2C+Hamngatan+37%2C+Stockholm!5e0!3m2!1ssv!2sse!4v1700000000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <h3>Så kontaktar du oss</h3>
+      <div class="contact-options">
+        <ul><li><strong>SMS</strong> – snabbast svar</li><li><strong>E-post</strong> – för frågor som inte är brådskande</li><li><strong>Bokning</strong> – via vårt bokningssystem</li></ul>
+      </div>
+
+      <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="contact-cta">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Boka tid
+      </a>
+      <p class="contact-note">Vi arbetar främst efter bokning. Tider kan variera beroende på behandling.</p>
+      <button class="info-modal-close-bottom" aria-label="Stäng">Stäng</button>
+    </div>
+  </div>
+
+</body>
+</html>

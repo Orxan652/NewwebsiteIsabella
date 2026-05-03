@@ -81,4 +81,47 @@ document.addEventListener('DOMContentLoaded', () => {
       dropdowns.forEach(dd => dd.classList.remove('active'));
     }
   });
+
+  /* --- Info Modals --- */
+  document.querySelectorAll('[data-modal]').forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const id = trigger.getAttribute('data-modal');
+      const overlay = document.getElementById(id);
+      if (overlay) {
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+
+  document.querySelectorAll('.info-modal-overlay').forEach(overlay => {
+    // Close on X button (top)
+    overlay.querySelector('.info-modal-close')?.addEventListener('click', () => {
+      overlay.classList.remove('is-open');
+      document.body.style.overflow = '';
+    });
+    // Close on bottom button
+    overlay.querySelector('.info-modal-close-bottom')?.addEventListener('click', () => {
+      overlay.classList.remove('is-open');
+      document.body.style.overflow = '';
+    });
+    // Close on backdrop click
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.info-modal-overlay.is-open').forEach(overlay => {
+        overlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+      });
+    }
+  });
 });
