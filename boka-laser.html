@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Välj ditt område och boka laser hårborttagning hos Your Skin Clinic i Stockholm.">
+  <title>Boka Laser Hårborttagning – Your Skin Clinic Stockholm</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="problem.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>✦</text></svg>">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-main">YOUR SKIN</span>
+        <span class="logo-sub">CLINIC</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Huvudnavigation">
+        <ul>
+          <li class="nav-dropdown">
+            <a href="index.html#behandlingar">Behandlingar</a>
+            <div class="dropdown-menu">
+              <a href="ansiktsbehandlingar.html">Avancerade ansiktsbehandlingar</a>
+              <a href="kemisk-peeling.html">Kemisk peeling</a>
+              <a href="microneedling.html">Microneedling</a>
+              <a href="laser-harborttagning.html">Laser hårborttagning</a>
+            </div>
+          </li>
+          <li class="nav-dropdown"><a href="index.html#hudproblem">Hudproblem</a>
+            <div class="dropdown-menu">
+              <a href="leverflackar.html">Leverfläckar &amp; hudförändringar</a>
+              <a href="laser-harborttagning.html">Oönskad hårväxt</a>
+            </div>
+          </li>
+          <li><a href="index.html#om-oss">Om oss</a></li>
+          <li><a href="index.html#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm header-cta">Boka tid</a>
+
+      <button class="hamburger" id="hamburger" aria-label="Öppna meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html#behandlingar">Behandlingar</a>
+    <a href="index.html#hudproblem">Hudproblem</a>
+    <a href="index.html#om-oss">Om oss</a>
+    <a href="index.html#kontakt">Kontakt</a>
+    <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary">Boka tid</a>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="boka-hero">
+    <div class="container">
+      <a href="laser-harborttagning.html" class="boka-back">← Läs mer om laser hårborttagning</a>
+      <h1>Boka Laser Hårborttagning</h1>
+      <p>Vem bokar?</p>
+    </div>
+  </section>
+
+  <!-- ========== GENDER CHOICE (Silhouettes) ========== -->
+  <section class="boka-gender" id="genderChoice">
+    <div class="container">
+      <div class="gender-grid">
+        <button class="gender-card" data-gender="kvinna">
+          <img src="images/womenfront.jpg" alt="Kvinna" class="gender-card__img">
+          <span class="gender-card__label">Kvinna</span>
+        </button>
+        <button class="gender-card" data-gender="man">
+          <img src="images/manfront.jpg" alt="Man" class="gender-card__img">
+          <span class="gender-card__label">Man</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== INTERACTIVE BODY MAP ========== -->
+  <section class="boka-bodymap" id="areaSection" style="display:none;">
+    <div class="container">
+      <p class="bodymap-instruction">Klicka på området du vill behandla</p>
+      <div class="bodymap-tooltip" id="tooltip"></div>
+
+      <!-- KVINNA BODY MAP -->
+      <div class="bodymap-wrap" data-for="kvinna">
+        <div class="bodymap-img-container">
+          <img src="images/womenfront.png" alt="Kvinna silhuett" class="bodymap-img">
+          <button class="bodymap-hotspot" data-area="huvud" style="top:8%; left:44%;" aria-label="Huvud & nacke"></button>
+          <button class="bodymap-hotspot" data-area="armhalor" style="top:23%; left:42%;" aria-label="Armhålor"></button>
+          <button class="bodymap-hotspot" data-area="armar" style="top:35%; left:30%;" aria-label="Armar"></button>
+          <button class="bodymap-hotspot" data-area="brasiliansk" style="top:52%; left:46%;" aria-label="Brasiliansk"></button>
+          <button class="bodymap-hotspot" data-area="ben" style="top:72%; left:43%;" aria-label="Ben"></button>
+        </div>
+        <button class="bodymap-helkropp-btn" data-area="helkropp">✦ Helkropp</button>
+      </div>
+
+      <!-- MAN BODY MAP -->
+      <div class="bodymap-wrap" data-for="man" style="display:none;">
+        <div class="bodymap-img-container">
+          <img src="images/manfront.png" alt="Man silhuett" class="bodymap-img">
+          <button class="bodymap-hotspot" data-area="huvud-m" style="top:6%; left:50%;" aria-label="Huvud & nacke"></button>
+          <button class="bodymap-hotspot" data-area="axlar-m" style="top:16%; left:50%;" aria-label="Axlar"></button>
+          <button class="bodymap-hotspot" data-area="armhalor-m" style="top:21%; left:34%;" aria-label="Armhålor"></button>
+          <button class="bodymap-hotspot" data-area="brost-m" style="top:27%; left:50%;" aria-label="Bröst"></button>
+          <button class="bodymap-hotspot" data-area="rygg-m" style="top:35%; left:50%;" aria-label="Rygg"></button>
+          <button class="bodymap-hotspot" data-area="hander-m" style="top:42%; left:22%;" aria-label="Händer"></button>
+        </div>
+        <button class="bodymap-helkropp-btn" data-area="overkropp-m">✦ Hela överkroppen</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== TREATMENT RESULTS ========== -->
+  <section class="boka-results" id="results" style="display:none;">
+    <div class="container">
+      <div class="boka-results__header">
+        <button class="boka-results__back" id="backToAreas">← Välj annat område</button>
+        <h2 class="boka-results__title" id="resultsTitle"></h2>
+        <p class="boka-results__note">Kampanjpris 50% – klicka för att boka direkt.</p>
+      </div>
+
+      <div class="boka-grid" id="resultsGrid">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Konsultation CTA -->
+  <section class="boka-cta">
+    <div class="container">
+      <p>Osäker på vad som passar dig?</p>
+      <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/konsultation-hud-laser-harborttagning-2170427" target="_blank" rel="noopener" class="btn btn-primary">Boka en gratis konsultation</a>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo footer-logo">
+            <span class="logo-main">YOUR SKIN</span>
+            <span class="logo-sub">CLINIC</span>
+          </div>
+          <p class="footer-tagline">Avancerade hudbehandlingar i Stockholm</p>
+        </div>
+        <div class="footer-col">
+          <h4>Behandlingar</h4>
+          <a href="ansiktsbehandlingar.html">Ansiktsbehandlingar</a>
+          <a href="kemisk-peeling.html">Kemisk peeling</a>
+          <a href="microneedling.html">Microneedling</a>
+          <a href="laser-harborttagning.html">Laser hårborttagning</a>
+        </div>
+        <div class="footer-col">
+          <h4>Information</h4>
+          <a href="index.html#om-oss">Om oss</a>
+          <a href="index.html#kontakt">Kontakt</a>
+          <a href="integritetspolicy.html">Integritetspolicy</a>
+          <a href="villkor.html">Villkor</a>
+        </div>
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <p>Brahegatan 23<br>114 37 Stockholm</p>
+          <a href="mailto:info@yourskinclinic.se">info@yourskinclinic.se</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Your Skin Clinic. Alla rättigheter förbehållna.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  (function() {
+    // ===== TREATMENT DATA =====
+    const treatments = {
+      kvinna: {
+        helkropp: [
+          { title: 'Helkropp', time: '120 min', price: '3 995 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/helkropp-permanent-harreduktion-2209929' }
+        ],
+        ben: [
+          { title: 'Hela ben + brasiliansk + armhålor + hela armar', time: '90 min', price: '2 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-armhalor-hela-armar-2209929' },
+          { title: 'Hela ben + brasiliansk + armhålor', time: '80 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-armhalor-2209929' },
+          { title: 'Hela ben + bikinilinje + armhålor + hela armar', time: '80 min', price: '2 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-hela-armar-2209929' },
+          { title: 'Hela ben + brasiliansk + rumpa', time: '75 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-rumpa-2209929' },
+          { title: 'Hela ben + bikinilinje + armhålor', time: '70 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-2209929' },
+          { title: 'Hela ben + brasiliansk', time: '60 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-2209929' },
+          { title: 'Hela ben + bikinilinje + rumpa', time: '60 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-rumpa-2209929' },
+          { title: 'Hela ben + bikinilinje', time: '50 min', price: '1 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-2209929' },
+          { title: 'Armhålor + underben + brasiliansk', time: '50 min', price: '1 695 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-brasiliansk-2209929' },
+          { title: 'Armhålor + underben + bikinilinje', time: '45 min', price: '1 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-bikinilinje-2209929' },
+          { title: 'Armhålor + underben', time: '50 min', price: '1 195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-2209929' },
+          { title: 'Underben', time: '30 min', price: '995 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/underben-2209929' },
+          { title: 'Lår', time: '30 min', price: '895 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/lar-2209929' }
+        ],
+        brasiliansk: [
+          { title: 'Hela ben + brasiliansk + armhålor + hela armar', time: '90 min', price: '2 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-armhalor-hela-armar-2209929' },
+          { title: 'Hela ben + brasiliansk + armhålor', time: '80 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-armhalor-2209929' },
+          { title: 'Hela ben + brasiliansk + rumpa', time: '75 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-rumpa-2209929' },
+          { title: 'Hela ben + brasiliansk', time: '60 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-2209929' },
+          { title: 'Armhålor + underben + brasiliansk', time: '50 min', price: '1 695 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-brasiliansk-2209929' },
+          { title: 'Armhålor + brasiliansk', time: '40 min', price: '1 195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-brasiliansk-2209929' },
+          { title: 'Brasiliansk (fram & bak)', time: '30 min', price: '995 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/brasiliansk-fram-bak-2209929' },
+          { title: 'Armhålor + bikinilinje', time: '30 min', price: '895 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-bikinilinje-2209929' },
+          { title: 'Bikinilinje', time: '20 min', price: '595 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/bikinilinje-2209929' }
+        ],
+        armhalor: [
+          { title: 'Hela ben + brasiliansk + armhålor + hela armar', time: '90 min', price: '2 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-armhalor-hela-armar-2209929' },
+          { title: 'Hela ben + brasiliansk + armhålor', time: '80 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-armhalor-2209929' },
+          { title: 'Hela ben + bikinilinje + armhålor + hela armar', time: '80 min', price: '2 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-hela-armar-2209929' },
+          { title: 'Hela ben + bikinilinje + armhålor', time: '70 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-2209929' },
+          { title: 'Armhålor + underben + brasiliansk', time: '50 min', price: '1 695 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-brasiliansk-2209929' },
+          { title: 'Armhålor + underben + bikinilinje', time: '45 min', price: '1 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-bikinilinje-2209929' },
+          { title: 'Armhålor + brasiliansk', time: '40 min', price: '1 195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-brasiliansk-2209929' },
+          { title: 'Armhålor + underben', time: '50 min', price: '1 195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-2209929' },
+          { title: 'Armhålor + bikinilinje', time: '30 min', price: '895 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-bikinilinje-2209929' },
+          { title: 'Armhålor', time: '15 min', price: '595 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-2209929' }
+        ],
+        armar: [
+          { title: 'Hela ben + brasiliansk + armhålor + hela armar', time: '90 min', price: '2 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-armhalor-hela-armar-2209929' },
+          { title: 'Hela ben + bikinilinje + armhålor + hela armar', time: '80 min', price: '2 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-hela-armar-2209929' },
+          { title: 'Hela armar', time: '40 min', price: '1 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-armar-2209929' }
+        ],
+        huvud: [
+          { title: 'Ansikte (helområde)', time: '25 min', price: '645 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/ansikte-helomrade-2209929' },
+          { title: 'Nacke & hals', time: '30 min', price: '595 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/nacke-hals-2209929' },
+          { title: 'Haka + överläpp', time: '20 min', price: '495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/haka-overlapp-2209929' },
+          { title: 'Haka', time: '20 min', price: '395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/haka-2209929' },
+          { title: 'Överläpp', time: '15 min', price: '295 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/overlapp-2209929' },
+          { title: 'Mellan ögonbrynen', time: '15 min', price: '195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/mellan-ogonbrynen-2209929' }
+        ]
+      },
+      man: {
+        'overkropp-m': [
+          { title: 'Överkropp (bröst, mage, rygg, axlar & nacke)', time: '90 min', price: '3 295 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/overkropp-man-2209929' }
+        ],
+        'rygg-m': [
+          { title: 'Rygg + axlar & nacke', time: '60 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/rygg-axlar-nacke-man-2209929' },
+          { title: 'Rygg', time: '30 min', price: '1 295 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/rygg-man-2209929' }
+        ],
+        'brost-m': [
+          { title: 'Bröst & mage', time: '60 min', price: '1 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/brost-mage-man-2209929' },
+          { title: 'Bröst', time: '30 min', price: '895 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/brost-man-2209929' },
+          { title: 'Mage', time: '40 min', price: '795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/mage-man-2209929' }
+        ],
+        'axlar-m': [
+          { title: 'Rygg + axlar & nacke', time: '60 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/rygg-axlar-nacke-man-2209929' },
+          { title: 'Axlar & skuldror', time: '30 min', price: '795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/axlar-skuldror-man-2209929' }
+        ],
+        'armhalor-m': [
+          { title: 'Armhålor', time: '20 min', price: '595 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-man-2209929' }
+        ],
+        'huvud-m': [
+          { title: 'Kinder', time: '20 min', price: '395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/kinder-man-2209929' },
+          { title: 'Nacke', time: '15 min', price: '495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/nacke-man-2209929' },
+          { title: 'Mellan ögonbrynen', time: '15 min', price: '195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/mellan-ogonbrynen-man-2209929' }
+        ],
+        'hander-m': [
+          { title: 'Händer', time: '30 min', price: '395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hander-man-2209929' }
+        ]
+      }
+    };
+
+    const areaLabels = {
+      helkropp: 'Helkropp',
+      ben: 'Ben',
+      brasiliansk: 'Brasiliansk & intim',
+      armhalor: 'Armhålor',
+      armar: 'Armar',
+      huvud: 'Huvud & nacke',
+      'overkropp-m': 'Överkropp',
+      'rygg-m': 'Rygg',
+      'brost-m': 'Bröst & mage',
+      'axlar-m': 'Axlar & skuldror',
+      'armhalor-m': 'Armhålor',
+      'huvud-m': 'Huvud & nacke',
+      'hander-m': 'Händer'
+    };
+
+    let currentGender = null;
+
+    // Gender silhouette choice
+    document.querySelectorAll('.gender-card').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentGender = btn.dataset.gender;
+
+        // Hide gender choice, show body map
+        document.getElementById('genderChoice').style.display = 'none';
+        const areaSection = document.getElementById('areaSection');
+        areaSection.style.display = '';
+
+        document.querySelectorAll('.bodymap-wrap').forEach(g => g.style.display = 'none');
+        document.querySelector('.bodymap-wrap[data-for="' + currentGender + '"]').style.display = '';
+
+        areaSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Tooltip on hover
+    const tooltip = document.getElementById('tooltip');
+    document.querySelectorAll('.bodymap-hotspot').forEach(zone => {
+      zone.addEventListener('mouseenter', (e) => {
+        const area = zone.dataset.area;
+        tooltip.textContent = areaLabels[area] || area;
+        tooltip.classList.add('visible');
+      });
+      zone.addEventListener('mousemove', (e) => {
+        tooltip.style.left = e.clientX + 'px';
+        tooltip.style.top = (e.clientY - 40) + 'px';
+      });
+      zone.addEventListener('mouseleave', () => {
+        tooltip.classList.remove('visible');
+      });
+    });
+
+    // Zone clicks
+    document.querySelectorAll('.bodymap-hotspot').forEach(zone => {
+      zone.addEventListener('click', () => {
+        const area = zone.dataset.area;
+        showResults(area);
+      });
+    });
+
+    // Helkropp buttons
+    document.querySelectorAll('.bodymap-helkropp-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        showResults(btn.dataset.area);
+      });
+    });
+
+    function showResults(area) {
+      const items = treatments[currentGender][area];
+      if (!items) return;
+
+      tooltip.classList.remove('visible');
+      document.getElementById('areaSection').style.display = 'none';
+      const results = document.getElementById('results');
+      results.style.display = '';
+
+      document.getElementById('resultsTitle').textContent = areaLabels[area];
+
+      const grid = document.getElementById('resultsGrid');
+      grid.innerHTML = items.map(function(t) {
+        return '<a href="' + t.url + '" target="_blank" rel="noopener" class="boka-card">' +
+          '<span class="boka-card__title">' + t.title + '</span>' +
+          '<span class="boka-card__meta">' + t.time + '</span>' +
+          '<span class="boka-card__price">' + t.price + '</span>' +
+        '</a>';
+      }).join('');
+
+      results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Back to body map
+    document.getElementById('backToAreas').addEventListener('click', function() {
+      document.getElementById('results').style.display = 'none';
+      document.getElementById('areaSection').style.display = '';
+      document.getElementById('areaSection').scrollIntoView({ behavior: 'smooth' });
+    });
+  })();
+  </script>
+</body>
+</html>

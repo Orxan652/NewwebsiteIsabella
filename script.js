@@ -124,4 +124,29 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  /* --- Carousel Arrow Navigation (infinite loop) --- */
+  document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+    const track = wrapper.querySelector('.carousel-track');
+    const leftBtn = wrapper.querySelector('.carousel-arrow--left');
+    const rightBtn = wrapper.querySelector('.carousel-arrow--right');
+    const scrollAmount = 240;
+
+    rightBtn.addEventListener('click', () => {
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if (track.scrollLeft >= maxScroll - 5) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      }
+    });
+
+    leftBtn.addEventListener('click', () => {
+      if (track.scrollLeft <= 5) {
+        track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      }
+    });
+  });
 });

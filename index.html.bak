@@ -25,32 +25,22 @@
       <nav class="nav-desktop" aria-label="Huvudnavigation">
         <ul>
           <li class="nav-dropdown">
-            <a href="#hudproblem">Hudproblem</a>
-            <div class="dropdown-menu">
-              <a href="leverflackar.html">Leverfläckar, cherry spots &amp; skintags</a>
-              <a href="#hudproblem">Acne &amp; ärr</a>
-              <a href="#hudproblem">Pigmentering</a>
-              <a href="#hudproblem">Rynkor &amp; fina linjer</a>
-              <a href="#hudproblem">Stora porer</a>
-              <a href="#hudproblem">Oönskad hårväxt</a>
-              <a href="#hudproblem">Torr &amp; känslig hud</a>
-            </div>
-          </li>
-          <li class="nav-dropdown">
             <a href="#behandlingar">Behandlingar</a>
             <div class="dropdown-menu">
               <a href="ansiktsbehandlingar.html">Avancerade ansiktsbehandlingar</a>
               <a href="kemisk-peeling.html">Kemisk peeling</a>
               <a href="microneedling.html">Microneedling</a>
-              <a href="laser-harborttagning.html">Laser hårborttagning</a>
+              <a href="#behandlingar">Laser hårborttagning</a>
               <a href="#behandlingar">PMU – Bryn &amp; Läppar</a>
               <a href="#behandlingar">PMU borttagning</a>
               <a href="#behandlingar">Borttagning av hudförändringar</a>
               <a href="#behandlingar">Fransar &amp; Bryn</a>
             </div>
           </li>
-          <li><a href="#omdomen">Omdömen</a></li>
+          <li><a href="#resultat">Resultat</a></li>
+          <li><a href="#priser">Priser</a></li>
           <li><a href="#om-oss">Om oss</a></li>
+          <li><a href="#omdomen">Omdömen</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
@@ -65,10 +55,11 @@
 
   <!-- Mobile nav -->
   <div class="mobile-nav" id="mobileNav">
-    <a href="#hudproblem">Hudproblem</a>
     <a href="#behandlingar">Behandlingar</a>
-    <a href="#omdomen">Omdömen</a>
+    <a href="#resultat">Resultat</a>
+    <a href="#priser">Priser</a>
     <a href="#om-oss">Om oss</a>
+    <a href="#omdomen">Omdömen</a>
     <a href="#kontakt">Kontakt</a>
     <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary">Boka tid</a>
   </div>
@@ -141,130 +132,116 @@
     </div>
   </section>
 
-  <!-- ========== PROBLEMS (HUDPROBLEM) ========== -->
-  <section class="problems-section" id="hudproblem">
-    <div class="container">
-      <div class="section-header fade-in">
-        <span class="section-label">Vad vill du behandla?</span>
-        <h2 class="section-title">Vi hjälper dig med</h2>
-      </div>
-
-      <div class="carousel-wrapper">
-        <button class="carousel-arrow carousel-arrow--left" aria-label="Föregående">&#10094;</button>
-        <div class="carousel-track">
-          <a href="#behandlingar" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/aknearr.jpg" alt="Acne & ärr">
-            </div>
-            <span class="card-square__label">Acne &amp; ärr</span>
-          </a>
-          <a href="#behandlingar" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/pigmenteringar.jpg" alt="Pigmentering">
-            </div>
-            <span class="card-square__label">Pigmentering</span>
-          </a>
-          <a href="#behandlingar" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/finalinjerochrynkor.jpg" alt="Rynkor & fina linjer">
-            </div>
-            <span class="card-square__label">Rynkor &amp; fina linjer</span>
-          </a>
-          <a href="#behandlingar" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/storaporer.jpg" alt="Stora porer">
-            </div>
-            <span class="card-square__label">Stora porer</span>
-          </a>
-          <a href="leverflackar.html" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/leverflack.jpg" alt="Leverfläckar, cherryspots & skintags">
-            </div>
-            <span class="card-square__label">Leverfläckar, cherryspots &amp; skintags</span>
-          </a>
-          <a href="laser-harborttagning.html" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/oonskadharvaxt.avif" alt="Oönskad hårväxt">
-            </div>
-            <span class="card-square__label">Oönskad hårväxt</span>
-          </a>
-          <a href="#behandlingar" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/torrhud.jpg" alt="Torr & känslig hud">
-            </div>
-            <span class="card-square__label">Torr &amp; känslig hud</span>
-          </a>
-        </div>
-        <button class="carousel-arrow carousel-arrow--right" aria-label="Nästa">&#10095;</button>
-      </div>
-    </div>
-  </section>
-
   <!-- ========== TREATMENTS ========== -->
   <section class="treatments" id="behandlingar">
     <div class="container">
       <div class="section-header fade-in">
         <span class="section-label">Våra behandlingar</span>
-        <h2 class="section-title">Behandlingar vi erbjuder</h2>
+        <h2 class="section-title">Avancerade behandlingar för huden du vill ha</h2>
       </div>
 
-      <div class="carousel-wrapper">
-        <button class="carousel-arrow carousel-arrow--left" aria-label="Föregående">&#10094;</button>
-        <div class="carousel-track">
-          <a href="microneedling.html" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/microneedling.jpg" alt="Microneedling">
-            </div>
-            <span class="card-square__label">Microneedling</span>
-          </a>
-          <a href="kemisk-peeling.html" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/kemisk-peeling.jpg" alt="Kemisk peeling">
-            </div>
-            <span class="card-square__label">Kemisk peeling</span>
-          </a>
-          <a href="ansiktsbehandlingar.html" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/ansiktsbehandling.jpg" alt="Avancerade ansiktsbehandlingar">
-            </div>
-            <span class="card-square__label">Avancerade ansiktsbehandlingar</span>
-          </a>
-          <a href="laser-harborttagning.html" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/laser.jpg" alt="Laser hårborttagning">
-            </div>
-            <span class="card-square__label">Laser hårborttagning</span>
-          </a>
-          <a href="#" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/pmu.jpg" alt="PMU – Bryn & Läppar">
-            </div>
-            <span class="card-square__label">PMU – Bryn &amp; Läppar</span>
-          </a>
-          <a href="#" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/pmu-borttagning.jpg" alt="PMU borttagning">
-            </div>
-            <span class="card-square__label">PMU borttagning</span>
-          </a>
-          <a href="#" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/hudforandringar.jpg" alt="Borttagning av hudförändringar">
-            </div>
-            <span class="card-square__label">Borttagning av hudförändringar</span>
-          </a>
-          <a href="#" class="card-square fade-in">
-            <div class="card-square__img">
-              <img src="images/fransar-bryn.jpg" alt="Fransar & Bryn">
-            </div>
-            <span class="card-square__label">Fransar &amp; Bryn</span>
-          </a>
-        </div>
-        <button class="carousel-arrow carousel-arrow--right" aria-label="Nästa">&#10095;</button>
+      <div class="treatments-grid stagger">
+
+        <article class="treatment-card fade-in">
+          <div class="treatment-card-img">
+            <img src="https://images.unsplash.com/photo-1612908689369-4a5e6f903b3d?w=600&q=75&auto=format"
+                 alt="Microneedling" width="600" height="412" loading="lazy">
+          </div>
+          <div class="treatment-card-body">
+            <h3>Microneedling</h3>
+            <p>Förbättrar hudens struktur, minskar porer och ger en jämnare, klarare hud.</p>
+            <a href="microneedling.html" class="card-link">Läs mer</a>
+          </div>
+        </article>
+
+        <article class="treatment-card fade-in">
+          <div class="treatment-card-img">
+            <img src="https://images.unsplash.com/photo-1598524588066-1e1e5e2c3867?w=600&q=75&auto=format"
+                 alt="Kemisk peeling" width="600" height="412" loading="lazy">
+          </div>
+          <div class="treatment-card-body">
+            <h3>Kemisk peeling</h3>
+            <p>Reducerar pigmentering, akne och ojämn hudton för ett klarare resultat.</p>
+            <a href="kemisk-peeling.html" class="card-link">Läs mer</a>
+          </div>
+        </article>
+
+        <article class="treatment-card fade-in">
+          <div class="treatment-card-img">
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=75&auto=format"
+                 alt="Avancerade ansiktsbehandlingar" width="600" height="412" loading="lazy">
+          </div>
+          <div class="treatment-card-body">
+            <h3>Avancerade ansiktsbehandlingar</h3>
+            <p>Kliniska behandlingar anpassade för din huds behov och mål.</p>
+            <a href="ansiktsbehandlingar.html" class="card-link">Läs mer</a>
+          </div>
+        </article>
+
+        <article class="treatment-card fade-in">
+          <div class="treatment-card-img">
+            <img src="https://images.unsplash.com/photo-1609587312208-cea54be969e7?w=600&q=75&auto=format"
+                 alt="Laser hårborttagning" width="600" height="412" loading="lazy">
+          </div>
+          <div class="treatment-card-body">
+            <h3>Laser hårborttagning</h3>
+            <p>Permanent hårreduktion för silkeslen hud – snabbt och säkert.</p>
+            <a href="#" class="card-link">Läs mer</a>
+          </div>
+        </article>
+
+        <article class="treatment-card fade-in">
+          <div class="treatment-card-img">
+            <img src="https://images.unsplash.com/photo-1588006173527-b1d8e5a2b69b?w=600&q=75&auto=format"
+                 alt="PMU – Bryn & Läppar" width="600" height="412" loading="lazy">
+          </div>
+          <div class="treatment-card-body">
+            <h3>PMU – Bryn &amp; Läppar</h3>
+            <p>Naturliga, hållbara resultat som framhäver din skönhet.</p>
+            <a href="#" class="card-link">Läs mer</a>
+          </div>
+        </article>
+
+        <article class="treatment-card fade-in">
+          <div class="treatment-card-img">
+            <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=600&q=75&auto=format"
+                 alt="PMU borttagning" width="600" height="412" loading="lazy">
+          </div>
+          <div class="treatment-card-body">
+            <h3>PMU borttagning</h3>
+            <p>Säker och effektiv borttagning av oönskad pigmentering.</p>
+            <a href="#" class="card-link">Läs mer</a>
+          </div>
+        </article>
+
+        <article class="treatment-card fade-in">
+          <div class="treatment-card-img">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=75&auto=format"
+                 alt="Borttagning av hudförändringar" width="600" height="412" loading="lazy">
+          </div>
+          <div class="treatment-card-body">
+            <h3>Borttagning av hudförändringar</h3>
+            <p>Snabb och skonsam behandling för en jämnare hud.</p>
+            <a href="#" class="card-link">Läs mer</a>
+          </div>
+        </article>
+
+        <article class="treatment-card fade-in">
+          <div class="treatment-card-img">
+            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=75&auto=format"
+                 alt="Fransar & Bryn" width="600" height="412" loading="lazy">
+          </div>
+          <div class="treatment-card-body">
+            <h3>Fransar &amp; Bryn</h3>
+            <p>Lash lift, brow lift, färgning och formning för ett lyftande resultat.</p>
+            <a href="#" class="card-link">Läs mer</a>
+          </div>
+        </article>
+
       </div>
 
       <div class="treatments-footer fade-in">
-        <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary">Boka tid</a>
+        <a href="#" class="btn btn-outline">Se alla behandlingar</a>
       </div>
     </div>
   </section>
@@ -280,83 +257,100 @@
     </div>
   </section>
 
+  <!-- ========== RESULTS ========== -->
+  <section class="results" id="resultat">
+    <div class="container">
+      <div class="results-layout fade-in">
+        <div class="results-left">
+          <span class="section-label">Resultat som håller – även efter läkning</span>
+          <h2 class="section-title results-title">Före &amp; efter</h2>
+          <a href="#" class="btn btn-outline btn-sm">Se fler resultat</a>
+        </div>
+        <div class="results-scroll">
+          <div class="result-card">
+            <div class="result-card-inner">
+              <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=400&q=75&auto=format"
+                   alt="Före och efter – Microneedling" width="400" height="500" loading="lazy">
+              <div class="result-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+              </div>
+            </div>
+            <div class="result-card-label">Microneedling</div>
+          </div>
+          <div class="result-card">
+            <div class="result-card-inner">
+              <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=75&auto=format"
+                   alt="Före och efter – Kemisk peeling" width="400" height="500" loading="lazy">
+              <div class="result-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+              </div>
+            </div>
+            <div class="result-card-label">Kemisk peeling</div>
+          </div>
+          <div class="result-card">
+            <div class="result-card-inner">
+              <img src="https://images.unsplash.com/photo-1614859324967-bfa825dc4406?w=400&q=75&auto=format"
+                   alt="Före och efter – PMU Bryn" width="400" height="500" loading="lazy">
+              <div class="result-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+              </div>
+            </div>
+            <div class="result-card-label">PMU Bryn</div>
+          </div>
+          <div class="result-card">
+            <div class="result-card-inner">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=75&auto=format"
+                   alt="Före och efter – Laser hårborttagning" width="400" height="500" loading="lazy">
+              <div class="result-card-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+              </div>
+            </div>
+            <div class="result-card-label">Laser hårborttagning</div>
+          </div>
+        </div>
+      </div>
+      <div class="results-cta fade-in">
+        <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary">Boka tid</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== REVIEWS ========== -->
   <section class="reviews" id="omdomen">
     <div class="container">
       <div class="section-header fade-in">
-        <span class="section-label">Vad våra kunder säger</span>
-        <h2 class="section-title">Omdömen</h2>
+        <span class="section-label">Omdömen från Bokadirekt</span>
       </div>
-
-      <div class="reviews-dual">
-        <!-- Google Reviews -->
-        <div class="reviews-panel fade-in">
-          <div class="reviews-panel-header">
-            <svg class="reviews-panel-logo" viewBox="0 0 24 24" width="24" height="24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            <div>
-              <strong>Google</strong>
-              <div class="reviews-panel-score">
-                <span class="reviews-stars">★★★★★</span>
-                <span>5.0 / 5</span>
-              </div>
-            </div>
-          </div>
-          <div class="reviews-panel-cards">
-            <div class="review-card">
-              <div class="review-card-stars">★★★★★</div>
-              <p>"Fantastisk klinik! Isabella är otroligt kunnig och professionell. Min hud har aldrig sett bättre ut."</p>
-              <span class="review-author">– Anna L.</span>
-              <span class="review-source">Google</span>
-            </div>
-            <div class="review-card">
-              <div class="review-card-stars">★★★★★</div>
-              <p>"Bästa hudvården jag provat. Resultat redan efter första behandlingen."</p>
-              <span class="review-author">– Sofia M.</span>
-              <span class="review-source">Google</span>
-            </div>
-            <div class="review-card">
-              <div class="review-card-stars">★★★★★</div>
-              <p>"Så nöjd med min microneedling! Proffsig och trygg känsla hela vägen."</p>
-              <span class="review-author">– Linda K.</span>
-              <span class="review-source">Google</span>
-            </div>
-          </div>
-          <a href="https://g.co/kgs/your-skin-clinic" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Se alla Google-omdömen</a>
+      <div class="reviews-grid">
+        <div class="reviews-summary fade-in">
+          <div class="reviews-score">4.9<span>/5</span></div>
+          <div class="reviews-stars">★★★★★</div>
+          <p class="reviews-verified">Verifierade omdömen via BokaDirekt</p>
+          <p>600+ omdömen</p>
+          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Läs alla omdömen</a>
         </div>
 
-        <!-- Bokadirekt Reviews -->
-        <div class="reviews-panel fade-in">
-          <div class="reviews-panel-header">
-            <svg class="reviews-panel-logo" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            <div>
-              <strong>Bokadirekt</strong>
-              <div class="reviews-panel-score">
-                <span class="reviews-stars">★★★★★</span>
-                <span>4.9 / 5 &middot; 600+ omdömen</span>
-              </div>
-            </div>
+        <div class="reviews-cards">
+          <div class="review-card fade-in">
+            <div class="review-card-stars">★★★★★</div>
+            <p>"Alltid bäst, med kunskap o expertis."</p>
+            <span class="review-author">– Frida W.</span>
           </div>
-          <div class="reviews-panel-cards">
-            <div class="review-card">
-              <div class="review-card-stars">★★★★★</div>
-              <p>"Alltid bäst, med kunskap o expertis."</p>
-              <span class="review-author">– Frida W.</span>
-              <span class="review-source">Bokadirekt</span>
-            </div>
-            <div class="review-card">
-              <div class="review-card-stars">★★★★★</div>
-              <p>"Alltid toppen service och kan verkligen sin grej🤩"</p>
-              <span class="review-author">– Katja Z.</span>
-              <span class="review-source">Bokadirekt</span>
-            </div>
-            <div class="review-card">
-              <div class="review-card-stars">★★★★★</div>
-              <p>"No one is more thorough, patient and better at their job than Isabella! The nicest and best professional, always a pleasure to get treatments from her."</p>
-              <span class="review-author">– Daphne J.</span>
-              <span class="review-source">Bokadirekt</span>
-            </div>
+          <div class="review-card fade-in">
+            <div class="review-card-stars">★★★★★</div>
+            <p>"Alltid toppen service och kan verkligen sin grej🤩"</p>
+            <span class="review-author">– Katja Z.</span>
           </div>
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Läs alla omdömen</a>
+          <div class="review-card fade-in">
+            <div class="review-card-stars">★★★★★</div>
+            <p>"No one is more thorough, patient and better at their job than Isabella! The nicest and best professional, always a pleasure to get treatments from her."</p>
+            <span class="review-author">– Daphne J.</span>
+          </div>
+          <div class="review-card fade-in">
+            <div class="review-card-stars">★★★★☆</div>
+            <p>"Proffsig och vänligt bemötande."</p>
+            <span class="review-author">– Malin B.</span>
+          </div>
         </div>
       </div>
     </div>
