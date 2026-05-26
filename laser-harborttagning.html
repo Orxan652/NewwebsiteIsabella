@@ -204,7 +204,32 @@
         <h2 class="section-title">Frågor &amp; svar om laser</h2>
       </div>
 
-      <div class="faq-list fade-in">
+      <!-- Category tabs -->
+      <div class="faq-tabs fade-in" role="tablist">
+        <button class="faq-tab faq-tab--active" data-category="behandling" role="tab" aria-selected="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6m11-11h-6M7 12H1m16.66-7.66l-4.24 4.24m-2.84 2.84l-4.24 4.24m12.32 0l-4.24-4.24m-2.84-2.84L5.34 5.34"/></svg>
+          <span>Behandling</span>
+        </button>
+        <button class="faq-tab" data-category="sakerhet" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Säkerhet</span>
+        </button>
+        <button class="faq-tab" data-category="eftervard" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 2C8 6 6 9 6 13a6 6 0 0 0 12 0c0-4-2-7-6-11z"/></svg>
+          <span>Eftervård</span>
+        </button>
+        <button class="faq-tab" data-category="resultat" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <span>Resultat</span>
+        </button>
+        <button class="faq-tab" data-category="rutiner" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          <span>Rutiner &amp; säkerhet</span>
+        </button>
+      </div>
+
+      <!-- BEHANDLING -->
+      <div class="faq-list faq-content faq-content--active fade-in" data-category="behandling">
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>Fungerar laser på mig?</span>
@@ -214,7 +239,6 @@
             <p>Laser fungerar på alla som har mörka hårstrån – oavsett hudton. Vi anpassar inställningarna efter din hud- och hårtyp. Däremot fungerar det <strong>inte</strong> på ljusa, röda, grå eller vita hårstrån eftersom de saknar tillräckligt melanin. Vi behandlar heller inte vellushår (fjun) då det kan trigga grövre hårväxt.</p>
           </div>
         </div>
-
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>Hur många behandlingar behöver jag?</span>
@@ -224,7 +248,6 @@
             <p>Det varierar beroende på hårtyp, område och hormonell status. Generellt behövs 6–8 behandlingar vid grov mörk hårväxt på ljus hud, och 10–12 behandlingar vid ljusare eller finare hår. Vi kan aldrig ge en exakt siffra eftersom hårväxt påverkas av faktorer utanför vår kontroll.</p>
           </div>
         </div>
-
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>Gör det ont?</span>
@@ -234,37 +257,10 @@
             <p>De flesta beskriver det som ett lätt "snäpp" eller värmekänsla. Aldix Smart Laser har inbyggd kylning som gör behandlingen bekväm. Känsliga områden som bikinilinje kan upplevas som mer intensiva, men de flesta tycker att det är fullt hanterbart.</p>
           </div>
         </div>
+      </div>
 
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            <span>Vad ska jag göra innan behandlingen?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Raka området 24 timmar innan eller samma dag. Lämna gärna en liten yta orakad vid första besöket så vi kan bedöma hårtypen. Området ska vara fritt från brun-utan-sol, retinol, syror och oljor i 5–7 dagar innan. Undvik solning 2 veckor före behandlingen.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            <span>Vad händer efter behandlingen?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Direkt efter kan du se rodnad, värmekänsla, lätt svullnad runt hårsäckarna och små prickar – detta är normalt och avtar inom 1–48 timmar. Undvik sol, träning, bastu och varma bad i 48 timmar. Använd SPF 50 dagligen och inga aktiva produkter (retinol, syror) i 5–7 dagar.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" aria-expanded="false">
-            <span>Blir resultatet permanent?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="faq-answer">
-            <p>Vi kallar det permanent hårreduktion – inte permanent hårborttagning. De flesta upplever 80–90% reduktion av hårväxten efter en fullständig behandlingsserie. Hormonella förändringar (graviditet, menopaus, mediciner) kan dock aktivera nya hårsäckar, och underhållsbehandlingar kan behövas 1–2 gånger per år.</p>
-          </div>
-        </div>
-
+      <!-- SAKERHET -->
+      <div class="faq-list faq-content fade-in" data-category="sakerhet">
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>Vilka kan inte göra laser?</span>
@@ -274,7 +270,6 @@
             <p>Behandlingen utförs inte vid graviditet eller amning, på skadad/irriterad/infekterad hud, på kraftigt solbränd hud, eller om du använder fotosensitiva mediciner. Ljusa, röda och grå hårstrån kan inte behandlas.</p>
           </div>
         </div>
-
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             <span>Finns det risker?</span>
@@ -282,6 +277,79 @@
           </button>
           <div class="faq-answer">
             <p>Ovanliga men möjliga biverkningar inkluderar postinflammatorisk hyperpigmentering (mörka fläckar), hypopigmentering (ljusa fläckar), eller ytlig irritation. Risken ökar avsevärt om eftervårdsråd inte följs eller om huden är solpåverkad. Vi informerar alltid noggrant före behandling.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EFTERVARD -->
+      <div class="faq-list faq-content fade-in" data-category="eftervard">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Vad ska jag göra innan behandlingen?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Raka området 24 timmar innan eller samma dag. Lämna gärna en liten yta orakad vid första besöket så vi kan bedöma hårtypen. Området ska vara fritt från brun-utan-sol, retinol, syror och oljor i 5–7 dagar innan. Undvik solning 2 veckor före behandlingen.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Vad händer efter behandlingen?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Direkt efter kan du se rodnad, värmekänsla, lätt svullnad runt hårsäckarna och små prickar – detta är normalt och avtar inom 1–48 timmar. Undvik sol, träning, bastu och varma bad i 48 timmar. Använd SPF 50 dagligen och inga aktiva produkter (retinol, syror) i 5–7 dagar.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESULTAT -->
+      <div class="faq-list faq-content fade-in" data-category="resultat">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Blir resultatet permanent?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Vi kallar det permanent hårreduktion – inte permanent hårborttagning. De flesta upplever 80–90% reduktion av hårväxten efter en fullständig behandlingsserie. Hormonella förändringar (graviditet, menopaus, mediciner) kan dock aktivera nya hårsäckar, och underhållsbehandlingar kan behövas 1–2 gånger per år.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Erbjuder ni kurpaket?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ja. Vi erbjuder <strong>20 % rabatt vid köp av kur</strong> — paket om 6 behandlingar. Detta är vårt rekommenderade upplägg eftersom hårväxt sker i cykler och flera sessioner krävs för att nå alla aktiva hårsäckar.</p>
+            <p><strong>Exempel på kurpriser (6 behandlingar):</strong></p>
+            <ul>
+              <li><strong>Brasiliansk (fram &amp; bak):</strong> ord. 5 970 kr → <strong>4 775 kr</strong> (sparar 1 195 kr)</li>
+              <li><strong>Hela ben + bikinilinje:</strong> ord. 10 770 kr → <strong>8 615 kr</strong> (sparar 2 155 kr)</li>
+              <li><strong>Hela ben + brasiliansk + armhålor:</strong> ord. 14 370 kr → <strong>11 495 kr</strong> (sparar 2 875 kr)</li>
+            </ul>
+            <p>Fråga vid bokning eller konsultation för exakt prisuppgift för ditt valda område.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RUTINER -->
+      <div class="faq-list faq-content fade-in" data-category="rutiner">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Är lasern godkänd och registrerad?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ja. Your Skin Clinic är registrerad hos <strong>Strålsäkerhetsmyndigheten</strong> i enlighet med svensk lagstiftning för estetiska laserbehandlingar (SSMFS 2020:9). Sedan 1 januari 2021 är estetiska laserbehandlingar i Sverige reglerade och får endast utföras av certifierad personal med godkänd utrustning.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Hur ofta servas och kontrolleras laserutrustningen?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Vår Aldix Smart Laser genomgår obligatorisk årlig service och säkerhetskontroll av <strong>Astomed</strong>, auktoriserad serviceleverantör för medicinsk laserutrustning. Senaste servicetillfället var <strong>8 maj 2026</strong>. Detta säkerställer att utrustningen levererar korrekt energi och uppfyller alla säkerhetskrav.</p>
           </div>
         </div>
       </div>
@@ -393,7 +461,37 @@
 
   <script src="script.js"></script>
   <script>
-    // FAQ accordion
+    // FAQ — tab switching
+    document.querySelectorAll('.faq-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const category = tab.dataset.category;
+
+        // Update tab active states
+        document.querySelectorAll('.faq-tab').forEach(t => {
+          t.classList.remove('faq-tab--active');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('faq-tab--active');
+        tab.setAttribute('aria-selected', 'true');
+
+        // Show only matching content
+        document.querySelectorAll('.faq-content').forEach(content => {
+          if (content.dataset.category === category) {
+            content.classList.add('faq-content--active');
+          } else {
+            content.classList.remove('faq-content--active');
+          }
+        });
+
+        // Close any open accordions when switching tabs
+        document.querySelectorAll('.faq-question').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          if (b.nextElementSibling) b.nextElementSibling.style.maxHeight = null;
+        });
+      });
+    });
+
+    // FAQ — accordion (one open at a time within the visible category)
     document.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', () => {
         const expanded = btn.getAttribute('aria-expanded') === 'true';

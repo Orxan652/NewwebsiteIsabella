@@ -8,7 +8,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>✦</text></svg>">
 </head>
@@ -29,9 +29,12 @@
             <div class="dropdown-menu">
               <a href="leverflackar.html">Leverfläckar, cherry spots &amp; skintags</a>
               <a href="#hudproblem">Acne &amp; ärr</a>
+              <a href="pormaskar.html">Pormaskar &amp; finnar</a>
               <a href="#hudproblem">Pigmentering</a>
               <a href="#hudproblem">Rynkor &amp; fina linjer</a>
               <a href="#hudproblem">Stora porer</a>
+              <a href="milier.html">Milier</a>
+              <a href="bristningar.html">Bristningar</a>
               <a href="#hudproblem">Oönskad hårväxt</a>
               <a href="#hudproblem">Torr &amp; känslig hud</a>
             </div>
@@ -50,7 +53,7 @@
             </div>
           </li>
           <li><a href="#omdomen">Omdömen</a></li>
-          <li><a href="#om-oss">Om oss</a></li>
+          <li><a href="#om-isabella">Om oss</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
@@ -68,7 +71,7 @@
     <a href="#hudproblem">Hudproblem</a>
     <a href="#behandlingar">Behandlingar</a>
     <a href="#omdomen">Omdömen</a>
-    <a href="#om-oss">Om oss</a>
+    <a href="#om-isabella">Om oss</a>
     <a href="#kontakt">Kontakt</a>
     <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary">Boka tid</a>
   </div>
@@ -158,9 +161,15 @@
             </div>
             <span class="card-square__label">Acne &amp; ärr</span>
           </a>
+          <a href="pormaskar.html" class="card-square fade-in">
+            <div class="card-square__img">
+              <img src="images/pormaskar.jpeg" alt="Pormaskar & finnar">
+            </div>
+            <span class="card-square__label">Pormaskar &amp; finnar</span>
+          </a>
           <a href="#behandlingar" class="card-square fade-in">
             <div class="card-square__img">
-              <img src="images/pigmenteringar.jpg" alt="Pigmentering">
+              <img src="images/sunspot.jpeg" alt="Pigmentering">
             </div>
             <span class="card-square__label">Pigmentering</span>
           </a>
@@ -176,11 +185,23 @@
             </div>
             <span class="card-square__label">Stora porer</span>
           </a>
+          <a href="milier.html" class="card-square fade-in">
+            <div class="card-square__img">
+              <img src="images/millia.jpeg" alt="Milier">
+            </div>
+            <span class="card-square__label">Milier</span>
+          </a>
           <a href="leverflackar.html" class="card-square fade-in">
             <div class="card-square__img">
               <img src="images/leverflack.jpg" alt="Leverfläckar, cherryspots & skintags">
             </div>
             <span class="card-square__label">Leverfläckar, cherryspots &amp; skintags</span>
+          </a>
+          <a href="bristningar.html" class="card-square fade-in">
+            <div class="card-square__img">
+              <img src="images/stretchmarks.jpeg" alt="Bristningar">
+            </div>
+            <span class="card-square__label">Bristningar</span>
           </a>
           <a href="laser-harborttagning.html" class="card-square fade-in">
             <div class="card-square__img">
@@ -362,20 +383,31 @@
     </div>
   </section>
 
-  <!-- ========== ABOUT ========== -->
-  <section class="about" id="om-oss">
+  <!-- ========== MEET ISABELLA ========== -->
+  <section class="meet-isabella" id="om-isabella">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-image fade-in">
-          <img src="images/clinic.jpg"
-               alt="Your Skin Clinic – Vår klinik i Gallerian, Stockholm" width="800" height="600" loading="lazy">
+      <div class="meet-grid">
+        <div class="meet-image fade-in">
+          <!-- ISABELLA PORTRAIT GOES HERE LATER -->
+          <!-- When ready, replace with: <img src="images/isabella-portrait.jpg" alt="Isabella, grundare av Your Skin Clinic"> -->
+          <div class="meet-image-placeholder">
+            <span>Porträtt av Isabella</span>
+          </div>
         </div>
-        <div class="about-content fade-in">
+        <div class="meet-content fade-in">
           <span class="section-label">Om oss</span>
-          <h2>Resultatdriven hudklinik i Stockholm</h2>
-          <p>Vi arbetar med avancerade behandlingar inom hud, laser och PMU där fokus alltid ligger på naturliga resultat och säker läkning.</p>
-          <p>Genom noggrann analys och anpassade behandlingar skapar vi resultat som håller över tid.</p>
-          <a href="#" class="btn btn-outline">Läs mer om oss</a>
+          <h2 class="meet-headline">Bakom <em>kliniken</em>.</h2>
+          <p class="meet-body">Jag är auktoriserad hud- och spaterapeut med gesällbrev och internationell CIDESCO-examen. På Your Skin Clinic arbetar jag evidensbaserat med fokus på kvalitet, säkerhet och långsiktiga resultat — varje behandling formas efter just din hud.</p>
+          <p class="meet-body">Min filosofi är enkel: säkra metoder, ärlig rådgivning och resultat som håller.</p>
+          <p class="meet-signature">— Isabella</p>
+          <div class="meet-credentials">
+            <span>CIDESCO</span>
+            <span>SHR</span>
+            <span>Phi Brows Artist</span>
+            <span>Plaxel+ Certified</span>
+            <span>Microneedling Certified</span>
+          </div>
+          <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/konsultation-hud-laser-harborttagning-2170427" target="_blank" rel="noopener" class="btn btn-primary">Boka konsultation med mig</a>
         </div>
       </div>
     </div>
@@ -423,7 +455,7 @@
         <div class="footer-col">
           <h4>Kontakt</h4>
           <ul>
-            <li><a href="tel:+46701234567">073-123 45 67</a></li>
+            <li><a href="tel:+46730412589">073-041 25 89</a></li>
             <li><a href="mailto:info@yourskinclinic.se">info@yourskinclinic.se</a></li>
           </ul>
         </div>
@@ -434,7 +466,7 @@
             <li><a href="#behandlingar">Behandlingar</a></li>
             <li><a href="#resultat">Resultat</a></li>
             <li><a href="#omdomen">Omdömen</a></li>
-            <li><a href="#om-oss">Om oss</a></li>
+            <li><a href="#om-isabella">Om oss</a></li>
             <li><a href="#kontakt">Kontakt</a></li>
           </ul>
         </div>
@@ -649,7 +681,7 @@
           </div>
           <div class="contact-item-text">
             <h4>Adress</h4>
-            <p>Your Skin Clinic<br>Salong ZAX City<br>Gallerian, Hamngatan 37<br>111 53 Stockholm</p>
+            <p>Your Skin Clinic<br>Salong ZAX City<br>Gallerian, Hamngatan 37<br>111 51 Stockholm</p>
           </div>
         </div>
         <div class="contact-item">
@@ -658,7 +690,7 @@
           </div>
           <div class="contact-item-text">
             <h4>Telefon</h4>
-            <p><a href="tel:+46730698591">073-069 85 91</a><br><small style="color:var(--text-muted)">Snabbast svar via SMS</small></p>
+            <p><a href="tel:+46730412589">073-041 25 89</a><br><small style="color:var(--text-muted)">Snabbast svar via SMS</small></p>
           </div>
         </div>
         <div class="contact-item">

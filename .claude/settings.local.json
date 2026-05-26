@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -n '186,192p' /Users/isabellakazimova/Desktop/newwebsite/boka-laser.html)",
+      "Bash(sed -n '273,290p' /Users/isabellakazimova/Desktop/newwebsite/boka-laser.html)"
+    ]
+  }
+}

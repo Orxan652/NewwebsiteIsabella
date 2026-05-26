@@ -839,72 +839,10 @@
   color: var(--text-body);
 }
 
-/* Booking cards grid */
+/* Booking results container (cards stack as horizontal rows) */
 .boka-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1rem;
   max-width: 1000px;
   margin: 0 auto;
-}
-
-.boka-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1.75rem 1.25rem;
-  background: var(--bg-primary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  text-decoration: none;
-  transition: all var(--transition);
-  min-height: 150px;
-  position: relative;
-  overflow: hidden;
-}
-
-.boka-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--gold);
-  transform: scaleX(0);
-  transition: transform var(--transition);
-}
-
-.boka-card:hover {
-  border-color: var(--gold);
-  box-shadow: 0 8px 24px rgba(198, 162, 126, .15);
-  transform: translateY(-4px);
-}
-
-.boka-card:hover::before {
-  transform: scaleX(1);
-}
-
-.boka-card__title {
-  font-size: .9375rem;
-  font-weight: 600;
-  color: var(--text-heading);
-  margin-bottom: .5rem;
-  line-height: 1.4;
-}
-
-.boka-card__meta {
-  font-size: .8125rem;
-  color: var(--text-body);
-  margin-bottom: .75rem;
-}
-
-.boka-card__price {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--gold);
 }
 
 /* CTA */
@@ -935,22 +873,223 @@
   .area-btn__label {
     font-size: .75rem;
   }
+}
 
-  .boka-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: .75rem;
+/* ============================================
+   FAQ — Icon category tabs
+   ============================================ */
+.faq-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
+  margin: 0 auto 2.5rem;
+  max-width: 900px;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-tab {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+  padding: 1rem 1.25rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  color: var(--text-body);
+  font-family: 'Inter', sans-serif;
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  text-transform: none;
+  transition: color var(--transition), background var(--transition);
+  min-width: 90px;
+}
+
+.faq-tab svg {
+  opacity: .55;
+  transition: opacity var(--transition), color var(--transition);
+}
+
+.faq-tab:hover {
+  color: var(--text-heading);
+  background: var(--bg-secondary);
+}
+
+.faq-tab:hover svg {
+  opacity: 1;
+}
+
+.faq-tab--active {
+  color: var(--gold);
+  background: transparent;
+}
+
+.faq-tab--active svg {
+  opacity: 1;
+  color: var(--gold);
+}
+
+.faq-tab--active span {
+  font-weight: 600;
+}
+
+/* Content sections — hide non-active categories */
+.faq-content {
+  display: none;
+}
+
+.faq-content--active {
+  display: block;
+}
+
+/* Mobile — make tabs smaller and 2 rows */
+@media (max-width: 640px) {
+  .faq-tabs {
+    gap: .25rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1.75rem;
   }
-
-  .boka-card {
-    padding: 1.25rem .75rem;
-    min-height: 130px;
+  .faq-tab {
+    padding: .75rem .5rem;
+    min-width: 0;
+    flex: 1 1 calc(33.333% - .25rem);
+    font-size: .65rem;
   }
-
-  .boka-card__title {
-    font-size: .8125rem;
+  .faq-tab svg {
+    width: 18px;
+    height: 18px;
   }
+}
 
-  .boka-card__price {
-    font-size: 1rem;
+/* ============================================
+   BOKA RESULTS — Horizontal row cards
+   (image left, info right, arrow far right)
+   ============================================ */
+.boka-card-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1rem 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--text-heading);
+  transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+  margin-bottom: .75rem;
+}
+
+.boka-card-row:hover {
+  border-color: var(--gold);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
+}
+
+.boka-card-row__img {
+  flex-shrink: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boka-card-row__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.boka-card-row__placeholder {
+  font-family: 'Inter', sans-serif;
+  font-size: .7rem;
+  font-weight: 500;
+  letter-spacing: .05em;
+  color: var(--text-body);
+  text-align: center;
+  padding: 0 .5rem;
+  opacity: .6;
+}
+
+.boka-card-row__info {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  min-width: 0;
+}
+
+.boka-card-row__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--text-heading);
+  margin: 0;
+}
+
+.boka-card-row__meta {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: .8125rem;
+  color: var(--text-body);
+}
+
+.boka-card-row__time {
+  font-weight: 400;
+}
+
+.boka-card-row__dot {
+  opacity: .5;
+}
+
+.boka-card-row__price {
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.boka-card-row__arrow {
+  flex-shrink: 0;
+  color: var(--text-body);
+  opacity: .4;
+  transition: opacity var(--transition), transform var(--transition), color var(--transition);
+}
+
+.boka-card-row:hover .boka-card-row__arrow {
+  opacity: 1;
+  color: var(--gold);
+  transform: translateX(4px);
+}
+
+/* Mobile — smaller image */
+@media (max-width: 640px) {
+  .boka-card-row {
+    gap: 1rem;
+    padding: .75rem .875rem;
+  }
+  .boka-card-row__img {
+    width: 80px;
+    height: 80px;
+  }
+  .boka-card-row__title {
+    font-size: .95rem;
+  }
+  .boka-card-row__meta {
+    font-size: .75rem;
+  }
+  .boka-card-row__arrow {
+    display: none;
+  }
+  .boka-card-row__placeholder {
+    font-size: .6rem;
   }
 }

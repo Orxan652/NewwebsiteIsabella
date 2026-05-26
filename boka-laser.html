@@ -129,7 +129,6 @@
       <div class="boka-results__header">
         <button class="boka-results__back" id="backToAreas">← Välj annat område</button>
         <h2 class="boka-results__title" id="resultsTitle"></h2>
-        <p class="boka-results__note">Kampanjpris 50% – klicka för att boka direkt.</p>
       </div>
 
       <div class="boka-grid" id="resultsGrid">
@@ -190,87 +189,87 @@
     const treatments = {
       kvinna: {
         helkropp: [
-          { title: 'Helkropp', time: '120 min', price: '3 995 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/helkropp-permanent-harreduktion-2209929' }
+          { title: 'Helkropp', time: '120 min', price: '3 995 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/helkropp-permanent-harreduktion-3204625' }
         ],
         ben: [
-          { title: 'Hela ben + brasiliansk + armhålor + hela armar', time: '90 min', price: '2 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-armhalor-hela-armar-2209929' },
-          { title: 'Hela ben + brasiliansk + armhålor', time: '80 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-armhalor-2209929' },
-          { title: 'Hela ben + bikinilinje + armhålor + hela armar', time: '80 min', price: '2 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-hela-armar-2209929' },
-          { title: 'Hela ben + brasiliansk + rumpa', time: '75 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-rumpa-2209929' },
-          { title: 'Hela ben + bikinilinje + armhålor', time: '70 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-2209929' },
-          { title: 'Hela ben + brasiliansk', time: '60 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-2209929' },
-          { title: 'Hela ben + bikinilinje + rumpa', time: '60 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-rumpa-2209929' },
-          { title: 'Hela ben + bikinilinje', time: '50 min', price: '1 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-2209929' },
-          { title: 'Armhålor + underben + brasiliansk', time: '50 min', price: '1 695 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-brasiliansk-2209929' },
-          { title: 'Armhålor + underben + bikinilinje', time: '45 min', price: '1 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-bikinilinje-2209929' },
-          { title: 'Armhålor + underben', time: '50 min', price: '1 195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-2209929' },
-          { title: 'Underben', time: '30 min', price: '995 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/underben-2209929' },
-          { title: 'Lår', time: '30 min', price: '895 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/lar-2209929' }
+          { title: 'Hela ben + brasiliansk (fram & bak) + armhålor + hela armar', time: '90 min', price: '2 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-fram-bak-armhalor-hela-armar-permanent-harreduktion-3453618' },
+          { title: 'Hela ben + brasiliansk (fram & bak) + armhålor', time: '80 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-fram-bak-armhalor-permanent-harreduktion-3284967' },
+          { title: 'Hela ben + bikinilinje + armhålor + hela armar', time: '80 min', price: '2 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-hela-armar-permanent-harreduktion-3453617' },
+          { title: 'Hela ben + brasiliansk (fram & bak) + rumpa', time: '75 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-fram-bak-rumpa-permanent-harreduktion-3453619' },
+          { title: 'Hela ben + bikinilinje + armhålor', time: '70 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-permanent-harreduktion-3241733' },
+          { title: 'Hela ben + brasiliansk (fram & bak)', time: '60 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-fram-bak-permanent-harreduktion-3386914' },
+          { title: 'Hela ben + bikinilinje + rumpa', time: '60 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-rumpa-permanent-harreduktion-3453622' },
+          { title: 'Hela ben + bikinilinje', time: '50 min', price: '1 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-permanent-harreduktion-3206328' },
+          { title: 'Armhålor + underben + brasiliansk (fram & bak)', time: '50 min', price: '1 695 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-brasiliansk-fram-bak-permanent-harreduktion-3251696' },
+          { title: 'Armhålor + underben + bikinilinje', time: '45 min', price: '1 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-bikinilinje-permanent-harreduktion-3251694' },
+          { title: 'Armhålor + underben', time: '50 min', price: '1 195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-permanent-harreduktion-3251693' },
+          { title: 'Underben', time: '30 min', price: '995 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/underben-permanent-harreduktion-3204437' },
+          { title: 'Lår', time: '30 min', price: '895 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/lar-permanent-harreduktion-3204438' }
         ],
         brasiliansk: [
-          { title: 'Hela ben + brasiliansk + armhålor + hela armar', time: '90 min', price: '2 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-armhalor-hela-armar-2209929' },
-          { title: 'Hela ben + brasiliansk + armhålor', time: '80 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-armhalor-2209929' },
-          { title: 'Hela ben + brasiliansk + rumpa', time: '75 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-rumpa-2209929' },
-          { title: 'Hela ben + brasiliansk', time: '60 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-2209929' },
-          { title: 'Armhålor + underben + brasiliansk', time: '50 min', price: '1 695 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-brasiliansk-2209929' },
-          { title: 'Armhålor + brasiliansk', time: '40 min', price: '1 195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-brasiliansk-2209929' },
-          { title: 'Brasiliansk (fram & bak)', time: '30 min', price: '995 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/brasiliansk-fram-bak-2209929' },
-          { title: 'Armhålor + bikinilinje', time: '30 min', price: '895 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-bikinilinje-2209929' },
-          { title: 'Bikinilinje', time: '20 min', price: '595 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/bikinilinje-2209929' }
+          { title: 'Hela ben + brasiliansk (fram & bak) + armhålor + hela armar', time: '90 min', price: '2 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-fram-bak-armhalor-hela-armar-permanent-harreduktion-3453618' },
+          { title: 'Hela ben + brasiliansk (fram & bak) + armhålor', time: '80 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-fram-bak-armhalor-permanent-harreduktion-3284967' },
+          { title: 'Hela ben + brasiliansk (fram & bak) + rumpa', time: '75 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-fram-bak-rumpa-permanent-harreduktion-3453619' },
+          { title: 'Hela ben + brasiliansk (fram & bak)', time: '60 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-fram-bak-permanent-harreduktion-3386914' },
+          { title: 'Armhålor + underben + brasiliansk (fram & bak)', time: '50 min', price: '1 695 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-brasiliansk-fram-bak-permanent-harreduktion-3251696' },
+          { title: 'Armhålor + brasiliansk (fram & bak)', time: '40 min', price: '1 195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-brasiliansk-fram-bak-permanent-harreduktion-3251691' },
+          { title: 'Brasiliansk (fram & bak)', time: '30 min', price: '995 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/brasiliansk-fram-bak-permanent-harreduktion-3228422' },
+          { title: 'Armhålor + bikinilinje', time: '30 min', price: '895 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-bikinilinje-permanent-harreduktion-3251690' },
+          { title: 'Bikinilinje', time: '20 min', price: '595 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/bikinilinje-permanent-harreduktion-3204439' }
         ],
         armhalor: [
-          { title: 'Hela ben + brasiliansk + armhålor + hela armar', time: '90 min', price: '2 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-armhalor-hela-armar-2209929' },
-          { title: 'Hela ben + brasiliansk + armhålor', time: '80 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-armhalor-2209929' },
-          { title: 'Hela ben + bikinilinje + armhålor + hela armar', time: '80 min', price: '2 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-hela-armar-2209929' },
-          { title: 'Hela ben + bikinilinje + armhålor', time: '70 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-2209929' },
-          { title: 'Armhålor + underben + brasiliansk', time: '50 min', price: '1 695 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-brasiliansk-2209929' },
-          { title: 'Armhålor + underben + bikinilinje', time: '45 min', price: '1 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-bikinilinje-2209929' },
-          { title: 'Armhålor + brasiliansk', time: '40 min', price: '1 195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-brasiliansk-2209929' },
-          { title: 'Armhålor + underben', time: '50 min', price: '1 195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-2209929' },
-          { title: 'Armhålor + bikinilinje', time: '30 min', price: '895 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-bikinilinje-2209929' },
-          { title: 'Armhålor', time: '15 min', price: '595 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-2209929' }
+          { title: 'Hela ben + brasiliansk (fram & bak) + armhålor + hela armar', time: '90 min', price: '2 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-fram-bak-armhalor-hela-armar-permanent-harreduktion-3453618' },
+          { title: 'Hela ben + brasiliansk (fram & bak) + armhålor', time: '80 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-fram-bak-armhalor-permanent-harreduktion-3284967' },
+          { title: 'Hela ben + bikinilinje + armhålor + hela armar', time: '80 min', price: '2 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-hela-armar-permanent-harreduktion-3453617' },
+          { title: 'Hela ben + bikinilinje + armhålor', time: '70 min', price: '2 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-permanent-harreduktion-3241733' },
+          { title: 'Armhålor + underben + brasiliansk (fram & bak)', time: '50 min', price: '1 695 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-brasiliansk-fram-bak-permanent-harreduktion-3251696' },
+          { title: 'Armhålor + underben + bikinilinje', time: '45 min', price: '1 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-bikinilinje-permanent-harreduktion-3251694' },
+          { title: 'Armhålor + brasiliansk (fram & bak)', time: '40 min', price: '1 195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-brasiliansk-fram-bak-permanent-harreduktion-3251691' },
+          { title: 'Armhålor + underben', time: '50 min', price: '1 195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-underben-permanent-harreduktion-3251693' },
+          { title: 'Armhålor + bikinilinje', time: '30 min', price: '895 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-bikinilinje-permanent-harreduktion-3251690' },
+          { title: 'Armhålor', time: '15 min', price: '595 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-permanent-harreduktion-3206319' }
         ],
         armar: [
-          { title: 'Hela ben + brasiliansk + armhålor + hela armar', time: '90 min', price: '2 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-armhalor-hela-armar-2209929' },
-          { title: 'Hela ben + bikinilinje + armhålor + hela armar', time: '80 min', price: '2 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-hela-armar-2209929' },
-          { title: 'Hela armar', time: '40 min', price: '1 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-armar-2209929' }
+          { title: 'Hela ben + brasiliansk (fram & bak) + armhålor + hela armar', time: '90 min', price: '2 795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-brasiliansk-fram-bak-armhalor-hela-armar-permanent-harreduktion-3453618' },
+          { title: 'Hela ben + bikinilinje + armhålor + hela armar', time: '80 min', price: '2 495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-ben-bikinilinje-armhalor-hela-armar-permanent-harreduktion-3453617' },
+          { title: 'Hela armar', time: '40 min', price: '1 095 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hela-armar-permanent-harreduktion-3206324' }
         ],
         huvud: [
-          { title: 'Ansikte (helområde)', time: '25 min', price: '645 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/ansikte-helomrade-2209929' },
-          { title: 'Nacke & hals', time: '30 min', price: '595 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/nacke-hals-2209929' },
-          { title: 'Haka + överläpp', time: '20 min', price: '495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/haka-overlapp-2209929' },
-          { title: 'Haka', time: '20 min', price: '395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/haka-2209929' },
-          { title: 'Överläpp', time: '15 min', price: '295 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/overlapp-2209929' },
-          { title: 'Mellan ögonbrynen', time: '15 min', price: '195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/mellan-ogonbrynen-2209929' }
+          { title: 'Ansikte (helområde)', time: '25 min', price: '645 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/ansikte-helomrade-permanent-harreduktion-3206322' },
+          { title: 'Nacke & hals', time: '30 min', price: '595 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/nacke-hals-permanent-harreduktion-3206323' },
+          { title: 'Haka + överläpp', time: '20 min', price: '495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/haka-overlapp-permanent-harreduktion-3238437' },
+          { title: 'Haka', time: '20 min', price: '395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/haka-permanent-harreduktion-3213909' },
+          { title: 'Överläpp', time: '15 min', price: '295 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/overlapp-permanent-harreduktion-3213905' },
+          { title: 'Mellan ögonbrynen', time: '15 min', price: '195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/mellan-ogonbrynen-permanent-harreduktion-3213869' }
         ]
       },
       man: {
         'overkropp-m': [
-          { title: 'Överkropp (bröst, mage, rygg, axlar & nacke)', time: '90 min', price: '3 295 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/overkropp-man-2209929' }
+          { title: 'Överkropp (bröst, mage, rygg, axlar & nacke)', time: '90 min', price: '3 295 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/overkropp-brost-mage-rygg-axlar-nacke-permanent-harreduktion-3241372' }
         ],
         'rygg-m': [
-          { title: 'Rygg + axlar & nacke', time: '60 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/rygg-axlar-nacke-man-2209929' },
-          { title: 'Rygg', time: '30 min', price: '1 295 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/rygg-man-2209929' }
+          { title: 'Rygg + axlar & nacke', time: '60 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/rygg-axlar-nacke-permanent-harreduktion-3241371' },
+          { title: 'Rygg', time: '30 min', price: '1 295 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/rygg-permanent-harreduktion-3206325' }
         ],
         'brost-m': [
-          { title: 'Bröst & mage', time: '60 min', price: '1 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/brost-mage-man-2209929' },
-          { title: 'Bröst', time: '30 min', price: '895 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/brost-man-2209929' },
-          { title: 'Mage', time: '40 min', price: '795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/mage-man-2209929' }
+          { title: 'Bröst & mage', time: '60 min', price: '1 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/brost-mage-permanent-harreduktion-3241367' },
+          { title: 'Bröst', time: '30 min', price: '895 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/brost-permanent-harreduktion-3206326' },
+          { title: 'Mage', time: '40 min', price: '795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/mage-permanent-harreduktion-3206327' }
         ],
         'axlar-m': [
-          { title: 'Rygg + axlar & nacke', time: '60 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/rygg-axlar-nacke-man-2209929' },
-          { title: 'Axlar & skuldror', time: '30 min', price: '795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/axlar-skuldror-man-2209929' }
+          { title: 'Rygg + axlar & nacke', time: '60 min', price: '2 395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/rygg-axlar-nacke-permanent-harreduktion-3241371' },
+          { title: 'Axlar & skuldror', time: '30 min', price: '795 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/axlar-skuldror-permanent-harreduktion-3213896' }
         ],
         'armhalor-m': [
-          { title: 'Armhålor', time: '20 min', price: '595 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-man-2209929' }
+          { title: 'Armhålor (man)', time: '20 min', price: '595 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/armhalor-man-permanent-harreduktion-3213903' }
         ],
         'huvud-m': [
-          { title: 'Kinder', time: '20 min', price: '395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/kinder-man-2209929' },
-          { title: 'Nacke', time: '15 min', price: '495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/nacke-man-2209929' },
-          { title: 'Mellan ögonbrynen', time: '15 min', price: '195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/mellan-ogonbrynen-man-2209929' }
+          { title: 'Kinder', time: '20 min', price: '395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/kinder-permanent-harreduktion-3213907' },
+          { title: 'Nacke', time: '15 min', price: '495 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/nacke-permanent-harreduktion-3213875' },
+          { title: 'Mellan ögonbrynen (Man)', time: '15 min', price: '195 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/mellan-ogonbrynen-permanent-harreduktion-man-3213874' }
         ],
         'hander-m': [
-          { title: 'Händer', time: '30 min', price: '395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hander-man-2209929' }
+          { title: 'Händer', time: '30 min', price: '395 kr', url: 'https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/hander-permanent-harreduktion-3213877' }
         ]
       }
     };
@@ -354,11 +353,23 @@
       document.getElementById('resultsTitle').textContent = areaLabels[area];
 
       const grid = document.getElementById('resultsGrid');
+
       grid.innerHTML = items.map(function(t) {
-        return '<a href="' + t.url + '" target="_blank" rel="noopener" class="boka-card">' +
-          '<span class="boka-card__title">' + t.title + '</span>' +
-          '<span class="boka-card__meta">' + t.time + '</span>' +
-          '<span class="boka-card__price">' + t.price + '</span>' +
+        return '<a href="' + t.url + '" target="_blank" rel="noopener" class="boka-card-row">' +
+          '<div class="boka-card-row__img">' +
+            '<span class="boka-card-row__placeholder">Bild kommer här</span>' +
+          '</div>' +
+          '<div class="boka-card-row__info">' +
+            '<h3 class="boka-card-row__title">' + t.title + '</h3>' +
+            '<div class="boka-card-row__meta">' +
+              '<span class="boka-card-row__time">' + t.time + '</span>' +
+              '<span class="boka-card-row__dot">·</span>' +
+              '<span class="boka-card-row__price">' + t.price + '</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="boka-card-row__arrow">' +
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>' +
+          '</div>' +
         '</a>';
       }).join('');
 
