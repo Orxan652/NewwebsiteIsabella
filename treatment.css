@@ -6,7 +6,8 @@
 /* ---- Treatment Hero ---- */
 .tx-hero {
   position: relative;
-  min-height: 440px;
+  min-height: 45vh;
+  max-height: 480px;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -64,8 +65,11 @@
   margin-bottom: 1.75rem;
 }
 
-@media (min-width: 768px) {
-  .tx-hero { min-height: 500px; }
+@media (max-width: 640px) {
+  .tx-hero {
+    min-height: 35vh;
+    max-height: 360px;
+  }
 }
 
 .tx-hero-btns {

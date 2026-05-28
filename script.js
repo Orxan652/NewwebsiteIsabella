@@ -84,14 +84,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* --- Info Modals --- */
   document.querySelectorAll('[data-modal]').forEach(trigger => {
+    const id = trigger.getAttribute('data-modal');
+    const overlay = document.getElementById(id);
+    // Skip triggers that target the treatment-modal system — it owns body.modal-open.
+    if (!overlay || !overlay.classList.contains('info-modal-overlay')) return;
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
-      const id = trigger.getAttribute('data-modal');
-      const overlay = document.getElementById(id);
-      if (overlay) {
-        overlay.classList.add('is-open');
-        document.body.style.overflow = 'hidden';
-      }
+      overlay.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
     });
   });
 
@@ -150,3 +150,101 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+// ============================================
+// Modal-system för behandlingsval
+// ============================================
+(function() {
+  let activeModal = null;
+
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    modal.hidden = false;
+    document.body.classList.add('modal-open');
+    activeModal = modal;
+    // Fokusera stängknappen för tillgänglighet
+    const closeBtn = modal.querySelector('.modal__close');
+    if (closeBtn) closeBtn.focus();
+  }
+
+  function closeModal() {
+    if (!activeModal) return;
+    activeModal.hidden = true;
+    document.body.classList.remove('modal-open');
+    activeModal = null;
+  }
+
+  // Öppna modal vid klick på kort med data-modal
+  document.addEventListener('click', function(e) {
+    const trigger = e.target.closest('[data-modal]');
+    if (trigger) {
+      e.preventDefault();
+      openModal(trigger.dataset.modal);
+      return;
+    }
+    // Stäng modal vid klick på backdrop eller close-knapp
+    if (e.target.closest('[data-modal-close]')) {
+      closeModal();
+    }
+  });
+
+  // Stäng modal med Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && activeModal) {
+      closeModal();
+    }
+  });
+})();
+
+// ============================================
+// FAQ — tab switching + accordion (used on laser-harborttagning + pormaskar)
+// ============================================
+(function() {
+  // FAQ — tab switching
+  document.querySelectorAll('.faq-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const category = tab.dataset.category;
+
+      // Update tab active states
+      document.querySelectorAll('.faq-tab').forEach(t => {
+        t.classList.remove('faq-tab--active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('faq-tab--active');
+      tab.setAttribute('aria-selected', 'true');
+
+      // Show only matching content
+      document.querySelectorAll('.faq-content').forEach(content => {
+        if (content.dataset.category === category) {
+          content.classList.add('faq-content--active');
+        } else {
+          content.classList.remove('faq-content--active');
+        }
+      });
+
+      // Close any open accordions when switching tabs
+      document.querySelectorAll('.faq-question').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        if (b.nextElementSibling) b.nextElementSibling.style.maxHeight = null;
+      });
+    });
+  });
+
+  // FAQ — accordion (one open at a time within the visible category)
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      // Close all
+      document.querySelectorAll('.faq-question').forEach(b => {
+        b.setAttribute('aria-expanded', 'false');
+        b.nextElementSibling.style.maxHeight = null;
+      });
+      // Open clicked if it was closed
+      if (!expanded) {
+        btn.setAttribute('aria-expanded', 'true');
+        btn.nextElementSibling.style.maxHeight = btn.nextElementSibling.scrollHeight + 'px';
+      }
+    });
+  });
+})();

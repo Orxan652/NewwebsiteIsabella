@@ -2,7 +2,15 @@
   "permissions": {
     "allow": [
       "Bash(sed -n '186,192p' /Users/isabellakazimova/Desktop/newwebsite/boka-laser.html)",
-      "Bash(sed -n '273,290p' /Users/isabellakazimova/Desktop/newwebsite/boka-laser.html)"
+      "Bash(sed -n '273,290p' /Users/isabellakazimova/Desktop/newwebsite/boka-laser.html)",
+      "Bash(grep -c '^        </a>$' /Users/isabellakazimova/Desktop/newwebsite/pormaskar.html)",
+      "Bash(awk -F: '$1>=69 && $1<=120')",
+      "Bash(python3 /tmp/replace_headers.py)",
+      "Read(//Library/Frameworks/Python.framework/**)",
+      "Read(//opt/homebrew/**)",
+      "Read(//usr/local/bin/**)",
+      "Bash(perl --version)",
+      "Bash(node /tmp/replace_headers.js)"
     ]
   }
 }
