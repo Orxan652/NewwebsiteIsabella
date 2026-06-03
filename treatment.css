@@ -118,6 +118,65 @@
   box-shadow: 0 0 0 1px var(--gold), var(--shadow-card);
 }
 
+/* Stacked single-column grid (override 2-col on opted-in sektioner) */
+.tx-cards-grid--stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Horizontal layout: bild vänster, innehåll höger (samma idé som behandling-card-vertical) */
+.tx-card--horizontal {
+  flex-direction: row;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+.tx-card__image {
+  flex-shrink: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: var(--bg-secondary);
+  align-self: flex-start;
+}
+.tx-card__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Exklusiv premium-styling: varm bakgrund + lite mer skugga */
+.tx-card--exclusive {
+  background: var(--bg-secondary);
+  box-shadow: 0 0 0 1px var(--gold), 0 12px 32px rgba(31, 45, 42, 0.10);
+}
+.tx-card--exclusive:hover {
+  box-shadow: 0 0 0 1px var(--gold), 0 16px 40px rgba(31, 45, 42, 0.15);
+}
+.tx-card-exclusive-tag {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--gold);
+  margin-top: .35rem;
+}
+
+@media (max-width: 640px) {
+  .tx-card--horizontal {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .tx-card__image {
+    width: 100%;
+    height: 220px;
+    align-self: stretch;
+  }
+}
+
 .tx-card-badge {
   position: absolute;
   top: -1px;
@@ -602,3 +661,11 @@
 .tx-bottom-cta-content .tx-hero-btns {
   justify-content: center;
 }
+
+/* Kompakt variant av .tx-accordion – tunnare rader för accordions inuti behandlingskort.
+   Flyttad hit från scoped <style> i kemisk-peeling.html så att flera sidor kan dela den. */
+.tx-accordion--compact { border-top: none; margin-top: 1rem; }
+.tx-accordion--compact .tx-accordion-trigger { padding: .55rem 0; font-size: .8rem; }
+.tx-accordion--compact .tx-accordion-panel ul { padding: .5rem 0 .35rem; }
+.tx-accordion--compact .tx-accordion-panel li { font-size: .8rem; line-height: 1.55; }
+.tx-accordion--compact .tx-accordion-panel > p { font-size: .8rem; line-height: 1.6; }

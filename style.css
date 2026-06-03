@@ -271,16 +271,21 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav {
   position: fixed;
   inset: 0;
-  background: var(--white);
+  background: var(--bg-primary);
   z-index: 999;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
+  justify-content: flex-start;
+  gap: 1.25rem;
+  padding: 5rem 1.5rem 3rem;
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   opacity: 0;
   visibility: hidden;
-  transition: all var(--transition);
+  transition: opacity var(--transition), visibility var(--transition);
 }
 .mobile-nav.open { opacity: 1; visibility: visible; }
 
@@ -290,7 +295,96 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-heading);
   letter-spacing: .04em;
 }
-.mobile-nav .btn { margin-top: 1rem; }
+.mobile-nav .btn { margin-top: 1.5rem; }
+
+/* Boka tid-knapp inuti mobilmenyn – behåll vit text mot accent-bakgrund */
+.mobile-nav a.btn-primary { color: var(--white); }
+
+/* Topnivå-rader (Hudproblem / Behandlingar / Omdömen / Om oss / Kontakt) — display-serif i forest green */
+.mobile-nav-toggle,
+.mobile-nav > a:not(.btn) {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-heading);
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+/* Mobile-nav ackordeon (Hudproblem / Behandlingar) */
+.mobile-nav-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+/* Avdelare även mellan ackordeon-grupper och top-level-länkarna */
+.mobile-nav > a:not(.btn) {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+.mobile-nav-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  transition: color .2s ease;
+}
+.mobile-nav-toggle[aria-expanded="true"] {
+  color: var(--gold);
+}
+.mobile-nav-chev {
+  font-size: .7em;
+  color: var(--gold);
+  transition: transform .2s ease;
+  display: inline-block;
+}
+.mobile-nav-toggle[aria-expanded="true"] .mobile-nav-chev {
+  transform: rotate(180deg);
+}
+.mobile-nav-sub {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .65rem;
+  padding-top: .5rem;
+}
+/* Respektera HTML [hidden]-attributet (vår klass-regel skulle annars vinna över UA-default) */
+.mobile-nav-sub[hidden] {
+  display: none;
+}
+.mobile-nav-sub a {
+  font-family: 'Inter', sans-serif;
+  font-size: .95rem;
+  font-weight: 400;
+  color: var(--text-body);
+  letter-spacing: .01em;
+}
+
+/* Kontaktblock längst ned i mobilmenyn */
+.mobile-nav-contact {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+.mobile-nav-contact a {
+  font-family: 'Inter', sans-serif;
+  font-size: .85rem;
+  font-weight: 400;
+  color: var(--text-body);
+  letter-spacing: .02em;
+}
 
 @media (min-width: 768px) {
   .hamburger { display: none; }
@@ -1134,6 +1228,10 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
+}
+
+.reviews-panel-toggle {
+  margin-right: .5rem;
 }
 
 /* ============================================

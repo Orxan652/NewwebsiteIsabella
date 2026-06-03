@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Kemisk peeling &amp; biostimulerande behandlingar hos Your Skin Clinic i Stockholm. PRX-T33, BioRePeel, AHA/BHA/PHA, dermaplaning och mer. Boka tid idag.">
+  <meta name="description" content="Kemisk peeling och biostimulerande behandlingar hos Your Skin Clinic i Stockholm. PRX-T33, BioRePeel och medicinska peelingar. Boka tid idag.">
   <title>Kemisk peeling &amp; biostimulerande behandlingar – Your Skin Clinic Stockholm</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,22 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="treatment.css">
+  <link rel="stylesheet" href="problem.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>✦</text></svg>">
-
-  <style>
-    .tx-category-title {
-      font-family: var(--font-heading);
-      font-size: clamp(1.25rem, 2.5vw, 1.6rem);
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: 1.25rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border);
-    }
-    .tx-category-title:not(:first-child) {
-      margin-top: 3rem;
-    }
-  </style>
 </head>
 <body>
 
@@ -43,15 +29,15 @@
             <a href="index.html#hudproblem">Hudproblem</a>
             <div class="dropdown-menu">
               <a href="leverflackar.html">Leverfläckar, cherry spots &amp; skintags</a>
-              <a href="akne.html">Acne &amp; ärr</a>
+              <a href="akne.html">Akne &amp; ärr</a>
               <a href="pormaskar.html">Pormaskar &amp; finnar</a>
-              <a href="index.html#hudproblem">Pigmentering</a>
-              <a href="index.html#hudproblem">Rynkor &amp; fina linjer</a>
-              <a href="index.html#hudproblem">Stora porer</a>
+              <a href="pigmentering.html">Pigmentering</a>
+              <a href="rynkor.html">Rynkor &amp; fina linjer</a>
+              <a href="stora-porer.html">Stora porer</a>
               <a href="milier.html">Milier</a>
               <a href="bristningar.html">Bristningar</a>
               <a href="index.html#hudproblem">Oönskad hårväxt</a>
-              <a href="index.html#hudproblem">Torr &amp; känslig hud</a>
+              <a href="torr-kanslig-hud.html">Torr &amp; känslig hud</a>
             </div>
           </li>
           <li class="nav-dropdown">
@@ -61,10 +47,11 @@
               <a href="kemisk-peeling.html">Kemisk peeling</a>
               <a href="microneedling.html">Microneedling</a>
               <a href="laser-harborttagning.html">Laser hårborttagning</a>
+              <a href="kroppsbehandlingar.html">Kroppsbehandlingar</a>
               <a href="index.html#behandlingar">PMU – Bryn &amp; Läppar</a>
               <a href="index.html#behandlingar">PMU borttagning</a>
               <a href="index.html#behandlingar">Borttagning av hudförändringar</a>
-              <a href="index.html#behandlingar">Fransar &amp; Bryn</a>
+              <a href="frans-bryn.html">Fransar &amp; Bryn</a>
             </div>
           </li>
           <li><a href="index.html#omdomen">Omdömen</a></li>
@@ -83,12 +70,50 @@
 
   <!-- Mobile nav -->
   <div class="mobile-nav" id="mobileNav">
-    <a href="index.html#hudproblem">Hudproblem</a>
-    <a href="index.html#behandlingar">Behandlingar</a>
+    <div class="mobile-nav-group">
+      <button type="button" class="mobile-nav-toggle" aria-expanded="false" aria-controls="m-hudproblem">
+        Hudproblem
+        <span class="mobile-nav-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="mobile-nav-sub" id="m-hudproblem" hidden>
+        <a href="leverflackar.html">Leverfläckar, cherry spots &amp; skintags</a>
+        <a href="akne.html">Akne &amp; ärr</a>
+        <a href="pormaskar.html">Pormaskar &amp; finnar</a>
+        <a href="pigmentering.html">Pigmentering</a>
+        <a href="rynkor.html">Rynkor &amp; fina linjer</a>
+        <a href="stora-porer.html">Stora porer</a>
+        <a href="milier.html">Milier</a>
+        <a href="bristningar.html">Bristningar</a>
+        <a href="index.html#hudproblem">Oönskad hårväxt</a>
+        <a href="torr-kanslig-hud.html">Torr &amp; känslig hud</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button type="button" class="mobile-nav-toggle" aria-expanded="false" aria-controls="m-behandlingar">
+        Behandlingar
+        <span class="mobile-nav-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="mobile-nav-sub" id="m-behandlingar" hidden>
+        <a href="ansiktsbehandlingar.html">Avancerade ansiktsbehandlingar</a>
+        <a href="kemisk-peeling.html">Kemisk peeling</a>
+        <a href="microneedling.html">Microneedling</a>
+        <a href="laser-harborttagning.html">Laser hårborttagning</a>
+        <a href="kroppsbehandlingar.html">Kroppsbehandlingar</a>
+        <a href="index.html#behandlingar">PMU – Bryn &amp; Läppar</a>
+        <a href="index.html#behandlingar">PMU borttagning</a>
+        <a href="index.html#behandlingar">Borttagning av hudförändringar</a>
+        <a href="frans-bryn.html">Fransar &amp; Bryn</a>
+      </div>
+    </div>
     <a href="index.html#omdomen">Omdömen</a>
     <a href="index.html#om-isabella">Om oss</a>
     <a href="index.html#kontakt">Kontakt</a>
     <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary">Boka tid</a>
+    <div class="mobile-nav-contact">
+      <a href="tel:+46730412589">073-041 25 89</a>
+      <a href="https://www.instagram.com/your.skin.clinic" target="_blank" rel="noopener">@your.skin.clinic</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Your+Skin+Clinic+Hamngatan+37+Gallerian+Stockholm" target="_blank" rel="noopener">Hamngatan 37, Gallerian, Stockholm</a>
+    </div>
   </div>
 
   <!-- ========== HERO ========== -->
@@ -109,7 +134,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- ========== TRUST BAR ========== -->
   <section class="trust-bar trust-bar--compact">
@@ -162,904 +186,663 @@
     </div>
   </section>
 
-  <!-- ========== SECTION 1: PRX-T33 ========== -->
+  <!-- ========== INTRO ========== -->
+  <section class="problem-intro">
+    <div class="container">
+      <div class="problem-intro__content fade-in">
+        <h2>Om kemisk peeling &amp; biostimulering</h2>
+        <!-- UTKAST – Isabella putsar -->
+        <p>Kemiska peelingar och biostimulerande behandlingar förbättrar hudens struktur, ton, lyster och fasthet genom kontrollerad cellförnyelse och kollagenstimulering. Styrkan varierar från milda AHA/BHA/PHA-syror till mer aktiva TCA-peelingar och nålfri biostimulering med PRX-T33 – behandlingen anpassas efter din hud och dina mål. Osäker på vad som passar dig? Boka en konsultation så guidar vi dig rätt.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BEHANDLINGAR ========== -->
   <section class="tx-cards-section">
     <div class="container">
-      <h2 class="tx-category-title fade-in">PRX-T33 – Biostimulerande behandling <span style="font-weight:400; font-size:0.85em; color:var(--text-muted);">(utan nålar, utan fjällning)</span></h2>
-
-      <div class="tx-cards-grid">
-
-        <!-- PRX-T33 – Ansikte -->
-        <article class="tx-card tx-card--featured fade-in">
-          <div class="tx-card-badge">Populärast</div>
-          <div class="tx-card-header">
-            <h3>PRX-T33 – Ansikte</h3>
-            <span class="tx-card-sub">Biostimulerande &amp; glow</span>
-          </div>
-          <p class="tx-card-desc">Stimulerar kollagen på djupet och förbättrar fasthet och lyster – utan downtime.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Vill förbättra hudens spänst och elasticitet utan nålar</li>
-                <li>Har tidiga tecken på hudåldrande, ojämn struktur eller pigmentering</li>
-                <li>Söker en effektiv behandling utan downtime</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>PRX-T33 är en biostimulerande behandling där en modifierad TCA-syra arbetar djupt i huden utan att skada hudytan. Detta aktiverar fibroblaster och stimulerar kollagenproduktionen i dermis samtidigt som huden förblir intakt.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Fastare hud med ökad spänst redan efter första behandlingen</li>
-                <li>Jämnare hudton och reducerad pigmentering</li>
-                <li>Synlig glow och förbättrad hudkvalitet</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Graviditet eller amning</li>
-                <li>Aktiv hudinfektion eller irriterad hud</li>
-                <li>Pågående retinoidbehandling</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- PRX-T33 – Hals -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>PRX-T33 – Hals</h3>
-            <span class="tx-card-sub">Biostimulerande</span>
-          </div>
-          <p class="tx-card-desc">Förbättrar hudens fasthet och lyster i halsområdet – utan nålar eller downtime.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Upplever förlust av spänst och elasticitet på halsen</li>
-                <li>Vill förbättra hudens struktur och fasthet utan nålar</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>PRX-T33 är en biostimulerande behandling där en modifierad TCA-syra arbetar djupt i huden utan att skada hudytan. Detta aktiverar fibroblaster och stimulerar kollagenproduktionen i dermis samtidigt som huden förblir intakt.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Fastare och stramare hud på halsen</li>
-                <li>Jämnare hudton och förbättrad lyster</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Graviditet eller amning</li>
-                <li>Aktiv hudinfektion eller irriterad hud</li>
-                <li>Pågående retinoidbehandling</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- PRX-T33 – Ansikte & Hals -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>PRX-T33 – Ansikte &amp; Hals</h3>
-            <span class="tx-card-sub">Biostimulerande kombi</span>
-          </div>
-          <p class="tx-card-desc">Behandlar ansikte och hals i samma session för ett enhetligt resultat.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Vill behandla både ansikte och hals för ett enhetligt resultat</li>
-                <li>Söker kollagenstimulering utan downtime eller fjällning</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>PRX-T33 är en biostimulerande behandling där en modifierad TCA-syra arbetar djupt i huden utan att skada hudytan. Detta aktiverar fibroblaster och stimulerar kollagenproduktionen i dermis samtidigt som huden förblir intakt.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Fastare och fräschare hud på både ansikte och hals</li>
-                <li>Jämnare hudton och ökad lyster i hela området</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Graviditet eller amning</li>
-                <li>Aktiv hudinfektion eller irriterad hud</li>
-                <li>Pågående retinoidbehandling</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- PRX-T33 – Hals & Dekolletage -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>PRX-T33 – Hals &amp; Dekolletage</h3>
-            <span class="tx-card-sub">Biostimulerande kombi</span>
-          </div>
-          <p class="tx-card-desc">Biostimulerande behandling som förbättrar fasthet och lyster på hals och décolleté.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Har solskadad eller slapp hud på hals och dekolletage</li>
-                <li>Vill stimulera kollagen och förbättra hudens fasthet utan nålar</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>PRX-T33 är en biostimulerande behandling där en modifierad TCA-syra arbetar djupt i huden utan att skada hudytan. Detta aktiverar fibroblaster och stimulerar kollagenproduktionen i dermis samtidigt som huden förblir intakt.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Fastare hud med ökad elasticitet på hals och bröstkorg</li>
-                <li>Jämnare hudton och reducerade solskador</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Graviditet eller amning</li>
-                <li>Aktiv hudinfektion eller irriterad hud</li>
-                <li>Pågående retinoidbehandling</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- PRX-T33 – Ansikte, Hals & Dekolletage -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>PRX-T33 – Ansikte, Hals &amp; Dekolletage</h3>
-            <span class="tx-card-sub">Biostimulerande helbehandling</span>
-          </div>
-          <p class="tx-card-desc">Komplett biostimulerande behandling för ansikte, hals och dekolletage i en session.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Vill behandla ansikte, hals och dekolletage för ett komplett anti-age-resultat</li>
-                <li>Söker biostimulerande effekt utan fjällning eller downtime</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>PRX-T33 är en biostimulerande behandling där en modifierad TCA-syra arbetar djupt i huden utan att skada hudytan. Detta aktiverar fibroblaster och stimulerar kollagenproduktionen i dermis samtidigt som huden förblir intakt.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Enhetligt fastare och fräschare hud i alla tre zoner</li>
-                <li>Stimulerad kollagenproduktion för långvarigt resultat</li>
-                <li>Ökad lyster och jämnare hudton</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Graviditet eller amning</li>
-                <li>Aktiv hudinfektion eller irriterad hud</li>
-                <li>Pågående retinoidbehandling</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- PRX-T33 – Handryggar -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>PRX-T33 – Handryggar</h3>
-            <span class="tx-card-sub">Biostimulerande</span>
-          </div>
-          <p class="tx-card-desc">Förbättrar hudens kvalitet och lyster på händerna – ett ofta bortglömt område.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Har tunn, åldrad hud på händerna med synliga ådror</li>
-                <li>Vill förbättra hudens kvalitet och fasthet utan downtime</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>PRX-T33 är en biostimulerande behandling där en modifierad TCA-syra arbetar djupt i huden utan att skada hudytan. Detta aktiverar fibroblaster och stimulerar kollagenproduktionen i dermis samtidigt som huden förblir intakt.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Mjukare och fastare hud på händerna</li>
-                <li>Jämnare hudton och förbättrad hudkvalitet</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Graviditet eller amning</li>
-                <li>Aktiv hudinfektion eller irriterad hud</li>
-                <li>Pågående retinoidbehandling</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
+      <div class="section-header fade-in">
+        <span class="section-label">Behandlingar</span>
+        <h2 class="section-title">Våra peeling- &amp; biostimulerande behandlingar</h2>
       </div>
+
+      <!-- ========== KATEGORI 1: PRX-T33 – biostimulerande ========== -->
+      <div class="behandling-kategori">
+        <h2 class="behandling-kategori__title">PRX-T33 – biostimulerande</h2>
+
+        <div class="behandling-cards-list">
+
+          <!-- REFERENSKORT: vågrätt .behandling-card-vertical (bild vänster), med kompakta accordions + Boka-knapp som öppnar variantmodalen -->
+          <div class="behandling-card-vertical fade-in">
+            <span class="behandling-card-vertical__badge">Mest bokad</span>
+            <div class="behandling-card-vertical__image behandling-card-vertical__image--placeholder">Bild kommer här</div>
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>PRX-T33</h3>
+                <span class="tx-card-sub">Biostimulerande &amp; glow</span>
+                <div class="behandling-card-vertical__meta">
+                  <span>30–45 min</span>
+                  <span class="price">från 1 195 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  Stimulerar kollagen på djupet och förbättrar fasthet och lyster – utan downtime.
+                </p>
+              </div>
+
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/prxt33icon.png" alt="PRX-T33"><span>PRX-T33</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Återfuktning"><span>Återfuktning</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF-skydd"><span>SPF-skydd</span></div>
+              </div>
+
+              <!-- Fyra kompakta accordions – text VERBATIM från befintligt PRX-T33 – Ansikte-kort. Drivs av treatment.js (.tx-accordion-trigger). -->
+              <div class="tx-accordion tx-accordion--compact">
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Passar dig som</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Vill förbättra hudens spänst och elasticitet utan nålar</li>
+                    <li>Har tidiga tecken på hudåldrande, ojämn struktur eller pigmentering</li>
+                    <li>Söker en effektiv behandling utan downtime</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Så fungerar behandlingen</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>PRX-T33 är en biostimulerande behandling där en modifierad TCA-syra arbetar djupt i huden utan att skada hudytan. Detta aktiverar fibroblaster och stimulerar kollagenproduktionen i dermis samtidigt som huden förblir intakt.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Resultat</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Fastare hud med ökad spänst redan efter första behandlingen</li>
+                    <li>Jämnare hudton och reducerad pigmentering</li>
+                    <li>Synlig glow och förbättrad hudkvalitet</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Ej lämplig vid</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Graviditet eller amning</li>
+                    <li>Aktiv hudinfektion eller irriterad hud</li>
+                    <li>Pågående retinoidbehandling</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="#" data-modal="modal-prxt33" class="btn btn-primary btn-sm">Boka</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== KATEGORI 2: Resultatinriktade peelingar ========== -->
+      <div class="behandling-kategori">
+        <h2 class="behandling-kategori__title">Resultatinriktade peelingar</h2>
+        <div class="behandling-cards-list">
+
+          <!-- BioRePeel -->
+          <div class="behandling-card-vertical fade-in">
+            <span class="behandling-card-vertical__badge">Populär</span>
+            <div class="behandling-card-vertical__image behandling-card-vertical__image--placeholder">Bild kommer här</div>
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>BioRePeel</h3>
+                <span class="tx-card-sub">Peeling &amp; hudförnyelse</span>
+                <div class="behandling-card-vertical__meta">
+                  <span>30–50 min</span>
+                  <span class="price">från 1 295 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">Djupverkande peeling som behandlar akne, porer och hudstruktur utan lång downtime.</p>
+              </div>
+
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Dubbelrengöring"><span>Dubbelrengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Exfoliering"><span>Exfoliering</span></div>
+                <div class="moment-icon"><img src="images/biorepeelikon.png" alt="BioRePeel"><span>BioRePeel</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Återfuktning"><span>Återfuktning</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF-skydd"><span>SPF-skydd</span></div>
+              </div>
+
+              <div class="tx-accordion tx-accordion--compact">
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Passar dig som</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Har akne, tilltäppta porer eller överproduktion av talg</li>
+                    <li>Vill förbättra hudstruktur och minska inflammation</li>
+                    <li>Söker en effektiv peeling med kort återhämtningstid</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Så fungerar behandlingen</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>BioRePeel är en TCA-baserad peeling som kombinerar exfoliering med antibakteriell och talgreglerande effekt. Den löser upp tilltäppta porer, minskar inflammation och stimulerar hudens cellförnyelse.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Resultat</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Renare hud med minskad talgproduktion</li>
+                    <li>Mindre synliga porer och jämnare hudstruktur</li>
+                    <li>Reducerad inflammation och förbättrad hudton</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Ej lämplig vid</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Graviditet eller amning</li>
+                    <li>Aktiv hudinfektion eller öppen hud</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="#" data-modal="modal-biorepeel" class="btn btn-primary btn-sm">Boka</a>
+            </div>
+          </div>
+
+          <!-- Kemisk peeling AHA/BHA/PHA -->
+          <div class="behandling-card-vertical fade-in">
+            <div class="behandling-card-vertical__image behandling-card-vertical__image--placeholder">Bild kommer här</div>
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Kemisk peeling AHA/BHA/PHA</h3>
+                <span class="tx-card-sub">Exfoliering &amp; lyster</span>
+                <div class="behandling-card-vertical__meta">
+                  <span>20–30 min</span>
+                  <span class="price">från 895 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">Exfolierar huden och förbättrar hudton, struktur och lyster.</p>
+              </div>
+
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Dubbelrengöring"><span>Dubbelrengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Exfoliering"><span>Exfoliering</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="AHA/BHA/PHA-peeling"><span>AHA/BHA/PHA-peeling</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Återfuktning"><span>Återfuktning</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF-skydd"><span>SPF-skydd</span></div>
+              </div>
+
+              <div class="tx-accordion tx-accordion--compact">
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Passar dig som</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Har pigmentering, ojämn hudton eller matt hud</li>
+                    <li>Vill förbättra hudens lyster och textur</li>
+                    <li>Söker en individanpassad peeling med måttlig downtime</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Så fungerar behandlingen</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>Kombinationen av syror exfolierar hudens yta, löser upp orenheter och stimulerar cellförnyelsen. Samtidigt förbättras hudens fuktbalans och struktur.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Resultat</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Klarare, mer strålande hud med synlig glow</li>
+                    <li>Jämnare hudton och förbättrad fuktbalans</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Ej lämplig vid</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Graviditet eller amning</li>
+                    <li>Aktiv hudinfektion eller irriterad hud</li>
+                    <li>Nylig solexponering eller solbränna</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="#" data-modal="modal-ahabhapha" class="btn btn-primary btn-sm">Boka</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== KATEGORI 3: Medicinska peelingar ========== -->
+      <div class="behandling-kategori">
+        <h2 class="behandling-kategori__title">Medicinska peelingar</h2>
+        <div class="behandling-cards-list">
+
+          <!-- Cosmo Peel TCA -->
+          <div class="behandling-card-vertical fade-in">
+            <div class="behandling-card-vertical__image behandling-card-vertical__image--placeholder">Bild kommer här</div>
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Cosmo Peel TCA</h3>
+                <span class="tx-card-sub">Djupverkande peeling</span>
+                <div class="behandling-card-vertical__meta">
+                  <span>30 min</span>
+                  <span class="price">från 1 795 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">Djupverkande peeling för linjer, pigment och hudförnyelse.</p>
+              </div>
+
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Förberedelse"><span>Förberedelse</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="TCA-peeling"><span>TCA-peeling</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Återfuktning"><span>Återfuktning</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF-skydd"><span>SPF-skydd</span></div>
+              </div>
+
+              <div class="tx-accordion tx-accordion--compact">
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Passar dig som</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Vill arbeta avancerat med hudförnyelse och anti-age</li>
+                    <li>Har solskador, linjer eller åldersförändringar</li>
+                    <li>Vill ha djupare resultat och accepterar längre återhämtning</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Så fungerar behandlingen</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>En medicinsk TCA-peeling som penetrerar djupare i huden och skapar en kontrollerad exfoliering. Detta triggar hudens regenerationsprocess och stimulerar ny cellbildning samt kollagenproduktion.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Resultat</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Jämnare hud med reducerade linjer och fåror</li>
+                    <li>Förbättrad hudstruktur och stimulerad kollagenproduktion</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Ej lämplig vid</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Graviditet eller amning</li>
+                    <li>Aktiv hudinfektion eller eksem</li>
+                    <li>Pågående retinoidbehandling eller nylig solexponering</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="#" data-modal="modal-cosmopeel" class="btn btn-primary btn-sm">Boka</a>
+            </div>
+          </div>
+
+          <!-- Mela Peel Forte -->
+          <div class="behandling-card-vertical fade-in">
+            <div class="behandling-card-vertical__image behandling-card-vertical__image--placeholder">Bild kommer här</div>
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Mela Peel Forte</h3>
+                <span class="tx-card-sub">Pigmentering &amp; melasma</span>
+                <div class="behandling-card-vertical__meta">
+                  <span>30 min</span>
+                  <span class="price">från 2 995 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">Specialiserad behandling för melasma och pigmentering.</p>
+              </div>
+
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="Pigmentpeeling"><span>Pigmentpeeling</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Återfuktning"><span>Återfuktning</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF-skydd"><span>SPF-skydd</span></div>
+              </div>
+
+              <div class="tx-accordion tx-accordion--compact">
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Passar dig som</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Har melasma, pigmentfläckar eller ojämn hudton</li>
+                    <li>Vill riktat behandla överproduktion av melanin</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Så fungerar behandlingen</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>En medicinsk pigmentpeeling som arbetar med melaninreglerande ingredienser för att minska överproduktion av pigment och jämna ut hudtonen.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Resultat</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Ljusare och jämnare hudton med reducerad pigmentering</li>
+                    <li>Kontrollerad melaninproduktion för långvarigt resultat</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Ej lämplig vid</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Graviditet eller amning</li>
+                    <li>Aktiv hudinfektion eller irriterad hud</li>
+                    <li>Nylig solexponering eller solbränna</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="#" data-modal="modal-melapeel" class="btn btn-primary btn-sm">Boka</a>
+            </div>
+          </div>
+
+          <!-- Yellow Peel -->
+          <div class="behandling-card-vertical fade-in">
+            <div class="behandling-card-vertical__image behandling-card-vertical__image--placeholder">Bild kommer här</div>
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Yellow Peel</h3>
+                <span class="tx-card-sub">Retinol &amp; lyster</span>
+                <div class="behandling-card-vertical__meta">
+                  <span>30 min</span>
+                  <span class="price">från 995 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">Retinolbaserad peeling för lyster och jämn hudton.</p>
+              </div>
+
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="Retinolpeeling"><span>Retinolpeeling</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Återfuktning"><span>Återfuktning</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF-skydd"><span>SPF-skydd</span></div>
+              </div>
+
+              <div class="tx-accordion tx-accordion--compact">
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Passar dig som</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Vill förbättra hudens lyster och jämnhet</li>
+                    <li>Söker en retinolbaserad behandling för hudförnyelse</li>
+                    <li>Har pigmentering eller matthet</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Så fungerar behandlingen</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>En retinolbaserad peeling som stimulerar cellförnyelsen och förbättrar hudens struktur, samtidigt som pigmenteringar och ojämn hudton reduceras.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Resultat</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Förbättrad lyster och strålande hudton</li>
+                    <li>Jämnare hudstruktur och reducerad pigmentering</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Ej lämplig vid</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Graviditet eller amning</li>
+                    <li>Aktiv hudinfektion eller irriterad hud</li>
+                    <li>Pågående retinoidbehandling</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="#" data-modal="modal-yellowpeel" class="btn btn-primary btn-sm">Boka</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ========== KATEGORI 4: Glow & kombo ========== -->
+      <div class="behandling-kategori">
+        <h2 class="behandling-kategori__title">Glow &amp; kombo</h2>
+        <div class="behandling-cards-list">
+
+          <!-- Dermaplaning PRO – enkel tjänst, direktlänk (ingen modal) -->
+          <div class="behandling-card-vertical fade-in">
+            <div class="behandling-card-vertical__image behandling-card-vertical__image--placeholder">Bild kommer här</div>
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Dermaplaning PRO – Ansikte</h3>
+                <span class="tx-card-sub">Exfoliering &amp; glow</span>
+                <div class="behandling-card-vertical__meta">
+                  <span>45 min</span>
+                  <span class="price">1 095 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">Tar bort döda hudceller och ger direkt lyster.</p>
+              </div>
+
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Dermaplaning"><span>Dermaplaning</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Återfuktning"><span>Återfuktning</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF-skydd"><span>SPF-skydd</span></div>
+              </div>
+
+              <div class="tx-accordion tx-accordion--compact">
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Passar dig som</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Vill ha omedelbar glow och slätare hud</li>
+                    <li>Har torr, matt hud eller fjällning</li>
+                    <li>Söker en skonsam behandling helt utan downtime</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Så fungerar behandlingen</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>En mekanisk exfoliering där döda hudceller och vellushår avlägsnas, vilket förbättrar hudens yta och ökar upptaget av aktiva ingredienser.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Resultat</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Len, slät hud med omedelbar lyster</li>
+                    <li>Förbättrat upptag av hudvårdsprodukter</li>
+                    <li>Jämnare hudstruktur och glow direkt efter behandling</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Ej lämplig vid</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Aktiv akne eller inflammation</li>
+                    <li>Hudinfektion eller öppna sår</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263?ss=3110511" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Boka</a>
+            </div>
+          </div>
+
+          <!-- Glowbehandling – Dermaplaning + PRX/BioRePeel – enkel tjänst, direktlänk (ingen modal) -->
+          <div class="behandling-card-vertical fade-in">
+            <span class="behandling-card-vertical__badge">Bästa glow</span>
+            <div class="behandling-card-vertical__image behandling-card-vertical__image--placeholder">Bild kommer här</div>
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Glowbehandling – Dermaplaning + PRX/BioRePeel</h3>
+                <span class="tx-card-sub">Kombobehandling</span>
+                <div class="behandling-card-vertical__meta">
+                  <span>60 min</span>
+                  <span class="price">1 995 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">Kombinerad behandling för maximal glow och hudförbättring.</p>
+              </div>
+
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Dermaplaning"><span>Dermaplaning</span></div>
+                <div class="moment-icon"><img src="images/prxt33icon.png" alt="PRX/BioRePeel"><span>PRX/BioRePeel</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Återfuktning"><span>Återfuktning</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF-skydd"><span>SPF-skydd</span></div>
+              </div>
+
+              <div class="tx-accordion tx-accordion--compact">
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Passar dig som</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Vill ha maximal glow och hudförbättring i en session</li>
+                    <li>Vill kombinera mekanisk exfoliering med djupare biostimulerande effekt</li>
+                    <li>Förbereder huden inför event eller speciellt tillfälle</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Så fungerar behandlingen</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>Kombinerar mekanisk exfoliering med en aktiv peeling för att maximera hudens cellförnyelse, förbättra produktupptag och stimulera hudens struktur och lyster.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Resultat</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Omedelbar glow och påtagligt slätare hud</li>
+                    <li>Djupare hudförbättring med stimulerad kollagenproduktion</li>
+                    <li>Perfekt inför speciella tillfällen då huden ska vara på topp</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Ej lämplig vid</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Graviditet eller amning</li>
+                    <li>Aktiv akne, hudinfektion eller irriterad hud</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263?ss=3267887" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Boka</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   </section>
 
-
-  <!-- ========== SECTION 2: RESULTATINRIKTADE PEELINGAR ========== -->
-  <section class="tx-cards-section" style="background: var(--bg-secondary);">
+  <!-- ========== FAQ ========== -->
+  <section class="problem-faq" id="faq">
     <div class="container">
-      <h2 class="tx-category-title fade-in">Resultatinriktade peelingar</h2>
-
-      <div class="tx-cards-grid">
-
-        <!-- BioRePeel – Ansikte -->
-        <article class="tx-card tx-card--featured fade-in">
-          <div class="tx-card-badge">Populär</div>
-          <div class="tx-card-header">
-            <h3>BioRePeel – Ansikte</h3>
-            <span class="tx-card-sub">Peeling &amp; hudförnyelse</span>
-          </div>
-          <p class="tx-card-desc">Djupverkande peeling som behandlar akne, porer och hudstruktur utan lång downtime.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Har akne, tilltäppta porer eller överproduktion av talg</li>
-                <li>Vill förbättra hudstruktur och minska inflammation</li>
-                <li>Söker en effektiv peeling med kort återhämtningstid</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>BioRePeel är en TCA-baserad peeling som kombinerar exfoliering med antibakteriell och talgreglerande effekt. Den löser upp tilltäppta porer, minskar inflammation och stimulerar hudens cellförnyelse.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Renare hud med minskad talgproduktion</li>
-                <li>Mindre synliga porer och jämnare hudstruktur</li>
-                <li>Reducerad inflammation och förbättrad hudton</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Graviditet eller amning</li>
-                <li>Aktiv hudinfektion eller öppen hud</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- BioRePeel – Ansikte & hals -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>BioRePeel – Ansikte &amp; hals</h3>
-            <span class="tx-card-sub">Peeling kombi</span>
-          </div>
-          <p class="tx-card-desc">Behandlar ansikte och hals med TCA-baserad peeling för ett enhetligt resultat.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Vill behandla både ansikte och hals för ett enhetligt resultat</li>
-                <li>Har akne, tilltäppta porer eller ojämn hudton på flera zoner</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>BioRePeel är en TCA-baserad peeling som kombinerar exfoliering med antibakteriell och talgreglerande effekt. Den löser upp tilltäppta porer, minskar inflammation och stimulerar hudens cellförnyelse.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Renare, jämnare hud på både ansikte och hals</li>
-                <li>Mindre synliga porer och förbättrad hudton</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Graviditet eller amning</li>
-                <li>Aktiv hudinfektion eller öppen hud</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- BioRePeel – Ansikte, hals & dekolletage -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>BioRePeel – Ansikte, hals &amp; dekolletage</h3>
-            <span class="tx-card-sub">Peeling helbehandling</span>
-          </div>
-          <p class="tx-card-desc">Komplett peeling som behandlar ansikte, hals och dekolletage i en session.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Vill behandla ansikte, hals och dekolletage för komplett hudförnyelse</li>
-                <li>Har ojämn hudstruktur, porer eller talgproblem på flera zoner</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>BioRePeel är en TCA-baserad peeling som kombinerar exfoliering med antibakteriell och talgreglerande effekt. Den löser upp tilltäppta porer, minskar inflammation och stimulerar hudens cellförnyelse.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Renare hud med jämnare struktur och ton i alla tre zoner</li>
-                <li>Förbättrad hudkvalitet och reducerade porer</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Graviditet eller amning</li>
-                <li>Aktiv hudinfektion eller öppen hud</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Kemisk peeling – AHA/BHA/PHA -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>Kemisk peeling – AHA/BHA/PHA</h3>
-            <span class="tx-card-sub">Exfoliering &amp; lyster</span>
-          </div>
-          <p class="tx-card-desc">Exfolierar huden och förbättrar hudton, struktur och lyster.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Har pigmentering, ojämn hudton eller matt hud</li>
-                <li>Vill förbättra hudens lyster och textur</li>
-                <li>Söker en individanpassad peeling med måttlig downtime</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>Kombinationen av syror exfolierar hudens yta, löser upp orenheter och stimulerar cellförnyelsen. Samtidigt förbättras hudens fuktbalans och struktur.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Klarare, mer strålande hud med synlig glow</li>
-                <li>Jämnare hudton och förbättrad fuktbalans</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Graviditet eller amning</li>
-                <li>Aktiv hudinfektion eller irriterad hud</li>
-                <li>Nylig solexponering eller solbränna</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
+      <div class="section-header fade-in">
+        <span class="section-label">Vanliga frågor</span>
+        <h2 class="section-title">Frågor &amp; svar om kemisk peeling</h2>
       </div>
-    </div>
-  </section>
 
-
-  <!-- ========== SECTION 3: MEDICINSKA PEELINGAR ========== -->
-  <section class="tx-cards-section">
-    <div class="container">
-      <h2 class="tx-category-title fade-in">Medicinska peelingar</h2>
-
-      <div class="tx-cards-grid">
-
-        <!-- Cosmo Peel TCA -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>Cosmo Peel TCA</h3>
-            <span class="tx-card-sub">Djupverkande peeling</span>
-          </div>
-          <p class="tx-card-desc">Djupverkande peeling för linjer, pigment och hudförnyelse.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Vill arbeta avancerat med hudförnyelse och anti-age</li>
-                <li>Har solskador, linjer eller åldersförändringar</li>
-                <li>Vill ha djupare resultat och accepterar längre återhämtning</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>En medicinsk TCA-peeling som penetrerar djupare i huden och skapar en kontrollerad exfoliering. Detta triggar hudens regenerationsprocess och stimulerar ny cellbildning samt kollagenproduktion.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Jämnare hud med reducerade linjer och fåror</li>
-                <li>Förbättrad hudstruktur och stimulerad kollagenproduktion</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Graviditet eller amning</li>
-                <li>Aktiv hudinfektion eller eksem</li>
-                <li>Pågående retinoidbehandling eller nylig solexponering</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Mela Peel Forte -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>Mela Peel Forte</h3>
-            <span class="tx-card-sub">Pigmentering &amp; melasma</span>
-          </div>
-          <p class="tx-card-desc">Specialiserad behandling för melasma och pigmentering.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Har melasma, pigmentfläckar eller ojämn hudton</li>
-                <li>Vill riktat behandla överproduktion av melanin</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>En medicinsk pigmentpeeling som arbetar med melaninreglerande ingredienser för att minska överproduktion av pigment och jämna ut hudtonen.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Ljusare och jämnare hudton med reducerad pigmentering</li>
-                <li>Kontrollerad melaninproduktion för långvarigt resultat</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Graviditet eller amning</li>
-                <li>Aktiv hudinfektion eller irriterad hud</li>
-                <li>Nylig solexponering eller solbränna</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Yellow Peel -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>Yellow Peel</h3>
-            <span class="tx-card-sub">Retinol &amp; lyster</span>
-          </div>
-          <p class="tx-card-desc">Retinolbaserad peeling för lyster och jämn hudton.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Vill förbättra hudens lyster och jämnhet</li>
-                <li>Söker en retinolbaserad behandling för hudförnyelse</li>
-                <li>Har pigmentering eller matthet</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>En retinolbaserad peeling som stimulerar cellförnyelsen och förbättrar hudens struktur, samtidigt som pigmenteringar och ojämn hudton reduceras.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Förbättrad lyster och strålande hudton</li>
-                <li>Jämnare hudstruktur och reducerad pigmentering</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Graviditet eller amning</li>
-                <li>Aktiv hudinfektion eller irriterad hud</li>
-                <li>Pågående retinoidbehandling</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
+      <!-- Category tabs -->
+      <div class="faq-tabs fade-in" role="tablist">
+        <button class="faq-tab faq-tab--active" data-category="behandling" role="tab" aria-selected="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6m11-11h-6M7 12H1m16.66-7.66l-4.24 4.24m-2.84 2.84l-4.24 4.24m12.32 0l-4.24-4.24m-2.84-2.84L5.34 5.34"/></svg>
+          <span>Behandling</span>
+        </button>
+        <button class="faq-tab" data-category="sakerhet" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Inför &amp; säkerhet</span>
+        </button>
+        <button class="faq-tab" data-category="resultat" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 2C8 6 6 9 6 13a6 6 0 0 0 12 0c0-4-2-7-6-11z"/></svg>
+          <span>Resultat &amp; eftervård</span>
+        </button>
       </div>
-    </div>
-  </section>
 
-
-  <!-- ========== SECTION 4: GLOW & KOMBO ========== -->
-  <section class="tx-cards-section" style="background: var(--bg-secondary);">
-    <div class="container">
-      <h2 class="tx-category-title fade-in">Glow &amp; kombo</h2>
-
-      <div class="tx-cards-grid">
-
-        <!-- Dermaplaning PRO -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>Dermaplaning PRO</h3>
-            <span class="tx-card-sub">Exfoliering &amp; glow</span>
-          </div>
-          <p class="tx-card-desc">Tar bort döda hudceller och ger direkt lyster.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Vill ha omedelbar glow och slätare hud</li>
-                <li>Har torr, matt hud eller fjällning</li>
-                <li>Söker en skonsam behandling helt utan downtime</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>En mekanisk exfoliering där döda hudceller och vellushår avlägsnas, vilket förbättrar hudens yta och ökar upptaget av aktiva ingredienser.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Len, slät hud med omedelbar lyster</li>
-                <li>Förbättrat upptag av hudvårdsprodukter</li>
-                <li>Jämnare hudstruktur och glow direkt efter behandling</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Aktiv akne eller inflammation</li>
-                <li>Hudinfektion eller öppna sår</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Glowbehandling – Dermaplaning + PRX/BioRePeel -->
-        <article class="tx-card tx-card--featured fade-in">
-          <div class="tx-card-badge">Bästa glow</div>
-          <div class="tx-card-header">
-            <h3>Glowbehandling – Dermaplaning + PRX/BioRePeel</h3>
-            <span class="tx-card-sub">Kombobehandling</span>
-          </div>
-          <p class="tx-card-desc">Kombinerad behandling för maximal glow och hudförbättring.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Vill ha maximal glow och hudförbättring i en session</li>
-                <li>Vill kombinera mekanisk exfoliering med djupare biostimulerande effekt</li>
-                <li>Förbereder huden inför event eller speciellt tillfälle</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Så fungerar behandlingen</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p>Kombinerar mekanisk exfoliering med en aktiv peeling för att maximera hudens cellförnyelse, förbättra produktupptag och stimulera hudens struktur och lyster.</p>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Omedelbar glow och påtagligt slätare hud</li>
-                <li>Djupare hudförbättring med stimulerad kollagenproduktion</li>
-                <li>Perfekt inför speciella tillfällen då huden ska vara på topp</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Graviditet eller amning</li>
-                <li>Aktiv akne, hudinfektion eller irriterad hud</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========== INFO & FAQ ========== -->
-  <section class="tx-info">
-    <div class="container">
-      <div class="tx-info-block fade-in">
-        <h2>Viktig information &amp; vanliga frågor</h2>
-
-        <!-- Sub-section 1: Important info -->
-        <h3 class="tx-info-section-title">Viktig information <span>(läs innan du bokar)</span></h3>
-
-        <div class="tx-accordion tx-accordion--wide">
-          <button class="tx-accordion-trigger" aria-expanded="false">
+      <!-- BEHANDLING -->
+      <div class="faq-list faq-content faq-content--active fade-in" data-category="behandling">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
             <span>Resultat &amp; läkning</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="tx-accordion-panel">
+          <div class="faq-answer">
             <ul>
               <li>Resultat varierar beroende på behandling och hudtyp</li>
               <li>PRX-T33: ingen downtime – lätt rodnad som går över inom timmar</li>
@@ -1068,12 +851,13 @@
               <li>Bäst resultat uppnås med en serie om 3–6 behandlingar</li>
             </ul>
           </div>
-
-          <button class="tx-accordion-trigger" aria-expanded="false">
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
             <span>Normala reaktioner</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="tx-accordion-panel">
+          <div class="faq-answer">
             <ul>
               <li>Lätt rodnad och värmekänsla direkt efter behandlingen</li>
               <li>Stramhet i huden</li>
@@ -1081,12 +865,17 @@
               <li>Tillfälligt ökad känslighet</li>
             </ul>
           </div>
+        </div>
+      </div>
 
-          <button class="tx-accordion-trigger" aria-expanded="false">
+      <!-- INFÖR & SÄKERHET -->
+      <div class="faq-list faq-content fade-in" data-category="sakerhet">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
             <span>Ej lämpligt vid</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="tx-accordion-panel">
+          <div class="faq-answer">
             <ul>
               <li>Graviditet eller amning</li>
               <li>Aktiv hudinfektion, eksem eller rosacea i behandlingsområdet</li>
@@ -1096,12 +885,17 @@
               <li>Öppna sår eller irriterad hud</li>
             </ul>
           </div>
+        </div>
+      </div>
 
-          <button class="tx-accordion-trigger" aria-expanded="false">
+      <!-- RESULTAT & EFTERVÅRD -->
+      <div class="faq-list faq-content fade-in" data-category="resultat">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
             <span>Eftervård</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="tx-accordion-panel">
+          <div class="faq-answer">
             <ul>
               <li>Använd SPF 50 dagligen i minst 2 veckor</li>
               <li>Undvik starka aktiva ingredienser (AHA/retinol) i 3–5 dagar</li>
@@ -1110,12 +904,13 @@
               <li>Pilla eller skrapa inte i fjällande hud</li>
             </ul>
           </div>
-
-          <button class="tx-accordion-trigger" aria-expanded="false">
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
             <span>Behandlingsplan</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="tx-accordion-panel">
+          <div class="faq-answer">
             <ul>
               <li>PRX-T33: rekommenderad kur 4–6 behandlingar, intervall 1–2 veckor</li>
               <li>BioRePeel: rekommenderad kur 4–6 behandlingar, intervall 2–4 veckor</li>
@@ -1124,85 +919,119 @@
             </ul>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Sub-section 2: FAQ -->
-        <h3 class="tx-info-section-title">Vanliga frågor</h3>
+  <!-- ========== REVIEWS ========== -->
+  <section class="reviews">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Vad våra kunder säger</span>
+        <h2 class="section-title">Omdömen</h2>
+      </div>
 
-        <div class="tx-accordion tx-accordion--wide">
-          <button class="tx-accordion-trigger" aria-expanded="false">
-            <span>Gör kemisk peeling ont?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="tx-accordion-panel">
-            <p>De flesta upplever en lätt stickande eller värmande känsla under behandlingen. PRX-T33 och BioRePeel är generellt väl tolererade. Medicinska peelingar kan ge mer intensiv känsla men är kortvarig.</p>
+      <div class="reviews-dual">
+        <!-- Google Reviews -->
+        <div class="reviews-panel fade-in">
+          <div class="reviews-panel-header">
+            <svg class="reviews-panel-logo" viewBox="0 0 24 24" width="24" height="24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            <div>
+              <strong>Google</strong>
+              <div class="reviews-panel-score">
+                <span class="reviews-stars">★★★★★</span>
+                <span>5,0 / 5</span>
+              </div>
+            </div>
           </div>
-
-          <button class="tx-accordion-trigger" aria-expanded="false">
-            <span>Vilken peeling passar mig bäst?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="tx-accordion-panel">
-            <p>Det beror på ditt hudtillstånd och dina mål. PRX-T33 passar för fasthet och lyster utan downtime. BioRePeel är bra vid akne och porer. Medicinska peelingar ger djupare resultat men kräver längre återhämtning. Vi hjälper dig välja vid konsultation.</p>
+          <div class="reviews-panel-cards">
+            <div class="review-card">
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Supernöjd! Isabella är så duktig och proffsig."</p>
+              <span class="review-author">– Camilla Olsson</span>
+              <span class="review-source">Google</span>
+            </div>
+            <div class="review-card">
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Isabella är jättetrevlig och kunnig! Rekommenderar verkligen henne."</p>
+              <span class="review-author">– Helene Lindell</span>
+              <span class="review-source">Google</span>
+            </div>
+            <div class="review-card">
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Den bästa Isabella – så duktig, trevlig och alltid så hjälpsam. Varmt rekommenderar."</p>
+              <span class="review-author">– Marina Stefanovic</span>
+              <span class="review-source">Google</span>
+            </div>
+            <div class="review-card" hidden>
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Supertrevlig och duktig! Rekommenderar."</p>
+              <span class="review-author">– Carolina Hartzell</span>
+              <span class="review-source">Google</span>
+            </div>
           </div>
+          <button type="button" class="btn btn-outline btn-sm reviews-panel-toggle">Visa fler</button>
+          <a href="https://g.co/kgs/your-skin-clinic" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Se alla Google-omdömen</a>
+        </div>
 
-          <button class="tx-accordion-trigger" aria-expanded="false">
-            <span>Hur lång är återhämtningen?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="tx-accordion-panel">
-            <p>PRX-T33: ingen downtime. BioRePeel: 1–3 dagars lätt fjällning. Medicinska peelingar: 3–7 dagars fjällning beroende på styrka. Vi går igenom detta noggrant innan behandlingen.</p>
+        <!-- Bokadirekt Reviews -->
+        <div class="reviews-panel fade-in">
+          <div class="reviews-panel-header">
+            <svg class="reviews-panel-logo" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <div>
+              <strong>Bokadirekt</strong>
+              <div class="reviews-panel-score">
+                <span class="reviews-stars">★★★★★</span>
+                <span>4,9 &middot; 590+ omdömen</span>
+              </div>
+            </div>
           </div>
-
-          <button class="tx-accordion-trigger" aria-expanded="false">
-            <span>Kan man göra peeling på sommaren?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="tx-accordion-panel">
-            <p>PRX-T33 kan generellt utföras året runt. Starkare peelingar rekommenderas under höst/vinter/vår då solexponeringen är lägre. Hög SPF-användning är obligatorisk oavsett säsong.</p>
+          <div class="reviews-panel-cards">
+            <div class="review-card">
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Alltid högsta service. Isabella är noggrann och kunnig på allt. Man känner sig trygg och omhändertagen. Rekommenderas!"</p>
+              <span class="review-author">– Jessica H.</span>
+              <span class="review-source">Bokadirekt</span>
+            </div>
+            <div class="review-card">
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Isabella är så go! Så kunnig och delar med sig av sin kunskap utan att tveka när man frågar. Hon vet vad hon gör."</p>
+              <span class="review-author">– Ev K.</span>
+              <span class="review-source">Bokadirekt</span>
+            </div>
+            <div class="review-card">
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Isabella är fantastisk som person och fantastisk på sitt jobb!"</p>
+              <span class="review-author">– Petra H.</span>
+              <span class="review-source">Bokadirekt</span>
+            </div>
+            <div class="review-card" hidden>
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Isabella är noggrann och kunnig. Dessutom supertrevlig!"</p>
+              <span class="review-author">– Lisa E.</span>
+              <span class="review-source">Bokadirekt</span>
+            </div>
           </div>
-
-          <button class="tx-accordion-trigger" aria-expanded="false">
-            <span>Hur ofta kan man göra behandlingen?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="tx-accordion-panel">
-            <p>PRX-T33 kan göras med 1–2 veckors mellanrum. BioRePeel var 2:a till 4:e vecka. Medicinska peelingar har längre intervall som bestäms individuellt. Vi lägger upp en plan efter din första behandling.</p>
-          </div>
-
-          <button class="tx-accordion-trigger" aria-expanded="false">
-            <span>Kan jag kombinera peeling med microneedling?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="tx-accordion-panel">
-            <p>Ja, PRX-T33 och BioRePeel kan kombineras med microneedling för förstärkta resultat. Det planeras individuellt vid konsultation.</p>
-          </div>
-
-          <button class="tx-accordion-trigger" aria-expanded="false">
-            <span>Behöver jag konsultation först?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="tx-accordion-panel">
-            <p>Konsultation ingår alltid inför din första behandling och behöver inte bokas separat. Vi bedömer din hud och rekommenderar den bäst lämpade behandlingen.</p>
-          </div>
+          <button type="button" class="btn btn-outline btn-sm reviews-panel-toggle">Visa fler</button>
+          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Se alla Bokadirekt-omdömen</a>
         </div>
       </div>
     </div>
   </section>
 
-
-  <!-- ========== BOTTOM CTA ========== -->
-  <section class="tx-bottom-cta">
+  <!-- ========== CTA ========== -->
+  <section class="problem-cta">
     <div class="container">
-      <div class="tx-bottom-cta-content fade-in">
+      <div class="problem-cta__content fade-in">
         <h2>Redo att boka din behandling?</h2>
-        <div class="tx-hero-btns">
+        <p>Boka en konsultation så bedömer vi din hud och rekommenderar rätt peeling för dig.</p>
+        <div class="problem-cta__btns">
           <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary">Boka tid</a>
           <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/konsultation-hud-laser-harborttagning-2170427" target="_blank" rel="noopener" class="btn btn-outline">Boka konsultation</a>
         </div>
       </div>
     </div>
   </section>
-
 
   <!-- ========== FOOTER ========== -->
   <footer class="footer" id="kontakt">
@@ -1243,10 +1072,10 @@
         <div class="footer-col">
           <h4>Information</h4>
           <ul>
-            <li><a href="#" data-modal="modal-kontakt">Kontakt</a></li>
-            <li><a href="#" data-modal="modal-integritetspolicy">Integritetspolicy</a></li>
-            <li><a href="#" data-modal="modal-villkor">Villkor</a></li>
-            <li><a href="#" data-modal="modal-cookies">Cookies</a></li>
+            <li><a href="index.html#kontakt">Kontakt</a></li>
+            <li><a href="integritetspolicy.html">Integritetspolicy</a></li>
+            <li><a href="villkor.html">Villkor</a></li>
+            <li><a href="#">Cookies</a></li>
           </ul>
         </div>
 
@@ -1271,178 +1100,227 @@
     </div>
   </footer>
 
+  <!-- ========== MODALS — Behandlingsval ========== -->
+
+  <!-- Modal: PRX-T33 (6 varianter). Markup återanvänd från akne/pigmentering. -->
+  <div class="modal" id="modal-prxt33" role="dialog" aria-modal="true" aria-labelledby="modal-prxt33-title" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-modal-close aria-label="Stäng">✕</button>
+      <h2 class="modal__title" id="modal-prxt33-title">PRX-T33 — välj område</h2>
+      <p class="modal__subtitle">Klicka på det område du vill boka.</p>
+      <div class="modal__options">
+
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/prx-t33-ansikte-biorevitaliserande-behandling-3054767" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte</h3>
+            <span class="modal__option-meta">30 min · 1 995 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/prx-t33-hals-biorevitaliserande-behandling-3073410" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Hals</h3>
+            <span class="modal__option-meta">30 min · 1 195 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/prx-t33-ansikte-hals-biorevitaliserande-behandling-3073408" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte &amp; Hals</h3>
+            <span class="modal__option-meta">40 min · 2 495 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/prx-t33-hals-dekolletage-biorevitaliserande-behandling-3073412" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Hals &amp; Dekolletage</h3>
+            <span class="modal__option-meta">45 min · 1 995 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/prx-t33-ansikte-hals-dekolletage-biorevitaliserande-behandling-3343671" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte, Hals &amp; Dekolletage</h3>
+            <span class="modal__option-meta">45 min · 2 995 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/prx-t33-handryggar-biorevitaliserande-behandling-3073415" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Handryggar</h3>
+            <span class="modal__option-meta">30 min · 1 495 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+
+      </div>
+      <button class="modal__back-btn" data-modal-close>Tillbaka</button>
+    </div>
+  </div>
+
+  <!-- Modal: BioRePeel (3 varianter) -->
+  <div class="modal" id="modal-biorepeel" role="dialog" aria-modal="true" aria-labelledby="modal-biorepeel-title" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-modal-close aria-label="Stäng">✕</button>
+      <h2 class="modal__title" id="modal-biorepeel-title">BioRePeel — välj område</h2>
+      <p class="modal__subtitle">Klicka på det område du vill boka.</p>
+      <div class="modal__options">
+        <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263?ss=2989496" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte</h3>
+            <span class="modal__option-meta">40 min · 1 295 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+        <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263?ss=3344013" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte &amp; hals</h3>
+            <span class="modal__option-meta">30 min · 1 695 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/biorepeel-ansikte-hals-dekolletage-akne-porer-hudstruktur-3344014" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte, hals &amp; dekolletage</h3>
+            <span class="modal__option-meta">50 min · 1 995 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+      </div>
+      <button class="modal__back-btn" data-modal-close>Tillbaka</button>
+    </div>
+  </div>
+
+  <!-- Modal: Kemisk peeling AHA/BHA/PHA (3 varianter) -->
+  <div class="modal" id="modal-ahabhapha" role="dialog" aria-modal="true" aria-labelledby="modal-ahabhapha-title" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-modal-close aria-label="Stäng">✕</button>
+      <h2 class="modal__title" id="modal-ahabhapha-title">Kemisk peeling AHA/BHA/PHA — välj område</h2>
+      <p class="modal__subtitle">Klicka på det område du vill boka.</p>
+      <div class="modal__options">
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/kemisk-peeling-ansikte-aha-bha-pha-3039129" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte</h3>
+            <span class="modal__option-meta">30 min · 895 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/kemisk-peeling-ansikte-hals-aha-bha-pha-3039132" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte &amp; hals</h3>
+            <span class="modal__option-meta">20 min · 995 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/kemisk-peeling-ansikte-hals-dekolletage-aha-bha-pha-3344017" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte, hals &amp; dekolletage</h3>
+            <span class="modal__option-meta">30 min · 1 295 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+      </div>
+      <button class="modal__back-btn" data-modal-close>Tillbaka</button>
+    </div>
+  </div>
+
+  <!-- Modal: Cosmo Peel TCA (3 varianter) -->
+  <div class="modal" id="modal-cosmopeel" role="dialog" aria-modal="true" aria-labelledby="modal-cosmopeel-title" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-modal-close aria-label="Stäng">✕</button>
+      <h2 class="modal__title" id="modal-cosmopeel-title">Cosmo Peel TCA — välj område</h2>
+      <p class="modal__subtitle">Klicka på det område du vill boka.</p>
+      <div class="modal__options">
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/cosmo-peel-tca-ansikte-1518-tca-3154203" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte</h3>
+            <span class="modal__option-meta">30 min · 1 795 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/cosmo-peel-tca-ansikte-hals-1518-tca-3154206" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte &amp; hals</h3>
+            <span class="modal__option-meta">30 min · 2 195 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/cosmo-peel-tca-ansikte-hals-dekolletage-1518-tca-3226713" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte, hals &amp; dekolletage</h3>
+            <span class="modal__option-meta">30 min · 2 595 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+      </div>
+      <button class="modal__back-btn" data-modal-close>Tillbaka</button>
+    </div>
+  </div>
+
+  <!-- Modal: Mela Peel Forte (2 varianter) -->
+  <div class="modal" id="modal-melapeel" role="dialog" aria-modal="true" aria-labelledby="modal-melapeel-title" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-modal-close aria-label="Stäng">✕</button>
+      <h2 class="modal__title" id="modal-melapeel-title">Mela Peel Forte — välj område</h2>
+      <p class="modal__subtitle">Klicka på det område du vill boka.</p>
+      <div class="modal__options">
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/mela-peel-forte-ansikte-3206318" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte</h3>
+            <span class="modal__option-meta">30 min · 2 995 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/mela-peel-forte-ansikte-hals-3344031" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte &amp; hals</h3>
+            <span class="modal__option-meta">30 min · 3 395 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+      </div>
+      <button class="modal__back-btn" data-modal-close>Tillbaka</button>
+    </div>
+  </div>
+
+  <!-- Modal: Yellow Peel (2 varianter) -->
+  <div class="modal" id="modal-yellowpeel" role="dialog" aria-modal="true" aria-labelledby="modal-yellowpeel-title" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-modal-close aria-label="Stäng">✕</button>
+      <h2 class="modal__title" id="modal-yellowpeel-title">Yellow Peel — välj område</h2>
+      <p class="modal__subtitle">Klicka på det område du vill boka.</p>
+      <div class="modal__options">
+        <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263?ss=3100041" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte</h3>
+            <span class="modal__option-meta">30 min · 995 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+        <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263?ss=3344034" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Ansikte &amp; hals</h3>
+            <span class="modal__option-meta">30 min · 1 295 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+      </div>
+      <button class="modal__back-btn" data-modal-close>Tillbaka</button>
+    </div>
+  </div>
+
   <script src="script.js" defer></script>
   <script src="treatment.js" defer></script>
-
-  <!-- ========== INFO MODALS ========== -->
-
-  <!-- Integritetspolicy -->
-  <div class="info-modal-overlay" id="modal-integritetspolicy">
-    <div class="info-modal">
-      <button class="info-modal-close" aria-label="Stäng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-      <h2>Integritetspolicy</h2>
-      <span class="modal-updated">Senast uppdaterad: 2026-05-03</span>
-
-      <h3>1. Inledning</h3>
-      <p>Your Skin Clinic värnar om din personliga integritet. Denna integritetspolicy förklarar hur vi samlar in, behandlar och skyddar dina personuppgifter i enlighet med Europaparlamentets och rådets dataskyddsförordning (EU) 2016/679 (&ldquo;GDPR&rdquo;).</p>
-      <p>Genom att använda våra tjänster godkänner du behandlingen av dina personuppgifter i enlighet med denna policy.</p>
-
-      <h3>2. Personuppgiftsansvarig</h3>
-      <p><strong>Your Skin Clinic</strong><br>Gallerian, Hamngatan 37, Stockholm<br>Telefon: <a href="tel:+46730412589">073-041 25 89</a><br>E-post: <a href="mailto:info@yourskinclinic.se">info@yourskinclinic.se</a></p>
-      <p>Your Skin Clinic är personuppgiftsansvarig för behandlingen av dina personuppgifter.</p>
-
-      <h3>3. Vilka personuppgifter vi behandlar</h3>
-      <p>Vi kan behandla följande kategorier av personuppgifter:</p>
-      <ul><li>Namn</li><li>Telefonnummer</li><li>E-postadress</li><li>Bokningsinformation</li><li>Uppgifter som lämnas vid konsultation eller behandling</li></ul>
-      <p>Endast uppgifter som är nödvändiga för ändamålet samlas in.</p>
-
-      <h3>4. Ändamål och rättslig grund</h3>
-      <p>Vi behandlar dina personuppgifter för följande ändamål:</p>
-      <ul><li>Hantera bokningar och behandlingar</li><li>Kommunicera inför och efter behandling</li><li>Säkerställa en trygg och individanpassad behandling</li><li>Uppfylla rättsliga förpliktelser</li></ul>
-      <p>Den rättsliga grunden för behandlingen är:</p>
-      <ul><li>Avtal (bokning av tjänst)</li><li>Rättslig förpliktelse</li><li>Berättigat intresse</li></ul>
-
-      <h3>5. Bokningssystem och tredjepart</h3>
-      <p>Vi använder externa bokningssystem såsom BokaDirekt. När du bokar via dessa system behandlas dina personuppgifter även enligt respektive leverantörs integritetspolicy.</p>
-
-      <h3>6. Lagring av personuppgifter</h3>
-      <p>Dina personuppgifter lagras endast så länge det är nödvändigt för att uppfylla ändamålet med behandlingen eller enligt gällande lagstiftning.</p>
-
-      <h3>7. Utlämnande av uppgifter</h3>
-      <p>Vi lämnar inte ut dina personuppgifter till tredje part, annat än när det krävs enligt lag eller är nödvändigt för att tillhandahålla våra tjänster.</p>
-
-      <h3>8. Dina rättigheter</h3>
-      <p>Du har rätt att:</p>
-      <ul><li>Begära tillgång till dina personuppgifter</li><li>Begära rättelse av felaktiga uppgifter</li><li>Begära radering av dina uppgifter</li><li>Invända mot behandling</li><li>Begära begränsning av behandling</li></ul>
-      <p>För att utöva dina rättigheter, kontakta oss via e-post. Du har även rätt att lämna klagomål till Integritetsskyddsmyndigheten (IMY).</p>
-
-      <h3>9. Säkerhet</h3>
-      <p>Vi vidtar lämpliga tekniska och organisatoriska säkerhetsåtgärder för att skydda dina personuppgifter mot obehörig åtkomst, förlust eller missbruk.</p>
-
-      <h3>10. Ändringar i policyn</h3>
-      <p>Your Skin Clinic förbehåller sig rätten att uppdatera denna policy vid behov. Den senaste versionen finns alltid tillgänglig på vår hemsida.</p>
-
-      <h3>11. Kontakt</h3>
-      <p><a href="mailto:info@yourskinclinic.se">info@yourskinclinic.se</a><br><a href="tel:+46730412589">073-041 25 89</a></p>
-      <button class="info-modal-close-bottom" aria-label="Stäng">Stäng</button>
-    </div>
-  </div>
-
-  <!-- Villkor -->
-  <div class="info-modal-overlay" id="modal-villkor">
-    <div class="info-modal">
-      <button class="info-modal-close" aria-label="Stäng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-      <h2>Villkor</h2>
-      <span class="modal-updated">Senast uppdaterad: 2026-05-03</span>
-
-      <h3>1. Allmänt</h3>
-      <p>Dessa villkor gäller för alla bokningar och behandlingar hos Your Skin Clinic. Genom att boka en tid godkänner du dessa villkor.</p>
-
-      <h3>2. Bokning</h3>
-      <p>Bokning sker via vårt bokningssystem BokaDirekt eller enligt överenskommelse. Konsultation ingår alltid inför din första behandling och behöver inte bokas separat.</p>
-
-      <h3>3. Avbokning &amp; ombokning</h3>
-      <p>Avbokning eller ombokning ska ske senast <strong>24 timmar</strong> före bokad tid.</p>
-      <ul><li>Vid sen avbokning (mindre än 24 timmar): <strong>100 % debitering</strong></li><li>Vid uteblivet besök (no-show): <strong>100 % debitering</strong></li><li>Gäller oavsett anledning (inkl. sjukdom)</li></ul>
-      <p>Avbokning ska göras via bokningssystemet eller direkt till kliniken.</p>
-
-      <h3>4. Sen ankomst</h3>
-      <p>Vid sen ankomst kan behandlingstiden behöva kortas ned eller avbokas. Full debitering kan då ske.</p>
-
-      <h3>5. Betalning</h3>
-      <p>Betalning sker i samband med behandling om inget annat överenskommits. Kliniken förbehåller sig rätten att kräva <strong>förskottsbetalning/deposition</strong> för vissa behandlingar eller kunder med upprepade sena avbokningar.</p>
-
-      <h3>6. Behandling &amp; ansvar</h3>
-      <p>Alla behandlingar anpassas individuellt. Resultat varierar och kan inte garanteras. Kunden ansvarar för att lämna korrekt information om hälsa, medicinering och hudtillstånd. Kliniken förbehåller sig rätten att <strong>avstå från behandling</strong> om det bedöms olämpligt ur medicinsk eller säkerhetsmässig synpunkt.</p>
-
-      <h3>7. Eftervård</h3>
-      <p>Kunden ansvarar för att följa givna eftervårdsråd. Avvikelser kan påverka resultatet och ligger utanför klinikens ansvar.</p>
-
-      <h3>8. Reklamation</h3>
-      <p>Eventuella synpunkter ska meddelas inom rimlig tid efter behandlingen. Bedömning sker individuellt.</p>
-
-      <h3>9. Åldersgräns</h3>
-      <p>Du måste vara minst 18 år eller ha målsmans godkännande.</p>
-
-      <h3>10. Personuppgifter</h3>
-      <p>Personuppgifter behandlas enligt vår integritetspolicy.</p>
-
-      <h3>11. Ändringar</h3>
-      <p>Your Skin Clinic förbehåller sig rätten att uppdatera dessa villkor.</p>
-
-      <h3>12. Kontakt</h3>
-      <p><a href="mailto:info@yourskinclinic.se">info@yourskinclinic.se</a><br><a href="tel:+46730412589">073-041 25 89</a></p>
-      <button class="info-modal-close-bottom" aria-label="Stäng">Stäng</button>
-    </div>
-  </div>
-
-  <!-- Cookies -->
-  <div class="info-modal-overlay" id="modal-cookies">
-    <div class="info-modal">
-      <button class="info-modal-close" aria-label="Stäng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-      <h2>Cookies (kakor)</h2>
-      <span class="modal-updated">Senast uppdaterad: 2026-05-03</span>
-
-      <h3>1. Vad är cookies?</h3>
-      <p>Cookies är små textfiler som lagras i din webbläsare för att webbplatsen ska fungera korrekt och för att förbättra användarupplevelsen.</p>
-
-      <h3>2. Vilka cookies vi använder</h3>
-      <ul><li>Nödvändiga cookies (funktionalitet och säkerhet)</li><li>Analyscookies (för att förstå användning av webbplatsen)</li></ul>
-
-      <h3>3. Tredjepart</h3>
-      <p>Vi kan använda tredjepartstjänster som Google Analytics och BokaDirekt.</p>
-
-      <h3>4. Hantering av cookies</h3>
-      <p>Du kan blockera eller radera cookies via din webbläsare. Vissa funktioner kan då påverkas.</p>
-
-      <h3>5. Samtycke</h3>
-      <p>Genom att använda webbplatsen samtycker du till användningen av cookies.</p>
-      <button class="info-modal-close-bottom" aria-label="Stäng">Stäng</button>
-    </div>
-  </div>
-
-  <!-- Kontakt -->
-  <div class="info-modal-overlay" id="modal-kontakt">
-    <div class="info-modal">
-      <button class="info-modal-close" aria-label="Stäng"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
-      <h2>Kontakt</h2>
-      <p>Har du frågor eller vill boka en tid? Kontakta oss – vi hjälper dig gärna.</p>
-
-      <h3>Kontaktuppgifter</h3>
-      <div class="contact-grid">
-        <div class="contact-item">
-          <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div class="contact-item-text"><h4>Adress</h4><p>Your Skin Clinic<br>Salong ZAX City<br>Gallerian, Hamngatan 37<br>111 51 Stockholm</p></div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-          <div class="contact-item-text"><h4>Telefon</h4><p><a href="tel:+46730412589">073-041 25 89</a><br><small style="color:var(--text-muted)">Snabbast svar via SMS</small></p></div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <div class="contact-item-text"><h4>E-post</h4><p><a href="mailto:info@yourskinclinic.se">info@yourskinclinic.se</a></p></div>
-        </div>
-      </div>
-
-      <h3>Hitta till oss</h3>
-      <p>Du hittar oss i Gallerian i Stockholm city, hos Salong ZAX City, nära Sergels torg.</p>
-      <div class="contact-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2035.0!2d18.0710!3d59.3325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f9d5f5e5e5e5d%3A0x0!2sGallerian%2C+Hamngatan+37%2C+Stockholm!5e0!3m2!1ssv!2sse!4v1700000000000" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-
-      <h3>Så kontaktar du oss</h3>
-      <div class="contact-options">
-        <ul><li><strong>SMS</strong> – snabbast svar</li><li><strong>E-post</strong> – för frågor som inte är brådskande</li><li><strong>Bokning</strong> – via vårt bokningssystem</li></ul>
-      </div>
-
-      <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="contact-cta">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        Boka tid
-      </a>
-      <p class="contact-note">Vi arbetar främst efter bokning. Tider kan variera beroende på behandling.</p>
-      <button class="info-modal-close-bottom" aria-label="Stäng">Stäng</button>
-    </div>
-  </div>
-
 </body>
 </html>

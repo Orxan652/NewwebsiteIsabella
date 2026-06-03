@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="treatment.css">
+  <link rel="stylesheet" href="problem.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>✦</text></svg>">
 </head>
 <body>
@@ -28,15 +29,15 @@
             <a href="index.html#hudproblem">Hudproblem</a>
             <div class="dropdown-menu">
               <a href="leverflackar.html">Leverfläckar, cherry spots &amp; skintags</a>
-              <a href="akne.html">Acne &amp; ärr</a>
+              <a href="akne.html">Akne &amp; ärr</a>
               <a href="pormaskar.html">Pormaskar &amp; finnar</a>
-              <a href="index.html#hudproblem">Pigmentering</a>
-              <a href="index.html#hudproblem">Rynkor &amp; fina linjer</a>
-              <a href="index.html#hudproblem">Stora porer</a>
+              <a href="pigmentering.html">Pigmentering</a>
+              <a href="rynkor.html">Rynkor &amp; fina linjer</a>
+              <a href="stora-porer.html">Stora porer</a>
               <a href="milier.html">Milier</a>
               <a href="bristningar.html">Bristningar</a>
               <a href="index.html#hudproblem">Oönskad hårväxt</a>
-              <a href="index.html#hudproblem">Torr &amp; känslig hud</a>
+              <a href="torr-kanslig-hud.html">Torr &amp; känslig hud</a>
             </div>
           </li>
           <li class="nav-dropdown">
@@ -46,10 +47,11 @@
               <a href="kemisk-peeling.html">Kemisk peeling</a>
               <a href="microneedling.html">Microneedling</a>
               <a href="laser-harborttagning.html">Laser hårborttagning</a>
+              <a href="kroppsbehandlingar.html">Kroppsbehandlingar</a>
               <a href="index.html#behandlingar">PMU – Bryn &amp; Läppar</a>
               <a href="index.html#behandlingar">PMU borttagning</a>
               <a href="index.html#behandlingar">Borttagning av hudförändringar</a>
-              <a href="index.html#behandlingar">Fransar &amp; Bryn</a>
+              <a href="frans-bryn.html">Fransar &amp; Bryn</a>
             </div>
           </li>
           <li><a href="index.html#omdomen">Omdömen</a></li>
@@ -68,12 +70,50 @@
 
   <!-- Mobile nav -->
   <div class="mobile-nav" id="mobileNav">
-    <a href="index.html#hudproblem">Hudproblem</a>
-    <a href="index.html#behandlingar">Behandlingar</a>
+    <div class="mobile-nav-group">
+      <button type="button" class="mobile-nav-toggle" aria-expanded="false" aria-controls="m-hudproblem">
+        Hudproblem
+        <span class="mobile-nav-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="mobile-nav-sub" id="m-hudproblem" hidden>
+        <a href="leverflackar.html">Leverfläckar, cherry spots &amp; skintags</a>
+        <a href="akne.html">Akne &amp; ärr</a>
+        <a href="pormaskar.html">Pormaskar &amp; finnar</a>
+        <a href="pigmentering.html">Pigmentering</a>
+        <a href="rynkor.html">Rynkor &amp; fina linjer</a>
+        <a href="stora-porer.html">Stora porer</a>
+        <a href="milier.html">Milier</a>
+        <a href="bristningar.html">Bristningar</a>
+        <a href="index.html#hudproblem">Oönskad hårväxt</a>
+        <a href="torr-kanslig-hud.html">Torr &amp; känslig hud</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button type="button" class="mobile-nav-toggle" aria-expanded="false" aria-controls="m-behandlingar">
+        Behandlingar
+        <span class="mobile-nav-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="mobile-nav-sub" id="m-behandlingar" hidden>
+        <a href="ansiktsbehandlingar.html">Avancerade ansiktsbehandlingar</a>
+        <a href="kemisk-peeling.html">Kemisk peeling</a>
+        <a href="microneedling.html">Microneedling</a>
+        <a href="laser-harborttagning.html">Laser hårborttagning</a>
+        <a href="kroppsbehandlingar.html">Kroppsbehandlingar</a>
+        <a href="index.html#behandlingar">PMU – Bryn &amp; Läppar</a>
+        <a href="index.html#behandlingar">PMU borttagning</a>
+        <a href="index.html#behandlingar">Borttagning av hudförändringar</a>
+        <a href="frans-bryn.html">Fransar &amp; Bryn</a>
+      </div>
+    </div>
     <a href="index.html#omdomen">Omdömen</a>
     <a href="index.html#om-isabella">Om oss</a>
     <a href="index.html#kontakt">Kontakt</a>
     <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary">Boka tid</a>
+    <div class="mobile-nav-contact">
+      <a href="tel:+46730412589">073-041 25 89</a>
+      <a href="https://www.instagram.com/your.skin.clinic" target="_blank" rel="noopener">@your.skin.clinic</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Your+Skin+Clinic+Hamngatan+37+Gallerian+Stockholm" target="_blank" rel="noopener">Hamngatan 37, Gallerian, Stockholm</a>
+    </div>
   </div>
 
   <!-- ========== HERO ========== -->
@@ -149,321 +189,51 @@
     </div>
   </section>
 
-  <!-- ========== TREATMENT CARDS ========== -->
-  <section class="tx-cards-section">
+  <!-- ========== INTRO ========== -->
+  <section class="problem-intro">
     <div class="container">
-      <div class="tx-cards-grid">
+      <div class="problem-intro__content fade-in">
+        <h2>Vad är microneedling?</h2>
+        <p>Microneedling – även kallat collagen induction therapy – är en behandling där en penna med fina, sterila nålar skapar små mikrokanaler i huden. De kontrollerade mikroskadorna väcker hudens egen läkningsprocess och sätter igång produktionen av nytt kollagen och elastin – byggstenarna som ger huden spänst, fasthet och lyster.</p>
+        <p>Över tid blir huden jämnare, tätare och friskare. Microneedling används för att förbättra hudstruktur, fina linjer, ärr (som akneärr), förstorade porer och en glåmig hudton. Resultatet utvecklas gradvis och bäst effekt nås med en serie behandlingar.</p>
+        <p>Hos oss kombineras microneedling ofta med aktiva serum (hyaluronsyra och polynukleotider), lugnande mask och LED-ljusterapi för optimal läkning.</p>
+      </div>
+    </div>
+  </section>
 
-        <!-- Card 1 -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>Microneedling – Ansikte</h3>
-            <span class="tx-card-sub">Glow &amp; kollagen</span>
+  <!-- ========== OLIKA TYPER (vad microneedling hjälper mot) ========== -->
+  <section class="problem-types">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Detta hjälper det mot</span>
+        <h2 class="section-title">Vad microneedling hjälper mot</h2>
+      </div>
+
+      <div class="types-details stagger">
+        <div class="type-card type-card--text-only fade-in">
+          <div class="type-card__body">
+            <h3>Fina linjer &amp; spänst</h3>
+            <p>Stimulerar kollagen för fastare, slätare hud.</p>
           </div>
-          <div class="tx-card-meta">
-            <span class="tx-card-time">45 min</span>
-            <span class="tx-card-price">1 995 kr</span>
+        </div>
+        <div class="type-card type-card--text-only fade-in">
+          <div class="type-card__body">
+            <h3>Ärr &amp; ojämn struktur</h3>
+            <p>Jämnar ut hudytan, bl.a. akneärr.</p>
           </div>
-          <p class="tx-card-desc">Förbättrar lyster och hudstruktur med naturlig kollagenstimulering.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263?ss=2209929" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger tx-tillval-trigger" aria-expanded="false">
-              <span>Tillval (valfritt) <span class="tx-tillval-hint">från +350 kr</span></span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul class="tx-tillval-list">
-                <li><span>Hals</span> <span class="tx-tillval-price">+350 kr</span> <span class="tx-tillval-note">– För ett mer enhetligt resultat</span></li>
-                <li><span>Dekolletage</span> <span class="tx-tillval-price">+450 kr</span> <span class="tx-tillval-note">– Förbättrar hudton och struktur</span></li>
-                <li><span>Glow peeling</span> <span class="tx-tillval-price">+495 kr</span> <span class="tx-tillval-note">– Ger extra lyster</span></li>
-                <li><span>Avancerad peeling (PRX / BioRePeel)</span> <span class="tx-tillval-price">+1 095 kr</span> <span class="tx-tillval-note">– Djupare hudförbättring</span></li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Vill förbättra lyster och hudton</li>
-                <li>Har tråkig, glåmig hud</li>
-                <li>Vill stärka hudens barriär</li>
-                <li>Söker en enklare men effektiv behandling</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Detta får du</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Djuprengöring &amp; förberedelse</li>
-                <li>Microneedling med professionellt device</li>
-                <li>Hyaluronsyra-serum under behandling</li>
-                <li>Lugnande mask &amp; SPF</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Jämnare hudton &amp; ökad lyster</li>
-                <li>Finare porer</li>
-                <li>Mjukare hud efter 1–2 veckor</li>
-                <li>Förbättras successivt över 4–6 behandlingar</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Aktiv akne eller hudinfektion</li>
-                <li>Graviditet eller amning</li>
-                <li>Pågående Accutane/Roaccutan-behandling</li>
-                <li>Blodförtunnande medicinering</li>
-              </ul>
-            </div>
+        </div>
+        <div class="type-card type-card--text-only fade-in">
+          <div class="type-card__body">
+            <h3>Förstorade porer</h3>
+            <p>Fastare hud runt porerna gör dem mindre synliga.</p>
           </div>
-        </article>
-
-        <!-- Card 2 – Featured -->
-        <article class="tx-card tx-card--featured fade-in">
-          <div class="tx-card-badge">Mest bokad</div>
-          <div class="tx-card-header">
-            <h3>Premium Microneedling – Ansikte</h3>
-            <span class="tx-card-sub">Anti-age &amp; hudförnyelse</span>
+        </div>
+        <div class="type-card type-card--text-only fade-in">
+          <div class="type-card__body">
+            <h3>Glåmig hud &amp; lyster</h3>
+            <p>Ökad cellförnyelse ger fräschare lyster.</p>
           </div>
-          <div class="tx-card-meta">
-            <span class="tx-card-time">80 min</span>
-            <span class="tx-card-price">2 795 kr</span>
-          </div>
-          <p class="tx-card-desc">Avancerad behandling med peeling, polynukleotider och LED för djupare resultat.</p>
-
-          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263?ss=3454397" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger tx-tillval-trigger" aria-expanded="false">
-              <span>Tillval (valfritt) <span class="tx-tillval-hint">från +450 kr</span></span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <p class="tx-tillval-highlight">Rekommenderas att kombinera med hals eller dekolletage</p>
-              <ul class="tx-tillval-list">
-                <li><span>Premium – Hals</span> <span class="tx-tillval-price">+450 kr</span> <span class="tx-tillval-note">– Utförs med samma avancerade teknik</span></li>
-                <li><span>Premium – Dekolletage</span> <span class="tx-tillval-price">+550 kr</span> <span class="tx-tillval-note">– Ger ett komplett resultat</span></li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Vill ha maximalt resultat</li>
-                <li>Har fina linjer, rynkor eller pigmentering</li>
-                <li>Söker djupare hudförnyelse</li>
-                <li>Vill kombinera flera aktiva steg</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Detta får du</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Kemisk peeling (förberedande)</li>
-                <li>Microneedling med professionellt device</li>
-                <li>Polynukleotider (PN) eller hyaluronsyra-cocktail</li>
-                <li>LED-ljusterapi</li>
-                <li>Lugnande mask &amp; SPF</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Tydligt förbättrad hudstruktur</li>
-                <li>Reducerade fina linjer &amp; rynkor</li>
-                <li>Jämnare pigmentering</li>
-                <li>Fastare, mer ungdomlig hud</li>
-                <li>Synligt resultat redan efter första behandlingen</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Aktiv akne eller hudinfektion</li>
-                <li>Graviditet eller amning</li>
-                <li>Pågående Accutane/Roaccutan-behandling</li>
-                <li>Blodförtunnande medicinering</li>
-                <li>Nyligen utförd kemisk peeling (inom 2 veckor)</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 3 -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>Microneedling – Rygg</h3>
-            <span class="tx-card-sub">Akne &amp; struktur</span>
-          </div>
-          <div class="tx-card-meta">
-            <span class="tx-card-time">60 min</span>
-            <span class="tx-card-price">2 295 kr</span>
-          </div>
-          <p class="tx-card-desc">Förbättrar akne, tilltäppt hud och ojämn struktur på ryggen.</p>
-
-          <p class="tx-tillval-empty">Inga tillval – behandlingen är redan optimerad för området.</p>
-
-          <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/microneedling-rygg-akne-hudstruktur-3454539" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Har akne eller aknelärr på ryggen</li>
-                <li>Har ojämn hudstruktur</li>
-                <li>Vill förbättra tilltäppt hud</li>
-                <li>Söker en behandling specifikt för rygg</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Detta får du</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Djuprengöring av ryggen</li>
-                <li>Microneedling anpassad för rygg</li>
-                <li>Aktiva serum under behandling</li>
-                <li>Lugnande avslutning</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Minskad akne &amp; inflammation</li>
-                <li>Jämnare hudstruktur</li>
-                <li>Renare porer</li>
-                <li>Resultat syns efter 2–3 behandlingar</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Aktiv svår akne med öppna sår</li>
-                <li>Hudinfektioner på ryggen</li>
-                <li>Graviditet eller amning</li>
-                <li>Blodförtunnande medicinering</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Card 4 -->
-        <article class="tx-card fade-in">
-          <div class="tx-card-header">
-            <h3>Premium Microneedling – Rygg</h3>
-            <span class="tx-card-sub">Djupgående hudförbättring</span>
-          </div>
-          <div class="tx-card-meta">
-            <span class="tx-card-time">80 min</span>
-            <span class="tx-card-price">2 995 kr</span>
-          </div>
-          <p class="tx-card-desc">Kombinerad behandling med peeling och aktiva steg för djupare hudförbättring.</p>
-
-          <p class="tx-tillval-empty">Inga tillval – behandlingen är redan optimerad för området.</p>
-
-          <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/premium-microneedling-rygg-akne-arr-hudfornyelse-3454540" target="_blank" rel="noopener" class="btn btn-primary btn-sm tx-card-btn">Boka</a>
-
-          <div class="tx-accordion">
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Passar dig som</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Har svåra aknelärr eller pigmentering på ryggen</li>
-                <li>Vill ha maximal förbättring</li>
-                <li>Söker en kombinerad behandling för djupare resultat</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Detta får du</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Kemisk peeling (förberedande)</li>
-                <li>Microneedling anpassad för rygg</li>
-                <li>Aktiva cocktails (PN/HA)</li>
-                <li>LED-ljusterapi</li>
-                <li>Lugnande avslutning &amp; SPF</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Resultat</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Markant förbättrad hudstruktur</li>
-                <li>Reducerade ärr &amp; pigmenteringar</li>
-                <li>Jämnare, friskare hud</li>
-                <li>Långvariga resultat med behandlingsplan</li>
-              </ul>
-            </div>
-
-            <button class="tx-accordion-trigger" aria-expanded="false">
-              <span>Ej lämplig vid</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="tx-accordion-panel">
-              <ul>
-                <li>Aktiv svår akne med öppna sår</li>
-                <li>Hudinfektioner på ryggen</li>
-                <li>Graviditet eller amning</li>
-                <li>Blodförtunnande medicinering</li>
-                <li>Nyligen utförd kemisk peeling (inom 2 veckor)</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
+        </div>
       </div>
     </div>
   </section>
@@ -478,23 +248,325 @@
         <div class="tx-compare-col">
           <h3>Microneedling</h3>
           <ul>
-            <li>Fokus på kollagenstimulering</li>
-            <li>Förbättrar lyster och struktur</li>
-            <li>Enklare behandling</li>
+            <li>Stimulerar hudens egen kollagenproduktion</li>
+            <li>Microneedling med återfuktande serum</li>
+            <li>Lugnande sheet mask och rödljusterapi</li>
+            <li>Perfekt för lyster, underhåll och förebyggande</li>
           </ul>
         </div>
         <div class="tx-compare-col tx-compare-col--premium">
           <h3>Premium Microneedling</h3>
           <ul>
-            <li>Kombineras med kemisk peeling</li>
-            <li>Innehåller aktiva cocktails (PN/HA)</li>
-            <li>Arbetar både ytligt och på djupet</li>
-            <li>Ger mer synliga och långvariga resultat</li>
+            <li>Allt i den klassiska – plus mer</li>
+            <li>Förberedande kemisk peeling för djupare förnyelse</li>
+            <li>Regenererande cocktail: polynukleotider (stärker &amp; återfuktar) + hyaluronsyra</li>
+            <li>Avancerad bio-cellulose mask och längre rödljusterapi (25–30 min)</li>
+            <li>Arbetar djupare – mer synliga och långvariga resultat</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ========== TREATMENT CARDS ========== -->
+  <section class="tx-cards-section">
+    <div class="container">
+      <div class="behandling-kategori">
+        <div class="behandling-cards-list">
+
+          <div class="behandling-card-vertical fade-in">
+            <img src="images/microneedlingbas.png" alt="Microneedling Ansikte hos Your Skin Clinic i Stockholm" class="behandling-card-vertical__image">
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Microneedling Ansikte</h3>
+                <div class="behandling-card-vertical__meta">
+                  <span>45 min</span>
+                  <span class="price">1 995 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  En klassisk microneedling som stimulerar hudens egen kollagenproduktion och förbättrar hudens struktur, lyster och elasticitet. Bra för dig med lättare akneärr, ojämn struktur eller som vill arbeta förebyggande mot fina linjer.
+                </p>
+              </div>
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Enzympeeling"><span>Enzympeeling</span></div>
+                <div class="moment-icon"><img src="images/icon-extraction.png" alt="Microneedling"><span>Microneedling</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Reparerande serum"><span>Reparerande serum</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="Lugnande mask"><span>Lugnande mask</span></div>
+              </div>
+
+              <div class="tx-accordion tx-accordion--compact">
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Passar dig som</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>Du vill förbättra hudens struktur, fasthet och lyster, mjuka upp fina linjer eller ärr efter akne, förfina förstorade porer eller jämna ut hudtonen – utan kirurgi eller lång läkningstid.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Så fungerar behandlingen</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>Fina, sterila nålar skapar mängder av mikrokanaler i huden. De kontrollerade mikrostimuli aktiverar hudens egen läkning och sätter igång nybildning av kollagen och elastin, vilket ger tätare, jämnare och fastare hud över tid. Behandlingen inleds med rengöring och avslutas med lugnande, återfuktande vård. Lätt rodnad i 1–2 dygn är normalt.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Resultat</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Huden kan vara röd och svullen i 1–3 dagar</li>
+                    <li>Slutresultatet syns efter 2–4 veckor</li>
+                    <li>Kollagenuppbyggnad fortsätter i upp till 6 månader</li>
+                    <li>Bäst resultat uppnås med en serie om 4–6 behandlingar</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Ej lämplig vid</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Aktiv akne, eksem eller rosacea i behandlingsområdet</li>
+                    <li>Graviditet eller amning</li>
+                    <li>Pågående Accutane/isotretinoin-medicinering</li>
+                    <li>Blodförtunnande medicin</li>
+                    <li>Aktiv herpes simplex (munsår) – meddela oss i förväg</li>
+                    <li>Nyligen utförd laserbehandling eller kemisk peeling</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="#" data-modal="modal-mn-ansikte-bas" class="btn btn-primary btn-sm">Boka</a>
+            </div>
+          </div>
+
+          <div class="behandling-card-vertical fade-in">
+            <span class="behandling-card-vertical__badge">Mest bokad</span>
+            <img src="images/microneedlingpremium.png" alt="Premium Microneedling Ansikte hos Your Skin Clinic i Stockholm" class="behandling-card-vertical__image">
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Premium Microneedling Ansikte</h3>
+                <div class="behandling-card-vertical__stars" aria-label="5 av 5 stjärnor">★★★★★</div>
+                <div class="behandling-card-vertical__meta">
+                  <span>80 min</span>
+                  <span class="price">2 795 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  Vår mest avancerade behandling för akneärr och hudförnyelse. Kombinerar kemisk peeling, microneedling med regenererande cocktail (polynukleotider + hyaluronsyra), lugnande bio-cellulose mask och LED/IR-ljusterapi. Arbetar både ytligt och på djupet för maximalt resultat.
+                </p>
+              </div>
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Kemisk peeling"><span>Kemisk peeling</span></div>
+                <div class="moment-icon"><img src="images/icon-extraction.png" alt="Microneedling"><span>Microneedling</span></div>
+                <div class="moment-icon"><img src="images/iconbiocellulose.png" alt="Bio-cellulose mask"><span>Bio-cellulose mask</span></div>
+                <div class="moment-icon"><img src="images/iconredlight.png" alt="Rödljus/LED"><span>Rödljus/LED</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Barriärkräm"><span>Barriärkräm</span></div>
+              </div>
+
+              <div class="tx-accordion tx-accordion--compact">
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Passar dig som</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>Du vill ha vårt mest kompletta och resultatinriktade microneedling-protokoll – särskilt vid mer uttalade linjer, ärr, pigmentering eller hudtrötthet – och vill maximera kollagenstimulering och lyster i en längre behandling.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Så fungerar behandlingen</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>Vår mest omfattande microneedling: en längre behandling (80 min) med fler steg för djupare och mer fullständig kollagenstimulering. Nålarna skapar mikrokanaler som aktiverar hudens läkning och nybildning av kollagen och elastin, medan de extra stegen ökar upptaget av aktiva ingredienser och förstärker både fasthet och lyster. Ger ett mer påtagligt och långvarigt resultat än grundbehandlingen.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Resultat</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Huden kan vara röd och svullen i 1–3 dagar</li>
+                    <li>Slutresultatet syns efter 2–4 veckor</li>
+                    <li>Kollagenuppbyggnad fortsätter i upp till 6 månader</li>
+                    <li>Bäst resultat uppnås med en serie om 4–6 behandlingar</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Ej lämplig vid</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Aktiv akne, eksem eller rosacea i behandlingsområdet</li>
+                    <li>Graviditet eller amning</li>
+                    <li>Pågående Accutane/isotretinoin-medicinering</li>
+                    <li>Blodförtunnande medicin</li>
+                    <li>Aktiv herpes simplex (munsår) – meddela oss i förväg</li>
+                    <li>Nyligen utförd laserbehandling eller kemisk peeling</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="#" data-modal="modal-mn-ansikte-premium" class="btn btn-primary btn-sm">Boka</a>
+            </div>
+          </div>
+
+          <div class="behandling-card-vertical fade-in">
+            <img src="images/microneedlingryggbas.png" alt="Microneedling Rygg hos Your Skin Clinic i Stockholm" class="behandling-card-vertical__image">
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Microneedling Rygg</h3>
+                <div class="behandling-card-vertical__meta">
+                  <span>60 min</span>
+                  <span class="price">2 295 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  Microneedling för ryggen som stärker hudens egen kollagenproduktion och jämnar ut struktur och ärr. Bra för dig med akneärr eller ojämn hud på ryggen.
+                </p>
+              </div>
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Enzympeeling"><span>Enzympeeling</span></div>
+                <div class="moment-icon"><img src="images/icon-extraction.png" alt="Microneedling"><span>Microneedling</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Reparerande serum"><span>Reparerande serum</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="Lugnande mask"><span>Lugnande mask</span></div>
+              </div>
+
+              <div class="tx-accordion tx-accordion--compact">
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Passar dig som</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>Du vill behandla ärr, märken eller ojämn hudstruktur på ryggen, t.ex. spår efter akne ("bacne"), och önskar slätare, jämnare och fastare hud på ett större område.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Så fungerar behandlingen</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>Samma kollagenstimulerande princip som för ansiktet, anpassad för ryggens större yta. Mikrokanalerna aktiverar hudens läkning och nybildning av kollagen, vilket mjukar upp ärr och jämnar ut strukturen över tid. Inleds med rengöring och avslutas med lugnande vård.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Resultat</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Huden kan vara röd och svullen i 1–3 dagar</li>
+                    <li>Slutresultatet syns efter 2–4 veckor</li>
+                    <li>Kollagenuppbyggnad fortsätter i upp till 6 månader</li>
+                    <li>Bäst resultat uppnås med en serie om 4–6 behandlingar</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Ej lämplig vid</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Aktiv akne, eksem eller rosacea i behandlingsområdet</li>
+                    <li>Graviditet eller amning</li>
+                    <li>Pågående Accutane/isotretinoin-medicinering</li>
+                    <li>Blodförtunnande medicin</li>
+                    <li>Aktiv herpes simplex (munsår) – meddela oss i förväg</li>
+                    <li>Nyligen utförd laserbehandling eller kemisk peeling</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="#" data-modal="modal-mn-rygg-bas" class="btn btn-primary btn-sm">Boka</a>
+            </div>
+          </div>
+
+          <div class="behandling-card-vertical fade-in">
+            <img src="images/microneedlingryggpremium.png" alt="Premium Microneedling Rygg hos Your Skin Clinic i Stockholm" class="behandling-card-vertical__image">
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Premium Microneedling Rygg</h3>
+                <div class="behandling-card-vertical__meta">
+                  <span>80 min</span>
+                  <span class="price">2 995 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  Vår mest avancerade ryggbehandling. Kombinerar kemisk peeling, microneedling med regenererande cocktail (polynukleotider + hyaluronsyra), rödljusterapi och en lugnande mask för djupare förnyelse och jämnare hud.
+                </p>
+              </div>
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Kemisk peeling"><span>Kemisk peeling</span></div>
+                <div class="moment-icon"><img src="images/icon-extraction.png" alt="Microneedling"><span>Microneedling</span></div>
+                <div class="moment-icon"><img src="images/iconredlight.png" alt="Rödljus/LED"><span>Rödljus/LED</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="Lugnande mask"><span>Lugnande mask</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF 50"><span>SPF 50</span></div>
+              </div>
+
+              <div class="tx-accordion tx-accordion--compact">
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Passar dig som</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>Du vill ha det mest omfattande protokollet för ryggen – vid mer uttalade ärr, märken eller ojämn struktur – och vill maximera resultatet på ett större område i en längre behandling.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Så fungerar behandlingen</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <p>Vårt mest kompletta protokoll för ryggen: en längre behandling med fler steg för djupare kollagenstimulering och mer fullständig täckning. Mikrokanalerna aktiverar hudens egen läkning och förnyelse, medan de extra stegen förstärker resultatet på struktur, fasthet och jämnhet.</p>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Resultat</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Huden kan vara röd och svullen i 1–3 dagar</li>
+                    <li>Slutresultatet syns efter 2–4 veckor</li>
+                    <li>Kollagenuppbyggnad fortsätter i upp till 6 månader</li>
+                    <li>Bäst resultat uppnås med en serie om 4–6 behandlingar</li>
+                  </ul>
+                </div>
+
+                <button class="tx-accordion-trigger" aria-expanded="false">
+                  <span>Ej lämplig vid</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="tx-accordion-panel">
+                  <ul>
+                    <li>Aktiv akne, eksem eller rosacea i behandlingsområdet</li>
+                    <li>Graviditet eller amning</li>
+                    <li>Pågående Accutane/isotretinoin-medicinering</li>
+                    <li>Blodförtunnande medicin</li>
+                    <li>Aktiv herpes simplex (munsår) – meddela oss i förväg</li>
+                    <li>Nyligen utförd laserbehandling eller kemisk peeling</li>
+                  </ul>
+                </div>
+              </div>
+
+              <a href="#" data-modal="modal-mn-rygg-premium" class="btn btn-primary btn-sm">Boka</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- ========== INFO & FAQ ========== -->
   <section class="tx-info">
@@ -974,6 +1046,88 @@
       <p class="contact-note">Vi arbetar främst efter bokning. Tider kan variera beroende på behandling.</p>
 
       <button class="info-modal-close-bottom" aria-label="Stäng">Stäng</button>
+    </div>
+  </div>
+
+  <!-- ========== MODALS — Behandlingsval ========== -->
+
+  <!-- Modal: Microneedling Ansikte (bas) -->
+  <div class="modal" id="modal-mn-ansikte-bas" role="dialog" aria-modal="true" aria-labelledby="modal-mn-ansikte-bas-title" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-modal-close aria-label="Stäng">✕</button>
+      <h2 class="modal__title" id="modal-mn-ansikte-bas-title">Microneedling Ansikte</h2>
+      <p class="modal__subtitle">Klicka för att boka via Bokadirekt.</p>
+      <div class="modal__options">
+        <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263?ss=2209929" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Boka behandling</h3>
+            <span class="modal__option-meta">45 min · 1 995 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+      </div>
+      <button class="modal__back-btn" data-modal-close>Tillbaka</button>
+    </div>
+  </div>
+
+  <!-- Modal: Premium Microneedling Ansikte -->
+  <div class="modal" id="modal-mn-ansikte-premium" role="dialog" aria-modal="true" aria-labelledby="modal-mn-ansikte-premium-title" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-modal-close aria-label="Stäng">✕</button>
+      <h2 class="modal__title" id="modal-mn-ansikte-premium-title">Premium Microneedling Ansikte</h2>
+      <p class="modal__subtitle">Klicka för att boka via Bokadirekt.</p>
+      <div class="modal__options">
+        <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263?ss=3454397" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Boka behandling</h3>
+            <span class="modal__option-meta">80 min · 2 795 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+      </div>
+      <button class="modal__back-btn" data-modal-close>Tillbaka</button>
+    </div>
+  </div>
+
+  <!-- Modal: Microneedling Rygg (bas) -->
+  <div class="modal" id="modal-mn-rygg-bas" role="dialog" aria-modal="true" aria-labelledby="modal-mn-rygg-bas-title" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-modal-close aria-label="Stäng">✕</button>
+      <h2 class="modal__title" id="modal-mn-rygg-bas-title">Microneedling Rygg</h2>
+      <p class="modal__subtitle">Klicka för att boka via Bokadirekt.</p>
+      <div class="modal__options">
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/microneedling-rygg-akne-hudstruktur-3454539" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Boka behandling</h3>
+            <span class="modal__option-meta">60 min · 2 295 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+      </div>
+      <button class="modal__back-btn" data-modal-close>Tillbaka</button>
+    </div>
+  </div>
+
+  <!-- Modal: Premium Microneedling Rygg -->
+  <div class="modal" id="modal-mn-rygg-premium" role="dialog" aria-modal="true" aria-labelledby="modal-mn-rygg-premium-title" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__content">
+      <button class="modal__close" data-modal-close aria-label="Stäng">✕</button>
+      <h2 class="modal__title" id="modal-mn-rygg-premium-title">Premium Microneedling Rygg</h2>
+      <p class="modal__subtitle">Klicka för att boka via Bokadirekt.</p>
+      <div class="modal__options">
+        <a href="https://www.bokadirekt.se/boka-tjanst/your-skin-clinic-48263/premium-microneedling-rygg-akne-arr-hudfornyelse-3454540" target="_blank" rel="noopener" class="modal__option">
+          <div class="modal__option-info">
+            <h3>Boka behandling</h3>
+            <span class="modal__option-meta">80 min · 2 995 kr</span>
+          </div>
+          <span class="modal__option-arrow">→</span>
+        </a>
+      </div>
+      <button class="modal__back-btn" data-modal-close>Tillbaka</button>
     </div>
   </div>
 

@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="treatment.css">
+  <link rel="stylesheet" href="problem.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>✦</text></svg>">
 
   <style>
@@ -47,17 +48,16 @@
       margin-bottom: 2rem;
     }
     .tx-guide-header h2 {
-      font-family: var(--font-heading);
-      font-size: clamp(1.3rem, 2.5vw, 1.7rem);
-      font-weight: 600;
-      color: var(--accent);
-      margin-bottom: .5rem;
-      text-transform: uppercase;
-      letter-spacing: .04em;
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 400;
+      color: var(--text-heading);
+      margin-bottom: .75rem;
+      letter-spacing: -.01em;
     }
     .tx-guide-header p {
-      font-size: .9rem;
-      color: var(--text-muted);
+      font-size: 1rem;
+      color: var(--text-body);
     }
     .tx-guide-grid {
       display: grid;
@@ -72,11 +72,14 @@
       .tx-guide-grid { grid-template-columns: repeat(2, 1fr); }
     }
     .tx-guide-card {
+      display: block;
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
       padding: 1.5rem 1.25rem;
       text-align: center;
+      text-decoration: none;
+      color: inherit;
       transition: box-shadow var(--transition), border-color var(--transition);
       cursor: pointer;
     }
@@ -95,17 +98,19 @@
       height: 100%;
     }
     .tx-guide-label {
-      font-family: var(--font-heading);
-      font-weight: 600;
-      font-size: .95rem;
-      color: var(--accent);
-      margin-bottom: .4rem;
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 1.1rem;
+      color: var(--text-heading);
+      margin-bottom: .5rem;
+      letter-spacing: 0;
     }
     .tx-guide-desc {
-      font-size: .78rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-      margin-bottom: .6rem;
+      font-family: 'Inter', sans-serif;
+      font-size: .85rem;
+      color: var(--text-body);
+      line-height: 1.55;
+      margin-bottom: .85rem;
     }
     .tx-guide-rec {
       font-size: .72rem;
@@ -114,13 +119,15 @@
       letter-spacing: .05em;
       text-transform: uppercase;
     }
-    .tx-guide-rec a {
+    .tx-guide-rec a,
+    .tx-guide-rec span {
       color: var(--gold);
       text-decoration: none;
       border-bottom: 1px solid transparent;
       transition: border-color var(--transition);
     }
-    .tx-guide-rec a:hover { border-color: var(--gold); }
+    .tx-guide-rec a:hover,
+    .tx-guide-card:hover .tx-guide-rec span { border-color: var(--gold); }
 
     /* --- Treatment List (Row-based) --- */
     .tl-section {
@@ -433,15 +440,15 @@
             <a href="index.html#hudproblem">Hudproblem</a>
             <div class="dropdown-menu">
               <a href="leverflackar.html">Leverfläckar, cherry spots &amp; skintags</a>
-              <a href="akne.html">Acne &amp; ärr</a>
+              <a href="akne.html">Akne &amp; ärr</a>
               <a href="pormaskar.html">Pormaskar &amp; finnar</a>
-              <a href="index.html#hudproblem">Pigmentering</a>
-              <a href="index.html#hudproblem">Rynkor &amp; fina linjer</a>
-              <a href="index.html#hudproblem">Stora porer</a>
+              <a href="pigmentering.html">Pigmentering</a>
+              <a href="rynkor.html">Rynkor &amp; fina linjer</a>
+              <a href="stora-porer.html">Stora porer</a>
               <a href="milier.html">Milier</a>
               <a href="bristningar.html">Bristningar</a>
               <a href="index.html#hudproblem">Oönskad hårväxt</a>
-              <a href="index.html#hudproblem">Torr &amp; känslig hud</a>
+              <a href="torr-kanslig-hud.html">Torr &amp; känslig hud</a>
             </div>
           </li>
           <li class="nav-dropdown">
@@ -451,10 +458,11 @@
               <a href="kemisk-peeling.html">Kemisk peeling</a>
               <a href="microneedling.html">Microneedling</a>
               <a href="laser-harborttagning.html">Laser hårborttagning</a>
+              <a href="kroppsbehandlingar.html">Kroppsbehandlingar</a>
               <a href="index.html#behandlingar">PMU – Bryn &amp; Läppar</a>
               <a href="index.html#behandlingar">PMU borttagning</a>
               <a href="index.html#behandlingar">Borttagning av hudförändringar</a>
-              <a href="index.html#behandlingar">Fransar &amp; Bryn</a>
+              <a href="frans-bryn.html">Fransar &amp; Bryn</a>
             </div>
           </li>
           <li><a href="index.html#omdomen">Omdömen</a></li>
@@ -473,12 +481,50 @@
 
   <!-- Mobile nav -->
   <div class="mobile-nav" id="mobileNav">
-    <a href="index.html#hudproblem">Hudproblem</a>
-    <a href="index.html#behandlingar">Behandlingar</a>
+    <div class="mobile-nav-group">
+      <button type="button" class="mobile-nav-toggle" aria-expanded="false" aria-controls="m-hudproblem">
+        Hudproblem
+        <span class="mobile-nav-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="mobile-nav-sub" id="m-hudproblem" hidden>
+        <a href="leverflackar.html">Leverfläckar, cherry spots &amp; skintags</a>
+        <a href="akne.html">Akne &amp; ärr</a>
+        <a href="pormaskar.html">Pormaskar &amp; finnar</a>
+        <a href="pigmentering.html">Pigmentering</a>
+        <a href="rynkor.html">Rynkor &amp; fina linjer</a>
+        <a href="stora-porer.html">Stora porer</a>
+        <a href="milier.html">Milier</a>
+        <a href="bristningar.html">Bristningar</a>
+        <a href="index.html#hudproblem">Oönskad hårväxt</a>
+        <a href="torr-kanslig-hud.html">Torr &amp; känslig hud</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button type="button" class="mobile-nav-toggle" aria-expanded="false" aria-controls="m-behandlingar">
+        Behandlingar
+        <span class="mobile-nav-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="mobile-nav-sub" id="m-behandlingar" hidden>
+        <a href="ansiktsbehandlingar.html">Avancerade ansiktsbehandlingar</a>
+        <a href="kemisk-peeling.html">Kemisk peeling</a>
+        <a href="microneedling.html">Microneedling</a>
+        <a href="laser-harborttagning.html">Laser hårborttagning</a>
+        <a href="kroppsbehandlingar.html">Kroppsbehandlingar</a>
+        <a href="index.html#behandlingar">PMU – Bryn &amp; Läppar</a>
+        <a href="index.html#behandlingar">PMU borttagning</a>
+        <a href="index.html#behandlingar">Borttagning av hudförändringar</a>
+        <a href="frans-bryn.html">Fransar &amp; Bryn</a>
+      </div>
+    </div>
     <a href="index.html#omdomen">Omdömen</a>
     <a href="index.html#om-isabella">Om oss</a>
     <a href="index.html#kontakt">Kontakt</a>
     <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary">Boka tid</a>
+    <div class="mobile-nav-contact">
+      <a href="tel:+46730412589">073-041 25 89</a>
+      <a href="https://www.instagram.com/your.skin.clinic" target="_blank" rel="noopener">@your.skin.clinic</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Your+Skin+Clinic+Hamngatan+37+Gallerian+Stockholm" target="_blank" rel="noopener">Hamngatan 37, Gallerian, Stockholm</a>
+    </div>
   </div>
 
   <!-- ========== HERO ========== -->
@@ -564,7 +610,7 @@
       </div>
       <div class="tx-guide-grid fade-in">
 
-        <div class="tx-guide-card" data-scroll="glow">
+        <a href="#signature-glow" class="tx-guide-card" data-scroll="glow">
           <div class="tx-guide-icon">
             <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 2v4M18 30v4M2 18h4M30 18h4M6.3 6.3l2.8 2.8M26.9 26.9l2.8 2.8M6.3 29.7l2.8-2.8M26.9 9.1l2.8-2.8"/>
@@ -573,10 +619,10 @@
           </div>
           <div class="tx-guide-label">Glow &amp; lyster</div>
           <div class="tx-guide-desc">Strålande hud, jämn hudton och maximal lyster.</div>
-          <div class="tx-guide-rec"><a href="#behandlingar">Se behandlingar →</a></div>
-        </div>
+          <div class="tx-guide-rec"><span>Se behandlingar →</span></div>
+        </a>
 
-        <div class="tx-guide-card" data-scroll="antiage">
+        <a href="#collagen-boost" class="tx-guide-card" data-scroll="antiage">
           <div class="tx-guide-icon">
             <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 3a15 15 0 1 0 15 15"/>
@@ -586,10 +632,10 @@
           </div>
           <div class="tx-guide-label">Anti-age &amp; kvalitet</div>
           <div class="tx-guide-desc">Spänst, elasticitet och förbättrad hudkvalitet.</div>
-          <div class="tx-guide-rec"><a href="#behandlingar">Se behandlingar →</a></div>
-        </div>
+          <div class="tx-guide-rec"><span>Se behandlingar →</span></div>
+        </a>
 
-        <div class="tx-guide-card" data-scroll="akne">
+        <a href="#advanced-acne-detox" class="tx-guide-card" data-scroll="akne">
           <div class="tx-guide-icon">
             <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 4C10 4 6 12 6 18c0 8 5 14 12 14s12-6 12-14c0-6-4-14-12-14z"/>
@@ -600,10 +646,10 @@
           </div>
           <div class="tx-guide-label">Akne &amp; orenheter</div>
           <div class="tx-guide-desc">Djuprengöring, balans och färre utbrott.</div>
-          <div class="tx-guide-rec"><a href="#behandlingar">Se behandlingar →</a></div>
-        </div>
+          <div class="tx-guide-rec"><span>Se behandlingar →</span></div>
+        </a>
 
-        <div class="tx-guide-card" data-scroll="kanslig">
+        <a href="#barrier-repair" class="tx-guide-card" data-scroll="kanslig">
           <div class="tx-guide-icon">
             <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 6C12 6 8 11 8 16c0 7 10 16 10 16s10-9 10-16c0-5-4-10-10-10z"/>
@@ -612,8 +658,8 @@
           </div>
           <div class="tx-guide-label">Känslig hud</div>
           <div class="tx-guide-desc">Lugnande, barriärstärkande och antiinflammatorisk vård.</div>
-          <div class="tx-guide-rec"><a href="#behandlingar">Se behandlingar →</a></div>
-        </div>
+          <div class="tx-guide-rec"><span>Se behandlingar →</span></div>
+        </a>
 
       </div>
     </div>
@@ -621,631 +667,261 @@
 
 
   <!-- ========== TREATMENT LIST ========== -->
-  <section class="tl-section" id="behandlingar">
+  <section class="tx-cards-section" id="behandlingar">
     <div class="container">
-      <div class="tl-section-header fade-in">
-        <h2>Alla ansiktsbehandlingar</h2>
-        <p>12 skräddarsydda behandlingar – klicka på en rad för att läsa mer.</p>
+      <div class="section-header fade-in">
+        <h2 class="section-title">Alla ansiktsbehandlingar</h2>
       </div>
-      <div class="tl-list">
+      <div class="behandling-kategori">
+        <div class="behandling-cards-list">
 
-        <!-- 1. Signature Glow Facial -->
-        <div class="tl-row" id="glow">
-          <div class="tl-row-header" onclick="toggleRow(this)">
-            <span class="tl-num">01</span>
-            <div class="tl-main">
-              <span class="tl-name">Signature Glow Facial</span>
-              <span class="tl-duration">80 min</span>
-              <span class="tl-desc">Maximal lyster och jämn hudstruktur – utan downtime.</span>
-            </div>
-            <div class="tl-actions">
-              <span class="tl-price">1 795 kr</span>
-              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
-              <button class="tl-toggle" aria-label="Visa detaljer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                <span class="tl-toggle-text">Info</span>
-              </button>
-            </div>
-          </div>
-          <div class="tl-panel">
-            <div class="tl-panel-inner">
-              <div class="tl-detail">
-                <h4>Passar dig som</h4>
-                <ul>
-                  <li>Har trött, glåmig eller torr hud</li>
-                  <li>Vill ha glow inför event</li>
-                  <li>Har ojämn hudton eller struktur</li>
-                </ul>
+          <a href="#" id="signature-glow" class="behandling-card-vertical fade-in">
+            <div class="behandling-card-vertical__image behandling-card-vertical__image--placeholder">Bild kommer här</div>
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Signature Glow Facial</h3>
+                <div class="behandling-card-vertical__meta">
+                  <span>80 min</span>
+                  <span class="price">1 795 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  Vår signaturbehandling för maximal lyster och jämn hudstruktur – utan downtime. Dermaplaning och en mild peeling kombineras med massage och ljusterapi för frisk, strålande hud.
+                </p>
               </div>
-              <div class="tl-detail">
-                <h4>Så fungerar behandlingen</h4>
-                <p>Kombinerar mekanisk exfoliering (dermaplaning) och kemisk peeling för att avlägsna döda hudceller och stimulera cellförnyelse. Samtidigt tillförs aktiva ingredienser och cirkulationen ökar genom massage och ljusterapi.</p>
-              </div>
-              <div class="tl-detail">
-                <h4>Resultat</h4>
-                <ul>
-                  <li>Direkt glow</li>
-                  <li>Slätare hud</li>
-                  <li>Jämnare hudstruktur</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Ej lämplig vid</h4>
-                <ul>
-                  <li>Aktiv akne</li>
-                  <li>Irritation</li>
-                  <li>Retinoidkur</li>
-                </ul>
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Dermaplaning & peeling"><span>Dermaplaning & peeling</span></div>
+                <div class="moment-icon"><img src="images/icon-massage.png" alt="Massage"><span>Massage</span></div>
+                <div class="moment-icon"><img src="images/iconredlight.png" alt="Ljusterapi"><span>Ljusterapi</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Aktivt serum"><span>Aktivt serum</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF 50"><span>SPF 50</span></div>
               </div>
             </div>
-          </div>
+            <div class="behandling-card-vertical__arrow">→</div>
+          </a>
+
+          <a href="#" id="collagen-boost" class="behandling-card-vertical fade-in">
+            <img src="images/CollagenBoostDeluxe.png" alt="Collagen Boost Deluxe hos Your Skin Clinic i Stockholm" class="behandling-card-vertical__image">
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Collagen Boost Deluxe</h3>
+                <div class="behandling-card-vertical__meta">
+                  <span>75 min</span>
+                  <span class="price">2 195 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  Resultatinriktad anti-age-behandling med dubbel exfoliering, lyftande massage och återfuktande serum för fastare, mer lyster hud.
+                </p>
+              </div>
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Dubbelrengöring"><span>Dubbelrengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Dubbel exfoliering"><span>Dubbel exfoliering</span></div>
+                <div class="moment-icon"><img src="images/icon-massage.png" alt="Massage"><span>Massage</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="Lugnande mask"><span>Lugnande mask</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Serum-layering"><span>Serum-layering</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF 50"><span>SPF 50</span></div>
+              </div>
+            </div>
+            <div class="behandling-card-vertical__arrow">→</div>
+          </a>
+
+          <a href="#" class="behandling-card-vertical fade-in">
+            <div class="behandling-card-vertical__badge">Hudterapeutens favorit</div>
+            <div class="behandling-card-vertical__image behandling-card-vertical__image--placeholder">Bild kommer här</div>
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Nano Infusion Skin Booster</h3>
+                <div class="behandling-card-vertical__meta">
+                  <span>60 min</span>
+                  <span class="price">2 095 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  Återfuktande boost där ett Salmon DNA-serum infuseras djupt i huden med nano-teknik – för lyster, spänst och en frisk, återhämtad hud.
+                </p>
+              </div>
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Exfoliering"><span>Exfoliering</span></div>
+                <div class="moment-icon"><img src="images/icon-extraction.png" alt="Nano infusion"><span>Nano infusion</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Salmon DNA-serum"><span>Salmon DNA-serum</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="Lugnande mask"><span>Lugnande mask</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF 50"><span>SPF 50</span></div>
+              </div>
+            </div>
+            <div class="behandling-card-vertical__arrow">→</div>
+          </a>
+
+          <a href="#" class="behandling-card-vertical fade-in">
+            <div class="behandling-card-vertical__image behandling-card-vertical__image--placeholder">Bild kommer här</div>
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Glass Skin Hydration</h3>
+                <div class="behandling-card-vertical__meta">
+                  <span>60 min</span>
+                  <span class="price">1 795 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  Intensivt återfuktande behandling för en slät, dewy finish – exfoliering, massage och fukt-serum som ger huden lyster.
+                </p>
+              </div>
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Mild exfoliering"><span>Mild exfoliering</span></div>
+                <div class="moment-icon"><img src="images/icon-massage.png" alt="Massage"><span>Massage</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="Återfuktande mask"><span>Återfuktande mask</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Hydrerande serum"><span>Hydrerande serum</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF 50"><span>SPF 50</span></div>
+              </div>
+            </div>
+            <div class="behandling-card-vertical__arrow">→</div>
+          </a>
+
+          <a href="#" class="behandling-card-vertical fade-in">
+            <img src="images/skinresetfacial.png" alt="Skin Reset Facial hos Your Skin Clinic i Stockholm" class="behandling-card-vertical__image">
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Skin Reset Facial</h3>
+                <div class="behandling-card-vertical__meta">
+                  <span>60 min</span>
+                  <span class="price">1 695 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  En lugn, barriärstärkande klassiker – mild exfoliering, avslappnande massage och fukt för en frisk, balanserad hud.
+                </p>
+              </div>
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Mild exfoliering"><span>Mild exfoliering</span></div>
+                <div class="moment-icon"><img src="images/icon-massage.png" alt="Massage"><span>Massage</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="Lugnande mask"><span>Lugnande mask</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Hydrerande serum"><span>Hydrerande serum</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF 50"><span>SPF 50</span></div>
+              </div>
+            </div>
+            <div class="behandling-card-vertical__arrow">→</div>
+          </a>
+
+          <a href="#" class="behandling-card-vertical fade-in">
+            <img src="images/chemicalpeel.png" alt="Chemical Glow Peel hos Your Skin Clinic i Stockholm" class="behandling-card-vertical__image">
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Chemical Glow Peel</h3>
+                <div class="behandling-card-vertical__meta">
+                  <span>45 min</span>
+                  <span class="price">1 695 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  Kemisk peeling anpassad efter din hud som förnyar hudytan, jämnar ut ton och struktur och ger en tydlig glow.
+                </p>
+              </div>
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Kemisk peeling"><span>Kemisk peeling</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="Lugnande mask"><span>Lugnande mask</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF 50"><span>SPF 50</span></div>
+              </div>
+            </div>
+            <div class="behandling-card-vertical__arrow">→</div>
+          </a>
+
+          <a href="#" id="advanced-acne-detox" class="behandling-card-vertical fade-in">
+            <img src="images/AdvancedAcneDetox.png" alt="Advanced Acne Detox hos Your Skin Clinic i Stockholm" class="behandling-card-vertical__image">
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Advanced Acne Detox</h3>
+                <div class="behandling-card-vertical__meta">
+                  <span>60 min</span>
+                  <span class="price">1 895 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  Djuprengörande behandling mot orenheter och aktiv akne – exfoliering, portömning och högfrekvens som rengör, lugnar och balanserar.
+                </p>
+              </div>
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Exfoliering"><span>Exfoliering</span></div>
+                <div class="moment-icon"><img src="images/icon-extraction.png" alt="Portömning"><span>Portömning</span></div>
+                <div class="moment-icon"><img src="images/icon-antibacterial.png" alt="Desinfektion"><span>Desinfektion</span></div>
+                <div class="moment-icon"><img src="images/icon-highfrequency.png" alt="Högfrekvens"><span>Högfrekvens</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="Lugnande mask"><span>Lugnande mask</span></div>
+              </div>
+            </div>
+            <div class="behandling-card-vertical__arrow">→</div>
+          </a>
+
+          <a href="#" id="barrier-repair" class="behandling-card-vertical fade-in">
+            <div class="behandling-card-vertical__image behandling-card-vertical__image--placeholder">Bild kommer här</div>
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Barrier Repair Therapy</h3>
+                <div class="behandling-card-vertical__meta">
+                  <span>60 min</span>
+                  <span class="price">1 795 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  Återuppbyggande behandling för stressad eller uttorkad hud – mild, fuktgivande och lugnande för en starkare hudbarriär.
+                </p>
+              </div>
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Skonsam rengöring"><span>Skonsam rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-massage.png" alt="Lugnande massage"><span>Lugnande massage</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="Återfuktande mask"><span>Återfuktande mask</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Hyaluron-serum"><span>Hyaluron-serum</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF 30"><span>SPF 30</span></div>
+              </div>
+            </div>
+            <div class="behandling-card-vertical__arrow">→</div>
+          </a>
+
+          <a href="#" class="behandling-card-vertical fade-in">
+            <div class="behandling-card-vertical__image behandling-card-vertical__image--placeholder">Bild kommer här</div>
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Rosacea Calm Therapy</h3>
+                <div class="behandling-card-vertical__meta">
+                  <span>60 min</span>
+                  <span class="price">1 695 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  Skonsam, kylande behandling för känslig och rodnadsbenägen hud – utan syror eller stimulering, helt fokuserad på att lugna.
+                </p>
+              </div>
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Skonsam rengöring"><span>Skonsam rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-massage.png" alt="Lugnande massage"><span>Lugnande massage</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="Kylande mask"><span>Kylande mask</span></div>
+                <div class="moment-icon"><img src="images/icon-serum.png" alt="Hyaluron-serum"><span>Hyaluron-serum</span></div>
+                <div class="moment-icon"><img src="images/icon-spf.png" alt="SPF 30"><span>SPF 30</span></div>
+              </div>
+            </div>
+            <div class="behandling-card-vertical__arrow">→</div>
+          </a>
+
+          <a href="#" class="behandling-card-vertical fade-in">
+            <img src="images/TeenSkinClear.png" alt="Teen Skin Clear hos Your Skin Clinic i Stockholm" class="behandling-card-vertical__image">
+            <div class="behandling-card-vertical__content">
+              <div class="behandling-card-vertical__header">
+                <h3>Teen Skin Clear</h3>
+                <div class="behandling-card-vertical__meta">
+                  <span>45 min</span>
+                  <span class="price">1 295 kr</span>
+                </div>
+                <p class="behandling-card-vertical__description">
+                  Skonsam behandling för ung hud – rengöring, mild exfoliering och varsam portömning mot orenheter.
+                </p>
+              </div>
+              <div class="moment-icons">
+                <div class="moment-icon"><img src="images/icon-cleanse.png" alt="Rengöring"><span>Rengöring</span></div>
+                <div class="moment-icon"><img src="images/icon-exfoliate.png" alt="Mild exfoliering"><span>Mild exfoliering</span></div>
+                <div class="moment-icon"><img src="images/icon-extraction.png" alt="Portömning"><span>Portömning</span></div>
+                <div class="moment-icon"><img src="images/icon-highfrequency.png" alt="Högfrekvens"><span>Högfrekvens</span></div>
+                <div class="moment-icon"><img src="images/icon-mask.png" alt="Lugnande mask"><span>Lugnande mask</span></div>
+              </div>
+            </div>
+            <div class="behandling-card-vertical__arrow">→</div>
+          </a>
+
         </div>
-
-        <!-- 2. Collagen Boost Deluxe -->
-        <div class="tl-row" id="antiage">
-          <div class="tl-row-header" onclick="toggleRow(this)">
-            <span class="tl-num">02</span>
-            <div class="tl-main">
-              <span class="tl-name">Collagen Boost Deluxe</span>
-              <span class="tl-duration">75 min</span>
-              <span class="tl-desc">Resultatinriktad behandling för spänst, struktur och lyster.</span>
-            </div>
-            <div class="tl-actions">
-              <span class="tl-price">2 195 kr</span>
-              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
-              <button class="tl-toggle" aria-label="Visa detaljer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                <span class="tl-toggle-text">Info</span>
-              </button>
-            </div>
-          </div>
-          <div class="tl-panel">
-            <div class="tl-panel-inner">
-              <div class="tl-detail">
-                <h4>Passar dig som</h4>
-                <ul>
-                  <li>Upplever förlust av spänst och elasticitet</li>
-                  <li>Vill förbättra hudkvaliteten långsiktigt</li>
-                  <li>Söker anti-age utan injektioner</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Så fungerar behandlingen</h4>
-                <p>Kombinerar exfoliering, aktiva ingredienser och cirkulationsökande massage för att stimulera hudens cellförnyelse och kollagenproduktion.</p>
-              </div>
-              <div class="tl-detail">
-                <h4>Resultat</h4>
-                <ul>
-                  <li>Fastare hud</li>
-                  <li>Förbättrad struktur</li>
-                  <li>Ökad lyster</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Ej lämplig vid</h4>
-                <ul>
-                  <li>Aktiv hudinfektion</li>
-                  <li>Irriterad eller öppen hud</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. Collagen Boost Deluxe – 90 min -->
-        <div class="tl-row">
-          <div class="tl-row-header" onclick="toggleRow(this)">
-            <span class="tl-num">03</span>
-            <div class="tl-main">
-              <span class="tl-name">Collagen Boost Deluxe – 90 min</span>
-              <span class="tl-duration">90 min</span>
-              <span class="tl-desc">Mer tid för djupare arbete och mer långvarigt resultat.</span>
-            </div>
-            <div class="tl-actions">
-              <span class="tl-price">2 395 kr</span>
-              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
-              <button class="tl-toggle" aria-label="Visa detaljer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                <span class="tl-toggle-text">Info</span>
-              </button>
-            </div>
-          </div>
-          <div class="tl-panel">
-            <div class="tl-panel-inner">
-              <div class="tl-detail">
-                <h4>Passar dig som</h4>
-                <ul>
-                  <li>Vill ha ett djupare och mer långvarigt anti-age-resultat</li>
-                  <li>Uppskattar en längre, mer avkopplande session</li>
-                  <li>Söker maximal kollagenstimulering</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Så fungerar behandlingen</h4>
-                <p>Samma beprövade metod som 75-minutersversionen, med utökad tid för djupare serum-penetration, extra massage och förlängd ljusterapi för maximalt resultat.</p>
-              </div>
-              <div class="tl-detail">
-                <h4>Resultat</h4>
-                <ul>
-                  <li>Fastare hud</li>
-                  <li>Förbättrad struktur</li>
-                  <li>Ökad lyster</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Ej lämplig vid</h4>
-                <ul>
-                  <li>Aktiv hudinfektion</li>
-                  <li>Irriterad eller öppen hud</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Nano Infusion Skin Booster (Salmon DNA) -->
-        <div class="tl-row">
-          <div class="tl-row-header" onclick="toggleRow(this)">
-            <span class="tl-num">04</span>
-            <div class="tl-main">
-              <span class="tl-name">Nano Infusion Skin Booster (Salmon DNA)</span>
-              <span class="tl-duration">60 min</span>
-              <span class="tl-desc">Djup återfuktning och hudförbättring utan nålar eller downtime.</span>
-            </div>
-            <div class="tl-actions">
-              <span class="tl-price">2 095 kr</span>
-              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
-              <button class="tl-toggle" aria-label="Visa detaljer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                <span class="tl-toggle-text">Info</span>
-              </button>
-            </div>
-          </div>
-          <div class="tl-panel">
-            <div class="tl-panel-inner">
-              <div class="tl-detail">
-                <h4>Passar dig som</h4>
-                <ul>
-                  <li>Vill ha djup återfuktning utan nålar</li>
-                  <li>Har uttorkad, trött eller åldrad hud</li>
-                  <li>Söker hudförbättring utan downtime</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Så fungerar behandlingen</h4>
-                <p>Genom nano-infusion skapas mikroskopiska kanaler i hudytan som möjliggör effektiv leverans av aktiva ingredienser, vilket förbättrar hudens fuktnivå och struktur.</p>
-              </div>
-              <div class="tl-detail">
-                <h4>Resultat</h4>
-                <ul>
-                  <li>Ökad lyster</li>
-                  <li>Jämnare hud</li>
-                  <li>Förbättrad återfuktning</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Ej lämplig vid</h4>
-                <ul>
-                  <li>Aktiv hudinfektion</li>
-                  <li>Irriterad eller öppen hud</li>
-                  <li>Allergi mot fiskprotein</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Advanced Acne Detox (60 min) -->
-        <div class="tl-row" id="akne">
-          <div class="tl-row-header" onclick="toggleRow(this)">
-            <span class="tl-num">05</span>
-            <div class="tl-main">
-              <span class="tl-name">Advanced Acne Detox (60 min)</span>
-              <span class="tl-duration">60 min</span>
-              <span class="tl-desc">Djuprengörande behandling för akne, porer och obalanserad hud.</span>
-            </div>
-            <div class="tl-actions">
-              <span class="tl-price">1 895 kr</span>
-              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
-              <button class="tl-toggle" aria-label="Visa detaljer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                <span class="tl-toggle-text">Info</span>
-              </button>
-            </div>
-          </div>
-          <div class="tl-panel">
-            <div class="tl-panel-inner">
-              <div class="tl-detail">
-                <h4>Passar dig som</h4>
-                <ul>
-                  <li>Har akne, tilltäppta porer eller utbrott</li>
-                  <li>Upplever obalanserad eller oljig hud</li>
-                  <li>Söker en djuprengörande behandling</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Så fungerar behandlingen</h4>
-                <p>Kombinerar kemisk exfoliering, portömning och antibakteriell behandling för att rengöra porerna på djupet och minska inflammation.</p>
-              </div>
-              <div class="tl-detail">
-                <h4>Resultat</h4>
-                <ul>
-                  <li>Renare hud</li>
-                  <li>Mindre porer</li>
-                  <li>Färre utbrott</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Ej lämplig vid</h4>
-                <ul>
-                  <li>Aktiv hudinfektion (ej akne)</li>
-                  <li>Kraftigt irriterad hud</li>
-                  <li>Pågående isotretinoin-behandling</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. Advanced Acne Detox – 75 min -->
-        <div class="tl-row">
-          <div class="tl-row-header" onclick="toggleRow(this)">
-            <span class="tl-num">06</span>
-            <div class="tl-main">
-              <span class="tl-name">Advanced Acne Detox – 75 min</span>
-              <span class="tl-duration">75 min</span>
-              <span class="tl-desc">Fördjupad aknebehandling – mer tid för djupare rengöring och bättre resultat.</span>
-            </div>
-            <div class="tl-actions">
-              <span class="tl-price">2 095 kr</span>
-              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
-              <button class="tl-toggle" aria-label="Visa detaljer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                <span class="tl-toggle-text">Info</span>
-              </button>
-            </div>
-          </div>
-          <div class="tl-panel">
-            <div class="tl-panel-inner">
-              <div class="tl-detail">
-                <h4>Passar dig som</h4>
-                <ul>
-                  <li>Har utbredd akne eller många tilltäpptheter</li>
-                  <li>Vill ha ett djupare, mer genomgående resultat</li>
-                  <li>Behöver extra tid för portömning</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Så fungerar behandlingen</h4>
-                <p>Samma metod som 60-minutersversionen med utökad tid för grundligare portömning, extra exfoliering och längre antibakteriell behandling.</p>
-              </div>
-              <div class="tl-detail">
-                <h4>Resultat</h4>
-                <ul>
-                  <li>Renare hud</li>
-                  <li>Mindre porer</li>
-                  <li>Färre utbrott</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Ej lämplig vid</h4>
-                <ul>
-                  <li>Aktiv hudinfektion (ej akne)</li>
-                  <li>Kraftigt irriterad hud</li>
-                  <li>Pågående isotretinoin-behandling</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. Glass Skin Hydration -->
-        <div class="tl-row">
-          <div class="tl-row-header" onclick="toggleRow(this)">
-            <span class="tl-num">07</span>
-            <div class="tl-main">
-              <span class="tl-name">Glass Skin Hydration</span>
-              <span class="tl-duration">60 min</span>
-              <span class="tl-desc">Intensiv fuktboost för plumpad hud och maximal lyster.</span>
-            </div>
-            <div class="tl-actions">
-              <span class="tl-price">1 795 kr</span>
-              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
-              <button class="tl-toggle" aria-label="Visa detaljer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                <span class="tl-toggle-text">Info</span>
-              </button>
-            </div>
-          </div>
-          <div class="tl-panel">
-            <div class="tl-panel-inner">
-              <div class="tl-detail">
-                <h4>Passar dig som</h4>
-                <ul>
-                  <li>Har torr eller uttorkad hud</li>
-                  <li>Vill ha plumpad, daggfrisk look</li>
-                  <li>Söker intensiv återfuktning</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Så fungerar behandlingen</h4>
-                <p>Arbetar i flera lager med återfuktande ingredienser som binder fukt i huden och stärker hudbarriären.</p>
-              </div>
-              <div class="tl-detail">
-                <h4>Resultat</h4>
-                <ul>
-                  <li>Mjukare hud</li>
-                  <li>Ökad spänst</li>
-                  <li>Jämn glow</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Ej lämplig vid</h4>
-                <ul>
-                  <li>Aktiv hudinfektion</li>
-                  <li>Öppen eller irriterad hud</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. Skin Reset Facial -->
-        <div class="tl-row">
-          <div class="tl-row-header" onclick="toggleRow(this)">
-            <span class="tl-num">08</span>
-            <div class="tl-main">
-              <span class="tl-name">Skin Reset Facial</span>
-              <span class="tl-duration">60 min</span>
-              <span class="tl-desc">Grundläggande hudförbättring med direkt resultat.</span>
-            </div>
-            <div class="tl-actions">
-              <span class="tl-price">1 695 kr</span>
-              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
-              <button class="tl-toggle" aria-label="Visa detaljer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                <span class="tl-toggle-text">Info</span>
-              </button>
-            </div>
-          </div>
-          <div class="tl-panel">
-            <div class="tl-panel-inner">
-              <div class="tl-detail">
-                <h4>Passar dig som</h4>
-                <ul>
-                  <li>Vill ge huden en grundläggande restart</li>
-                  <li>Har matt, trött eller obalanserad hud</li>
-                  <li>Är ny till ansiktsbehandlingar</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Så fungerar behandlingen</h4>
-                <p>Kombinerar rengöring, exfoliering och återfuktning för att balansera huden och förbättra dess struktur.</p>
-              </div>
-              <div class="tl-detail">
-                <h4>Resultat</h4>
-                <ul>
-                  <li>Fräschare hud</li>
-                  <li>Jämnare hudton</li>
-                  <li>Mer lyster</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Ej lämplig vid</h4>
-                <ul>
-                  <li>Aktiv hudinfektion</li>
-                  <li>Öppen eller kraftigt irriterad hud</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 9. Chemical Glow Peel -->
-        <div class="tl-row">
-          <div class="tl-row-header" onclick="toggleRow(this)">
-            <span class="tl-num">09</span>
-            <div class="tl-main">
-              <span class="tl-name">Chemical Glow Peel</span>
-              <span class="tl-duration">45 min</span>
-              <span class="tl-desc">Resultatinriktad peeling för lyster och hudförnyelse.</span>
-            </div>
-            <div class="tl-actions">
-              <span class="tl-price">1 695 kr</span>
-              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
-              <button class="tl-toggle" aria-label="Visa detaljer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                <span class="tl-toggle-text">Info</span>
-              </button>
-            </div>
-          </div>
-          <div class="tl-panel">
-            <div class="tl-panel-inner">
-              <div class="tl-detail">
-                <h4>Passar dig som</h4>
-                <ul>
-                  <li>Vill ha klarare, mer strålande hud</li>
-                  <li>Har ojämn hudton eller matt hy</li>
-                  <li>Söker resultatinriktad peeling</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Så fungerar behandlingen</h4>
-                <p>Kemiska syror exfolierar huden, stimulerar cellförnyelse och förbättrar hudens struktur och klarhet.</p>
-              </div>
-              <div class="tl-detail">
-                <h4>Resultat</h4>
-                <ul>
-                  <li>Klarare hud</li>
-                  <li>Jämnare ton</li>
-                  <li>Förbättrad struktur</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Ej lämplig vid</h4>
-                <ul>
-                  <li>Graviditet eller amning</li>
-                  <li>Aktiv hudinfektion eller irriterad hud</li>
-                  <li>Nylig solexponering</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 10. Barrier Repair Therapy -->
-        <div class="tl-row" id="kanslig">
-          <div class="tl-row-header" onclick="toggleRow(this)">
-            <span class="tl-num">10</span>
-            <div class="tl-main">
-              <span class="tl-name">Barrier Repair Therapy</span>
-              <span class="tl-duration">60 min</span>
-              <span class="tl-desc">Återuppbyggande behandling för känslig och stressad hud.</span>
-            </div>
-            <div class="tl-actions">
-              <span class="tl-price">1 795 kr</span>
-              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
-              <button class="tl-toggle" aria-label="Visa detaljer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                <span class="tl-toggle-text">Info</span>
-              </button>
-            </div>
-          </div>
-          <div class="tl-panel">
-            <div class="tl-panel-inner">
-              <div class="tl-detail">
-                <h4>Passar dig som</h4>
-                <ul>
-                  <li>Har känslig, reaktiv eller stressad hud</li>
-                  <li>Upplever rodnad, stramhet eller obehag</li>
-                  <li>Söker en behandling som lugnar och stärker</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Så fungerar behandlingen</h4>
-                <p>Fokuserar på att stärka hudbarriären genom lugnande och återfuktande ingredienser som minskar inflammation och återställer balansen.</p>
-              </div>
-              <div class="tl-detail">
-                <h4>Resultat</h4>
-                <ul>
-                  <li>Mindre rodnad</li>
-                  <li>Starkare hud</li>
-                  <li>Ökad komfort</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Ej lämplig vid</h4>
-                <ul>
-                  <li>Aktiv hudinfektion</li>
-                  <li>Öppen hud eller sår</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 11. Rosacea Calm Therapy -->
-        <div class="tl-row">
-          <div class="tl-row-header" onclick="toggleRow(this)">
-            <span class="tl-num">11</span>
-            <div class="tl-main">
-              <span class="tl-name">Rosacea Calm Therapy</span>
-              <span class="tl-duration">60 min</span>
-              <span class="tl-desc">Lugnande behandling för rosacea och reaktiv hud.</span>
-            </div>
-            <div class="tl-actions">
-              <span class="tl-price">1 695 kr</span>
-              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
-              <button class="tl-toggle" aria-label="Visa detaljer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                <span class="tl-toggle-text">Info</span>
-              </button>
-            </div>
-          </div>
-          <div class="tl-panel">
-            <div class="tl-panel-inner">
-              <div class="tl-detail">
-                <h4>Passar dig som</h4>
-                <ul>
-                  <li>Har rosacea eller kronisk rodnad</li>
-                  <li>Upplever reaktiv och lättirriterad hud</li>
-                  <li>Söker en behandling utan irriterande ingredienser</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Så fungerar behandlingen</h4>
-                <p>Arbetar med kylande och barriärstärkande ingredienser för att minska rodnad och stabilisera huden utan irritation.</p>
-              </div>
-              <div class="tl-detail">
-                <h4>Resultat</h4>
-                <ul>
-                  <li>Mindre rodnad</li>
-                  <li>Stabilare hud</li>
-                  <li>Ökad återfuktning</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Ej lämplig vid</h4>
-                <ul>
-                  <li>Aktiv hudinfektion</li>
-                  <li>Öppen hud eller sår</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 12. Teen Skin Clear -->
-        <div class="tl-row">
-          <div class="tl-row-header" onclick="toggleRow(this)">
-            <span class="tl-num">12</span>
-            <div class="tl-main">
-              <span class="tl-name">Teen Skin Clear (Ungdomsbehandling)</span>
-              <span class="tl-duration">45 min</span>
-              <span class="tl-desc">Skonsam behandling för ungdomshud med orenheter.</span>
-            </div>
-            <div class="tl-actions">
-              <span class="tl-price">1 295 kr</span>
-              <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="tl-boka" onclick="event.stopPropagation()">Boka</a>
-              <button class="tl-toggle" aria-label="Visa detaljer">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                <span class="tl-toggle-text">Info</span>
-              </button>
-            </div>
-          </div>
-          <div class="tl-panel">
-            <div class="tl-panel-inner">
-              <div class="tl-detail">
-                <h4>Passar dig som</h4>
-                <ul>
-                  <li>Är ung och har orenheter eller pormaskar</li>
-                  <li>Söker en skonsam behandling utan starka syror</li>
-                  <li>Vill ha renare och mer balanserad hud</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Så fungerar behandlingen</h4>
-                <p>Rengör porerna, balanserar talgproduktionen och förebygger nya tilltäpptheter.</p>
-              </div>
-              <div class="tl-detail">
-                <h4>Resultat</h4>
-                <ul>
-                  <li>Renare hud</li>
-                  <li>Mindre pormaskar</li>
-                  <li>Bättre balans</li>
-                </ul>
-              </div>
-              <div class="tl-detail">
-                <h4>Ej lämplig vid</h4>
-                <ul>
-                  <li>Aktiv hudinfektion</li>
-                  <li>Öppen eller kraftigt irriterad hud</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -1317,98 +993,225 @@
   </section>
 
 
-  <!-- ========== INFO & FAQ ========== -->
-  <section class="tx-info">
+  <!-- ========== FAQ ========== -->
+  <section class="problem-faq" id="faq">
     <div class="container">
-      <div class="tx-info-block fade-in">
-        <h2>Viktig information &amp; vanliga frågor</h2>
+      <div class="section-header fade-in">
+        <span class="section-label">Vanliga frågor</span>
+        <h2 class="section-title">Frågor &amp; svar om ansiktsbehandlingar</h2>
+      </div>
 
-        <h3 class="tx-info-section-title">Viktig information <span>(läs innan du bokar)</span></h3>
+      <!-- Category tabs -->
+      <div class="faq-tabs fade-in" role="tablist">
+        <button class="faq-tab faq-tab--active" data-category="behandling" role="tab" aria-selected="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="3"/><path d="M12 1v6m0 10v6m11-11h-6M7 12H1m16.66-7.66l-4.24 4.24m-2.84 2.84l-4.24 4.24m12.32 0l-4.24-4.24m-2.84-2.84L5.34 5.34"/></svg>
+          <span>Behandling</span>
+        </button>
+        <button class="faq-tab" data-category="ansiktsbehandlingar" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span>Om ansiktsbehandlingar</span>
+        </button>
+        <button class="faq-tab" data-category="hudvard" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 2C8 6 6 9 6 13a6 6 0 0 0 12 0c0-4-2-7-6-11z"/></svg>
+          <span>Hudvård &amp; resultat</span>
+        </button>
+      </div>
 
-        <div class="tx-accordion tx-accordion--wide">
-          <button class="tx-accordion-trigger" aria-expanded="false">
-            <span>Resultat &amp; förväntningar</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+      <!-- BEHANDLING -->
+      <div class="faq-list faq-content faq-content--active fade-in" data-category="behandling">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Vilken ansiktsbehandling passar mig?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="tx-accordion-panel">
-            <ul>
-              <li>Resultat varierar beroende på hudtyp och behandling</li>
-              <li>Många upplever synlig skillnad redan efter första behandlingen</li>
-              <li>Bäst resultat uppnås ofta med en serie behandlingar</li>
-              <li>Vi anpassar alltid behandlingen efter din hud</li>
-            </ul>
-          </div>
-
-          <button class="tx-accordion-trigger" aria-expanded="false">
-            <span>Ej lämpligt vid</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="tx-accordion-panel">
-            <ul>
-              <li>Graviditet eller amning (meddela alltid)</li>
-              <li>Aktiv hudinfektion, eksem eller svår rosacea i behandlingsområdet</li>
-              <li>Pågående isotretinoin/Accutane-behandling</li>
-              <li>Aktiv retinoidkur (meddela alltid vilka produkter du använder)</li>
-              <li>Öppna sår eller kraftigt irriterad hud</li>
-            </ul>
-          </div>
-
-          <button class="tx-accordion-trigger" aria-expanded="false">
-            <span>Eftervård</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="tx-accordion-panel">
-            <ul>
-              <li>Använd SPF 30+ dagligen efter behandling</li>
-              <li>Undvik starka aktiva ingredienser i 24–48 timmar</li>
-              <li>Håll huden återfuktad</li>
-              <li>Undvik bastu och intensiv träning samma dag</li>
-            </ul>
+          <div class="faq-answer">
+            <p>Det beror på din hud och ditt mål. Vill du ha lyster och fräschhet passar Signature Glow Facial, Glass Skin Hydration eller Skin Reset Facial. För spänst och hudkvalitet rekommenderar vi Collagen Boost Deluxe eller Nano Infusion Skin Booster. Vid orenheter och akne passar Advanced Acne Detox eller Chemical Glow Peel, och för känslig eller rodnadsbenägen hud Barrier Repair Therapy och Rosacea Calm Therapy. Är du osäker hjälper vi dig välja vid en konsultation.</p>
           </div>
         </div>
-
-        <h3 class="tx-info-section-title">Vanliga frågor</h3>
-
-        <div class="tx-accordion tx-accordion--wide">
-          <button class="tx-accordion-trigger" aria-expanded="false">
-            <span>Vilken behandling passar mig?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="tx-accordion-panel">
-            <p>Det beror på ditt hudtillstånd och dina mål. Vi hjälper dig alltid att välja rätt behandling vid konsultation. Se även guiden ovan för en snabb rekommendation.</p>
-          </div>
-
-          <button class="tx-accordion-trigger" aria-expanded="false">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
             <span>Hur ofta bör jag göra en ansiktsbehandling?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="tx-accordion-panel">
-            <p>Generellt rekommenderar vi var 4:e till 6:e vecka för underhåll. Vid specifika hudproblem kan tätare intervall vara aktuellt. Vi lägger upp en plan efter din första behandling.</p>
+          <div class="faq-answer">
+            <p>För underhåll rekommenderar vi en behandling var 4:e–6:e vecka, i takt med hudens förnyelsecykel. Vill du arbeta mot ett specifikt mål sätter vi ihop en behandlingsplan som passar dig.</p>
           </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Kan jag kombinera flera behandlingar?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ja, ofta ger en kombination bäst resultat. Många kombinerar en ansiktsbehandling med kemisk peeling eller microneedling över tid. Vi planerar gärna ett upplägg utifrån din hud.</p>
+          </div>
+        </div>
+      </div>
 
-          <button class="tx-accordion-trigger" aria-expanded="false">
-            <span>Gör ansiktsbehandlingar ont?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+      <!-- OM ANSIKTSBEHANDLINGAR -->
+      <div class="faq-list faq-content fade-in" data-category="ansiktsbehandlingar">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Gör behandlingen ont och finns det någon nedtid?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="tx-accordion-panel">
-            <p>De flesta behandlingar är behagliga och avkopplande. Vid exfoliering eller portömning kan du uppleva en lätt stickande känsla, men den är kortvarig.</p>
+          <div class="faq-answer">
+            <p>Våra ansiktsbehandlingar är sköna och avslappnande utan nedtid. Behandlingar med kemisk peeling eller portömning kan ge en lätt rodnad som lägger sig inom några timmar till ett dygn.</p>
           </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Vad ska jag tänka på inför min behandling?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Kom gärna utan smink. Har du bokat en behandling med peeling, undvik starka syror och retinol några dagar innan. Berätta vid bokningen om du använder receptbelagda hudprodukter eller har känslig hud, så anpassar vi behandlingen.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Vilka produkter arbetar ni med?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Vi arbetar med medicinsk hudvård från Dermalogica och anpassar varje behandling efter din hudtyp och dina behov.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Passar en ansiktsbehandling alla hudtyper?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Ja, vi har behandlingar för alla hudtyper – från torr och känslig till fet och aknebenägen hud. Vi anpassar produkter och intensitet efter din hud, och rekommenderar vid behov en konsultation först.</p>
+          </div>
+        </div>
+      </div>
 
-          <button class="tx-accordion-trigger" aria-expanded="false">
-            <span>Kan jag sminka mig efter behandlingen?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
+      <!-- HUDVÅRD & RESULTAT -->
+      <div class="faq-list faq-content fade-in" data-category="hudvard">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>När ser jag resultat?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="tx-accordion-panel">
-            <p>Vi rekommenderar att du låter huden andas och undviker makeup samma dag. Dagen efter kan du sminka dig som vanligt om huden känns bra.</p>
+          <div class="faq-answer">
+            <p>Direkt efter behandlingen är huden renare, mjukare och får en fin lyster. De mer långsiktiga resultaten – struktur, spänst och jämnare hudton – byggs upp över tid med regelbundna behandlingar och rätt hemvård.</p>
           </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Vad bör jag tänka på efter behandlingen?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>Undvik smink första timmarna och låt huden vila. Efter peeling: undvik starka syror, retinol och solning några dagar, och använd SPF 50 dagligen. Vi ger dig alltid personliga råd efter din behandling.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Vilken hemvård rekommenderar ni?</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">
+            <p>En enkel men konsekvent rutin gör störst skillnad: skonsam rengöring, återfuktning och dagligt solskydd (SPF 50). Vi sätter ihop en personlig rutin med produkter som passar din hud.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <button class="tx-accordion-trigger" aria-expanded="false">
-            <span>Behöver jag konsultation först?</span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="6 9 12 15 18 9"/></svg>
-          </button>
-          <div class="tx-accordion-panel">
-            <p>Konsultation ingår alltid inför din första behandling och behöver inte bokas separat. Vi bedömer din hud och rekommenderar den bäst lämpade behandlingen.</p>
+  <!-- ========== REVIEWS ========== -->
+  <section class="reviews">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Vad våra kunder säger</span>
+        <h2 class="section-title">Omdömen</h2>
+      </div>
+
+      <div class="reviews-dual">
+        <!-- Google Reviews -->
+        <div class="reviews-panel fade-in">
+          <div class="reviews-panel-header">
+            <svg class="reviews-panel-logo" viewBox="0 0 24 24" width="24" height="24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            <div>
+              <strong>Google</strong>
+              <div class="reviews-panel-score">
+                <span class="reviews-stars">★★★★★</span>
+                <span>5,0 / 5</span>
+              </div>
+            </div>
           </div>
+          <div class="reviews-panel-cards">
+            <div class="review-card">
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Supernöjd! Isabella är så duktig och proffsig."</p>
+              <span class="review-author">– Camilla Olsson</span>
+              <span class="review-source">Google</span>
+            </div>
+            <div class="review-card">
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Den bästa Isabella – så duktig, trevlig och alltid så hjälpsam."</p>
+              <span class="review-author">– Marina Stefanovic</span>
+              <span class="review-source">Google</span>
+            </div>
+            <div class="review-card">
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Isabella är jättetrevlig och kunnig! Rekommenderar verkligen henne."</p>
+              <span class="review-author">– Helene Lindell</span>
+              <span class="review-source">Google</span>
+            </div>
+            <div class="review-card" hidden>
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Supertrevlig och duktig! Rekommenderar."</p>
+              <span class="review-author">– Carolina Hartzell</span>
+              <span class="review-source">Google</span>
+            </div>
+          </div>
+          <button type="button" class="btn btn-outline btn-sm reviews-panel-toggle">Visa fler</button>
+          <a href="https://g.co/kgs/your-skin-clinic" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Se alla Google-omdömen</a>
+        </div>
+
+        <!-- Bokadirekt Reviews -->
+        <div class="reviews-panel fade-in">
+          <div class="reviews-panel-header">
+            <svg class="reviews-panel-logo" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <div>
+              <strong>Bokadirekt</strong>
+              <div class="reviews-panel-score">
+                <span class="reviews-stars">★★★★★</span>
+                <span>4,9 &middot; 590+ omdömen</span>
+              </div>
+            </div>
+          </div>
+          <div class="reviews-panel-cards">
+            <div class="review-card">
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Jag blev jättenöjd med min ansiktsbehandling – massor med råd och fint bemötande från Isabella. Tack så mycket."</p>
+              <span class="review-author">– Deniz L.</span>
+              <span class="review-source">Bokadirekt</span>
+            </div>
+            <div class="review-card">
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Kan verkligen sin grej! Superbra upplevelse."</p>
+              <span class="review-author">– felicia l.</span>
+              <span class="review-source">Bokadirekt</span>
+            </div>
+            <div class="review-card">
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Kunnig, trevlig och alltid flexibel – kan sin sak."</p>
+              <span class="review-author">– Sukaina G.</span>
+              <span class="review-source">Bokadirekt</span>
+            </div>
+            <div class="review-card" hidden>
+              <div class="review-card-stars">★★★★★</div>
+              <p>"Isabella är fantastisk som person och fantastisk på sitt jobb!"</p>
+              <span class="review-author">– Petra H.</span>
+              <span class="review-source">Bokadirekt</span>
+            </div>
+          </div>
+          <button type="button" class="btn btn-outline btn-sm reviews-panel-toggle">Visa fler</button>
+          <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Se alla Bokadirekt-omdömen</a>
         </div>
       </div>
     </div>

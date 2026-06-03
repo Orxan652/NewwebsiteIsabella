@@ -28,15 +28,15 @@
             <a href="index.html#hudproblem">Hudproblem</a>
             <div class="dropdown-menu">
               <a href="leverflackar.html">Leverfläckar, cherry spots &amp; skintags</a>
-              <a href="akne.html">Acne &amp; ärr</a>
+              <a href="akne.html">Akne &amp; ärr</a>
               <a href="pormaskar.html">Pormaskar &amp; finnar</a>
-              <a href="index.html#hudproblem">Pigmentering</a>
-              <a href="index.html#hudproblem">Rynkor &amp; fina linjer</a>
-              <a href="index.html#hudproblem">Stora porer</a>
+              <a href="pigmentering.html">Pigmentering</a>
+              <a href="rynkor.html">Rynkor &amp; fina linjer</a>
+              <a href="stora-porer.html">Stora porer</a>
               <a href="milier.html">Milier</a>
               <a href="bristningar.html">Bristningar</a>
               <a href="index.html#hudproblem">Oönskad hårväxt</a>
-              <a href="index.html#hudproblem">Torr &amp; känslig hud</a>
+              <a href="torr-kanslig-hud.html">Torr &amp; känslig hud</a>
             </div>
           </li>
           <li class="nav-dropdown">
@@ -46,10 +46,11 @@
               <a href="kemisk-peeling.html">Kemisk peeling</a>
               <a href="microneedling.html">Microneedling</a>
               <a href="laser-harborttagning.html">Laser hårborttagning</a>
+              <a href="kroppsbehandlingar.html">Kroppsbehandlingar</a>
               <a href="index.html#behandlingar">PMU – Bryn &amp; Läppar</a>
               <a href="index.html#behandlingar">PMU borttagning</a>
               <a href="index.html#behandlingar">Borttagning av hudförändringar</a>
-              <a href="index.html#behandlingar">Fransar &amp; Bryn</a>
+              <a href="frans-bryn.html">Fransar &amp; Bryn</a>
             </div>
           </li>
           <li><a href="index.html#omdomen">Omdömen</a></li>
@@ -68,12 +69,50 @@
 
   <!-- Mobile nav -->
   <div class="mobile-nav" id="mobileNav">
-    <a href="index.html#hudproblem">Hudproblem</a>
-    <a href="index.html#behandlingar">Behandlingar</a>
+    <div class="mobile-nav-group">
+      <button type="button" class="mobile-nav-toggle" aria-expanded="false" aria-controls="m-hudproblem">
+        Hudproblem
+        <span class="mobile-nav-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="mobile-nav-sub" id="m-hudproblem" hidden>
+        <a href="leverflackar.html">Leverfläckar, cherry spots &amp; skintags</a>
+        <a href="akne.html">Akne &amp; ärr</a>
+        <a href="pormaskar.html">Pormaskar &amp; finnar</a>
+        <a href="pigmentering.html">Pigmentering</a>
+        <a href="rynkor.html">Rynkor &amp; fina linjer</a>
+        <a href="stora-porer.html">Stora porer</a>
+        <a href="milier.html">Milier</a>
+        <a href="bristningar.html">Bristningar</a>
+        <a href="index.html#hudproblem">Oönskad hårväxt</a>
+        <a href="torr-kanslig-hud.html">Torr &amp; känslig hud</a>
+      </div>
+    </div>
+    <div class="mobile-nav-group">
+      <button type="button" class="mobile-nav-toggle" aria-expanded="false" aria-controls="m-behandlingar">
+        Behandlingar
+        <span class="mobile-nav-chev" aria-hidden="true">▾</span>
+      </button>
+      <div class="mobile-nav-sub" id="m-behandlingar" hidden>
+        <a href="ansiktsbehandlingar.html">Avancerade ansiktsbehandlingar</a>
+        <a href="kemisk-peeling.html">Kemisk peeling</a>
+        <a href="microneedling.html">Microneedling</a>
+        <a href="laser-harborttagning.html">Laser hårborttagning</a>
+        <a href="kroppsbehandlingar.html">Kroppsbehandlingar</a>
+        <a href="index.html#behandlingar">PMU – Bryn &amp; Läppar</a>
+        <a href="index.html#behandlingar">PMU borttagning</a>
+        <a href="index.html#behandlingar">Borttagning av hudförändringar</a>
+        <a href="frans-bryn.html">Fransar &amp; Bryn</a>
+      </div>
+    </div>
     <a href="index.html#omdomen">Omdömen</a>
     <a href="index.html#om-isabella">Om oss</a>
     <a href="index.html#kontakt">Kontakt</a>
     <a href="https://www.bokadirekt.se/places/your-skin-clinic-48263" target="_blank" rel="noopener" class="btn btn-primary">Boka tid</a>
+    <div class="mobile-nav-contact">
+      <a href="tel:+46730412589">073-041 25 89</a>
+      <a href="https://www.instagram.com/your.skin.clinic" target="_blank" rel="noopener">@your.skin.clinic</a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Your+Skin+Clinic+Hamngatan+37+Gallerian+Stockholm" target="_blank" rel="noopener">Hamngatan 37, Gallerian, Stockholm</a>
+    </div>
   </div>
 
   <!-- ========== HERO ========== -->
@@ -404,6 +443,14 @@
         areaSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
+
+    // Pre-select gender from URL hash (#kvinna / #man) — triggers same click path as the buttons
+    (function() {
+      const g = (location.hash || '').replace('#', '');
+      if (g !== 'kvinna' && g !== 'man') return;
+      const target = document.querySelector('.gender-card[data-gender="' + g + '"]');
+      if (target) target.click();
+    })();
 
     // Tooltip on hover
     const tooltip = document.getElementById('tooltip');

@@ -9,17 +9,36 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileNav = document.getElementById('mobileNav');
   const mobileLinks = mobileNav.querySelectorAll('a');
 
+  function closeMobileSubgroups() {
+    mobileNav.querySelectorAll('.mobile-nav-toggle[aria-expanded="true"]').forEach(btn => {
+      btn.setAttribute('aria-expanded', 'false');
+      const sub = document.getElementById(btn.getAttribute('aria-controls'));
+      if (sub) sub.hidden = true;
+    });
+  }
+
   function toggleMenu() {
     const open = mobileNav.classList.toggle('open');
     hamburger.classList.toggle('active');
     hamburger.setAttribute('aria-expanded', open);
     document.body.style.overflow = open ? 'hidden' : '';
+    if (!open) closeMobileSubgroups();
   }
 
   hamburger.addEventListener('click', toggleMenu);
   mobileLinks.forEach(link => link.addEventListener('click', () => {
     if (mobileNav.classList.contains('open')) toggleMenu();
   }));
+
+  // Ackordeon-knappar (Hudproblem / Behandlingar) i mobilmenyn — fäll ut/in undermenyn
+  mobileNav.querySelectorAll('.mobile-nav-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      const sub = document.getElementById(btn.getAttribute('aria-controls'));
+      btn.setAttribute('aria-expanded', String(!expanded));
+      if (sub) sub.hidden = expanded;
+    });
+  });
 
   /* --- Header shadow on scroll --- */
   const header = document.getElementById('header');
@@ -194,6 +213,28 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.key === 'Escape' && activeModal) {
       closeModal();
     }
+  });
+})();
+
+// ============================================
+// Reviews panel — "Visa fler" toggle (independent per column)
+// ============================================
+(function() {
+  document.querySelectorAll('.reviews-panel-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = btn.closest('.reviews-panel');
+      if (!panel) return;
+      const hidden = panel.querySelectorAll('.review-card[hidden]');
+      if (hidden.length > 0) {
+        hidden.forEach(card => card.hidden = false);
+        btn.textContent = 'Visa färre';
+      } else {
+        panel.querySelectorAll('.review-card').forEach((card, i) => {
+          if (i >= 3) card.hidden = true;
+        });
+        btn.textContent = 'Visa fler';
+      }
+    });
   });
 })();
 

@@ -115,6 +115,10 @@
   margin-top: 2rem;
 }
 
+.type-card--text-only {
+  padding: 1.5rem 1.75rem;
+}
+
 /* ---- Treatment Methods ---- */
 .problem-methods {
   padding: var(--section-pad) 0;
@@ -1115,6 +1119,7 @@
 }
 
 .behandling-card-vertical {
+  position: relative;
   display: flex;
   gap: 1.5rem;
   padding: 1.75rem;
@@ -1126,6 +1131,27 @@
   align-items: stretch;
   text-decoration: none;
   color: inherit;
+}
+
+.behandling-card-vertical__stars {
+  color: var(--gold);
+  letter-spacing: 2px;
+  font-size: .9rem;
+  margin: .25rem 0 .5rem;
+}
+
+.behandling-card-vertical__badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--gold);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  text-transform: uppercase;
 }
 
 .behandling-card-vertical:hover {
@@ -1445,6 +1471,34 @@
   font-size: 0.9rem;
   color: var(--gold);
   font-weight: 500;
+}
+
+/* Modal-detail-block (Passar dig som / Detta får du / Resultat) – kompakt typografi inuti modaler */
+.modal__details {
+  margin-top: 1.5rem;
+}
+.modal__details h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text-heading);
+  margin: 1.25rem 0 .5rem;
+}
+.modal__details h4:first-child {
+  margin-top: 0;
+}
+.modal__details ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin: 0;
+}
+.modal__details li {
+  font-size: .875rem;
+  line-height: 1.55;
+  color: var(--text-body);
+  margin-bottom: .25rem;
 }
 
 .modal__option-note {
