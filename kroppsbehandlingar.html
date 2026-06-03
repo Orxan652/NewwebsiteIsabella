@@ -13,6 +13,17 @@
   <link rel="stylesheet" href="treatment.css">
   <link rel="stylesheet" href="problem.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>✦</text></svg>">
+
+  <!-- TEST: "Varm sten"-palett – scoped override ENDAST för denna sida (style.css orört).
+       Endast de icke-gröna variablerna byts. Den GRÖNA (--accent/--accent-hover/--text-heading) lämnas orörd. -->
+  <style>
+    :root {
+      --bg-primary: #F4F1EC;    /* sidbakgrund (var #FAFAF7) */
+      --bg-secondary: #EFE9E2;  /* sektioner/kort/modal-fyllning, lax-rosa (var #F0E6DE) */
+      --gold: #C6AA74;          /* accent terracotta/rost → guld (var #B8634C) */
+      --text-body: #24302D;     /* text (var #3D3D3D) */
+    }
+  </style>
 </head>
 <body>
 
