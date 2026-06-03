@@ -96,7 +96,8 @@
       "Bash(awk '/\\\\.tx-guide-header h2/,/\\\\}/' ansiktsbehandlingar.html)",
       "Bash(awk '/<section class=\"reviews\"/,/<!-- ========== BOTTOM/' ansiktsbehandlingar.html)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(awk 'NR>=228 && NR<=233' frans-bryn.html)"
     ],
     "additionalDirectories": [
       "/private/tmp/claude-501/-Users-isabellakazimova-Desktop-newwebsite/56b4455d-c897-41c1-8551-df75c9ac6954/tasks"
