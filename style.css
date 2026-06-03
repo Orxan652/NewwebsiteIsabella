@@ -5,15 +5,15 @@
    ============================================ */
 
 :root {
-  --bg-primary: #FAFAF7;       /* warm off-white, almost pure */
-  --bg-secondary: #F0E6DE;     /* pale blush, used sparingly */
+  --bg-primary: #F4F1EC;       /* Varm sten – sidbakgrund (var #FAFAF7) */
+  --bg-secondary: #EFE9E2;     /* Varm sten – sektioner/kort/modal-fyllning (var #F0E6DE) */
   --white: #FFFFFF;
   --text-heading: #1F2D2A;     /* deep forest green - the signature */
-  --text-body: #3D3D3D;        /* warm dark grey */
+  --text-body: #24302D;        /* Varm sten – text (var #3D3D3D) */
   --accent: #1F2D2A;           /* deep forest green */
   --accent-hover: #2D3F3B;     /* slightly lighter forest */
   --border: #E8E4DE;           /* warm pale border */
-  --gold: #B8634C;             /* muted terracotta - the secret weapon, used very sparingly */
+  --gold: #9A763F;             /* Varm sten – guld/accent (var terracotta #B8634C) */
   --font-display: 'DM Serif Display', 'Playfair Display', Georgia, serif;
   --radius-sm: 8px;
   --radius-md: 12px;
