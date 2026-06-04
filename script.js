@@ -144,28 +144,76 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* --- Carousel Arrow Navigation (infinite loop) --- */
+  /* --- Carousel: 2 kort per pilklick + sömlös oändlig loop (klonade kort) --- */
   document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
     const track = wrapper.querySelector('.carousel-track');
     const leftBtn = wrapper.querySelector('.carousel-arrow--left');
     const rightBtn = wrapper.querySelector('.carousel-arrow--right');
-    const scrollAmount = 240;
+    if (!track) return;
 
-    rightBtn.addEventListener('click', () => {
-      const maxScroll = track.scrollWidth - track.clientWidth;
-      if (track.scrollLeft >= maxScroll - 5) {
-        track.scrollTo({ left: 0, behavior: 'smooth' });
-      } else {
-        track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-      }
+    const reals = Array.from(track.children);
+    const setCount = reals.length;
+    if (setCount < 2) return;
+
+    // Klona hela uppsättningen FÖRE och EFTER (kopierar attribut, t.ex. loading="lazy"/decoding="async").
+    // Klonerna döljs för skärmläsare/tab och får 'visible' (fade-in-observern hinner inte se dem).
+    const makeClones = () => reals.map(node => {
+      const c = node.cloneNode(true);
+      c.setAttribute('aria-hidden', 'true');
+      c.setAttribute('tabindex', '-1');
+      c.classList.add('visible', 'is-clone');
+      return c;
     });
+    const before = document.createDocumentFragment();
+    makeClones().forEach(c => before.appendChild(c));
+    const after = document.createDocumentFragment();
+    makeClones().forEach(c => after.appendChild(c));
+    track.appendChild(after);
+    track.insertBefore(before, track.firstChild);
 
-    leftBtn.addEventListener('click', () => {
-      if (track.scrollLeft <= 5) {
-        track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
-      } else {
-        track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    let setWidth = 0, step = 0;
+    const measure = () => {
+      const items = track.children;
+      step = items[1].offsetLeft - items[0].offsetLeft;            // ett kort + gap
+      setWidth = items[setCount].offsetLeft - items[0].offsetLeft; // en hel uppsättning (= första riktiga kortet)
+    };
+
+    const setInstant = (x) => {
+      const prev = track.style.scrollBehavior;
+      track.style.scrollBehavior = 'auto';
+      track.scrollLeft = x;
+      void track.offsetWidth; // tvinga reflow
+      track.style.scrollBehavior = prev || '';
+    };
+
+    measure();
+    setInstant(setWidth); // starta på första riktiga kortet (mitten-uppsättningen)
+
+    // Tyst återställning när rörelsen lagt sig och vi hamnat i en klonzon.
+    // Innehållet i klonzonen är identiskt med de riktiga korten → hoppet blir osynligt.
+    const normalize = () => {
+      if (!setWidth) return;
+      if (track.scrollLeft > setWidth * 2 - step / 2) {
+        setInstant(track.scrollLeft - setWidth);
+      } else if (track.scrollLeft < setWidth - step / 2) {
+        setInstant(track.scrollLeft + setWidth);
       }
+    };
+
+    let idle;
+    track.addEventListener('scroll', () => {
+      clearTimeout(idle);
+      idle = setTimeout(normalize, 120); // normalisera efter pil-smooth-scroll / touch-momentum
+    }, { passive: true });
+
+    const jump = (dir) => track.scrollBy({ left: dir * step * 2, behavior: 'smooth' }); // 2 kort
+    if (rightBtn) rightBtn.addEventListener('click', () => jump(1));
+    if (leftBtn)  leftBtn.addEventListener('click', () => jump(-1));
+
+    let rz;
+    window.addEventListener('resize', () => {
+      clearTimeout(rz);
+      rz = setTimeout(() => { measure(); setInstant(setWidth); }, 150);
     });
   });
 });
