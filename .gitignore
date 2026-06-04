@@ -1,0 +1,7 @@
+# OS
+.DS_Store
+**/.DS_Store
+
+# Dev-artefakter
+*.dmg
+*.bak
