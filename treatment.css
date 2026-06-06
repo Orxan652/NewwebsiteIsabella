@@ -438,6 +438,7 @@
 
 /* Premium column highlight */
 .tx-compare-col--premium {
+  position: relative;
   background: var(--bg-secondary);
   border-color: var(--gold);
 }
