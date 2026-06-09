@@ -337,3 +337,161 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 })();
+
+// ===== Cookie-samtycke (GDPR, opt-in) + Google Analytics 4 =====
+// Laddar INGA analys-cookies/gtag före uttryckligt samtycke ("Acceptera").
+(function() {
+  const GA_ID = 'G-XX1817FQJM';
+  const KEY = 'ysc-cookie-consent'; // 'granted' | 'denied'
+
+  // Google Consent Mode v2 – allt nekat som standard (cookielöst, laddar inget script).
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  window.gtag = window.gtag || gtag;
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied'
+  });
+
+  let gaLoaded = false;
+  function loadGA() {
+    if (gaLoaded) return;
+    gaLoaded = true;
+    const s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+  }
+
+  function getConsent() { try { return localStorage.getItem(KEY); } catch (e) { return null; } }
+  function setConsent(v) { try { localStorage.setItem(KEY, v); } catch (e) {} }
+
+  function grant() {
+    setConsent('granted');
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+    loadGA();
+    hideBanner();
+  }
+  function deny() {
+    setConsent('denied');
+    gtag('consent', 'update', { analytics_storage: 'denied' });
+    hideBanner();
+  }
+
+  // --- Banner (injiceras via JS, ingen HTML-redigering) ---
+  let bannerEl = null;
+  function injectStyles() {
+    if (document.getElementById('ysc-cc-styles')) return;
+    const css = `
+      .ysc-cc{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:9999;
+        width:min(680px,calc(100% - 32px));background:#f3efe9;color:#4a4340;
+        border:1px solid #d8cfc2;border-radius:16px;box-shadow:0 8px 30px rgba(74,67,64,.18);
+        padding:20px 22px;font-family:'Inter',system-ui,sans-serif;font-size:.92rem;line-height:1.5;
+        display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;opacity:0;transition:opacity .3s ease,transform .3s ease}
+      .ysc-cc.is-visible{opacity:1}
+      .ysc-cc__text{flex:1 1 280px;margin:0}
+      .ysc-cc__text a{color:#8a7d6d;text-decoration:underline}
+      .ysc-cc__btns{display:flex;gap:10px;flex:0 0 auto}
+      .ysc-cc__btn{font:inherit;font-weight:600;border-radius:100px;padding:.6rem 1.4rem;cursor:pointer;
+        border:1.5px solid #b3a692;transition:all .2s ease;white-space:nowrap}
+      .ysc-cc__btn--accept{background:#9aa897;color:#fff;border-color:#9aa897}
+      .ysc-cc__btn--accept:hover{background:#86977f;border-color:#86977f}
+      .ysc-cc__btn--decline{background:transparent;color:#6b6258}
+      .ysc-cc__btn--decline:hover{background:#e8e1d6}
+      @media(max-width:520px){.ysc-cc{flex-direction:column;align-items:stretch}.ysc-cc__btns{justify-content:stretch}.ysc-cc__btn{flex:1}}`;
+    const st = document.createElement('style');
+    st.id = 'ysc-cc-styles';
+    st.textContent = css;
+    document.head.appendChild(st);
+  }
+
+  function showBanner() {
+    injectStyles();
+    if (bannerEl) { bannerEl.classList.add('is-visible'); return; }
+    bannerEl = document.createElement('div');
+    bannerEl.className = 'ysc-cc';
+    bannerEl.setAttribute('role', 'dialog');
+    bannerEl.setAttribute('aria-label', 'Cookie-samtycke');
+    bannerEl.innerHTML =
+      '<p class="ysc-cc__text">Vi använder cookies för anonym besöksstatistik (Google Analytics) ' +
+      'för att förbättra sidan. Inget laddas utan ditt samtycke. ' +
+      '<a href="integritetspolicy.html">Läs mer</a>.</p>' +
+      '<div class="ysc-cc__btns">' +
+      '<button type="button" class="ysc-cc__btn ysc-cc__btn--decline">Avböj</button>' +
+      '<button type="button" class="ysc-cc__btn ysc-cc__btn--accept">Acceptera</button>' +
+      '</div>';
+    document.body.appendChild(bannerEl);
+    bannerEl.querySelector('.ysc-cc__btn--accept').addEventListener('click', grant);
+    bannerEl.querySelector('.ysc-cc__btn--decline').addEventListener('click', deny);
+    requestAnimationFrame(() => bannerEl.classList.add('is-visible'));
+  }
+  function hideBanner() {
+    if (bannerEl) bannerEl.classList.remove('is-visible');
+  }
+
+  function init() {
+    const consent = getConsent();
+    if (consent === 'granted') {
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      loadGA();
+    } else if (consent !== 'denied') {
+      showBanner(); // inget val gjort → visa banner (inget analytics laddas än)
+    }
+
+    // Footer "Cookies"-länk öppnar samtyckesrutan igen (alla varianter).
+    // Capture-fas så den kör FÖRE ev. gammal data-modal-hanterare (som annars
+    // skulle öppna info-modalen på index/ansiktsbehandlingar/microneedling).
+    document.addEventListener('click', function(e) {
+      const a = e.target.closest('a');
+      if (a && a.textContent.trim().toLowerCase() === 'cookies') {
+        e.preventDefault();
+        e.stopPropagation();
+        showBanner();
+      }
+    }, true);
+
+    // Händelsespårning – bokningsavsikt (endast om samtycke givits).
+    document.addEventListener('click', function(e) {
+      if (getConsent() !== 'granted') return;
+      const link = e.target.closest('a[href]');
+      if (!link) return;
+      const href = link.getAttribute('href') || '';
+      if (href.indexOf('bokadirekt.se') !== -1) {
+        const card = link.closest('.behandling-card-vertical, .method-card, .tx-hero-content');
+        const titleEl = card && card.querySelector('h3, h1');
+        const isHeader = link.classList.contains('header-cta') || link.closest('.header, .mobile-nav');
+        gtag('event', 'boka_klick', {
+          behandling: titleEl ? titleEl.textContent.trim() : (document.querySelector('h1') ? document.querySelector('h1').textContent.trim() : document.title),
+          plats: isHeader ? 'header' : (link.closest('.tx-hero-content') ? 'hero' : 'kort'),
+          sidnamn: document.title,
+          lank: href
+        });
+      } else if (href.indexOf('tel:') === 0) {
+        gtag('event', 'telefon_klick', { sidnamn: document.title, nummer: href.replace('tel:', '') });
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+// ===== Topp-toggle: "Fråga terapeuten" (visa/dölj hela Q&A-blocket) =====
+(function() {
+  document.querySelectorAll('.ask-therapist__toggle').forEach(function(btn) {
+    var panel = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!panel) return;
+    btn.addEventListener('click', function() {
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      panel.hidden = open;
+    });
+  });
+})();

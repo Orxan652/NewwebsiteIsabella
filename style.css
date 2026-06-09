@@ -611,6 +611,20 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 639px) {
+  /* Mobil: kompakt, centrerad 2x2-grid istället för glesa fullbreddsrader. Rör ej desktop (>=768px) eller 640-767px. */
+  .trust-items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 0.5rem;
+  }
+  .trust-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.4rem;
+  }
+  .trust-text { align-items: center; }
+}
+
 /* ============================================
    SECTION HEADERS
    ============================================ */
@@ -1426,6 +1440,18 @@ h1, h2, h3, h4, h5, h6 {
   .footer-bottom { text-align: left; }
 }
 
+@media (max-width: 767px) {
+  /* Mobil: centrerad, luftig footer (annars vänsterställda kolumner som trycks ihop). Rör ej desktop (>=768px). */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    gap: 2.25rem;
+  }
+  .footer-col ul { align-items: center; }
+  .footer-social-links { align-items: center; }
+}
+
 /* ============================================
    FADE-IN ANIMATIONS
    ============================================ */
@@ -1541,26 +1567,40 @@ h1, h2, h3, h4, h5, h6 {
 
 .meet-credentials span {
   font-family: 'Inter', sans-serif;
-  font-size: .65rem;
+  font-size: .58rem;
   font-weight: 600;
-  letter-spacing: .15em;
+  letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--text-body);
-  padding: .35rem .75rem;
+  padding: .28rem .6rem;
   border: 1px solid var(--border);
   border-radius: 4px;
   background: var(--white);
 }
 
 @media (min-width: 900px) {
+  /* Slimmad desktop-vy: tajtare padding/spacing + mindre porträtt (mobil <900px orörd). */
+  .meet-isabella { padding: clamp(2.5rem, 5vw, 4rem) 0; }
   .meet-grid {
-    grid-template-columns: .55fr 1.45fr;
-    gap: clamp(3rem, 6vw, 5rem);
+    grid-template-columns: 240px 1fr;
+    gap: clamp(2.5rem, 4vw, 3.5rem);
     align-items: center;
   }
   .meet-image {
     aspect-ratio: 3/4;
-    max-width: 280px;
+    max-width: 240px;
+  }
+  .meet-headline { margin-bottom: 1rem; }
+  .meet-body { margin-bottom: .85rem; }
+  .meet-signature { margin: 1rem 0 1.25rem; }
+  .meet-credentials { margin-bottom: 1.25rem; padding: 1rem 0; }
+}
+
+@media (max-width: 899px) {
+  /* Begränsa porträttet på smal skärm – annars fyller stående 4/5-bild hela höjden. Rör ej desktop (>=900px). */
+  .meet-image {
+    max-width: 320px;
+    margin-inline: auto;
   }
 }
 

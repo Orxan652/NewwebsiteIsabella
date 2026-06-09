@@ -168,6 +168,13 @@
   color: var(--gold);
 }
 
+/* Raster-ikoner (laserikon*, diatermiikon) i badgen: fyll cirkeln istället för liten 40px-bild, så linjerna syns tydligt. */
+.method-card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .method-card h3 {
   font-size: 1.25rem;
   color: var(--text-heading);

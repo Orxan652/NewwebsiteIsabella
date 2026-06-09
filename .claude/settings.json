@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sips -g pixelWidth images/glassskinhydration2.png)",
+      "Bash(echo \" filen finns ✓ \\($\\(sips -g pixelWidth images/glassskinhydration2.png)",
+      "Bash(echo \"filen finns: $\\([ -f images/glassskinhydration2.png ] && echo ja\\) $\\(sips -g pixelWidth images/glassskinhydration2.png)"
+    ]
+  }
+}
