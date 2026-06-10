@@ -220,7 +220,19 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
   pointer-events: none;
   transition: all var(--transition);
+  transition-delay: .15s; /* förlåtande stängnings-fördröjning */
   z-index: 100;
+}
+
+/* Osynlig hover-brygga över glappet (.75rem) mellan menyval och ruta,
+   så :hover förblir sammanhängande när musen förs ner i rutan. */
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -.75rem;
+  height: .75rem;
 }
 
 .nav-dropdown:hover .dropdown-menu,
@@ -229,6 +241,7 @@ h1, h2, h3, h4, h5, h6 {
   visibility: visible;
   pointer-events: all;
   transform: translateX(-50%) translateY(0);
+  transition-delay: 0s; /* öppna direkt, fördröj bara stängning */
 }
 .nav-dropdown:hover > a::after { transform: rotate(-135deg); }
 
@@ -748,11 +761,12 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   gap: 1.25rem;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   padding: 1rem 0;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x proximity;
 }
 .carousel-track::-webkit-scrollbar {
   display: none;
@@ -1002,7 +1016,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
   -webkit-overflow-scrolling: touch;
   padding-bottom: .5rem;
   scrollbar-width: thin;
