@@ -76,9 +76,9 @@
         <span class="block font-serif text-lg text-ink tracking-wide">Your Skin Clinic</span>
         <span class="block text-[10px] tracking-[0.22em] uppercase text-gold">Gallerian · Stockholm</span>
       </div>
-      <a href="#lead" class="hidden sm:inline-flex items-center rounded-full bg-forest px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">
+      <button type="button" data-open-popup class="hidden sm:inline-flex items-center rounded-full bg-forest px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">
         Reservera din plats
-      </a>
+      </button>
     </div>
   </header>
 
@@ -105,7 +105,7 @@
             Slut på inåtväxta hårstrån och <span class="text-gold">röda prickar</span> efter rakning
           </h1>
 
-          <p class="text-[13px] sm:text-base font-semibold text-body mb-3 sm:mb-5">Laserbehandling för slätare hud, mindre irritation och färre inåtväxta hår. Boka valfritt område – <span class="text-gold">armhålorna bjuder vi på (värde 595 kr)</span>.</p>
+          <p class="text-[13px] sm:text-base font-semibold text-body mb-3 sm:mb-5">Boka valfritt område – <span class="text-gold">armhålorna bjuder vi på (värde 595 kr)</span>.</p>
 
           <!-- 3 säljpunkter (förstås på 3 sekunder) -->
           <ul class="space-y-1.5 sm:space-y-2 mb-4 sm:mb-7 text-[13px] sm:text-base">
@@ -130,10 +130,10 @@
           </span>
 
           <!-- Dominant CTA -->
-          <a href="#lead" data-cta="hero-primary"
+          <button type="button" data-open-popup data-cta="hero-primary"
              class="block w-full rounded-full bg-forest px-5 sm:px-8 py-3.5 sm:py-5 text-center text-sm sm:text-lg font-bold uppercase tracking-wide text-white shadow-2xl transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink sm:inline-block sm:w-auto">
             Reservera din plats
-          </a>
+          </button>
 
           <p class="hidden sm:block mt-2 sm:mt-3 text-[10px] sm:text-xs text-center text-body/60">Ingen betalning online · Inga förpliktelser · Vi hör av oss inom 24 h</p>
 
@@ -153,8 +153,7 @@
       <div class="max-w-5xl mx-auto px-5 py-10 md:py-14">
         <div class="text-center max-w-2xl mx-auto mb-6 lp-fade">
           <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Verkliga resultat</span>
-          <h2 id="ba-title" class="font-serif text-3xl md:text-4xl text-ink mb-2 leading-tight">Se skillnaden – färre inåtväxta hår och jämnare hud</h2>
-          <p class="text-sm text-body/70">Exempel från bikinilinje. Resultatet varierar mellan individer beroende på hårtyp, hormoner och behandlingsintervall.</p>
+          <h2 id="ba-title" class="font-serif text-3xl md:text-4xl text-ink leading-tight">Se skillnaden – färre inåtväxta hår och jämnare hud</h2>
         </div>
 
         <div class="flex flex-wrap justify-center gap-2.5 mb-6 lp-fade">
@@ -186,12 +185,6 @@
             </div>
           </div>
         </figure>
-
-        <div class="mt-6 text-center lp-fade">
-          <a href="#lead" class="inline-block w-full sm:w-auto rounded-full bg-forest px-8 py-4 text-base font-semibold text-white shadow-lg transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">
-            Reservera din plats
-          </a>
-        </div>
       </div>
     </section>
 
@@ -260,50 +253,14 @@
           </ul>
         </div>
 
-        <!-- ============================================================
-             LEAD-FORMULÄR — FÖRBEREDD FÖR HIGHLEVEL CRM
-             A) Behåll detta formulär: sätt LEAD_CONFIG.webhookUrl i sidans
-                script till din HighLevel Inbound Webhook-URL (fältnamnen name=""
-                mappas mot HighLevel-fälten).
-             B) Eller ersätt HELA formuläret med HighLevels embed (behåll #lead).
-             Popup-formuläret längst ned använder SAMMA lead-flöde.
-        ============================================================ -->
-        <form id="lead-form" name="laser_kampanj_lead" class="lp-fade rounded-3xl bg-white text-body p-6 sm:p-8 shadow-2xl" novalidate>
-          <div class="absolute left-[-9999px] w-px h-px overflow-hidden" aria-hidden="true">
-            <label>Lämna tomt<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div class="sm:col-span-2">
-              <label for="lf-name" class="block text-sm font-semibold text-ink mb-1.5">Fullständigt namn</label>
-              <input id="lf-name" name="full_name" type="text" autocomplete="name" required
-                     class="w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-body outline-none focus:border-forest focus:ring-2 focus:ring-forest/30">
-            </div>
-            <div>
-              <label for="lf-phone" class="block text-sm font-semibold text-ink mb-1.5">Telefon</label>
-              <input id="lf-phone" name="phone" type="tel" autocomplete="tel" required
-                     class="w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-body outline-none focus:border-forest focus:ring-2 focus:ring-forest/30">
-            </div>
-            <div>
-              <label for="lf-email" class="block text-sm font-semibold text-ink mb-1.5">E-post</label>
-              <input id="lf-email" name="email" type="email" autocomplete="email" required
-                     class="w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-body outline-none focus:border-forest focus:ring-2 focus:ring-forest/30">
-            </div>
-          </div>
-
-          <button type="submit" id="lead-submit"
-                  class="mt-6 w-full rounded-full bg-forest px-7 py-4 text-base font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2">
+        <!-- CTA – öppnar samma popup-lead-formulär som övriga knappar (inget dubbelt formulär) -->
+        <div class="text-center lp-fade">
+          <button type="button" data-open-popup
+                  class="inline-block w-full sm:w-auto rounded-full bg-white px-8 py-4 text-lg font-semibold text-forest shadow-xl transition hover:bg-stone focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-forest">
             Reservera din plats
           </button>
-
-          <p class="mt-3 text-xs text-center text-body/60">Ingen betalning online · Inga förpliktelser · Vi hör av oss inom 24 h</p>
-
-          <p id="lead-msg" class="mt-4 text-sm text-center" role="status" aria-live="polite"></p>
-          <p class="mt-4 text-xs text-body/60 text-center">
-            Vi använder dina uppgifter endast för att kontakta dig om din bokning.
-            <a href="integritetspolicy.html" class="underline hover:text-ink">Integritetspolicy</a>.
-          </p>
-        </form>
+          <p class="mt-3 text-xs text-white/70">Ingen betalning online · Inga förpliktelser · Vi hör av oss inom 24 h</p>
+        </div>
       </div>
     </section>
 
@@ -312,7 +269,7 @@
       <div class="max-w-5xl mx-auto px-5 py-10 md:py-12">
         <div class="text-center max-w-2xl mx-auto mb-6 lp-fade">
           <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Mer än hårborttagning</span>
-          <h2 id="skin-title" class="font-serif text-2xl md:text-3xl text-ink leading-tight">Mindre inåtväxta hårstrån. Mindre irritation. Slätare hud.</h2>
+          <h2 id="skin-title" class="font-serif text-2xl md:text-3xl text-ink leading-tight">Laser gör mer än att ta bort hår</h2>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           <div class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3">
@@ -400,13 +357,7 @@
       <div class="max-w-4xl mx-auto px-5 py-12 md:py-14">
         <div class="text-center mb-7 lp-fade">
           <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Exklusiv kampanj för nya laserkunder</span>
-          <h2 id="price-title" class="font-serif text-2xl md:text-3xl text-ink mb-4">Boka område – armhålorna på köpet</h2>
-          <div class="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 rounded-full border border-gold/50 bg-gold/10 px-5 py-2.5 shadow-sm">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-5 w-5 text-gold" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            <span class="font-semibold text-ink text-sm">Få armhålorna på köpet</span>
-            <span class="hidden sm:inline-block h-4 w-px bg-gold/40" aria-hidden="true"></span>
-            <span class="font-serif text-lg text-gold">Ordinarie värde 595 kr</span>
-          </div>
+          <h2 id="price-title" class="font-serif text-2xl md:text-3xl text-ink">Boka område – armhålorna på köpet</h2>
         </div>
 
         <!-- Erbjudande-block – armhålorna ingår hela kuren -->
@@ -600,9 +551,9 @@
         <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Exklusiv kampanj för nya laserkunder</span>
         <h2 id="final-cta-title" class="font-serif text-3xl md:text-4xl mb-3">Redo att komma igång?</h2>
         <p class="text-white/80 max-w-xl mx-auto mb-6">Boka valfritt område och få armhålorna på köpet – värde 595 kr. Begränsat antal nya laserkunder per månad.</p>
-        <a href="#lead" class="inline-block w-full sm:w-auto rounded-full bg-white px-8 py-4 text-lg font-semibold text-forest shadow-xl transition hover:bg-stone focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-forest">
+        <button type="button" data-open-popup class="inline-block w-full sm:w-auto rounded-full bg-white px-8 py-4 text-lg font-semibold text-forest shadow-xl transition hover:bg-stone focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-forest">
           Reservera din plats
-        </a>
+        </button>
       </div>
     </section>
   </main>
@@ -614,15 +565,14 @@
         <span class="font-serif text-lg text-white">Your Skin Clinic</span>
         <span class="block text-white/50">Gallerian, Hamngatan 37 · 111 53 Stockholm</span>
       </div>
-      <a href="#lead" class="rounded-full bg-forest px-6 py-3 font-semibold text-white transition hover:bg-forest-hover">Reservera din plats</a>
     </div>
   </footer>
 
   <!-- ============ STICKY MOBILE CTA ============ -->
   <div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-line px-4 py-3" style="padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));">
-    <a href="#lead" class="block w-full text-center rounded-full bg-forest px-6 py-3.5 text-base font-semibold text-white transition hover:bg-forest-hover">
+    <button type="button" data-open-popup class="block w-full text-center rounded-full bg-forest px-6 py-3.5 text-base font-semibold text-white transition hover:bg-forest-hover">
       Reservera din plats
-    </a>
+    </button>
   </div>
 
   <!-- ============ LEAD-POPUP (visas en gång efter ~15s) ============ -->
