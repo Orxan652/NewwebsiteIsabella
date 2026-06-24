@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- META PIXEL – SLOT (samma pixel som landningssidan). Schedule-event triggas
+       via metaTrack() nedan när bokningskalendern öppnas. -->
+  <!-- <script>!function(f,b,e,v,n,t,s){...fbq('init','PIXEL_ID');fbq('track','PageView');}</script> -->
+
+  <title>Tack! Boka din tid – Your Skin Clinic</title>
+  <meta name="description" content="Tack för din intresseanmälan. Slutför din bokning för laserhårborttagning hos Your Skin Clinic.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { forest:'#1F3028','forest-hover':'#2D3F3B', ink:'#1F2D2A', body:'#24302D', stone:'#F4F1EC','stone-2':'#EFE9E2', gold:'#9A763F', line:'#E8E4DE' },
+        fontFamily: { serif:['"DM Serif Display"','Georgia','serif'], sans:['Inter','system-ui','sans-serif'] }
+      } }
+    }
+  </script>
+  <style>body{font-family:'Inter',system-ui,sans-serif}</style>
+</head>
+<body class="bg-stone text-body min-h-screen px-5 py-16">
+  <main class="max-w-lg w-full mx-auto text-center bg-white rounded-3xl border border-line shadow-xl px-6 sm:px-10 py-12">
+    <div class="mx-auto mb-6 h-16 w-16 rounded-full bg-forest text-white flex items-center justify-center">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-8 w-8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+    </div>
+
+    <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-3">Steg 2 av 2</span>
+    <h1 class="font-serif text-3xl sm:text-4xl text-ink mb-4">Tack! Din plats är reserverad</h1>
+    <p class="text-body/80 mb-2">Vi har tagit emot dina uppgifter och kampanjen <strong class="text-ink">”armhålor på köpet”</strong> är reserverad åt dig.</p>
+    <p class="text-body/80 mb-8">Sista steget: välj en tid som passar dig i bokningskalendern nedan.</p>
+
+    <p class="mt-8 text-xs text-body/50">Your Skin Clinic · Gallerian, Hamngatan 37, Stockholm</p>
+  </main>
+
+  <!-- Countdown – platsen hålls i 10 min (ren JS, ingen blockering vid 0) -->
+  <section class="max-w-2xl w-full mx-auto mt-8 -mb-2 text-center">
+    <p id="countdown-text" class="text-sm font-medium text-ink mb-3">Din plats hålls i 10 minuter – välj behandling innan tiden går ut.</p>
+    <div class="flex items-center justify-center gap-3 sm:gap-4">
+      <div class="rounded-2xl border border-line bg-white px-4 py-3 min-w-[68px] sm:min-w-[80px]">
+        <span id="cd-hh" class="block font-serif text-3xl sm:text-4xl text-ink leading-none">00</span>
+        <span class="block text-[10px] uppercase tracking-[0.14em] text-body/50 mt-1">timmar</span>
+      </div>
+      <span class="font-serif text-2xl text-gold/60" aria-hidden="true">:</span>
+      <div class="rounded-2xl border border-line bg-white px-4 py-3 min-w-[68px] sm:min-w-[80px]">
+        <span id="cd-mm" class="block font-serif text-3xl sm:text-4xl text-ink leading-none">10</span>
+        <span class="block text-[10px] uppercase tracking-[0.14em] text-body/50 mt-1">minuter</span>
+      </div>
+      <span class="font-serif text-2xl text-gold/60" aria-hidden="true">:</span>
+      <div class="rounded-2xl border border-line bg-white px-4 py-3 min-w-[68px] sm:min-w-[80px]">
+        <span id="cd-ss" class="block font-serif text-3xl sm:text-4xl text-ink leading-none">00</span>
+        <span class="block text-[10px] uppercase tracking-[0.14em] text-body/50 mt-1">sekunder</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Välj område – 7 klickbara bokningskort med pris (sidans egen stil) -->
+  <section class="max-w-2xl w-full mx-auto my-8">
+    <div class="text-center mb-6">
+      <span class="inline-block text-xs font-semibold uppercase tracking-[0.18em] text-gold mb-2">Hårborttagning med laser</span>
+      <h2 class="font-serif text-2xl sm:text-3xl text-ink mb-2">Välj ditt område</h2>
+      <p class="text-sm text-body/70">Armhålorna ingår på köpet (värde 595 kr) – välj behandlingen du vill boka.</p>
+      <div class="mt-5 border-t border-line"></div>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+      <a href="https://api.leadconnectorhq.com/widget/booking/0m4RubktiauNuMS1VAiF"
+         class="group flex items-center justify-between gap-3 rounded-3xl border border-line bg-white px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-gold hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">
+        <span class="min-w-0">
+          <span class="block font-serif text-lg text-ink">Bikinilinje</span>
+          <span class="block font-semibold text-gold">595 kr</span>
+          <span class="block text-xs text-body/60 mt-0.5">Armhålorna ingår – värde 595 kr</span>
+        </span>
+        <span class="shrink-0 text-gold text-lg transition-transform group-hover:translate-x-0.5" aria-hidden="true">→</span>
+      </a>
+
+      <a href="https://api.leadconnectorhq.com/widget/booking/K9fNuk40NDN0zUU90tAL"
+         class="group flex items-center justify-between gap-3 rounded-3xl border border-line bg-white px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-gold hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">
+        <span class="min-w-0">
+          <span class="block font-serif text-lg text-ink">Underben</span>
+          <span class="block font-semibold text-gold">995 kr</span>
+          <span class="block text-xs text-body/60 mt-0.5">Armhålorna ingår – värde 595 kr</span>
+        </span>
+        <span class="shrink-0 text-gold text-lg transition-transform group-hover:translate-x-0.5" aria-hidden="true">→</span>
+      </a>
+
+      <a href="https://api.leadconnectorhq.com/widget/booking/wpXvgUagsxwzHMhhETB3"
+         class="group flex items-center justify-between gap-3 rounded-3xl border border-line bg-white px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-gold hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">
+        <span class="min-w-0">
+          <span class="block font-serif text-lg text-ink">Brasiliansk</span>
+          <span class="block font-semibold text-gold">995 kr</span>
+          <span class="block text-xs text-body/60 mt-0.5">Armhålorna ingår – värde 595 kr</span>
+        </span>
+        <span class="shrink-0 text-gold text-lg transition-transform group-hover:translate-x-0.5" aria-hidden="true">→</span>
+      </a>
+
+      <a href="https://api.leadconnectorhq.com/widget/booking/2P0GATb1KHfSJPGzdhYK"
+         class="group flex items-center justify-between gap-3 rounded-3xl border border-line bg-white px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-gold hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">
+        <span class="min-w-0">
+          <span class="block font-serif text-lg text-ink">Underben + bikini</span>
+          <span class="block font-semibold text-gold">1 195 kr</span>
+          <span class="block text-xs text-body/60 mt-0.5">Armhålorna ingår – värde 595 kr</span>
+        </span>
+        <span class="shrink-0 text-gold text-lg transition-transform group-hover:translate-x-0.5" aria-hidden="true">→</span>
+      </a>
+
+      <a href="https://api.leadconnectorhq.com/widget/booking/eBZn0Ju6CKvQtwjrEWef"
+         class="group flex items-center justify-between gap-3 rounded-3xl border border-line bg-white px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-gold hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">
+        <span class="min-w-0">
+          <span class="block font-serif text-lg text-ink">Underben + brasiliansk</span>
+          <span class="block font-semibold text-gold">1 495 kr</span>
+          <span class="block text-xs text-body/60 mt-0.5">Armhålorna ingår – värde 595 kr</span>
+        </span>
+        <span class="shrink-0 text-gold text-lg transition-transform group-hover:translate-x-0.5" aria-hidden="true">→</span>
+      </a>
+
+      <a href="https://api.leadconnectorhq.com/widget/booking/AysZosVfbcSYt4TTLfrw"
+         class="group flex items-center justify-between gap-3 rounded-3xl border border-line bg-white px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-gold hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">
+        <span class="min-w-0">
+          <span class="block font-serif text-lg text-ink">Hela ben + bikini</span>
+          <span class="block font-semibold text-gold">1 795 kr</span>
+          <span class="block text-xs text-body/60 mt-0.5">Armhålorna ingår – värde 595 kr</span>
+        </span>
+        <span class="shrink-0 text-gold text-lg transition-transform group-hover:translate-x-0.5" aria-hidden="true">→</span>
+      </a>
+
+      <a href="https://api.leadconnectorhq.com/widget/booking/4DSvrW4T3TJT6XSLqd5U"
+         class="group flex items-center justify-between gap-3 rounded-3xl border border-line bg-white px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:border-gold hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">
+        <span class="min-w-0">
+          <span class="block font-serif text-lg text-ink">Hela ben + brasiliansk</span>
+          <span class="block font-semibold text-gold">2 095 kr</span>
+          <span class="block text-xs text-body/60 mt-0.5">Armhålorna ingår – värde 595 kr</span>
+        </span>
+        <span class="shrink-0 text-gold text-lg transition-transform group-hover:translate-x-0.5" aria-hidden="true">→</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Meta-event: Schedule (bokning påbörjas). Ej aktiv förrän pixeln klistrats in i <head>. -->
+  <script>
+  (function () {
+    'use strict';
+    var BOOKING_URL = 'https://www.bokadirekt.se/places/your-skin-clinic-48263';
+
+    function metaTrack(event, params) {
+      // TODO Meta Pixel: if (window.fbq) window.fbq('track', event, params || {});
+      if (window.__DEBUG_META) console.log('[meta]', event, params || {});
+    }
+
+    // Räkna bokningssteget som påbörjat när tack-sidan visas (lead -> bokning).
+    metaTrack('Schedule', { content_name: 'Laserkampanj' });
+
+    // Säkerställ att event hinner skickas innan ev. navigering vid klick.
+    var bookingLinks = document.querySelectorAll('a[href*="bokadirekt.se"]');
+    bookingLinks.forEach(function (a) {
+      a.addEventListener('click', function () {
+        metaTrack('Schedule', { content_name: 'Laserkampanj', action: 'open_calendar' });
+      });
+    });
+  })();
+  </script>
+
+  <!-- Countdown-timer: startar 10:00, räknar ner, byter text vid 0 (korten förblir klickbara) -->
+  <script>
+  (function () {
+    'use strict';
+    var hh = document.getElementById('cd-hh'), mm = document.getElementById('cd-mm'),
+        ss = document.getElementById('cd-ss'), txt = document.getElementById('countdown-text');
+    if (!hh || !mm || !ss) return;
+    var total = 10 * 60;
+    function p(n){ return n < 10 ? '0' + n : '' + n; }
+    function render(s){ hh.textContent = p(Math.floor(s/3600)); mm.textContent = p(Math.floor((s%3600)/60)); ss.textContent = p(s%60); }
+    render(total);
+    var t = setInterval(function () {
+      total -= 1;
+      if (total <= 0) { render(0); clearInterval(t);
+        if (txt) txt.textContent = 'Tiden har gått ut – men hinner du fortfarande, välj din behandling nedan.';
+        return; }
+      render(total);
+    }, 1000);
+  })();
+  </script>
+</body>
+</html>
