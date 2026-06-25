@@ -1,757 +1,1660 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Kampanjsida – avindexerad för att inte påverka befintlig SEO-struktur -->
-  <meta name="robots" content="noindex, follow">
+    <!-- Kampanjsida – avindexerad för att inte påverka befintlig SEO-struktur -->
+    <meta name="robots" content="noindex, follow" />
 
-  <!-- Meta Pixel Code -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '28289277947326970');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=28289277947326970&ev=PageView&noscript=1"
-  /></noscript>
-  <!-- End Meta Pixel Code -->
-  <!-- Övriga events (ViewContent/Lead/Schedule) skickas via metaTrack() nedan. -->
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "28289277947326970");
+      fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=28289277947326970&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    <!-- Övriga events (ViewContent/Lead/Schedule) skickas via metaTrack() nedan. -->
 
-  <title>Laserhårborttagning Stockholm – Boka kampanjen | Your Skin Clinic</title>
-  <meta name="description" content="Boka valfritt laserområde och få armhålorna på köpet (värde 595 kr). 808nm diodlaser i Gallerian, Stockholm. Begränsat antal nya laserkunder per månad.">
+    <title>
+      Laserhårborttagning Stockholm – Boka kampanjen | Your Skin Clinic
+    </title>
+    <meta
+      name="description"
+      content="Boka valfritt laserområde och få armhålorna på köpet (värde 595 kr). 808nm diodlaser i Gallerian, Stockholm. Begränsat antal nya laserkunder per månad."
+    />
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Boka valfritt laserområde – armhålorna på köpet">
-  <meta property="og:description" content="Få armhålorna på köpet (värde 595 kr). 808nm diodlaser i Stockholm City.">
-  <meta property="og:image" content="images/laserharborttagning.png">
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Boka valfritt laserområde – armhålorna på köpet"
+    />
+    <meta
+      property="og:description"
+      content="Få armhålorna på köpet (värde 595 kr). 808nm diodlaser i Stockholm City."
+    />
+    <meta property="og:image" content="images/laserharborttagning.png" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Tailwind Play CDN (single-file). För produktion: kompilera Tailwind till statisk CSS. -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            forest: '#1F3028', 'forest-hover': '#2D3F3B',
-            ink: '#1F2D2A', body: '#24302D',
-            stone: '#F4F1EC', 'stone-2': '#EFE9E2',
-            gold: '#9A763F', line: '#E8E4DE', rost: '#8B3A2F'
+    <!-- Tailwind Play CDN (single-file). För produktion: kompilera Tailwind till statisk CSS. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              forest: "#1F3028",
+              "forest-hover": "#2D3F3B",
+              ink: "#1F2D2A",
+              body: "#24302D",
+              stone: "#F4F1EC",
+              "stone-2": "#EFE9E2",
+              gold: "#9A763F",
+              line: "#E8E4DE",
+              rost: "#8B3A2F",
+            },
+            fontFamily: {
+              serif: [
+                '"DM Serif Display"',
+                '"Playfair Display"',
+                "Georgia",
+                "serif",
+              ],
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
           },
-          fontFamily: {
-            serif: ['"DM Serif Display"', '"Playfair Display"', 'Georgia', 'serif'],
-            sans: ['Inter', 'system-ui', 'sans-serif']
-          }
+        },
+      };
+    </script>
+
+    <!-- Scopade stilar (prefix lp-) – påverkar inte resten av sajten -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+      }
+      .lp-fade {
+        opacity: 0;
+        transform: translateY(16px);
+        transition:
+          opacity 0.6s ease,
+          transform 0.6s ease;
+      }
+      .lp-fade.is-visible {
+        opacity: 1;
+        transform: none;
+      }
+      .lp-faq-panel {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease;
+      }
+      .lp-reviews {
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .lp-reviews::-webkit-scrollbar {
+        display: none;
+      }
+      .lp-reviews > * {
+        scroll-snap-align: center;
+      }
+      .lp-stars {
+        color: #9a763f;
+        letter-spacing: 2px;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        .lp-fade {
+          transition: none;
+          opacity: 1;
+          transform: none;
+        }
+        .lp-faq-panel {
+          transition: none;
         }
       }
-    }
-  </script>
+    </style>
+  </head>
 
-  <!-- Scopade stilar (prefix lp-) – påverkar inte resten av sajten -->
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .lp-fade { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
-    .lp-fade.is-visible { opacity: 1; transform: none; }
-    .lp-faq-panel { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
-    .lp-reviews { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-    .lp-reviews::-webkit-scrollbar { display: none; }
-    .lp-reviews > * { scroll-snap-align: center; }
-    .lp-stars { color: #9A763F; letter-spacing: 2px; }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .lp-fade { transition: none; opacity: 1; transform: none; }
-      .lp-faq-panel { transition: none; }
-    }
-  </style>
-</head>
-
-<body class="bg-white text-body antialiased pb-20 md:pb-0">
-
-  <!-- ============ MINI HEADER ============ -->
-  <header class="border-b border-line bg-white/90 backdrop-blur sticky top-0 z-40">
-    <div class="max-w-6xl mx-auto px-5 h-14 sm:h-11 flex items-center justify-between">
-      <div class="leading-tight">
-        <span class="block font-serif text-lg sm:text-sm text-ink tracking-wide">Your Skin Clinic</span>
-        <span class="block text-[10px] sm:text-[9px] tracking-[0.22em] uppercase text-gold">Gallerian · Stockholm</span>
-      </div>
-      <button type="button" data-open-popup class="hidden sm:inline-flex items-center rounded-full bg-forest px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">
-        Reservera din plats
-      </button>
-    </div>
-  </header>
-
-  <main>
-    <!-- ============ 1. HERO (ljus beige split, mörk text) ============ -->
-    <section aria-labelledby="hero-title" class="bg-stone flex flex-col">
-      <!-- Övre del: 2-kolumns split (text vänster, bild höger). Cappad bredd + innehållsstyrd höjd
-           → hero fyller INTE hela skärmen på stora skärmar; extra yta = beige runt om. -->
-      <div class="w-full grid grid-cols-[3fr_2fr] items-stretch min-h-[440px] sm:min-h-[480px] sm:max-h-[520px]">
-        <!-- BILD-kolumn (höger – både mobil och desktop) -->
-        <div class="relative overflow-hidden bg-stone order-2">
-          <picture>
-            <img src="images/laserheader.PNG"
-                 alt="Isabella, certifierad lasertekniker, utför laserhårborttagning på Your Skin Clinic i Stockholm"
-                 class="absolute inset-0 h-full w-full object-contain object-right" fetchpriority="high" decoding="async">
-          </picture>
+  <body class="bg-white text-body antialiased pb-20 md:pb-0">
+    <!-- ============ MINI HEADER ============ -->
+    <header
+      class="border-b border-line bg-white/90 backdrop-blur sticky top-0 z-40"
+    >
+      <div
+        class="max-w-6xl mx-auto px-5 h-14 sm:h-11 flex items-center justify-between"
+      >
+        <div class="leading-tight">
+          <span
+            class="block font-serif text-lg sm:text-sm text-ink tracking-wide"
+            >Your Skin Clinic</span
+          >
+          <span
+            class="block text-[10px] sm:text-[9px] tracking-[0.22em] uppercase text-gold"
+            >Gallerian · Stockholm</span
+          >
         </div>
-
-        <!-- TEXT-kolumn -->
-        <div class="flex flex-col justify-center px-4 sm:px-12 lg:px-20 py-8 sm:py-8 order-1">
-          <div class="max-w-xl">
-            <span class="inline-block text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.18em] text-gold mb-5 sm:mb-4">Exklusiv kampanj för nya laserkunder</span>
-
-            <h1 id="hero-title" class="font-serif leading-[1.15] sm:leading-[1.1] text-[2rem] sm:text-5xl text-ink mb-5 sm:mb-4">
-              Slut på inåtväxta hårstrån och <span class="text-rost">röda</span> prickar efter rakning
-            </h1>
-
-            <p class="text-base sm:text-xl font-semibold text-body mb-7 sm:mb-5">Boka valfritt område – <span class="text-gold">armhålorna på köpet (värde 595 kr)</span>.</p>
-
-            <!-- Ärlig, evergreen urgency-badge -->
-            <span class="inline-flex items-center gap-2 border border-gold/50 bg-gold/10 text-ink text-[10px] sm:text-xs font-medium rounded-full px-2.5 sm:px-3.5 py-1 sm:py-1.5 mb-6 sm:mb-5">
-              <span class="text-gold" aria-hidden="true">•</span>
-              Begränsat antal nya laserkunder per månad
-            </span>
-
-            <!-- Dominant CTA -->
-            <button type="button" data-open-popup data-cta="hero-primary"
-               class="block w-full rounded-full bg-forest px-5 sm:px-8 py-3.5 sm:py-5 text-center text-sm sm:text-lg font-bold uppercase tracking-wide text-white shadow-2xl transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink sm:inline-block sm:w-auto">
-              Reservera din plats
-            </button>
-
-            <p class="hidden sm:block mt-3 text-xs text-center text-body/60">Ingen betalning online · Inga förpliktelser · Vi hör av oss inom 24 h</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- TRUST-BAR: fullbredd längst ner, tunn linje upptill -->
-      <div class="border-t border-line px-5 py-3 sm:py-4">
-        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-8 gap-y-1 text-xs sm:text-sm text-body/70">
-          <span><span class="lp-stars" aria-hidden="true">★★★★★</span> <strong class="text-ink">4,9/5</strong></span>
-          <span class="text-body/40" aria-hidden="true">·</span>
-          <span><strong class="text-ink">600+</strong> omdömen</span>
-          <span class="text-body/40" aria-hidden="true">·</span>
-          <span><strong class="text-ink">1300+</strong> behandlade</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 2. FÖRE / EFTER – sidans starkaste argument, direkt under hero ============ -->
-    <section aria-labelledby="ba-title" class="bg-white">
-      <div class="max-w-5xl mx-auto px-5 py-10 md:py-14">
-        <div class="text-center max-w-2xl mx-auto mb-6 lp-fade">
-          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Verkliga resultat</span>
-          <h2 id="ba-title" class="font-serif text-3xl md:text-4xl text-ink leading-tight">Se skillnaden – färre inåtväxta hår och jämnare hud</h2>
-        </div>
-
-        <div class="flex flex-wrap justify-center gap-2.5 mb-6 lp-fade">
-          <span class="inline-flex items-center gap-2 rounded-full bg-stone border border-line px-3.5 py-1.5 text-sm font-medium text-ink">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-4 w-4 text-gold" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            Färre inåtväxta hårstrån
-          </span>
-          <span class="inline-flex items-center gap-2 rounded-full bg-stone border border-line px-3.5 py-1.5 text-sm font-medium text-ink">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-4 w-4 text-gold" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            Mindre irritation
-          </span>
-          <span class="inline-flex items-center gap-2 rounded-full bg-stone border border-line px-3.5 py-1.5 text-sm font-medium text-ink">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-4 w-4 text-gold" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            Slätare hud
-          </span>
-        </div>
-
-        <figure class="lp-fade max-w-2xl mx-auto rounded-2xl overflow-hidden border border-line bg-white shadow-md">
-          <div class="grid grid-cols-2">
-            <div class="relative">
-              <img src="images/bikinifore.jpg" alt="Bikinilinje före laserhårborttagning på Your Skin Clinic"
-                   class="w-full aspect-[3/4] object-cover" loading="lazy" decoding="async">
-              <span class="absolute top-3 left-3 rounded-full bg-ink/75 text-white text-xs font-semibold tracking-wide px-3 py-1">Före</span>
-            </div>
-            <div class="relative">
-              <img src="images/bikiniefter.jpg" alt="Bikinilinje efter laserhårborttagning på Your Skin Clinic"
-                   class="w-full aspect-[3/4] object-cover" loading="lazy" decoding="async">
-              <span class="absolute top-3 right-3 rounded-full bg-gold text-ink text-xs font-semibold tracking-wide px-3 py-1">Efter</span>
-            </div>
-          </div>
-        </figure>
-      </div>
-    </section>
-
-    <!-- ============ 3. RESULTAT REDAN EFTER FÖRSTA BEHANDLINGEN ============ -->
-    <section aria-labelledby="timeline-title" class="bg-stone">
-      <div class="max-w-2xl mx-auto px-5 py-10 md:py-14">
-        <div class="text-center mb-7 lp-fade">
-          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Vad händer sen?</span>
-          <h2 id="timeline-title" class="font-serif text-2xl md:text-3xl text-ink mb-3 leading-tight">Resultat börjar synas redan efter första behandlingen</h2>
-          <p class="text-sm text-body/75">De behandlade hårstråna börjar successivt falla ut under de kommande 2–3 veckorna. Huden känns slätare och mängden synliga hårstrån minskar redan efter första behandlingen. För varje ny behandling reduceras fler hårsäckar i aktiv tillväxtfas.</p>
-        </div>
-
-        <div class="relative max-w-md mx-auto lp-fade">
-          <span class="absolute left-[7px] top-2 bottom-2 w-0.5 bg-gold/25" aria-hidden="true"></span>
-          <ol class="space-y-6">
-            <li class="relative pl-9">
-              <span class="absolute left-0 top-1.5 h-4 w-4 rounded-full bg-gold ring-4 ring-gold/15" aria-hidden="true"></span>
-              <p class="text-xs font-semibold uppercase tracking-[0.14em] text-gold mb-0.5">Dag 1</p>
-              <p class="font-serif text-lg text-ink">Laserbehandling genomförs</p>
-            </li>
-            <li class="relative pl-9">
-              <span class="absolute left-0 top-1.5 h-4 w-4 rounded-full bg-gold ring-4 ring-gold/15" aria-hidden="true"></span>
-              <p class="text-xs font-semibold uppercase tracking-[0.14em] text-gold mb-0.5">Vecka 2–3</p>
-              <p class="font-serif text-lg text-ink">Behandlade hårstrån börjar falla ut</p>
-            </li>
-            <li class="relative pl-9">
-              <span class="absolute left-0 top-1.5 h-4 w-4 rounded-full bg-gold ring-4 ring-gold/15" aria-hidden="true"></span>
-              <p class="text-xs font-semibold uppercase tracking-[0.14em] text-gold mb-0.5">Vecka 4–6</p>
-              <p class="font-serif text-lg text-ink">Tydligt minskad hårmängd i området</p>
-            </li>
-            <li class="relative pl-9">
-              <span class="absolute left-0 top-1.5 h-4 w-4 rounded-full bg-gold ring-4 ring-gold/15" aria-hidden="true"></span>
-              <p class="text-xs font-semibold uppercase tracking-[0.14em] text-gold mb-0.5">Fortsatta behandlingar</p>
-              <p class="font-serif text-lg text-ink">Successivt mindre hårväxt och slätare hud</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 4. LEAD-FORMULÄR (konvertering högt upp) ============ -->
-    <section id="lead" aria-labelledby="lead-title" class="bg-forest text-white">
-      <div class="max-w-2xl mx-auto px-5 py-12 md:py-16">
-        <div class="text-center mb-7 lp-fade">
-          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Exklusiv kampanj för nya laserkunder</span>
-          <h2 id="lead-title" class="font-serif text-3xl md:text-4xl mb-3">Reservera din plats</h2>
-          <ul class="mt-5 mx-auto max-w-sm text-left space-y-2.5">
-            <li class="flex items-center gap-3">
-              <span class="shrink-0 h-6 w-6 rounded-full bg-gold/20 text-gold flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-3.5 w-3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-              </span>
-              <span class="text-white">Valfritt laserområde</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="shrink-0 h-6 w-6 rounded-full bg-gold/20 text-gold flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-3.5 w-3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-              </span>
-              <span class="text-white">Armhålor inkluderat utan extra kostnad</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <span class="shrink-0 h-6 w-6 rounded-full bg-gold/20 text-gold flex items-center justify-center">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-3.5 w-3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-              </span>
-              <span class="text-white font-semibold">Ordinarie värde 595 kr</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- CTA – öppnar samma popup-lead-formulär som övriga knappar (inget dubbelt formulär) -->
-        <div class="text-center lp-fade">
-          <button type="button" data-open-popup
-                  class="inline-block w-full sm:w-auto rounded-full bg-white px-8 py-4 text-lg font-semibold text-forest shadow-xl transition hover:bg-stone focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-forest">
-            Reservera din plats
-          </button>
-          <p class="mt-3 text-xs text-white/70">Ingen betalning online · Inga förpliktelser · Vi hör av oss inom 24 h</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 5. HUDFÖRDELAR (kompakt) ============ -->
-    <section aria-labelledby="skin-title" class="bg-white">
-      <div class="max-w-5xl mx-auto px-5 py-10 md:py-12">
-        <div class="text-center max-w-2xl mx-auto mb-6 lp-fade">
-          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Mer än hårborttagning</span>
-          <h2 id="skin-title" class="font-serif text-2xl md:text-3xl text-ink leading-tight">Laser gör mer än att ta bort hår</h2>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          <div class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-4 w-4 text-gold shrink-0" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            <p class="font-medium text-ink text-sm">Slut på inåtväxta hårstrån och röda prickar</p>
-          </div>
-          <div class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-4 w-4 text-gold shrink-0" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            <p class="font-medium text-ink text-sm">Slipp daglig rakning, vaxning och stubb</p>
-          </div>
-          <div class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-4 w-4 text-gold shrink-0" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            <p class="font-medium text-ink text-sm">Jämnare, len hud utan irritation eller klåda</p>
-          </div>
-          <div class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-4 w-4 text-gold shrink-0" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            <p class="font-medium text-ink text-sm">Permanent hårreducering – håret växer tillbaka allt glesare</p>
-          </div>
-          <div class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-4 w-4 text-gold shrink-0" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            <p class="font-medium text-ink text-sm">Skonsam och säker metod, anpassad för din hud</p>
-          </div>
-          <div class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-4 w-4 text-gold shrink-0" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
-            <p class="font-medium text-ink text-sm">Behandlingen tar bara några minuter per område</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 5.5 FLER RESULTAT (ben m.fl. – tål fler bilder senare) ============ -->
-    <section aria-labelledby="more-results-title" class="bg-stone-2">
-      <div class="max-w-5xl mx-auto px-5 py-10 md:py-12">
-        <div class="text-center mb-6 lp-fade">
-          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Fler resultat</span>
-          <h2 id="more-results-title" class="font-serif text-2xl md:text-3xl text-ink">Fler före och efter</h2>
-        </div>
-        <!-- Behållare som tål 1–3 resultat bredvid varandra -->
-        <div class="flex flex-wrap justify-center gap-5">
-          <figure class="lp-fade w-full max-w-2xl rounded-2xl overflow-hidden border border-line bg-white shadow-md">
-            <div class="grid grid-cols-2">
-              <div class="relative">
-                <img src="images/bikinifore.jpg" alt="Bikinilinje före laserbehandling"
-                     class="w-full aspect-[3/4] object-cover" loading="lazy" decoding="async">
-                <span class="absolute top-3 left-3 rounded-full bg-ink/75 text-white text-xs font-semibold tracking-wide px-3 py-1">Före</span>
-              </div>
-              <div class="relative">
-                <img src="images/bikiniefter.jpg" alt="Bikinilinje efter laserbehandling"
-                     class="w-full aspect-[3/4] object-cover" loading="lazy" decoding="async">
-                <span class="absolute top-3 right-3 rounded-full bg-gold text-ink text-xs font-semibold tracking-wide px-3 py-1">Efter</span>
-              </div>
-            </div>
-            <figcaption class="px-4 py-2.5 text-xs text-body/60">Bikinilinje – före & efter</figcaption>
-          </figure>
-          <figure class="lp-fade w-full max-w-2xl rounded-2xl overflow-hidden border border-line bg-white shadow-md">
-            <div class="grid grid-cols-2">
-              <div class="relative">
-                <img src="images/laserarmfore.jpg" alt="Armhåla före laserbehandling"
-                     class="w-full aspect-[3/4] object-cover" loading="lazy" decoding="async">
-                <span class="absolute top-3 left-3 rounded-full bg-ink/75 text-white text-xs font-semibold tracking-wide px-3 py-1">Före</span>
-              </div>
-              <div class="relative">
-                <img src="images/laserarmefter.jpg" alt="Armhåla efter laserbehandling"
-                     class="w-full aspect-[3/4] object-cover" loading="lazy" decoding="async">
-                <span class="absolute top-3 right-3 rounded-full bg-gold text-ink text-xs font-semibold tracking-wide px-3 py-1">Efter</span>
-              </div>
-            </div>
-            <figcaption class="px-4 py-2.5 text-xs text-body/60">Armhåla – före & efter</figcaption>
-          </figure>
-          <figure class="lp-fade w-full max-w-2xl rounded-2xl overflow-hidden border border-line bg-white shadow-md">
-            <div class="relative">
-              <img src="images/laserbenforeefter.jpg" alt="Ben före och efter laserhårborttagning på Your Skin Clinic"
-                   class="w-full object-cover" loading="lazy" decoding="async">
-              <span class="absolute top-3 left-3 rounded-full bg-ink/75 text-white text-xs font-semibold tracking-wide px-3 py-1">Före</span>
-              <span class="absolute top-3 right-3 rounded-full bg-gold text-ink text-xs font-semibold tracking-wide px-3 py-1">Efter</span>
-            </div>
-            <figcaption class="px-4 py-2.5 text-xs text-body/60">Ben. Resultatet varierar mellan individer.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 6. PRISER (kompakta kort, 3 områden) ============ -->
-    <section id="priser" aria-labelledby="price-title" class="bg-stone">
-      <div class="max-w-4xl mx-auto px-5 py-12 md:py-14">
-        <div class="text-center mb-7 lp-fade">
-          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Exklusiv kampanj för nya laserkunder</span>
-          <h2 id="price-title" class="font-serif text-2xl md:text-3xl text-ink">Boka område – armhålorna på köpet</h2>
-        </div>
-
-        <!-- Erbjudande-block – armhålorna ingår hela kuren -->
-        <div class="lp-fade max-w-2xl mx-auto mb-7 rounded-2xl border-2 border-gold/40 bg-white px-6 py-5 text-center shadow-sm">
-          <h3 class="font-serif text-xl sm:text-2xl text-ink mb-1.5">Armhålorna ingår – hela kuren</h3>
-          <p class="text-sm text-body/75">Så länge du följer din behandlingskur bjuder vi på armhålorna vid varje besök – ordinarie värde 595 kr per gång.</p>
-        </div>
-
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-          <div class="lp-fade rounded-2xl bg-white border border-line p-5 text-center flex flex-col">
-            <h3 class="font-serif text-xl text-ink mb-1">Hela ben + brasiliansk</h3>
-            <span class="block text-lg font-semibold text-gold mb-3">2 095 kr</span>
-            <span class="inline-block w-fit mx-auto text-[11px] font-semibold tracking-[0.1em] uppercase text-gold bg-gold/10 rounded-full px-3 py-1 mb-5">+ Armhålor på köpet</span>
-            <button type="button" data-open-popup class="mt-auto rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">Reservera din plats</button>
-          </div>
-          <div class="lp-fade rounded-2xl bg-white border border-line p-5 text-center flex flex-col">
-            <h3 class="font-serif text-xl text-ink mb-1">Hela ben + bikini</h3>
-            <span class="block text-lg font-semibold text-gold mb-3">1 795 kr</span>
-            <span class="inline-block w-fit mx-auto text-[11px] font-semibold tracking-[0.1em] uppercase text-gold bg-gold/10 rounded-full px-3 py-1 mb-5">+ Armhålor på köpet</span>
-            <button type="button" data-open-popup class="mt-auto rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">Reservera din plats</button>
-          </div>
-          <div class="lp-fade rounded-2xl bg-white border border-line p-5 text-center flex flex-col">
-            <h3 class="font-serif text-xl text-ink mb-1">Underben + brasiliansk</h3>
-            <span class="block text-lg font-semibold text-gold mb-3">1 495 kr</span>
-            <span class="inline-block w-fit mx-auto text-[11px] font-semibold tracking-[0.1em] uppercase text-gold bg-gold/10 rounded-full px-3 py-1 mb-5">+ Armhålor på köpet</span>
-            <button type="button" data-open-popup class="mt-auto rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">Reservera din plats</button>
-          </div>
-          <div class="lp-fade rounded-2xl bg-white border border-line p-5 text-center flex flex-col">
-            <h3 class="font-serif text-xl text-ink mb-1">Underben + bikini</h3>
-            <span class="block text-lg font-semibold text-gold mb-3">1 195 kr</span>
-            <span class="inline-block w-fit mx-auto text-[11px] font-semibold tracking-[0.1em] uppercase text-gold bg-gold/10 rounded-full px-3 py-1 mb-5">+ Armhålor på köpet</span>
-            <button type="button" data-open-popup class="mt-auto rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">Reservera din plats</button>
-          </div>
-          <div class="lp-fade rounded-2xl bg-white border border-line p-5 text-center flex flex-col">
-            <h3 class="font-serif text-xl text-ink mb-1">Brasiliansk</h3>
-            <span class="block text-lg font-semibold text-gold mb-3">995 kr</span>
-            <span class="inline-block w-fit mx-auto text-[11px] font-semibold tracking-[0.1em] uppercase text-gold bg-gold/10 rounded-full px-3 py-1 mb-5">+ Armhålor på köpet</span>
-            <button type="button" data-open-popup class="mt-auto rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">Reservera din plats</button>
-          </div>
-          <div class="lp-fade rounded-2xl bg-white border border-line p-5 text-center flex flex-col">
-            <h3 class="font-serif text-xl text-ink mb-1">Underben</h3>
-            <span class="block text-lg font-semibold text-gold mb-3">995 kr</span>
-            <span class="inline-block w-fit mx-auto text-[11px] font-semibold tracking-[0.1em] uppercase text-gold bg-gold/10 rounded-full px-3 py-1 mb-5">+ Armhålor på köpet</span>
-            <button type="button" data-open-popup class="mt-auto rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">Reservera din plats</button>
-          </div>
-          <div class="lp-fade rounded-2xl bg-white border border-line p-5 text-center flex flex-col">
-            <h3 class="font-serif text-xl text-ink mb-1">Bikinilinje</h3>
-            <span class="block text-lg font-semibold text-gold mb-3">595 kr</span>
-            <span class="inline-block w-fit mx-auto text-[11px] font-semibold tracking-[0.1em] uppercase text-gold bg-gold/10 rounded-full px-3 py-1 mb-5">+ Armhålor på köpet</span>
-            <button type="button" data-open-popup class="mt-auto rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2">Reservera din plats</button>
-          </div>
-        </div>
-        <p class="mt-5 text-center text-xs text-body/55">Aktuella priser visas vid bokningen. Kan inte kombineras med andra erbjudanden.</p>
-      </div>
-    </section>
-
-    <!-- ============ 7. ISABELLA – kompakt trust-block ============ -->
-    <section aria-labelledby="about-title" class="bg-white">
-      <div class="max-w-3xl mx-auto px-5 py-8 md:py-10">
-        <div class="lp-fade flex items-center gap-5 rounded-2xl border border-line bg-stone p-5 sm:p-6">
-          <img src="images/isabellany.PNG" alt="Isabella, CIDESCO-certifierad hudterapeut på Your Skin Clinic"
-               class="shrink-0 h-20 w-20 sm:h-24 sm:w-24 rounded-full object-cover shadow" loading="lazy" decoding="async">
-          <div>
-            <span class="block text-[11px] font-semibold uppercase tracking-[0.14em] text-gold mb-1">Din behandlare</span>
-            <h2 id="about-title" class="sr-only">Din behandlare Isabella</h2>
-            <p class="text-sm sm:text-base text-body/85 mb-3">Laserbehandling utförs av Isabella, CIDESCO-certifierad hudterapeut och certifierad lasertekniker med lång erfarenhet av estetiska behandlingar.</p>
-            <div class="flex flex-wrap gap-1.5 text-[11px]">
-              <span class="rounded-full bg-white border border-line px-2.5 py-1 text-body/70">CIDESCO</span>
-              <span class="rounded-full bg-white border border-line px-2.5 py-1 text-body/70">Certifierad lasertekniker</span>
-              <span class="rounded-full bg-white border border-line px-2.5 py-1 text-body/70">Säker Klinik</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 8. REVIEWS ============ -->
-    <section aria-labelledby="rev-title" class="bg-stone">
-      <div class="max-w-6xl mx-auto px-5 py-10 md:py-14">
-        <div class="text-center mb-7 lp-fade">
-          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Omdömen</span>
-          <h2 id="rev-title" class="font-serif text-2xl md:text-3xl text-ink mb-1">Vad våra kunder säger</h2>
-          <p class="text-sm text-body/70"><span class="lp-stars" aria-hidden="true">★★★★★</span> 4,9/5 · 600+ omdömen på Google och Bokadirekt</p>
-        </div>
-        <div class="lp-reviews flex gap-4 overflow-x-auto pb-3 snap-x">
-          <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-[340px] rounded-2xl bg-white border border-line p-6">
-            <div class="lp-stars mb-2" aria-label="5 av 5">★★★★★</div>
-            <p class="text-sm text-body/80 mb-4">”Bäst i stan!! Tillmötesgående, smidig med tidsbokning och super duktig! Plus att det ligger mitt i stan.”</p>
-            <footer class="text-sm font-semibold text-ink">Marjana S.</footer>
-          </blockquote>
-          <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-[340px] rounded-2xl bg-white border border-line p-6">
-            <div class="lp-stars mb-2" aria-label="5 av 5">★★★★★</div>
-            <p class="text-sm text-body/80 mb-4">”Var hos Isa för laserhårborttagning och kan verkligen rekommendera – hon har ett otroligt fint bemötande och är väldigt noggrann.”</p>
-            <footer class="text-sm font-semibold text-ink">Tulin D.</footer>
-          </blockquote>
-          <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-[340px] rounded-2xl bg-white border border-line p-6">
-            <div class="lp-stars mb-2" aria-label="5 av 5">★★★★★</div>
-            <p class="text-sm text-body/80 mb-4">”Var där för brasiliansk hårborttagning med laser. Supernöjd med upplevelsen, och Isa som genomförde den var så trevlig och proffsig. Rekommenderar Your Skin Clinic varmt.”</p>
-            <footer class="text-sm font-semibold text-ink">Kristina F.</footer>
-          </blockquote>
-          <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-[340px] rounded-2xl bg-white border border-line p-6">
-            <div class="lp-stars mb-2" aria-label="5 av 5">★★★★★</div>
-            <p class="text-sm text-body/80 mb-4">”Jag gjorde brasiliansk laserbehandling hos Isa och är väldigt nöjd. Ett känsligt område att behandla, men hon var otroligt professionell och respektfull. Kände mig trygg och väl omhändertagen – behandlingsrummet var fräscht och allt kändes hygieniskt och seriöst.”</p>
-            <footer class="text-sm font-semibold text-ink">Anna J.</footer>
-          </blockquote>
-          <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-[340px] rounded-2xl bg-white border border-line p-6">
-            <div class="lp-stars mb-2" aria-label="5 av 5">★★★★★</div>
-            <p class="text-sm text-body/80 mb-4">”Isa är bäst! Förutom att hon är supertrevlig så är hon professionell uti fingerspetsarna. Det arbete hon gjort är overkligt bra. Rekommenderar Isa mycket varmt!”</p>
-            <footer class="text-sm font-semibold text-ink">Maria H.</footer>
-          </blockquote>
-          <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-[340px] rounded-2xl bg-white border border-line p-6">
-            <div class="lp-stars mb-2" aria-label="5 av 5">★★★★★</div>
-            <p class="text-sm text-body/80 mb-4">”Isabella känns rak, tydlig och effektiv. Kunnig på sitt område. Stort plus att hon var ärlig om biverkningar och återhämtning i förväg, vilket många 'glömmer' – så man vet att behandlingen passar i tid. Kommer gärna tillbaka.”</p>
-            <footer class="text-sm font-semibold text-ink">Johnny K.</footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 9. FAQ (3 viktigaste) ============ -->
-    <section aria-labelledby="faq-title" class="bg-white">
-      <div class="max-w-2xl mx-auto px-5 py-10 md:py-12">
-        <div class="text-center mb-6 lp-fade">
-          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Vanliga frågor</span>
-          <h2 id="faq-title" class="font-serif text-2xl md:text-3xl text-ink">Frågor &amp; svar</h2>
-        </div>
-        <div class="divide-y divide-line border-y border-line">
-          <div class="lp-faq">
-            <h3>
-              <button type="button" class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 text-left" aria-expanded="false">
-                <span class="font-semibold text-ink">Hur fungerar erbjudandet med armhålorna?</span>
-                <span class="lp-faq-icon text-gold text-xl leading-none" aria-hidden="true">+</span>
-              </button>
-            </h3>
-            <div class="lp-faq-panel"><p class="pb-4 text-sm text-body/75">När du bokar valfritt laserområde bjuder vi på armhålorna (ordinarie värde 595 kr) – varje gång du kommer, så länge du följer din behandlingskur. Laser ger bäst resultat när du återkommer inom det rekommenderade intervallet för ditt område. Håller du din kur ingår armhålorna vid varje besök. Bryter du kuren – det vill säga väntar längre än det rekommenderade intervallet mellan behandlingarna – förfaller armhåle-förmånen. Du får ditt exakta intervall av oss vid första besöket.</p></div>
-          </div>
-          <div class="lp-faq">
-            <h3>
-              <button type="button" class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 text-left" aria-expanded="false">
-                <span class="font-semibold text-ink">Gör behandlingen ont?</span>
-                <span class="lp-faq-icon text-gold text-xl leading-none" aria-hidden="true">+</span>
-              </button>
-            </h3>
-            <div class="lp-faq-panel"><p class="pb-4 text-sm text-body/75">De flesta upplever bara en lätt värmekänsla eller ett snabbt knäpp. Vår 808nm diodlaser har integrerad kylning som gör behandlingen behaglig även på känsliga områden.</p></div>
-          </div>
-          <div class="lp-faq">
-            <h3>
-              <button type="button" class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 text-left" aria-expanded="false">
-                <span class="font-semibold text-ink">Hur många behandlingar behövs?</span>
-                <span class="lp-faq-icon text-gold text-xl leading-none" aria-hidden="true">+</span>
-              </button>
-            </h3>
-            <div class="lp-faq-panel"><p class="pb-4 text-sm text-body/75">Det varierar mellan individer. Grova, mörka hårstrån svarar ofta snabbare och kräver vanligtvis 6–8 behandlingar, medan ljusare eller finare hår kan behöva 10–12. Håret behandlas i sin aktiva tillväxtfas, så flera tillfällen behövs för bästa resultat. Detta är riktlinjer – vid din första behandling går vi igenom en plan som passar just din hud- och hårtyp.</p></div>
-          </div>
-          <div class="lp-faq">
-            <h3>
-              <button type="button" class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 text-left" aria-expanded="false">
-                <span class="font-semibold text-ink">Hur fungerar kampanjen?</span>
-                <span class="lp-faq-icon text-gold text-xl leading-none" aria-hidden="true">+</span>
-              </button>
-            </h3>
-            <div class="lp-faq-panel"><p class="pb-4 text-sm text-body/75">Boka valfritt område under kampanjperioden så ingår armhålorna på köpet (värde 595 kr) – utan extra kostnad. Lämna dina uppgifter i formuläret så reserverar vi platsen och hjälper dig vidare till bokningen.</p></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 10. PLATS (klinikbild + adress, ingen karta) ============ -->
-    <section aria-labelledby="loc-title" class="bg-stone">
-      <div class="max-w-5xl mx-auto px-5 py-10 md:py-14 grid md:grid-cols-2 gap-8 items-center">
-        <div class="lp-fade order-2 md:order-1">
-          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Hitta hit</span>
-          <h2 id="loc-title" class="font-serif text-2xl md:text-3xl text-ink mb-4">Mitt i Stockholm City</h2>
-          <p class="text-lg text-ink font-semibold leading-snug mb-1">📍 Your Skin Clinic</p>
-          <p class="text-body/75 mb-4">Gallerian, Stockholm City<br>Hamngatan 37, 111 53 Stockholm</p>
-          <a href="https://www.google.com/maps/search/?api=1&query=Your+Skin+Clinic+Hamngatan+37+Gallerian+Stockholm" target="_blank" rel="noopener"
-             class="text-sm font-semibold text-gold underline underline-offset-2 hover:text-ink">Vägbeskrivning</a>
-        </div>
-        <div class="lp-fade order-1 md:order-2 rounded-2xl overflow-hidden border border-line shadow-md">
-          <picture>
-            <img src="images/salongrum.PNG" alt="Behandlingsrum på Your Skin Clinic i Gallerian, Stockholm"
-                 class="w-full h-56 md:h-64 object-cover" loading="lazy" decoding="async">
-          </picture>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 11. SLUT-CTA ============ -->
-    <section aria-labelledby="final-cta-title" class="bg-forest text-white">
-      <div class="max-w-3xl mx-auto px-5 py-12 md:py-16 text-center">
-        <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Exklusiv kampanj för nya laserkunder</span>
-        <h2 id="final-cta-title" class="font-serif text-3xl md:text-4xl mb-3">Redo att komma igång?</h2>
-        <p class="text-white/80 max-w-xl mx-auto mb-6">Boka valfritt område och få armhålorna på köpet – värde 595 kr. Begränsat antal nya laserkunder per månad.</p>
-        <button type="button" data-open-popup class="inline-block w-full sm:w-auto rounded-full bg-white px-8 py-4 text-lg font-semibold text-forest shadow-xl transition hover:bg-stone focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-forest">
+        <button
+          type="button"
+          data-open-popup
+          class="hidden sm:inline-flex items-center rounded-full bg-forest px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
+        >
           Reservera din plats
         </button>
       </div>
-    </section>
-  </main>
+    </header>
 
-  <!-- ============ MINI FOOTER ============ -->
-  <footer class="bg-ink text-white/70">
-    <div class="max-w-6xl mx-auto px-5 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
-      <div>
-        <span class="font-serif text-lg text-white">Your Skin Clinic</span>
-        <span class="block text-white/50">Gallerian, Hamngatan 37 · 111 53 Stockholm</span>
+    <main>
+      <!-- ============ 1. HERO (ljus beige split, mörk text) ============ -->
+      <section aria-labelledby="hero-title" class="bg-stone flex flex-col">
+        <!-- Övre del: 2-kolumns split (text vänster, bild höger). Cappad bredd + innehållsstyrd höjd
+           → hero fyller INTE hela skärmen på stora skärmar; extra yta = beige runt om. -->
+        <div
+          class="w-full grid grid-cols-[3fr_2fr] items-stretch min-h-[440px] sm:min-h-[480px] sm:max-h-[520px]"
+        >
+          <!-- BILD-kolumn (höger – både mobil och desktop) -->
+          <div class="relative overflow-hidden bg-stone order-2">
+            <picture>
+              <img
+                src="images/laserheader.PNG"
+                alt="Isabella, certifierad lasertekniker, utför laserhårborttagning på Your Skin Clinic i Stockholm"
+                class="absolute inset-0 h-full w-full object-contain object-right"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </picture>
+          </div>
+
+          <!-- TEXT-kolumn -->
+          <div
+            class="flex flex-col justify-center px-4 sm:px-12 lg:px-20 py-8 sm:py-8 order-1"
+          >
+            <div class="max-w-xl">
+              <span
+                class="inline-block text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.18em] text-gold mb-5 sm:mb-4"
+                >Exklusiv kampanj för nya laserkunder</span
+              >
+
+              <h1
+                id="hero-title"
+                class="font-serif leading-[1.15] sm:leading-[1.1] text-[2rem] sm:text-5xl text-ink mb-5 sm:mb-4"
+              >
+                Slut på inåtväxta hårstrån och
+                <span class="text-rost">röda</span> prickar efter rakning
+              </h1>
+
+              <p
+                class="text-base sm:text-xl font-semibold text-body mb-7 sm:mb-5"
+              >
+                Boka valfritt område –
+                <span class="text-gold">armhålorna på köpet (värde 595 kr)</span
+                >.
+              </p>
+
+              <!-- Ärlig, evergreen urgency-badge -->
+              <span
+                class="inline-flex items-center gap-2 border border-gold/50 bg-gold/10 text-ink text-[10px] sm:text-xs font-medium rounded-full px-2.5 sm:px-3.5 py-1 sm:py-1.5 mb-6 sm:mb-5"
+              >
+                <span class="text-gold" aria-hidden="true">•</span>
+                Begränsat antal nya laserkunder per månad
+              </span>
+
+              <!-- Dominant CTA -->
+              <button
+                type="button"
+                data-open-popup
+                data-cta="hero-primary"
+                class="block w-full rounded-full bg-forest px-5 sm:px-8 py-3.5 sm:py-5 text-center text-sm sm:text-lg font-bold uppercase tracking-wide text-white shadow-2xl transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ink sm:inline-block sm:w-auto"
+              >
+                Reservera din plats
+              </button>
+
+              <p class="hidden sm:block mt-3 text-xs text-center text-body/60">
+                Ingen betalning online · Inga förpliktelser · Vi hör av oss inom
+                24 h
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRUST-BAR: fullbredd längst ner, tunn linje upptill -->
+        <div class="border-t border-line px-5 py-3 sm:py-4">
+          <div
+            class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-8 gap-y-1 text-xs sm:text-sm text-body/70"
+          >
+            <span
+              ><span class="lp-stars" aria-hidden="true">★★★★★</span>
+              <strong class="text-ink">4,9/5</strong></span
+            >
+            <span class="text-body/40" aria-hidden="true">·</span>
+            <span><strong class="text-ink">600+</strong> omdömen</span>
+            <span class="text-body/40" aria-hidden="true">·</span>
+            <span><strong class="text-ink">1300+</strong> behandlade</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 2. FÖRE / EFTER – sidans starkaste argument, direkt under hero ============ -->
+      <section aria-labelledby="ba-title" class="bg-white">
+        <div class="max-w-5xl mx-auto px-5 py-10 md:py-14">
+          <div class="text-center max-w-2xl mx-auto mb-6 lp-fade">
+            <span
+              class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2"
+              >Verkliga resultat</span
+            >
+            <h2
+              id="ba-title"
+              class="font-serif text-3xl md:text-4xl text-ink leading-tight"
+            >
+              Se skillnaden – färre inåtväxta hår och jämnare hud
+            </h2>
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-2.5 mb-6 lp-fade">
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-stone border border-line px-3.5 py-1.5 text-sm font-medium text-ink"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                class="h-4 w-4 text-gold"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12l5 5L20 7" />
+              </svg>
+              Färre inåtväxta hårstrån
+            </span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-stone border border-line px-3.5 py-1.5 text-sm font-medium text-ink"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                class="h-4 w-4 text-gold"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12l5 5L20 7" />
+              </svg>
+              Mindre irritation
+            </span>
+            <span
+              class="inline-flex items-center gap-2 rounded-full bg-stone border border-line px-3.5 py-1.5 text-sm font-medium text-ink"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                class="h-4 w-4 text-gold"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12l5 5L20 7" />
+              </svg>
+              Slätare hud
+            </span>
+          </div>
+
+          <figure
+            class="lp-fade max-w-2xl mx-auto rounded-2xl overflow-hidden border border-line bg-white shadow-md"
+          >
+            <div class="grid grid-cols-2">
+              <div class="relative">
+                <img
+                  src="images/bikinifore.jpg"
+                  alt="Bikinilinje före laserhårborttagning på Your Skin Clinic"
+                  class="w-full aspect-[3/4] object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span
+                  class="absolute top-3 left-3 rounded-full bg-ink/75 text-white text-xs font-semibold tracking-wide px-3 py-1"
+                  >Före</span
+                >
+              </div>
+              <div class="relative">
+                <img
+                  src="images/bikiniefter.jpg"
+                  alt="Bikinilinje efter laserhårborttagning på Your Skin Clinic"
+                  class="w-full aspect-[3/4] object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span
+                  class="absolute top-3 right-3 rounded-full bg-gold text-ink text-xs font-semibold tracking-wide px-3 py-1"
+                  >Efter</span
+                >
+              </div>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ 3. RESULTAT REDAN EFTER FÖRSTA BEHANDLINGEN ============ -->
+      <section aria-labelledby="timeline-title" class="bg-stone">
+        <div class="max-w-2xl mx-auto px-5 py-10 md:py-14">
+          <div class="text-center mb-7 lp-fade">
+            <span
+              class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2"
+              >Vad händer sen?</span
+            >
+            <h2
+              id="timeline-title"
+              class="font-serif text-2xl md:text-3xl text-ink mb-3 leading-tight"
+            >
+              Resultat börjar synas redan efter första behandlingen
+            </h2>
+            <p class="text-sm text-body/75">
+              De behandlade hårstråna börjar successivt falla ut under de
+              kommande 2–3 veckorna. Huden känns slätare och mängden synliga
+              hårstrån minskar redan efter första behandlingen. För varje ny
+              behandling reduceras fler hårsäckar i aktiv tillväxtfas.
+            </p>
+          </div>
+
+          <div class="relative max-w-md mx-auto lp-fade">
+            <span
+              class="absolute left-[7px] top-2 bottom-2 w-0.5 bg-gold/25"
+              aria-hidden="true"
+            ></span>
+            <ol class="space-y-6">
+              <li class="relative pl-9">
+                <span
+                  class="absolute left-0 top-1.5 h-4 w-4 rounded-full bg-gold ring-4 ring-gold/15"
+                  aria-hidden="true"
+                ></span>
+                <p
+                  class="text-xs font-semibold uppercase tracking-[0.14em] text-gold mb-0.5"
+                >
+                  Dag 1
+                </p>
+                <p class="font-serif text-lg text-ink">
+                  Laserbehandling genomförs
+                </p>
+              </li>
+              <li class="relative pl-9">
+                <span
+                  class="absolute left-0 top-1.5 h-4 w-4 rounded-full bg-gold ring-4 ring-gold/15"
+                  aria-hidden="true"
+                ></span>
+                <p
+                  class="text-xs font-semibold uppercase tracking-[0.14em] text-gold mb-0.5"
+                >
+                  Vecka 2–3
+                </p>
+                <p class="font-serif text-lg text-ink">
+                  Behandlade hårstrån börjar falla ut
+                </p>
+              </li>
+              <li class="relative pl-9">
+                <span
+                  class="absolute left-0 top-1.5 h-4 w-4 rounded-full bg-gold ring-4 ring-gold/15"
+                  aria-hidden="true"
+                ></span>
+                <p
+                  class="text-xs font-semibold uppercase tracking-[0.14em] text-gold mb-0.5"
+                >
+                  Vecka 4–6
+                </p>
+                <p class="font-serif text-lg text-ink">
+                  Tydligt minskad hårmängd i området
+                </p>
+              </li>
+              <li class="relative pl-9">
+                <span
+                  class="absolute left-0 top-1.5 h-4 w-4 rounded-full bg-gold ring-4 ring-gold/15"
+                  aria-hidden="true"
+                ></span>
+                <p
+                  class="text-xs font-semibold uppercase tracking-[0.14em] text-gold mb-0.5"
+                >
+                  Fortsatta behandlingar
+                </p>
+                <p class="font-serif text-lg text-ink">
+                  Successivt mindre hårväxt och slätare hud
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 4. LEAD-FORMULÄR (konvertering högt upp) ============ -->
+      <section
+        id="lead"
+        aria-labelledby="lead-title"
+        class="bg-forest text-white"
+      >
+        <div class="max-w-2xl mx-auto px-5 py-12 md:py-16">
+          <div class="text-center mb-7 lp-fade">
+            <span
+              class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2"
+              >Exklusiv kampanj för nya laserkunder</span
+            >
+            <h2 id="lead-title" class="font-serif text-3xl md:text-4xl mb-3">
+              Reservera din plats
+            </h2>
+            <ul class="mt-5 mx-auto max-w-sm text-left space-y-2.5">
+              <li class="flex items-center gap-3">
+                <span
+                  class="shrink-0 h-6 w-6 rounded-full bg-gold/20 text-gold flex items-center justify-center"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.4"
+                    class="h-3.5 w-3.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12l5 5L20 7" />
+                  </svg>
+                </span>
+                <span class="text-white">Valfritt laserområde</span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="shrink-0 h-6 w-6 rounded-full bg-gold/20 text-gold flex items-center justify-center"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.4"
+                    class="h-3.5 w-3.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12l5 5L20 7" />
+                  </svg>
+                </span>
+                <span class="text-white"
+                  >Armhålor inkluderat utan extra kostnad</span
+                >
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="shrink-0 h-6 w-6 rounded-full bg-gold/20 text-gold flex items-center justify-center"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.4"
+                    class="h-3.5 w-3.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12l5 5L20 7" />
+                  </svg>
+                </span>
+                <span class="text-white font-semibold"
+                  >Ordinarie värde 595 kr</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- CTA – öppnar samma popup-lead-formulär som övriga knappar (inget dubbelt formulär) -->
+          <div class="text-center lp-fade">
+            <button
+              type="button"
+              data-open-popup
+              class="inline-block w-full sm:w-auto rounded-full bg-white px-8 py-4 text-lg font-semibold text-forest shadow-xl transition hover:bg-stone focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-forest"
+            >
+              Reservera din plats
+            </button>
+            <p class="mt-3 text-xs text-white/70">
+              Ingen betalning online · Inga förpliktelser · Vi hör av oss inom
+              24 h
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5. HUDFÖRDELAR (kompakt) ============ -->
+      <section aria-labelledby="skin-title" class="bg-white">
+        <div class="max-w-5xl mx-auto px-5 py-10 md:py-12">
+          <div class="text-center max-w-2xl mx-auto mb-6 lp-fade">
+            <span
+              class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2"
+              >Mer än hårborttagning</span
+            >
+            <h2
+              id="skin-title"
+              class="font-serif text-2xl md:text-3xl text-ink leading-tight"
+            >
+              Laser gör mer än att ta bort hår
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            <div
+              class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                class="h-4 w-4 text-gold shrink-0"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12l5 5L20 7" />
+              </svg>
+              <p class="font-medium text-ink text-sm">
+                Slut på inåtväxta hårstrån och röda prickar
+              </p>
+            </div>
+            <div
+              class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                class="h-4 w-4 text-gold shrink-0"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12l5 5L20 7" />
+              </svg>
+              <p class="font-medium text-ink text-sm">
+                Slipp daglig rakning, vaxning och stubb
+              </p>
+            </div>
+            <div
+              class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                class="h-4 w-4 text-gold shrink-0"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12l5 5L20 7" />
+              </svg>
+              <p class="font-medium text-ink text-sm">
+                Jämnare, len hud utan irritation eller klåda
+              </p>
+            </div>
+            <div
+              class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                class="h-4 w-4 text-gold shrink-0"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12l5 5L20 7" />
+              </svg>
+              <p class="font-medium text-ink text-sm">
+                Permanent hårreducering – håret växer tillbaka allt glesare
+              </p>
+            </div>
+            <div
+              class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                class="h-4 w-4 text-gold shrink-0"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12l5 5L20 7" />
+              </svg>
+              <p class="font-medium text-ink text-sm">
+                Skonsam och säker metod, anpassad för din hud
+              </p>
+            </div>
+            <div
+              class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                class="h-4 w-4 text-gold shrink-0"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12l5 5L20 7" />
+              </svg>
+              <p class="font-medium text-ink text-sm">
+                Behandlingen tar bara några minuter per område
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5.5 FLER RESULTAT (ben m.fl. – tål fler bilder senare) ============ -->
+      <section aria-labelledby="more-results-title" class="bg-stone-2">
+        <div class="max-w-5xl mx-auto px-5 py-10 md:py-12">
+          <div class="text-center mb-6 lp-fade">
+            <span
+              class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2"
+              >Fler resultat</span
+            >
+            <h2
+              id="more-results-title"
+              class="font-serif text-2xl md:text-3xl text-ink"
+            >
+              Fler före och efter
+            </h2>
+          </div>
+          <!-- Behållare som tål 1–3 resultat bredvid varandra -->
+          <div class="flex flex-wrap justify-center gap-5">
+            <figure
+              class="lp-fade w-full max-w-2xl rounded-2xl overflow-hidden border border-line bg-white shadow-md"
+            >
+              <div class="grid grid-cols-2">
+                <div class="relative">
+                  <img
+                    src="images/bikinifore.jpg"
+                    alt="Bikinilinje före laserbehandling"
+                    class="w-full aspect-[3/4] object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    class="absolute top-3 left-3 rounded-full bg-ink/75 text-white text-xs font-semibold tracking-wide px-3 py-1"
+                    >Före</span
+                  >
+                </div>
+                <div class="relative">
+                  <img
+                    src="images/bikiniefter.jpg"
+                    alt="Bikinilinje efter laserbehandling"
+                    class="w-full aspect-[3/4] object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    class="absolute top-3 right-3 rounded-full bg-gold text-ink text-xs font-semibold tracking-wide px-3 py-1"
+                    >Efter</span
+                  >
+                </div>
+              </div>
+              <figcaption class="px-4 py-2.5 text-xs text-body/60">
+                Bikinilinje – före & efter
+              </figcaption>
+            </figure>
+            <figure
+              class="lp-fade w-full max-w-2xl rounded-2xl overflow-hidden border border-line bg-white shadow-md"
+            >
+              <div class="grid grid-cols-2">
+                <div class="relative">
+                  <img
+                    src="images/laserarmfore.jpg"
+                    alt="Armhåla före laserbehandling"
+                    class="w-full aspect-[3/4] object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    class="absolute top-3 left-3 rounded-full bg-ink/75 text-white text-xs font-semibold tracking-wide px-3 py-1"
+                    >Före</span
+                  >
+                </div>
+                <div class="relative">
+                  <img
+                    src="images/laserarmefter.jpg"
+                    alt="Armhåla efter laserbehandling"
+                    class="w-full aspect-[3/4] object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span
+                    class="absolute top-3 right-3 rounded-full bg-gold text-ink text-xs font-semibold tracking-wide px-3 py-1"
+                    >Efter</span
+                  >
+                </div>
+              </div>
+              <figcaption class="px-4 py-2.5 text-xs text-body/60">
+                Armhåla – före & efter
+              </figcaption>
+            </figure>
+            <figure
+              class="lp-fade w-full max-w-2xl rounded-2xl overflow-hidden border border-line bg-white shadow-md"
+            >
+              <div class="relative">
+                <img
+                  src="images/laserbenforeefter.jpg"
+                  alt="Ben före och efter laserhårborttagning på Your Skin Clinic"
+                  class="w-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <span
+                  class="absolute top-3 left-3 rounded-full bg-ink/75 text-white text-xs font-semibold tracking-wide px-3 py-1"
+                  >Före</span
+                >
+                <span
+                  class="absolute top-3 right-3 rounded-full bg-gold text-ink text-xs font-semibold tracking-wide px-3 py-1"
+                  >Efter</span
+                >
+              </div>
+              <figcaption class="px-4 py-2.5 text-xs text-body/60">
+                Ben. Resultatet varierar mellan individer.
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 6. PRISER (kompakta kort, 3 områden) ============ -->
+      <section id="priser" aria-labelledby="price-title" class="bg-stone">
+        <div class="max-w-4xl mx-auto px-5 py-12 md:py-14">
+          <div class="text-center mb-7 lp-fade">
+            <span
+              class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2"
+              >Exklusiv kampanj för nya laserkunder</span
+            >
+            <h2
+              id="price-title"
+              class="font-serif text-2xl md:text-3xl text-ink"
+            >
+              Boka område – armhålorna på köpet
+            </h2>
+          </div>
+
+          <!-- Erbjudande-block – armhålorna ingår hela kuren -->
+          <div
+            class="lp-fade max-w-2xl mx-auto mb-7 rounded-2xl border-2 border-gold/40 bg-white px-6 py-5 text-center shadow-sm"
+          >
+            <h3 class="font-serif text-xl sm:text-2xl text-ink mb-1.5">
+              Armhålorna ingår – hela kuren
+            </h3>
+            <p class="text-sm text-body/75">
+              Så länge du följer din behandlingskur bjuder vi på armhålorna vid
+              varje besök – ordinarie värde 595 kr per gång.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+            <div
+              class="lp-fade rounded-2xl bg-white border border-line p-5 text-center flex flex-col"
+            >
+              <h3 class="font-serif text-xl text-ink mb-1">
+                Hela ben + brasiliansk
+              </h3>
+              <span class="block text-lg font-semibold text-gold mb-3"
+                >2 095 kr</span
+              >
+              <span
+                class="inline-block w-fit mx-auto text-[11px] font-semibold tracking-[0.1em] uppercase text-gold bg-gold/10 rounded-full px-3 py-1 mb-5"
+                >+ Armhålor på köpet</span
+              >
+              <button
+                type="button"
+                data-open-popup
+                class="mt-auto rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
+              >
+                Reservera din plats
+              </button>
+            </div>
+            <div
+              class="lp-fade rounded-2xl bg-white border border-line p-5 text-center flex flex-col"
+            >
+              <h3 class="font-serif text-xl text-ink mb-1">
+                Hela ben + bikini
+              </h3>
+              <span class="block text-lg font-semibold text-gold mb-3"
+                >1 795 kr</span
+              >
+              <span
+                class="inline-block w-fit mx-auto text-[11px] font-semibold tracking-[0.1em] uppercase text-gold bg-gold/10 rounded-full px-3 py-1 mb-5"
+                >+ Armhålor på köpet</span
+              >
+              <button
+                type="button"
+                data-open-popup
+                class="mt-auto rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
+              >
+                Reservera din plats
+              </button>
+            </div>
+            <div
+              class="lp-fade rounded-2xl bg-white border border-line p-5 text-center flex flex-col"
+            >
+              <h3 class="font-serif text-xl text-ink mb-1">
+                Underben + brasiliansk
+              </h3>
+              <span class="block text-lg font-semibold text-gold mb-3"
+                >1 495 kr</span
+              >
+              <span
+                class="inline-block w-fit mx-auto text-[11px] font-semibold tracking-[0.1em] uppercase text-gold bg-gold/10 rounded-full px-3 py-1 mb-5"
+                >+ Armhålor på köpet</span
+              >
+              <button
+                type="button"
+                data-open-popup
+                class="mt-auto rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
+              >
+                Reservera din plats
+              </button>
+            </div>
+            <div
+              class="lp-fade rounded-2xl bg-white border border-line p-5 text-center flex flex-col"
+            >
+              <h3 class="font-serif text-xl text-ink mb-1">
+                Underben + bikini
+              </h3>
+              <span class="block text-lg font-semibold text-gold mb-3"
+                >1 195 kr</span
+              >
+              <span
+                class="inline-block w-fit mx-auto text-[11px] font-semibold tracking-[0.1em] uppercase text-gold bg-gold/10 rounded-full px-3 py-1 mb-5"
+                >+ Armhålor på köpet</span
+              >
+              <button
+                type="button"
+                data-open-popup
+                class="mt-auto rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
+              >
+                Reservera din plats
+              </button>
+            </div>
+            <div
+              class="lp-fade rounded-2xl bg-white border border-line p-5 text-center flex flex-col"
+            >
+              <h3 class="font-serif text-xl text-ink mb-1">Brasiliansk</h3>
+              <span class="block text-lg font-semibold text-gold mb-3"
+                >995 kr</span
+              >
+              <span
+                class="inline-block w-fit mx-auto text-[11px] font-semibold tracking-[0.1em] uppercase text-gold bg-gold/10 rounded-full px-3 py-1 mb-5"
+                >+ Armhålor på köpet</span
+              >
+              <button
+                type="button"
+                data-open-popup
+                class="mt-auto rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
+              >
+                Reservera din plats
+              </button>
+            </div>
+            <div
+              class="lp-fade rounded-2xl bg-white border border-line p-5 text-center flex flex-col"
+            >
+              <h3 class="font-serif text-xl text-ink mb-1">Underben</h3>
+              <span class="block text-lg font-semibold text-gold mb-3"
+                >995 kr</span
+              >
+              <span
+                class="inline-block w-fit mx-auto text-[11px] font-semibold tracking-[0.1em] uppercase text-gold bg-gold/10 rounded-full px-3 py-1 mb-5"
+                >+ Armhålor på köpet</span
+              >
+              <button
+                type="button"
+                data-open-popup
+                class="mt-auto rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
+              >
+                Reservera din plats
+              </button>
+            </div>
+            <div
+              class="lp-fade rounded-2xl bg-white border border-line p-5 text-center flex flex-col"
+            >
+              <h3 class="font-serif text-xl text-ink mb-1">Bikinilinje</h3>
+              <span class="block text-lg font-semibold text-gold mb-3"
+                >595 kr</span
+              >
+              <span
+                class="inline-block w-fit mx-auto text-[11px] font-semibold tracking-[0.1em] uppercase text-gold bg-gold/10 rounded-full px-3 py-1 mb-5"
+                >+ Armhålor på köpet</span
+              >
+              <button
+                type="button"
+                data-open-popup
+                class="mt-auto rounded-full bg-forest px-5 py-3 text-sm font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2"
+              >
+                Reservera din plats
+              </button>
+            </div>
+          </div>
+          <p class="mt-5 text-center text-xs text-body/55">
+            Aktuella priser visas vid bokningen. Kan inte kombineras med andra
+            erbjudanden.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ 7. ISABELLA – kompakt trust-block ============ -->
+      <section aria-labelledby="about-title" class="bg-white">
+        <div class="max-w-3xl mx-auto px-5 py-8 md:py-10">
+          <div
+            class="lp-fade flex items-center gap-5 rounded-2xl border border-line bg-stone p-5 sm:p-6"
+          >
+            <img
+              src="images/isabellany.PNG"
+              alt="Isabella, CIDESCO-certifierad hudterapeut på Your Skin Clinic"
+              class="shrink-0 h-20 w-20 sm:h-24 sm:w-24 rounded-full object-cover shadow"
+              loading="lazy"
+              decoding="async"
+            />
+            <div>
+              <span
+                class="block text-[11px] font-semibold uppercase tracking-[0.14em] text-gold mb-1"
+                >Din behandlare</span
+              >
+              <h2 id="about-title" class="sr-only">Din behandlare Isabella</h2>
+              <p class="text-sm sm:text-base text-body/85 mb-3">
+                Laserbehandling utförs av Isabella, CIDESCO-certifierad
+                hudterapeut och certifierad lasertekniker med lång erfarenhet av
+                estetiska behandlingar.
+              </p>
+              <div class="flex flex-wrap gap-1.5 text-[11px]">
+                <span
+                  class="rounded-full bg-white border border-line px-2.5 py-1 text-body/70"
+                  >CIDESCO</span
+                >
+                <span
+                  class="rounded-full bg-white border border-line px-2.5 py-1 text-body/70"
+                  >Certifierad lasertekniker</span
+                >
+                <span
+                  class="rounded-full bg-white border border-line px-2.5 py-1 text-body/70"
+                  >Säker Klinik</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 8. REVIEWS ============ -->
+      <section aria-labelledby="rev-title" class="bg-stone">
+        <div class="max-w-6xl mx-auto px-5 py-10 md:py-14">
+          <div class="text-center mb-7 lp-fade">
+            <span
+              class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2"
+              >Omdömen</span
+            >
+            <h2
+              id="rev-title"
+              class="font-serif text-2xl md:text-3xl text-ink mb-1"
+            >
+              Vad våra kunder säger
+            </h2>
+            <p class="text-sm text-body/70">
+              <span class="lp-stars" aria-hidden="true">★★★★★</span> 4,9/5 ·
+              600+ omdömen på Google och Bokadirekt
+            </p>
+          </div>
+          <div class="lp-reviews flex gap-4 overflow-x-auto pb-3 snap-x">
+            <blockquote
+              class="lp-fade snap-center shrink-0 w-[85%] sm:w-[340px] rounded-2xl bg-white border border-line p-6"
+            >
+              <div class="lp-stars mb-2" aria-label="5 av 5">★★★★★</div>
+              <p class="text-sm text-body/80 mb-4">
+                ”Bäst i stan!! Tillmötesgående, smidig med tidsbokning och super
+                duktig! Plus att det ligger mitt i stan.”
+              </p>
+              <footer class="text-sm font-semibold text-ink">Marjana S.</footer>
+            </blockquote>
+            <blockquote
+              class="lp-fade snap-center shrink-0 w-[85%] sm:w-[340px] rounded-2xl bg-white border border-line p-6"
+            >
+              <div class="lp-stars mb-2" aria-label="5 av 5">★★★★★</div>
+              <p class="text-sm text-body/80 mb-4">
+                ”Var hos Isa för laserhårborttagning och kan verkligen
+                rekommendera – hon har ett otroligt fint bemötande och är
+                väldigt noggrann.”
+              </p>
+              <footer class="text-sm font-semibold text-ink">Tulin D.</footer>
+            </blockquote>
+            <blockquote
+              class="lp-fade snap-center shrink-0 w-[85%] sm:w-[340px] rounded-2xl bg-white border border-line p-6"
+            >
+              <div class="lp-stars mb-2" aria-label="5 av 5">★★★★★</div>
+              <p class="text-sm text-body/80 mb-4">
+                ”Var där för brasiliansk hårborttagning med laser. Supernöjd med
+                upplevelsen, och Isa som genomförde den var så trevlig och
+                proffsig. Rekommenderar Your Skin Clinic varmt.”
+              </p>
+              <footer class="text-sm font-semibold text-ink">
+                Kristina F.
+              </footer>
+            </blockquote>
+            <blockquote
+              class="lp-fade snap-center shrink-0 w-[85%] sm:w-[340px] rounded-2xl bg-white border border-line p-6"
+            >
+              <div class="lp-stars mb-2" aria-label="5 av 5">★★★★★</div>
+              <p class="text-sm text-body/80 mb-4">
+                ”Jag gjorde brasiliansk laserbehandling hos Isa och är väldigt
+                nöjd. Ett känsligt område att behandla, men hon var otroligt
+                professionell och respektfull. Kände mig trygg och väl
+                omhändertagen – behandlingsrummet var fräscht och allt kändes
+                hygieniskt och seriöst.”
+              </p>
+              <footer class="text-sm font-semibold text-ink">Anna J.</footer>
+            </blockquote>
+            <blockquote
+              class="lp-fade snap-center shrink-0 w-[85%] sm:w-[340px] rounded-2xl bg-white border border-line p-6"
+            >
+              <div class="lp-stars mb-2" aria-label="5 av 5">★★★★★</div>
+              <p class="text-sm text-body/80 mb-4">
+                ”Isa är bäst! Förutom att hon är supertrevlig så är hon
+                professionell uti fingerspetsarna. Det arbete hon gjort är
+                overkligt bra. Rekommenderar Isa mycket varmt!”
+              </p>
+              <footer class="text-sm font-semibold text-ink">Maria H.</footer>
+            </blockquote>
+            <blockquote
+              class="lp-fade snap-center shrink-0 w-[85%] sm:w-[340px] rounded-2xl bg-white border border-line p-6"
+            >
+              <div class="lp-stars mb-2" aria-label="5 av 5">★★★★★</div>
+              <p class="text-sm text-body/80 mb-4">
+                ”Isabella känns rak, tydlig och effektiv. Kunnig på sitt område.
+                Stort plus att hon var ärlig om biverkningar och återhämtning i
+                förväg, vilket många 'glömmer' – så man vet att behandlingen
+                passar i tid. Kommer gärna tillbaka.”
+              </p>
+              <footer class="text-sm font-semibold text-ink">Johnny K.</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 9. FAQ (3 viktigaste) ============ -->
+      <section aria-labelledby="faq-title" class="bg-white">
+        <div class="max-w-2xl mx-auto px-5 py-10 md:py-12">
+          <div class="text-center mb-6 lp-fade">
+            <span
+              class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2"
+              >Vanliga frågor</span
+            >
+            <h2 id="faq-title" class="font-serif text-2xl md:text-3xl text-ink">
+              Frågor &amp; svar
+            </h2>
+          </div>
+          <div class="divide-y divide-line border-y border-line">
+            <div class="lp-faq">
+              <h3>
+                <button
+                  type="button"
+                  class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 text-left"
+                  aria-expanded="false"
+                >
+                  <span class="font-semibold text-ink"
+                    >Hur fungerar erbjudandet med armhålorna?</span
+                  >
+                  <span
+                    class="lp-faq-icon text-gold text-xl leading-none"
+                    aria-hidden="true"
+                    >+</span
+                  >
+                </button>
+              </h3>
+              <div class="lp-faq-panel">
+                <p class="pb-4 text-sm text-body/75">
+                  När du bokar valfritt laserområde bjuder vi på armhålorna
+                  (ordinarie värde 595 kr) – varje gång du kommer, så länge du
+                  följer din behandlingskur. Laser ger bäst resultat när du
+                  återkommer inom det rekommenderade intervallet för ditt
+                  område. Håller du din kur ingår armhålorna vid varje besök.
+                  Bryter du kuren – det vill säga väntar längre än det
+                  rekommenderade intervallet mellan behandlingarna – förfaller
+                  armhåle-förmånen. Du får ditt exakta intervall av oss vid
+                  första besöket.
+                </p>
+              </div>
+            </div>
+            <div class="lp-faq">
+              <h3>
+                <button
+                  type="button"
+                  class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 text-left"
+                  aria-expanded="false"
+                >
+                  <span class="font-semibold text-ink"
+                    >Gör behandlingen ont?</span
+                  >
+                  <span
+                    class="lp-faq-icon text-gold text-xl leading-none"
+                    aria-hidden="true"
+                    >+</span
+                  >
+                </button>
+              </h3>
+              <div class="lp-faq-panel">
+                <p class="pb-4 text-sm text-body/75">
+                  De flesta upplever bara en lätt värmekänsla eller ett snabbt
+                  knäpp. Vår 808nm diodlaser har integrerad kylning som gör
+                  behandlingen behaglig även på känsliga områden.
+                </p>
+              </div>
+            </div>
+            <div class="lp-faq">
+              <h3>
+                <button
+                  type="button"
+                  class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 text-left"
+                  aria-expanded="false"
+                >
+                  <span class="font-semibold text-ink"
+                    >Hur många behandlingar behövs?</span
+                  >
+                  <span
+                    class="lp-faq-icon text-gold text-xl leading-none"
+                    aria-hidden="true"
+                    >+</span
+                  >
+                </button>
+              </h3>
+              <div class="lp-faq-panel">
+                <p class="pb-4 text-sm text-body/75">
+                  Det varierar mellan individer. Grova, mörka hårstrån svarar
+                  ofta snabbare och kräver vanligtvis 6–8 behandlingar, medan
+                  ljusare eller finare hår kan behöva 10–12. Håret behandlas i
+                  sin aktiva tillväxtfas, så flera tillfällen behövs för bästa
+                  resultat. Detta är riktlinjer – vid din första behandling går
+                  vi igenom en plan som passar just din hud- och hårtyp.
+                </p>
+              </div>
+            </div>
+            <div class="lp-faq">
+              <h3>
+                <button
+                  type="button"
+                  class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 text-left"
+                  aria-expanded="false"
+                >
+                  <span class="font-semibold text-ink"
+                    >Hur fungerar kampanjen?</span
+                  >
+                  <span
+                    class="lp-faq-icon text-gold text-xl leading-none"
+                    aria-hidden="true"
+                    >+</span
+                  >
+                </button>
+              </h3>
+              <div class="lp-faq-panel">
+                <p class="pb-4 text-sm text-body/75">
+                  Boka valfritt område under kampanjperioden så ingår armhålorna
+                  på köpet (värde 595 kr) – utan extra kostnad. Lämna dina
+                  uppgifter i formuläret så reserverar vi platsen och hjälper
+                  dig vidare till bokningen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 10. PLATS (klinikbild + adress, ingen karta) ============ -->
+      <section aria-labelledby="loc-title" class="bg-stone">
+        <div
+          class="max-w-5xl mx-auto px-5 py-10 md:py-14 grid md:grid-cols-2 gap-8 items-center"
+        >
+          <div class="lp-fade order-2 md:order-1">
+            <span
+              class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2"
+              >Hitta hit</span
+            >
+            <h2
+              id="loc-title"
+              class="font-serif text-2xl md:text-3xl text-ink mb-4"
+            >
+              Mitt i Stockholm City
+            </h2>
+            <p class="text-lg text-ink font-semibold leading-snug mb-1">
+              📍 Your Skin Clinic
+            </p>
+            <p class="text-body/75 mb-4">
+              Gallerian, Stockholm City<br />Hamngatan 37, 111 53 Stockholm
+            </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Your+Skin+Clinic+Hamngatan+37+Gallerian+Stockholm"
+              target="_blank"
+              rel="noopener"
+              class="text-sm font-semibold text-gold underline underline-offset-2 hover:text-ink"
+              >Vägbeskrivning</a
+            >
+          </div>
+          <div
+            class="lp-fade order-1 md:order-2 rounded-2xl overflow-hidden border border-line shadow-md"
+          >
+            <picture>
+              <img
+                src="images/salongrum.PNG"
+                alt="Behandlingsrum på Your Skin Clinic i Gallerian, Stockholm"
+                class="w-full h-56 md:h-64 object-cover"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 11. SLUT-CTA ============ -->
+      <section aria-labelledby="final-cta-title" class="bg-forest text-white">
+        <div class="max-w-3xl mx-auto px-5 py-12 md:py-16 text-center">
+          <span
+            class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2"
+            >Exklusiv kampanj för nya laserkunder</span
+          >
+          <h2 id="final-cta-title" class="font-serif text-3xl md:text-4xl mb-3">
+            Redo att komma igång?
+          </h2>
+          <p class="text-white/80 max-w-xl mx-auto mb-6">
+            Boka valfritt område och få armhålorna på köpet – värde 595 kr.
+            Begränsat antal nya laserkunder per månad.
+          </p>
+          <button
+            type="button"
+            data-open-popup
+            class="inline-block w-full sm:w-auto rounded-full bg-white px-8 py-4 text-lg font-semibold text-forest shadow-xl transition hover:bg-stone focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-forest"
+          >
+            Reservera din plats
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ MINI FOOTER ============ -->
+    <footer class="bg-ink text-white/70">
+      <div
+        class="max-w-6xl mx-auto px-5 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm"
+      >
+        <div>
+          <span class="font-serif text-lg text-white">Your Skin Clinic</span>
+          <span class="block text-white/50"
+            >Gallerian, Hamngatan 37 · 111 53 Stockholm</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============ STICKY MOBILE CTA ============ -->
+    <div
+      class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-line px-4 py-3"
+      style="padding-bottom: calc(0.75rem + env(safe-area-inset-bottom))"
+    >
+      <button
+        type="button"
+        data-open-popup
+        class="block w-full text-center rounded-full bg-forest px-6 py-3.5 text-base font-semibold text-white transition hover:bg-forest-hover"
+      >
+        Reservera din plats
+      </button>
+    </div>
+
+    <!-- ============ LEAD-POPUP (visas en gång efter ~15s) ============ -->
+    <div
+      id="lead-popup"
+      class="hidden fixed inset-0 z-[60] items-start sm:items-center justify-center overflow-y-auto bg-ink/60 px-4 py-6 sm:py-10 backdrop-blur-sm"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="popup-title"
+    >
+      <div
+        class="relative w-full max-w-md rounded-3xl bg-white p-6 sm:p-8 shadow-2xl"
+      >
+        <button
+          type="button"
+          data-popup-close
+          aria-label="Stäng"
+          class="absolute top-3 right-4 text-2xl leading-none text-body/50 hover:text-ink focus:outline-none"
+        >
+          &times;
+        </button>
+        <span
+          class="inline-block text-[11px] font-bold uppercase tracking-[0.14em] text-gold mb-3"
+          >Exklusiv kampanj</span
+        >
+        <h2 id="popup-title" class="font-serif text-2xl text-ink mb-2">
+          Missa inte kampanjen
+        </h2>
+        <p class="text-sm text-body/75 mb-5">
+          Boka valfritt laserområde och få armhålorna på köpet (värde 595 kr).
+          Begränsat antal nya laserkunder per månad.
+        </p>
+
+        <form id="lead-popup-form" name="laser_kampanj_lead_popup" novalidate>
+          <div
+            class="absolute left-[-9999px] w-px h-px overflow-hidden"
+            aria-hidden="true"
+          >
+            <label
+              >Lämna tomt<input
+                type="text"
+                name="company_website"
+                tabindex="-1"
+                autocomplete="off"
+            /></label>
+          </div>
+          <div class="space-y-3">
+            <div>
+              <label for="lf-pop-name" class="sr-only">Fullständigt namn</label>
+              <input
+                id="lf-pop-name"
+                name="full_name"
+                type="text"
+                autocomplete="name"
+                placeholder="Fullständigt namn"
+                required
+                class="w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-body outline-none focus:border-forest focus:ring-2 focus:ring-forest/30"
+              />
+            </div>
+            <div>
+              <label for="lf-pop-phone" class="sr-only">Telefon</label>
+              <input
+                id="lf-pop-phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                placeholder="Telefon"
+                required
+                class="w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-body outline-none focus:border-forest focus:ring-2 focus:ring-forest/30"
+              />
+            </div>
+            <div>
+              <label for="lf-pop-email" class="sr-only">E-post</label>
+              <input
+                id="lf-pop-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="E-post"
+                required
+                class="w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-body outline-none focus:border-forest focus:ring-2 focus:ring-forest/30"
+              />
+            </div>
+          </div>
+          <button
+            type="submit"
+            id="lead-popup-submit"
+            class="mt-4 w-full rounded-full bg-forest px-7 py-4 text-base font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2"
+          >
+            Reservera min plats
+          </button>
+          <p
+            id="lead-popup-msg"
+            class="mt-3 text-sm text-center"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <p class="mt-3 text-xs text-body/55 text-center">
+            Vi använder dina uppgifter endast för att kontakta dig.
+            <a href="integritetspolicy.html" class="underline hover:text-ink"
+              >Integritetspolicy</a
+            >.
+          </p>
+        </form>
       </div>
     </div>
-  </footer>
 
-  <!-- ============ STICKY MOBILE CTA ============ -->
-  <div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-line px-4 py-3" style="padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));">
-    <button type="button" data-open-popup class="block w-full text-center rounded-full bg-forest px-6 py-3.5 text-base font-semibold text-white transition hover:bg-forest-hover">
-      Reservera din plats
-    </button>
-  </div>
+    <!-- ============ PAGE SCRIPT (scoped, no globals) ============ -->
+    <script>
+      (function () {
+        "use strict";
 
-  <!-- ============ LEAD-POPUP (visas en gång efter ~15s) ============ -->
-  <div id="lead-popup" class="hidden fixed inset-0 z-[60] items-start sm:items-center justify-center overflow-y-auto bg-ink/60 px-4 py-6 sm:py-10 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="popup-title">
-    <div class="relative w-full max-w-md rounded-3xl bg-white p-6 sm:p-8 shadow-2xl">
-      <button type="button" data-popup-close aria-label="Stäng" class="absolute top-3 right-4 text-2xl leading-none text-body/50 hover:text-ink focus:outline-none">&times;</button>
-      <span class="inline-block text-[11px] font-bold uppercase tracking-[0.14em] text-gold mb-3">Exklusiv kampanj</span>
-      <h2 id="popup-title" class="font-serif text-2xl text-ink mb-2">Missa inte kampanjen</h2>
-      <p class="text-sm text-body/75 mb-5">Boka valfritt laserområde och få armhålorna på köpet (värde 595 kr). Begränsat antal nya laserkunder per månad.</p>
-
-      <form id="lead-popup-form" name="laser_kampanj_lead_popup" novalidate>
-        <div class="absolute left-[-9999px] w-px h-px overflow-hidden" aria-hidden="true">
-          <label>Lämna tomt<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label>
-        </div>
-        <div class="space-y-3">
-          <div>
-            <label for="lf-pop-name" class="sr-only">Fullständigt namn</label>
-            <input id="lf-pop-name" name="full_name" type="text" autocomplete="name" placeholder="Fullständigt namn" required
-                   class="w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-body outline-none focus:border-forest focus:ring-2 focus:ring-forest/30">
-          </div>
-          <div>
-            <label for="lf-pop-phone" class="sr-only">Telefon</label>
-            <input id="lf-pop-phone" name="phone" type="tel" autocomplete="tel" placeholder="Telefon" required
-                   class="w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-body outline-none focus:border-forest focus:ring-2 focus:ring-forest/30">
-          </div>
-          <div>
-            <label for="lf-pop-email" class="sr-only">E-post</label>
-            <input id="lf-pop-email" name="email" type="email" autocomplete="email" placeholder="E-post" required
-                   class="w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-body outline-none focus:border-forest focus:ring-2 focus:ring-forest/30">
-          </div>
-        </div>
-        <button type="submit" id="lead-popup-submit"
-                class="mt-4 w-full rounded-full bg-forest px-7 py-4 text-base font-semibold text-white transition hover:bg-forest-hover focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2">
-          Reservera min plats
-        </button>
-        <p id="lead-popup-msg" class="mt-3 text-sm text-center" role="status" aria-live="polite"></p>
-        <p class="mt-3 text-xs text-body/55 text-center">Vi använder dina uppgifter endast för att kontakta dig. <a href="integritetspolicy.html" class="underline hover:text-ink">Integritetspolicy</a>.</p>
-      </form>
-    </div>
-  </div>
-
-  <!-- ============ PAGE SCRIPT (scoped, no globals) ============ -->
-  <script>
-  (function () {
-    'use strict';
-
-    /* LEAD-KONFIGURATION (HighLevel CRM-redo) – enda stället att ändra.
+        /* LEAD-KONFIGURATION (HighLevel CRM-redo) – enda stället att ändra.
        webhookUrl tom -> staging (går direkt till tack-steget).
        webhookUrl satt -> POST:ar lead till HighLevel innan vidareslussning. */
-    var LEAD_CONFIG = {
-      webhookUrl: '',
-      thankYouUrl: 'laserkampanj-tack.html'
-    };
+        var LEAD_CONFIG = {
+          webhookUrl: "",
+          thankYouUrl: "laserkampanj-tack.html",
+        };
 
-    /* META PIXEL – enda integrationspunkten (events ej aktiva ännu). */
-    window.metaTrack = function (event, params) {
-      if (window.fbq) window.fbq('track', event, params || {});
-      if (window.__DEBUG_META) console.log('[meta]', event, params || {});
-    };
-    metaTrack('ViewContent', { content_name: 'Laserkampanj', content_category: 'Laser hair removal' });
-
-    /* Scroll fade-in */
-    var faders = document.querySelectorAll('.lp-fade');
-    if ('IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+        /* META PIXEL – enda integrationspunkten (events ej aktiva ännu). */
+        window.metaTrack = function (event, params) {
+          if (window.fbq) window.fbq("track", event, params || {});
+          if (window.__DEBUG_META) console.log("[meta]", event, params || {});
+        };
+        metaTrack("ViewContent", {
+          content_name: "Laserkampanj",
+          content_category: "Laser hair removal",
         });
-      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-      faders.forEach(function (el) { io.observe(el); });
-    } else {
-      faders.forEach(function (el) { el.classList.add('is-visible'); });
-    }
 
-    /* FAQ accordion */
-    var faqBtns = document.querySelectorAll('.lp-faq-btn');
-    faqBtns.forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var panel = btn.parentElement.nextElementSibling;
-        var icon = btn.querySelector('.lp-faq-icon');
-        var open = btn.getAttribute('aria-expanded') === 'true';
-        faqBtns.forEach(function (b) {
-          b.setAttribute('aria-expanded', 'false');
-          var p = b.parentElement.nextElementSibling;
-          if (p) p.style.maxHeight = null;
-          var i = b.querySelector('.lp-faq-icon');
-          if (i) i.textContent = '+';
+        /* Scroll fade-in */
+        var faders = document.querySelectorAll(".lp-fade");
+        if ("IntersectionObserver" in window) {
+          var io = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                  e.target.classList.add("is-visible");
+                  io.unobserve(e.target);
+                }
+              });
+            },
+            { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+          );
+          faders.forEach(function (el) {
+            io.observe(el);
+          });
+        } else {
+          faders.forEach(function (el) {
+            el.classList.add("is-visible");
+          });
+        }
+
+        /* FAQ accordion */
+        var faqBtns = document.querySelectorAll(".lp-faq-btn");
+        faqBtns.forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var panel = btn.parentElement.nextElementSibling;
+            var icon = btn.querySelector(".lp-faq-icon");
+            var open = btn.getAttribute("aria-expanded") === "true";
+            faqBtns.forEach(function (b) {
+              b.setAttribute("aria-expanded", "false");
+              var p = b.parentElement.nextElementSibling;
+              if (p) p.style.maxHeight = null;
+              var i = b.querySelector(".lp-faq-icon");
+              if (i) i.textContent = "+";
+            });
+            if (!open && panel) {
+              btn.setAttribute("aria-expanded", "true");
+              panel.style.maxHeight = panel.scrollHeight + "px";
+              if (icon) icon.textContent = "–";
+            }
+          });
         });
-        if (!open && panel) {
-          btn.setAttribute('aria-expanded', 'true');
-          panel.style.maxHeight = panel.scrollHeight + 'px';
-          if (icon) icon.textContent = '–';
-        }
-      });
-    });
 
-    /* LEAD-FLÖDE – delas av huvudformulär OCH popup */
-    function setMsg(msgEl, text, ok) {
-      if (!msgEl) return;
-      msgEl.textContent = text || '';
-      msgEl.style.color = ok ? '#1F3028' : '#9a5a4a';
-    }
-    function collectLead(formEl) {
-      var data = { source: 'meta-laserkampanj' };
-      ['full_name', 'phone', 'email'].forEach(function (n) {
-        var el = formEl.querySelector('[name="' + n + '"]');
-        if (el) data[n] = (el.value || '').trim();
-      });
-      return data;
-    }
-    function wireLeadForm(formEl, btnEl, msgEl, label) {
-      if (!formEl || !btnEl) return;
-      formEl.addEventListener('submit', function (e) {
-        e.preventDefault();
-        var honey = formEl.querySelector('input[name="company_website"]');
-        if (honey && honey.value) return;
-        if (!formEl.checkValidity()) { formEl.reportValidity(); return; }
-        setMsg(msgEl, '', true);
-        btnEl.disabled = true;
-        btnEl.textContent = 'Skickar…';
-        var lead = collectLead(formEl);
-        function ok() {
-          metaTrack('Lead', { content_name: 'Laserkampanj', area: lead.area_of_interest || '' });
-          setMsg(msgEl, 'Tack! Vi skickar dig vidare till bokningen…', true);
-          window.location.href = LEAD_CONFIG.thankYouUrl;
+        /* LEAD-FLÖDE – delas av huvudformulär OCH popup */
+        function setMsg(msgEl, text, ok) {
+          if (!msgEl) return;
+          msgEl.textContent = text || "";
+          msgEl.style.color = ok ? "#1F3028" : "#9a5a4a";
         }
-        function err() {
-          setMsg(msgEl, 'Något gick fel. Försök igen eller ring oss direkt.', false);
-          btnEl.disabled = false;
-          btnEl.textContent = label;
+        function collectLead(formEl) {
+          var data = { source: "meta-laserkampanj" };
+          ["full_name", "phone", "email"].forEach(function (n) {
+            var el = formEl.querySelector('[name="' + n + '"]');
+            if (el) data[n] = (el.value || "").trim();
+          });
+          return data;
         }
-        if (LEAD_CONFIG.webhookUrl) {
-          fetch(LEAD_CONFIG.webhookUrl, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(lead)
-          })
-          .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); ok(); })
-          .catch(err);
-        } else { ok(); }
-      });
-    }
-    wireLeadForm(document.getElementById('lead-form'), document.getElementById('lead-submit'), document.getElementById('lead-msg'), 'Reservera din plats');
-    wireLeadForm(document.getElementById('lead-popup-form'), document.getElementById('lead-popup-submit'), document.getElementById('lead-popup-msg'), 'Reservera min plats');
+        function wireLeadForm(formEl, btnEl, msgEl, label) {
+          if (!formEl || !btnEl) return;
+          formEl.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var honey = formEl.querySelector('input[name="company_website"]');
+            if (honey && honey.value) return;
+            if (!formEl.checkValidity()) {
+              formEl.reportValidity();
+              return;
+            }
+            setMsg(msgEl, "", true);
+            btnEl.disabled = true;
+            btnEl.textContent = "Skickar…";
+            var lead = collectLead(formEl);
+            function ok() {
+              metaTrack("Lead", {
+                content_name: "Laserkampanj",
+                area: lead.area_of_interest || "",
+              });
+              setMsg(
+                msgEl,
+                "Tack! Vi skickar dig vidare till bokningen…",
+                true,
+              );
+              window.location.href = LEAD_CONFIG.thankYouUrl;
+            }
+            function err() {
+              setMsg(
+                msgEl,
+                "Något gick fel. Försök igen eller ring oss direkt.",
+                false,
+              );
+              btnEl.disabled = false;
+              btnEl.textContent = label;
+            }
+            if (LEAD_CONFIG.webhookUrl) {
+              fetch(LEAD_CONFIG.webhookUrl, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(lead),
+              })
+                .then(function (res) {
+                  if (!res.ok) throw new Error("HTTP " + res.status);
+                  ok();
+                })
+                .catch(err);
+            } else {
+              ok();
+            }
+          });
+        }
+        wireLeadForm(
+          document.getElementById("lead-form"),
+          document.getElementById("lead-submit"),
+          document.getElementById("lead-msg"),
+          "Reservera din plats",
+        );
+        wireLeadForm(
+          document.getElementById("lead-popup-form"),
+          document.getElementById("lead-popup-submit"),
+          document.getElementById("lead-popup-msg"),
+          "Reservera min plats",
+        );
 
-    /* LEAD-POPUP – en gång per besökare efter ~15 sekunder */
-    var POPUP_KEY = 'ysc-laser-popup-shown';
-    var popup = document.getElementById('lead-popup');
-    function popupAlreadyShown() { try { return localStorage.getItem(POPUP_KEY) === '1'; } catch (e) { return false; } }
-    function markPopupShown() { try { localStorage.setItem(POPUP_KEY, '1'); } catch (e) {} }
-    function openPopup() {
-      if (!popup) return;
-      popup.classList.remove('hidden'); popup.classList.add('flex');
-      markPopupShown();
-      var first = popup.querySelector('input:not([tabindex="-1"])');
-      if (first) first.focus();
-    }
-    function hidePopup() {
-      if (!popup) return;
-      popup.classList.add('hidden'); popup.classList.remove('flex');
-    }
-    if (popup) {
-      // Manuella öppnare (pris-kortens knappar m.fl.)
-      document.querySelectorAll('[data-open-popup]').forEach(function (el) {
-        el.addEventListener('click', function (e) { e.preventDefault(); openPopup(); });
-      });
-      // Stäng (alltid aktivt, även efter manuell öppning)
-      popup.addEventListener('click', function (e) {
-        if (e.target === popup || e.target.closest('[data-popup-close]')) hidePopup();
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && !popup.classList.contains('hidden')) hidePopup();
-      });
-      // Auto-popup en gång per besökare efter ~15 s
-      if (!popupAlreadyShown()) {
-        setTimeout(function () { if (!popupAlreadyShown()) openPopup(); }, 15000);
-      }
-    }
-  })();
-  </script>
-</body>
+        /* LEAD-POPUP – en gång per besökare efter ~15 sekunder */
+        var POPUP_KEY = "ysc-laser-popup-shown";
+        var popup = document.getElementById("lead-popup");
+        function popupAlreadyShown() {
+          try {
+            return localStorage.getItem(POPUP_KEY) === "1";
+          } catch (e) {
+            return false;
+          }
+        }
+        function markPopupShown() {
+          try {
+            localStorage.setItem(POPUP_KEY, "1");
+          } catch (e) {}
+        }
+        function openPopup() {
+          if (!popup) return;
+          popup.classList.remove("hidden");
+          popup.classList.add("flex");
+          markPopupShown();
+          var first = popup.querySelector('input:not([tabindex="-1"])');
+          if (first) first.focus();
+        }
+        function hidePopup() {
+          if (!popup) return;
+          popup.classList.add("hidden");
+          popup.classList.remove("flex");
+        }
+        if (popup) {
+          // Manuella öppnare (pris-kortens knappar m.fl.)
+          document.querySelectorAll("[data-open-popup]").forEach(function (el) {
+            el.addEventListener("click", function (e) {
+              e.preventDefault();
+              openPopup();
+            });
+          });
+          // Stäng (alltid aktivt, även efter manuell öppning)
+          popup.addEventListener("click", function (e) {
+            if (e.target === popup || e.target.closest("[data-popup-close]"))
+              hidePopup();
+          });
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && !popup.classList.contains("hidden"))
+              hidePopup();
+          });
+          // Auto-popup en gång per besökare efter ~15 s
+          if (!popupAlreadyShown()) {
+            setTimeout(function () {
+              if (!popupAlreadyShown()) openPopup();
+            }, 15000);
+          }
+        }
+      })();
+    </script>
+
+    <!-- HighLevel External Tracking (fångar leads i CRM) -->
+    <script
+      src="https://link.msgsndr.com/js/external-tracking.js"
+      data-tracking-id="tk_86f14889540b463485c75733fec91fa3"
+    ></script>
+  </body>
 </html>
