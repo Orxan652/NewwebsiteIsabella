@@ -5,9 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
 
-  <!-- META PIXEL – SLOT (samma pixel som landningssidan). Schedule-event triggas
-       via metaTrack() nedan när bokningskalendern öppnas. -->
-  <!-- <script>!function(f,b,e,v,n,t,s){...fbq('init','PIXEL_ID');fbq('track','PageView');}</script> -->
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '28289277947326970');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=28289277947326970&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <!-- Schedule-event skickas via metaTrack() nedan när bokningskalendern öppnas. -->
 
   <title>Tack! Boka din tid – Your Skin Clinic</title>
   <meta name="description" content="Tack för din intresseanmälan. Slutför din bokning för laserhårborttagning hos Your Skin Clinic.">
@@ -152,7 +167,7 @@
     var BOOKING_URL = 'https://www.bokadirekt.se/places/your-skin-clinic-48263';
 
     function metaTrack(event, params) {
-      // TODO Meta Pixel: if (window.fbq) window.fbq('track', event, params || {});
+      if (window.fbq) window.fbq('track', event, params || {});
       if (window.__DEBUG_META) console.log('[meta]', event, params || {});
     }
 

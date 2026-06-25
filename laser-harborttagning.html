@@ -24,6 +24,53 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="treatment.css">
   <link rel="stylesheet" href="problem.css">
+
+  <style>
+    /* Sid-specifik hero (laser-harborttagning): beige vänster-fade + mörk text.
+       Scopad till .tx-hero--light → påverkar inga andra sidor. */
+    /* Bilden fäst HÖGER, LÄTT inzoomad (mer av motivet än cover, större än contain-remsan).
+       Höjden styr zoomen → ändra 135% för mer/mindre. Stone bakom; .tx-hero overflow klipper topp/botten mjukt. */
+    .tx-hero--light .tx-hero-bg     { background: #F4F1EC; display: flex; align-items: center; justify-content: flex-end; }
+    .tx-hero--light .tx-hero-bg img {
+      width: auto; height: 150%; max-width: none; object-fit: contain;
+      /* Tona ut bildens vänsterkant så den smälter mjukt in i beigen (faden mellan bild och stone) */
+      -webkit-mask-image: linear-gradient(to right, transparent 0, transparent 6%, #000 40%);
+              mask-image: linear-gradient(to right, transparent 0, transparent 6%, #000 40%);
+    }
+
+    /* Beige fade: helt täckande till vänster (text), tonar ut mot höger (bilden) */
+    .tx-hero--light .tx-hero-overlay {
+      background: linear-gradient(100deg,
+        #F4F1EC 0%, #F4F1EC 46%, rgba(244,241,236,.86) 60%, rgba(244,241,236,0) 85%);
+    }
+
+    /* Mörk, läsbar text på beige */
+    .tx-hero--light .tx-hero-content h1 { color: #1F2D2A; }
+    .tx-hero--light .tx-hero-content p  { color: rgba(36,48,45,.85); }
+    .tx-hero--light .tx-breadcrumb       { color: #9A763F; }
+    .tx-hero--light .tx-breadcrumb:hover { color: #1F2D2A; }
+
+    /* Outline-knappen syns inte på beige → gör den mörk */
+    .tx-hero--light .btn-outline-white       { color: #1F2D2A; border-color: rgba(31,45,42,.35); }
+    .tx-hero--light .btn-outline-white:hover { background: #1F2D2A; color: #fff; border-color: #1F2D2A; }
+
+    /* ===== Före/efter-galleri (sid-specifikt – påverkar inga andra sidor) ===== */
+    .problem-results { padding: var(--section-pad) 0; background: var(--bg-secondary); }
+    .problem-results .ba-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+    @media (min-width: 768px) { .problem-results .ba-grid { grid-template-columns: repeat(3, 1fr); } }
+    .problem-results .ba-card { margin: 0; background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 10px 30px rgba(31,45,42,.07); }
+    .problem-results .ba-card__imgs { display: grid; grid-template-columns: 1fr 1fr; }
+    .problem-results .ba-card__img, .problem-results .ba-card__single { position: relative; }
+    /* enhetliga kort-höjder: par = 2×(3/4) → 3/2; ben (kombinerad) = 3/2 cover */
+    .problem-results .ba-card__img img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+    .problem-results .ba-card__single img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: center; }
+    .problem-results .ba-tag { position: absolute; top: .75rem; font-size: .72rem; font-weight: 700; letter-spacing: .04em; padding: .25rem .7rem; border-radius: 100px; }
+    .problem-results .ba-tag--before { left: .75rem; background: rgba(31,45,42,.78); color: #fff; }
+    .problem-results .ba-tag--after  { right: .75rem; background: var(--gold); color: #fff; }
+    .problem-results .ba-card figcaption { padding: .85rem 1rem; text-align: center; font-weight: 600; color: var(--text-heading); }
+    .problem-results .ba-disclaimer { margin-top: 1.5rem; text-align: center; font-size: .8rem; color: rgba(36,48,45,.6); }
+  </style>
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>✦</text></svg>">
   <script type="application/ld+json">
 {
@@ -255,10 +302,10 @@
   </div>
 
   <!-- ========== HERO ========== -->
-  <section class="tx-hero">
+  <section class="tx-hero tx-hero--light">
     <div class="tx-hero-bg">
-      <img src="images/oonskadharvaxt.avif"
-           alt="Laser hårborttagning hos Your Skin Clinic"
+      <img src="images/laserheader.PNG"
+           alt="Isabella utför laserhårborttagning på Your Skin Clinic"
            width="1400" height="800"
            loading="eager" fetchpriority="high">
     </div>
@@ -424,6 +471,45 @@
           <p>Benhår har de längsta växtcyklerna och kräver längre paus mellan behandlingarna för att fånga nya hårstrån i anagenfas.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ========== FÖRE / EFTER ========== -->
+  <section class="problem-results">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Verkliga resultat</span>
+        <h2 class="section-title">Före &amp; efter</h2>
+      </div>
+
+      <div class="ba-grid stagger">
+        <figure class="ba-card fade-in">
+          <div class="ba-card__imgs">
+            <div class="ba-card__img"><img src="images/bikinifore.jpg" alt="Bikinilinje före laserhårborttagning" loading="lazy" decoding="async"><span class="ba-tag ba-tag--before">Före</span></div>
+            <div class="ba-card__img"><img src="images/bikiniefter.jpg" alt="Bikinilinje efter laserhårborttagning" loading="lazy" decoding="async"><span class="ba-tag ba-tag--after">Efter</span></div>
+          </div>
+          <figcaption>Bikinilinje</figcaption>
+        </figure>
+
+        <figure class="ba-card fade-in">
+          <div class="ba-card__imgs">
+            <div class="ba-card__img"><img src="images/laserarmfore.jpg" alt="Armhåla före laserhårborttagning" loading="lazy" decoding="async"><span class="ba-tag ba-tag--before">Före</span></div>
+            <div class="ba-card__img"><img src="images/laserarmefter.jpg" alt="Armhåla efter laserhårborttagning" loading="lazy" decoding="async"><span class="ba-tag ba-tag--after">Efter</span></div>
+          </div>
+          <figcaption>Armhåla</figcaption>
+        </figure>
+
+        <figure class="ba-card fade-in">
+          <div class="ba-card__single">
+            <img src="images/laserbenforeefter.jpg" alt="Ben före och efter laserhårborttagning" loading="lazy" decoding="async">
+            <span class="ba-tag ba-tag--before">Före</span>
+            <span class="ba-tag ba-tag--after">Efter</span>
+          </div>
+          <figcaption>Ben</figcaption>
+        </figure>
+      </div>
+
+      <p class="ba-disclaimer">Bilderna är exempel. Resultatet varierar mellan individer beroende på hårtyp, hudtyp, hormonella faktorer och behandlingsintervall.</p>
     </div>
   </section>
 
