@@ -624,7 +624,7 @@
        webhookUrl tom -> staging (går direkt till tack-steget).
        webhookUrl satt -> POST:ar lead till HighLevel innan vidareslussning. */
     var LEAD_CONFIG = {
-      webhookUrl: 'https://services.leadconnectorhq.com/hooks/hHmtbTFrXPVU21RH813d/webhook-trigger/Ae8WYw5Jmx44fCAl294b',
+      webhookUrl: '',
       thankYouUrl: 'laserkampanj-tack.html'
     };
 
@@ -709,16 +709,11 @@
           fetch(LEAD_CONFIG.webhookUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            keepalive: true,
-            body: JSON.stringify({
-              full_name: lead.full_name,
-              phone: lead.phone,
-              email: lead.email,
-              source: 'laserkampanj'
-            })
-          }).catch(function () {});
-        }
-        ok();
+            body: JSON.stringify(lead)
+          })
+          .then(function (res) { if (!res.ok) throw new Error('HTTP ' + res.status); ok(); })
+          .catch(err);
+        } else { ok(); }
       });
     }
     wireLeadForm(document.getElementById('lead-form'), document.getElementById('lead-submit'), document.getElementById('lead-msg'), 'Reservera din plats');
