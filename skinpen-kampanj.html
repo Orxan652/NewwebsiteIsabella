@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Kampanjsida – avindexerad för att inte påverka befintlig SEO-struktur -->
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '28289277947326970');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=28289277947326970&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <!-- Övriga events (ViewContent/Lead/Schedule) skickas via metaTrack() nedan. -->
+
+  <title>SkinPen® Premium – Ansikte, hals & dekolletage | Your Skin Clinic</title>
+  <meta name="description" content="SkinPen® Premium – ansikte, hals och dekolletage ingår, 2 795 kr. Avancerad microneedlingbehandling hos Your Skin Clinic i Stockholm.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="SkinPen® Premium – ansikte, hals & dekolletage ingår">
+  <meta property="og:description" content="En ny, avancerad microneedlingbehandling. Ansikte + hals + dekolletage för 2 795 kr hos Your Skin Clinic, Stockholm.">
+  <meta property="og:image" content="images/microneedlingpremium.webp">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+  <!-- Tailwind Play CDN (single-file). För produktion: kompilera Tailwind till statisk CSS. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: '#1F3028', 'forest-hover': '#2D3F3B',
+            ink: '#1F2D2A', body: '#24302D',
+            stone: '#F4F1EC', 'stone-2': '#EFE9E2',
+            gold: '#9A763F', line: '#E8E4DE', rost: '#8B3A2F',
+            /* SkinPen-kampanjens egen accentfärg (endast denna sida – påverkar inte ordinarie sajt) */
+            terracotta: '#B77A5C'
+          },
+          fontFamily: {
+            serif: ['"DM Serif Display"', '"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            script: ['"Pinyon Script"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Scopade stilar (prefix lp-) – påverkar inte resten av sajten -->
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .lp-fade { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .lp-fade.is-visible { opacity: 1; transform: none; }
+    .lp-faq-panel { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+    .lp-reviews { scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    .lp-reviews::-webkit-scrollbar { display: none; }
+    .lp-reviews > * { scroll-snap-align: center; }
+    .lp-stars { color: #9A763F; letter-spacing: 2px; }
+    .lp-stars--gold { color: #D4AF37; letter-spacing: 2px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .lp-fade { transition: none; opacity: 1; transform: none; }
+      .lp-faq-panel { transition: none; }
+    }
+  </style>
+</head>
+
+<body class="bg-white text-body antialiased pb-20 md:pb-0">
+
+  <!-- ============ MINI HEADER ============ -->
+  <header class="border-b border-line bg-white/90 backdrop-blur sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-5 h-14 sm:h-11 flex items-center justify-between">
+      <div class="leading-tight">
+        <span class="block font-serif text-lg sm:text-sm text-[#1B3352] tracking-wide">Your Skin Clinic</span>
+        <span class="block text-[10px] sm:text-[9px] tracking-[0.22em] uppercase text-gold">Gallerian · Stockholm</span>
+      </div>
+      <button type="button" data-open-popup class="hidden sm:inline-flex items-center rounded-full bg-[#1B3352] px-4 py-1.5 text-xs font-semibold text-white transition hover:bg-[#142840] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1B3352] focus-visible:ring-offset-2">
+        Boka din tid
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ 1. HERO — sammanhängande bakgrundsbild, text som HTML ovanpå ============ -->
+    <section aria-labelledby="hero-title" class="relative bg-stone overflow-hidden">
+      <!-- Bakgrundsbild: skinpenheader4-photo.webp (beskuren ur skinpenheader4.png – endast det rena fotot, ingen inbakad text).
+           Mobil: full-bleed (bilden matchar naturligt en stående mobilyta). Desktop: höger-ankrad box i nära bildens egna proportioner
+           så kompositionen visas naturligt utan att zooma in ansiktet/pennan. -->
+      <div class="absolute inset-0">
+        <!-- Desktop -->
+        <div class="hidden sm:block absolute inset-y-0 right-0 w-[420px] lg:w-[520px]">
+          <img src="images/skinpenheader4-photo.webp"
+               alt="Kvinna får Premium SkinPen Microneedling-behandling hos Your Skin Clinic i Stockholm – den blå SkinPen®-pennan används mot kinden"
+               class="h-full w-full object-cover object-[50%_15%]" fetchpriority="high" decoding="async">
+          <div class="absolute inset-y-0 left-0 w-20 lg:w-28 bg-gradient-to-r from-stone to-transparent"></div>
+        </div>
+        <!-- Mobil -->
+        <div class="sm:hidden absolute inset-0">
+          <img src="images/skinpenheader4-photo.webp"
+               alt="Kvinna får Premium SkinPen Microneedling-behandling hos Your Skin Clinic i Stockholm – den blå SkinPen®-pennan används mot kinden"
+               class="h-full w-full object-cover object-[50%_10%]" fetchpriority="high" decoding="async">
+          <div class="absolute inset-0 bg-gradient-to-r from-stone via-stone/85 to-stone/10"></div>
+        </div>
+      </div>
+
+      <div class="relative max-w-6xl mx-auto px-5 sm:px-12 lg:px-16 sm:min-h-[480px] flex flex-col justify-center py-5 sm:py-6">
+        <div class="max-w-xl lp-fade">
+          <span class="inline-block text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.22em] text-terracotta mb-1.5">Exklusiv SkinPen Microneedling-kampanj</span>
+
+          <h1 id="hero-title" class="leading-[1.1] mb-2">
+            <span class="block font-serif text-2xl sm:text-4xl text-[#1B3352]">När började fina linjer, porer och trött hud</span>
+            <span class="block font-script text-3xl sm:text-5xl leading-tight text-terracotta">synas så mycket?</span>
+          </h1>
+
+          <p class="text-xs sm:text-sm leading-snug text-body/75 mb-2 max-w-md">
+            Fina linjer. Synligare porer. En hud som känns mindre spänstig och inte riktigt lika fräsch som tidigare.
+          </p>
+
+          <div class="mb-2.5">
+            <p class="font-serif italic text-sm sm:text-lg text-terracotta mb-0.5">Och halsen och dekolletaget?</p>
+            <p class="text-xs sm:text-sm text-body/75">De är ofta det första som avslöjar att huden förändrats.</p>
+          </div>
+
+          <!-- Erbjudandekort: premium SkinPen-navy med champagne/guld-highlights. "Premium Microneedling 80 min" och "Ingår vid varje behandling" är visuellt likvärdiga i vikt. -->
+          <div class="rounded-2xl bg-[#1B3352] border border-[#C9A15C]/40 px-4 sm:px-5 py-3 sm:py-4 mb-2.5 shadow-xl">
+            <p class="font-serif text-lg sm:text-2xl font-semibold leading-snug text-white">Premium Microneedling 80 min</p>
+            <p class="font-serif text-xs sm:text-sm leading-snug text-white mt-1">med <span class="text-[#C9A15C] font-semibold">hals + dekolletage inkluderat</span></p>
+            <p class="text-base sm:text-lg font-bold uppercase tracking-wide text-[#C9A15C] mt-1.5">Värde 1 000 kr</p>
+
+            <div class="border-t border-[#C9A15C]/30 mt-2 pt-2">
+              <span class="inline-block rounded-full bg-[#C9A15C] px-3.5 py-1.5 text-sm sm:text-lg font-bold uppercase tracking-wide text-[#1B3352]">Ingår vid varje behandling</span>
+              <p class="mt-1 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.12em] text-white/70">Under hela din SkinPen-kur</p>
+            </div>
+          </div>
+
+          <p class="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-terracotta mb-1.5">Missa inte erbjudandet – boka din tid nu!</p>
+
+          <div class="flex items-center gap-3 flex-wrap mb-2.5">
+            <!-- Pris: separat, ljust premiumkort — konkurrerar inte visuellt med erbjudandekortet -->
+            <div class="inline-block rounded-xl border border-gold/40 bg-white/95 backdrop-blur px-4 py-2 shadow-sm">
+              <p class="text-[9px] font-bold uppercase tracking-[0.12em] text-gold leading-none mb-0.5">Ansikte + hals + dekolletage</p>
+              <p class="font-serif text-xl sm:text-2xl leading-none text-[#1B3352]">2 795 kr</p>
+            </div>
+
+            <!-- Dominant CTA (lead-popup, oförändrad funktion/destination) -->
+            <button type="button" data-open-popup data-cta="hero-primary"
+               class="inline-flex items-center justify-center rounded-full bg-[#1B3352] px-5 sm:px-6 py-2.5 sm:py-3 text-center font-bold uppercase tracking-wide text-white shadow-xl transition hover:bg-[#142840] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A15C] focus-visible:ring-offset-2">
+              <span class="text-sm sm:text-base">Boka din tid</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRUST-BAR: fullbredd längst ner -->
+      <div class="relative border-t border-line bg-stone px-5 py-3 sm:py-4">
+        <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-8 gap-y-1 text-xs sm:text-sm text-body/70">
+          <span><span class="lp-stars--gold" aria-hidden="true">★★★★★</span> <strong class="text-[#1B3352]">4,9/5</strong></span>
+          <span class="text-body/40" aria-hidden="true">·</span>
+          <span><strong class="text-[#1B3352]">600+</strong> omdömen</span>
+          <span class="text-body/40" aria-hidden="true">·</span>
+          <span><strong class="text-[#1B3352]">1300+</strong> behandlade</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. FÖRE / EFTER — stor, central sektion ============ -->
+    <section aria-labelledby="ba-title" class="bg-white">
+      <div class="max-w-5xl mx-auto px-5 py-12 md:py-16">
+        <div class="text-center max-w-2xl mx-auto mb-8 lp-fade">
+          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Verkliga resultat</span>
+          <h2 id="ba-title" class="font-serif text-3xl md:text-4xl text-[#1B3352] leading-tight mb-3">Se vad en SkinPen-kur kan göra för huden</h2>
+          <p class="text-sm text-body/70">Fina linjer, ojämn hudstruktur, synligare porer och en hud som känns tröttare kan förändras med rätt behandlingsupplägg.</p>
+        </div>
+
+        <!-- Fyra före/efter-par – befintliga, verifierade bilder från microneedling.html. Naturlig bildproportion (ej aggressiv beskärning). -->
+        <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <figure class="lp-fade rounded-2xl overflow-hidden border border-line bg-white shadow-md">
+            <div class="grid grid-cols-2">
+              <div class="relative">
+                <img src="images/IMG_2463.jpg" alt="Microneedling-behandling – hud direkt efter nålning, kundresultat"
+                     class="w-full aspect-[1/2] object-cover" loading="lazy" decoding="async">
+                <span class="absolute top-3 left-3 rounded-full bg-[#1B3352]/80 text-white text-xs font-semibold tracking-wide px-3 py-1">Före</span>
+              </div>
+              <div class="relative">
+                <img src="images/skinpene2.jpg" alt="Microneedling-behandling – hud efter läkning, kundresultat"
+                     class="w-full aspect-[1/2] object-cover" loading="lazy" decoding="async">
+                <span class="absolute top-3 right-3 rounded-full bg-gold text-[#1B3352] text-xs font-semibold tracking-wide px-3 py-1">Efter</span>
+              </div>
+            </div>
+            <figcaption class="px-4 py-2.5 text-xs text-body/60">Resultat efter 3 microneedlingbehandlingar + rekommenderad hudvård</figcaption>
+          </figure>
+          <figure class="lp-fade rounded-2xl overflow-hidden border border-line bg-white shadow-md">
+            <div class="grid grid-cols-2">
+              <div class="relative">
+                <img src="images/microneedling-resultat-3-fore.webp" alt="Microneedling före behandling – kundresultat"
+                     class="w-full aspect-[1/2] object-cover" loading="lazy" decoding="async">
+                <span class="absolute top-3 left-3 rounded-full bg-[#1B3352]/80 text-white text-xs font-semibold tracking-wide px-3 py-1">Före</span>
+              </div>
+              <div class="relative">
+                <img src="images/microneedling-resultat-3-efter.webp" alt="Microneedling efter fyra behandlingar – kundresultat"
+                     class="w-full aspect-[1/2] object-cover" loading="lazy" decoding="async">
+                <span class="absolute top-3 right-3 rounded-full bg-gold text-[#1B3352] text-xs font-semibold tracking-wide px-3 py-1">Efter</span>
+              </div>
+            </div>
+            <figcaption class="px-4 py-2.5 text-xs text-body/60">Resultat efter 3 microneedlingbehandlingar + kemisk peeling</figcaption>
+          </figure>
+          <figure class="lp-fade rounded-2xl overflow-hidden border border-line bg-white shadow-md">
+            <div class="grid grid-cols-2">
+              <div class="relative">
+                <img src="images/microneedling-resultat-1-fore.webp" alt="Microneedling före behandling – kundresultat"
+                     class="w-full aspect-[1/2] object-cover" loading="lazy" decoding="async">
+                <span class="absolute top-3 left-3 rounded-full bg-[#1B3352]/80 text-white text-xs font-semibold tracking-wide px-3 py-1">Före</span>
+              </div>
+              <div class="relative">
+                <img src="images/microneedling-resultat-1-efter.webp" alt="Microneedling efter fyra behandlingar – kundresultat"
+                     class="w-full aspect-[1/2] object-cover" loading="lazy" decoding="async">
+                <span class="absolute top-3 right-3 rounded-full bg-gold text-[#1B3352] text-xs font-semibold tracking-wide px-3 py-1">Efter</span>
+              </div>
+            </div>
+            <figcaption class="px-4 py-2.5 text-xs text-body/60">Resultat efter 3 microneedlingbehandlingar</figcaption>
+          </figure>
+          <figure class="lp-fade rounded-2xl overflow-hidden border border-line bg-white shadow-md">
+            <div class="grid grid-cols-2">
+              <div class="relative">
+                <img src="images/microneedling-resultat-2-fore.webp" alt="Microneedling före behandling – kundresultat"
+                     class="w-full aspect-[1/2] object-cover" loading="lazy" decoding="async">
+                <span class="absolute top-3 left-3 rounded-full bg-[#1B3352]/80 text-white text-xs font-semibold tracking-wide px-3 py-1">Före</span>
+              </div>
+              <div class="relative">
+                <img src="images/microneedling-resultat-2-efter.webp" alt="Microneedling efter fyra behandlingar – kundresultat"
+                     class="w-full aspect-[1/2] object-cover" loading="lazy" decoding="async">
+                <span class="absolute top-3 right-3 rounded-full bg-gold text-[#1B3352] text-xs font-semibold tracking-wide px-3 py-1">Efter</span>
+              </div>
+            </div>
+            <figcaption class="px-4 py-2.5 text-xs text-body/60">Microneedling-resultat</figcaption>
+          </figure>
+        </div>
+
+        <!-- Sälj-sektion: ett komplett upplägg för ansikte + hals + dekolletage -->
+        <div class="mt-8 md:mt-10 max-w-2xl mx-auto text-center lp-fade">
+          <h3 class="font-serif text-2xl md:text-3xl text-[#1B3352] leading-tight mb-2">För en komplett hudföryngring</h3>
+          <p class="text-sm md:text-base text-body/75 max-w-xl mx-auto mb-6">Ansikte, hals och dekolletage – hela området får samma genomtänkta behandlingsupplägg.</p>
+
+          <div class="rounded-2xl bg-stone border border-[#C9A15C]/40 px-6 py-6 sm:px-8 sm:py-8 shadow-sm">
+            <span class="inline-block text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] text-[#C9A15C] mb-2">Ett komplett upplägg för hud-föryngring</span>
+            <p class="font-serif text-3xl sm:text-4xl text-[#1B3352] mb-3">Ansikte + hals + dekolletage</p>
+            <p class="text-sm sm:text-base text-body/75 max-w-md mx-auto mb-4">Premium Microneedling 80 min – med hals och dekolletage inkluderat vid varje behandling under hela kuren.</p>
+            <span class="inline-block rounded-full bg-[#C9A15C] px-5 py-2 text-sm sm:text-lg font-bold uppercase tracking-wide text-[#1B3352] mb-2">Hals + dekolletage ingår</span>
+            <p class="text-sm sm:text-base font-bold uppercase tracking-wide text-[#1B3352]">Värde 1 000 kr per behandling</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2.5 VARFÖR SKINPEN? — kort, premium förklaring ============ -->
+    <section aria-labelledby="why-skinpen-title" class="bg-[#1B3352] text-white">
+      <div class="max-w-3xl mx-auto px-5 py-12 md:py-16">
+        <div class="text-center mb-8 lp-fade">
+          <h2 id="why-skinpen-title" class="font-serif text-2xl md:text-4xl text-white leading-tight mb-2">Varför SkinPen®?</h2>
+          <p class="text-sm sm:text-base text-[#C9A15C]">Microneedling med medicinteknisk precision.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-4 mb-8 lp-fade">
+          <div class="rounded-2xl border border-[#C9A15C]/30 bg-white/5 p-5">
+            <p class="font-serif text-lg text-[#C9A15C] mb-1.5">Kontrollerad precision</p>
+            <p class="text-sm text-white/75">SkinPen® arbetar med justerbart nåldjup som kan anpassas efter hudområde och behandlingsmål.</p>
+          </div>
+          <div class="rounded-2xl border border-[#C9A15C]/30 bg-white/5 p-5">
+            <p class="font-serif text-lg text-[#C9A15C] mb-1.5">Sterila engångskassetter</p>
+            <p class="text-sm text-white/75">Varje behandling utförs med en ny steril engångskassett.</p>
+          </div>
+          <div class="rounded-2xl border border-[#C9A15C]/30 bg-white/5 p-5">
+            <p class="font-serif text-lg text-[#C9A15C] mb-1.5">Individuellt behandlingsupplägg</p>
+            <p class="text-sm text-white/75">Nåldjup och behandling anpassas efter din hud och det vi vill behandla.</p>
+          </div>
+        </div>
+
+        <div class="max-w-xl mx-auto mb-8 lp-fade">
+          <p class="font-serif text-lg sm:text-xl text-white mb-2">Varför spelar det någon roll?</p>
+          <p class="text-sm text-white/75">Microneedling handlar inte bara om att skapa mikroskopiska nålkanaler i huden. Resultatet påverkas av hur behandlingen utförs, vilket nåldjup som används och hur huden behandlas före, under och efter microneedlingen.</p>
+        </div>
+
+        <p class="text-center font-serif italic text-lg sm:text-xl text-white/90 max-w-xl mx-auto lp-fade">Det är fortfarande microneedling – men med ett mer kontrollerat och genomtänkt behandlingssystem.</p>
+      </div>
+    </section>
+
+    <!-- ============ 2.6 LÅNGSIKTIG HUDKVALITET ============ -->
+    <section aria-labelledby="longterm-title" class="bg-stone">
+      <div class="max-w-3xl mx-auto px-5 py-14 md:py-20 text-center">
+        <span class="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-[#C9A15C] mb-3 lp-fade">En långsiktig investering i din hud</span>
+        <h2 id="longterm-title" class="font-serif italic text-3xl sm:text-5xl text-[#1B3352] leading-tight mb-8 lp-fade">Förbättra huden idag – bevara resultatet över tid.</h2>
+
+        <div class="space-y-4 mb-8 lp-fade">
+          <p class="text-sm sm:text-base text-body/75 max-w-xl mx-auto">Microneedling är inte bara en behandling för att förebygga hudens åldrande. Det är en behandling som kan förbättra hudens kvalitet när fina linjer, ojämn struktur, minskad spänst och andra ålderstecken redan har börjat synas.</p>
+          <p class="text-sm sm:text-base text-body/75 max-w-xl mx-auto">Vi ser microneedling som en långsiktig investering i huden. När du har arbetat upp en bättre hudkvalitet kan återkommande behandlingar vara ett sätt att fortsätta stimulera huden och bevara resultatet över tid.</p>
+        </div>
+
+        <p class="font-serif italic text-xl sm:text-2xl text-[#1B3352] max-w-xl mx-auto mb-8 lp-fade">Du behöver inte vänta tills huden har förändrats – men det är aldrig för sent att börja förbättra den.</p>
+
+        <div class="border-t border-[#C9A15C]/30 pt-8 max-w-xl mx-auto space-y-3 lp-fade">
+          <p class="text-sm sm:text-base text-body/75">Botox och fillers kan förändra ansiktets linjer och volym. Microneedling arbetar med hudens kvalitet.</p>
+          <p class="text-sm sm:text-base text-body/75">Därför ser vi microneedling som en annan del av den långsiktiga strategin – inte istället för andra estetiska behandlingar, utan som behandlingen som fokuserar på själva huden.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2.75 INTE BARA MICRONEEDLING ============ -->
+    <section aria-labelledby="not-just-title" class="bg-white">
+      <div class="max-w-3xl mx-auto px-5 py-12 md:py-16">
+        <div class="text-center mb-8 lp-fade">
+          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-[#C9A15C] mb-2">Inte bara microneedling</span>
+          <h2 id="not-just-title" class="font-serif text-2xl md:text-4xl text-[#1B3352] leading-tight">En komplett behandling – inte bara själva microneedlingen.</h2>
+        </div>
+
+        <div class="space-y-4 mb-8 lp-fade">
+          <p class="text-sm sm:text-base text-body/75 text-center max-w-xl mx-auto">Premium SkinPen är utvecklad som ett komplett behandlingsupplägg för hudföryngring.</p>
+          <p class="text-sm sm:text-base text-body/75 text-center max-w-xl mx-auto">Här stannar behandlingen inte vid själva microneedlingen. Vi arbetar med huden som vid en professionell ansiktsbehandling – från rengöring och förberedelse till aktiva ingredienser, microneedling, mask, LED/rödljus och eftervård.</p>
+        </div>
+
+        <!-- Behandlingstid: 80 min – ansikte + hals + dekolletage (enda alternativet på denna kampanjsida) -->
+        <div class="max-w-xs mx-auto mb-8 lp-fade">
+          <div class="rounded-2xl bg-[#1B3352] px-6 py-6 text-center">
+            <p class="font-serif text-4xl sm:text-5xl text-white">80 min</p>
+            <p class="text-xs sm:text-sm text-[#C9A15C] mt-1 uppercase tracking-wide">Ansikte + hals + dekolletage</p>
+          </div>
+        </div>
+
+        <p class="text-sm sm:text-base text-body/75 text-center max-w-xl mx-auto mb-8 lp-fade">Det betyder att du får tid för hela protokollet – inte bara själva microneedlingen.</p>
+
+        <!-- Visuell jämförelse -->
+        <div class="grid sm:grid-cols-2 gap-4 mb-8 lp-fade">
+          <div class="rounded-2xl border border-line bg-stone p-5">
+            <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-body/50 mb-1.5">Vanlig microneedling</p>
+            <p class="text-sm text-body/70">Själva microneedlingen står i centrum.</p>
+          </div>
+          <div class="rounded-2xl border border-[#C9A15C]/40 bg-[#1B3352] p-5">
+            <p class="text-[11px] font-bold uppercase tracking-[0.14em] text-[#C9A15C] mb-1.5">Premium SkinPen</p>
+            <p class="text-sm text-white/85">Ett komplett behandlingsprotokoll där varje steg är en del av behandlingen.</p>
+          </div>
+        </div>
+
+        <p class="text-center font-serif italic text-lg sm:text-xl text-[#1B3352] max-w-xl mx-auto mb-3 lp-fade">Det är fortfarande microneedling – men vi har byggt ett helt behandlingsupplägg runt den.</p>
+        <p class="text-center text-sm text-body/70 max-w-xl mx-auto lp-fade">Vi behandlar inte bara huden med microneedling. Vi förbereder, behandlar, lugnar och återställer den.</p>
+      </div>
+    </section>
+
+    <!-- ============ 3. ETT KOMPLETT BEHANDLINGSPROTOKOLL ============ -->
+    <section aria-labelledby="protocol-title" class="bg-stone">
+      <div class="max-w-3xl mx-auto px-5 py-12 md:py-16">
+        <div class="text-center mb-8 lp-fade">
+          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Inte bara nålning</span>
+          <h2 id="protocol-title" class="font-serif text-2xl md:text-4xl text-[#1B3352] leading-tight mb-3">Ett komplett, professionellt behandlingsprotokoll</h2>
+          <p class="text-sm text-body/75">Varje SkinPen Premium-behandling följer samma genomtänkta upplägg – steg för steg.</p>
+        </div>
+
+        <ol class="space-y-4 lp-fade">
+          <li class="flex gap-4 rounded-2xl border border-line bg-white p-4 sm:p-5">
+            <span class="shrink-0 h-9 w-9 rounded-full bg-terracotta/15 text-terracotta font-serif text-lg flex items-center justify-center">1</span>
+            <div>
+              <p class="font-semibold text-[#1B3352] mb-0.5">Dubbelrengöring + ånga</p>
+              <p class="text-sm text-body/70">Huden rengörs noggrant i två steg under ånga för att avlägsna orenheter och förbereda huden inför behandlingen.</p>
+            </div>
+          </li>
+          <li class="flex gap-4 rounded-2xl border border-line bg-white p-4 sm:p-5">
+            <span class="shrink-0 h-9 w-9 rounded-full bg-terracotta/15 text-terracotta font-serif text-lg flex items-center justify-center">2</span>
+            <div>
+              <p class="font-semibold text-[#1B3352] mb-0.5">Kemisk peeling med AHA-syra</p>
+              <p class="text-sm text-body/70">En AHA-syra appliceras på behandlingsområdet för att förbereda huden inför microneedlingen.</p>
+            </div>
+          </li>
+          <li class="flex gap-4 rounded-2xl border border-line bg-white p-4 sm:p-5">
+            <span class="shrink-0 h-9 w-9 rounded-full bg-terracotta/15 text-terracotta font-serif text-lg flex items-center justify-center">3</span>
+            <div>
+              <p class="font-semibold text-[#1B3352] mb-0.5">SkinPen® microneedling</p>
+              <p class="text-sm text-body/70">Kontrollerad microneedling enligt SkinPen®-protokoll, med individuellt anpassat nåldjup efter hudområde och behandlingsmål.</p>
+            </div>
+          </li>
+          <li class="flex gap-4 rounded-2xl border border-line bg-white p-4 sm:p-5">
+            <span class="shrink-0 h-9 w-9 rounded-full bg-terracotta/15 text-terracotta font-serif text-lg flex items-center justify-center">4</span>
+            <div>
+              <p class="font-semibold text-[#1B3352] mb-0.5">Regenererande polynukleotider</p>
+              <p class="text-sm text-body/70">Polynukleotider baserade på renat lax-DNA microneedlas in i huden som en del av behandlingen.</p>
+            </div>
+          </li>
+          <li class="flex gap-4 rounded-2xl border border-line bg-white p-4 sm:p-5">
+            <span class="shrink-0 h-9 w-9 rounded-full bg-terracotta/15 text-terracotta font-serif text-lg flex items-center justify-center">5</span>
+            <div>
+              <p class="font-semibold text-[#1B3352] mb-0.5">Bio-cellulosemask + LED/rödljus</p>
+              <p class="text-sm text-body/70">En bio-cellulosemask specifikt framtagen för efter microneedling appliceras för att lugna huden, följt av förlängd LED/rödljusbehandling.</p>
+            </div>
+          </li>
+          <li class="flex gap-4 rounded-2xl border border-line bg-white p-4 sm:p-5">
+            <span class="shrink-0 h-9 w-9 rounded-full bg-terracotta/15 text-terracotta font-serif text-lg flex items-center justify-center">6</span>
+            <div>
+              <p class="font-semibold text-[#1B3352] mb-0.5">Barriärkräm och eftervård</p>
+              <p class="text-sm text-body/70">SkinFuse Rescue Calming Complex medföljer hem efter behandlingen, tillsammans med professionella rekommendationer för dagarna efter.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ 4. EN KOMPLETT SKINPEN-KUR — kurinfo + erbjudande igen ============ -->
+    <section aria-labelledby="kur-title" class="bg-white">
+      <div class="max-w-3xl mx-auto px-5 py-12 md:py-16 text-center">
+        <span class="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-gold mb-2">Kurupplägg</span>
+        <h2 id="kur-title" class="font-serif text-2xl md:text-4xl text-[#1B3352] mb-6">En komplett SkinPen-kur</h2>
+
+        <div class="grid sm:grid-cols-3 gap-4 mb-8 text-left">
+          <div class="lp-fade rounded-2xl border border-[#C9A15C]/40 bg-white shadow-sm p-5">
+            <p class="font-serif text-lg font-bold text-[#1B3352] mb-1">4–6 veckor</p>
+            <p class="text-sm text-body/70">mellan varje behandling i kuren.</p>
+          </div>
+          <div class="lp-fade rounded-2xl border border-[#C9A15C]/40 bg-white shadow-sm p-5">
+            <p class="font-serif text-lg font-bold text-[#1B3352] mb-1">Vi planerar tillsammans</p>
+            <p class="text-sm text-body/70">Efter första behandlingen bokar vi nästa tid tillsammans.</p>
+          </div>
+          <div class="lp-fade rounded-2xl border border-[#C9A15C]/40 bg-white shadow-sm p-5">
+            <p class="font-serif text-lg font-bold text-[#1B3352] mb-1">Ansikte + hals + dekolletage</p>
+            <p class="text-sm text-body/70">Ingår vid varje behandling i kuren – inte bara vid första tillfället.</p>
+          </div>
+        </div>
+
+        <div class="max-w-xl mx-auto mb-6 space-y-3">
+          <p class="text-body/75">För hudföryngring rekommenderar vi vanligtvis en kur på 4 behandlingar, med 4–6 veckors mellanrum.</p>
+          <p class="text-body/75">Om vi arbetar mer intensivt med exempelvis akneärr kan det behövas upp till 6 behandlingar.</p>
+          <p class="text-body/75">Vill du arbeta långsiktigt med hudkvalitet kan du göra en kur under vinterhalvåret. För dig som vill arbeta mer intensivt med fasthet och hudkvalitet kan vi lägga upp två kurer – en på hösten och en på våren, med 4 behandlingar per kur.</p>
+          <p class="text-body/75">Detta är ett intensivt upplägg och för de flesta räcker en kur för att ge huden en rejäl investering i kvalitet.</p>
+        </div>
+        <button type="button" data-open-popup class="inline-block rounded-full bg-[#1B3352] px-8 py-4 text-sm sm:text-base font-bold uppercase tracking-wide text-white shadow-xl transition hover:bg-[#142840] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A15C] focus-visible:ring-offset-2">
+          Boka din tid
+        </button>
+      </div>
+    </section>
+
+    <!-- ============ 5. LEAD-FORMULÄR (konvertering högt upp) ============ -->
+    <section id="lead" aria-labelledby="lead-title" class="bg-[#1B3352] text-white">
+      <div class="max-w-2xl mx-auto px-5 py-12 md:py-16">
+        <div class="text-center mb-7 lp-fade">
+          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-[#C9A15C] mb-2">SkinPen® Premium</span>
+          <h2 id="lead-title" class="font-serif text-3xl md:text-4xl mb-3">Missa inte erbjudandet – boka din tid nu!</h2>
+          <ul class="mt-5 mx-auto max-w-sm text-left space-y-2.5">
+            <li class="flex items-center gap-3">
+              <span class="shrink-0 h-6 w-6 rounded-full bg-[#C9A15C]/20 text-[#C9A15C] flex items-center justify-center">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-3.5 w-3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+              </span>
+              <span class="text-white">Ansikte + hals + dekolletage ingår</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="shrink-0 h-6 w-6 rounded-full bg-[#C9A15C]/20 text-[#C9A15C] flex items-center justify-center">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-3.5 w-3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+              </span>
+              <span class="text-white">Kemisk peeling, regenererande cocktail, bio-cellulose mask och LED-ljusterapi</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="shrink-0 h-6 w-6 rounded-full bg-[#C9A15C]/20 text-[#C9A15C] flex items-center justify-center">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-3.5 w-3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+              </span>
+              <span class="text-white font-semibold">2 795 kr</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CTA – öppnar samma popup-lead-formulär som övriga knappar (inget dubbelt formulär) -->
+        <div class="text-center lp-fade">
+          <button type="button" data-open-popup
+                  class="inline-block w-full sm:w-auto rounded-full bg-white px-8 py-4 text-lg font-semibold text-[#1B3352] shadow-xl transition hover:bg-stone focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-[#1B3352]">
+            Boka din tid
+          </button>
+          <p class="mt-3 text-xs text-white/70">Ingen betalning online · Inga förpliktelser · Gå vidare till bokning efter formuläret</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. FÖRDELAR ============ -->
+    <section aria-labelledby="skin-title" class="bg-white">
+      <div class="max-w-5xl mx-auto px-5 py-10 md:py-14">
+        <div class="text-center max-w-2xl mx-auto mb-6 lp-fade">
+          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Varför SkinPen®</span>
+          <h2 id="skin-title" class="font-serif text-2xl md:text-3xl text-[#1B3352] leading-tight">Medicinteknisk precision för din hud</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-4 w-4 text-gold shrink-0" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <p class="font-medium text-[#1B3352] text-sm">Avancerad microneedlingteknologi</p>
+          </div>
+          <div class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-4 w-4 text-gold shrink-0" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <p class="font-medium text-[#1B3352] text-sm">Kontrollerad, individuellt anpassad behandling</p>
+          </div>
+          <div class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-4 w-4 text-gold shrink-0" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <p class="font-medium text-[#1B3352] text-sm">Stimulerar hudens naturliga reparationsprocess</p>
+          </div>
+          <div class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-4 w-4 text-gold shrink-0" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <p class="font-medium text-[#1B3352] text-sm">Kollagenstimulering för fastare hud</p>
+          </div>
+          <div class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-4 w-4 text-gold shrink-0" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <p class="font-medium text-[#1B3352] text-sm">Förbättrad hudstruktur och färre fina linjer</p>
+          </div>
+          <div class="lp-fade rounded-xl border border-line bg-stone px-4 py-3.5 flex items-center gap-3">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" class="h-4 w-4 text-gold shrink-0" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+            <p class="font-medium text-[#1B3352] text-sm">Jämnare hud vid ojämn struktur och akneärr</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. ISABELLA – kompakt trust-block ============ -->
+    <section aria-labelledby="about-title" class="bg-stone">
+      <div class="max-w-3xl mx-auto px-5 py-8 md:py-10">
+        <div class="lp-fade flex items-center gap-5 rounded-2xl border border-line bg-white p-5 sm:p-6">
+          <img src="images/isabellany.webp" alt="Isabella, CIDESCO-certifierad hudterapeut på Your Skin Clinic"
+               class="shrink-0 h-20 w-20 sm:h-24 sm:w-24 rounded-full object-cover shadow" loading="lazy" decoding="async">
+          <div>
+            <span class="block text-[11px] font-semibold uppercase tracking-[0.14em] text-gold mb-1">Din behandlare</span>
+            <h2 id="about-title" class="sr-only">Din behandlare Isabella</h2>
+            <p class="text-sm sm:text-base text-body/85 mb-3">SkinPen Premium utförs av Isabella, CIDESCO-certifierad hudterapeut med lång erfarenhet av estetiska behandlingar.</p>
+            <div class="flex flex-wrap gap-1.5 text-[11px]">
+              <span class="rounded-full bg-stone border border-line px-2.5 py-1 text-body/70">CIDESCO</span>
+              <span class="rounded-full bg-stone border border-line px-2.5 py-1 text-body/70">SkinPen®</span>
+              <span class="rounded-full bg-stone border border-line px-2.5 py-1 text-body/70">Säker Klinik</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 8. REVIEWS ============ -->
+    <section aria-labelledby="rev-title" class="bg-stone">
+      <div class="max-w-5xl mx-auto px-5 py-12 md:py-16">
+        <div class="text-center mb-8 lp-fade">
+          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-[#C9A15C] mb-2">Omdömen</span>
+          <h2 id="rev-title" class="font-serif text-2xl md:text-3xl text-[#1B3352] mb-2">Det säger våra kunder</h2>
+          <p class="text-sm text-body/70 mb-1">Över 600 kunder har lämnat sitt omdöme om oss.</p>
+          <p class="text-sm text-body/70"><span class="lp-stars--gold" aria-hidden="true">★★★★★</span> 4,9/5 · 600+ omdömen</p>
+        </div>
+
+        <!-- Mobil: horisontell swipe. Desktop: 3 kolumner × 2 rader. -->
+        <div class="lp-reviews flex gap-4 overflow-x-auto pb-3 snap-x sm:grid sm:grid-cols-3 sm:gap-5 sm:overflow-visible sm:pb-0">
+          <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-auto sm:shrink rounded-2xl bg-white border border-[#C9A15C]/25 p-5 shadow-sm">
+            <div class="text-[#C9A15C] text-sm tracking-[2px] mb-2" aria-label="5 av 5">★★★★★</div>
+            <p class="text-sm text-body/80 mb-3">”Isabella genomförde en microneedling-kur på 4 behandlingar. Huden känns fastare, fylligare och jag upplever mindre synliga rynkor. Väldigt nöjd och kommer definitivt tillbaka!”</p>
+            <footer class="text-sm font-semibold text-[#1B3352]">Lisa Nyqvist</footer>
+          </blockquote>
+          <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-auto sm:shrink rounded-2xl bg-white border border-[#C9A15C]/25 p-5 shadow-sm">
+            <div class="text-[#C9A15C] text-sm tracking-[2px] mb-2" aria-label="5 av 5">★★★★★</div>
+            <p class="text-sm text-body/80 mb-3">”Isa var professionell och trevlig – fick en så fin lyster i huden efter behandlingen. Skulle definitivt komma tillbaka.”</p>
+            <footer class="text-sm font-semibold text-[#1B3352]">Leyla P.</footer>
+          </blockquote>
+          <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-auto sm:shrink rounded-2xl bg-white border border-[#C9A15C]/25 p-5 shadow-sm">
+            <div class="text-[#C9A15C] text-sm tracking-[2px] mb-2" aria-label="5 av 5">★★★★★</div>
+            <p class="text-sm text-body/80 mb-3">”Isabella känns rak, tydlig och effektiv. Kunnig på sitt område. Stort plus att hon var ärlig om biverkningar och återhämtning i förväg, vilket många 'glömmer' – så man vet att behandlingen passar i tid. Kommer gärna tillbaka.”</p>
+            <footer class="text-sm font-semibold text-[#1B3352]">Johnny K.</footer>
+          </blockquote>
+          <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-auto sm:shrink rounded-2xl bg-white border border-[#C9A15C]/25 p-5 shadow-sm">
+            <div class="text-[#C9A15C] text-sm tracking-[2px] mb-2" aria-label="5 av 5">★★★★★</div>
+            <p class="text-sm text-body/80 mb-3">”Isa är bäst! Förutom att hon är supertrevlig så är hon professionell uti fingerspetsarna. Det arbete hon gjort är overkligt bra. Rekommenderar Isa mycket varmt!”</p>
+            <footer class="text-sm font-semibold text-[#1B3352]">Maria H.</footer>
+          </blockquote>
+          <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-auto sm:shrink rounded-2xl bg-white border border-[#C9A15C]/25 p-5 shadow-sm">
+            <div class="text-[#C9A15C] text-sm tracking-[2px] mb-2" aria-label="5 av 5">★★★★★</div>
+            <p class="text-sm text-body/80 mb-3">”Isabella är världsklass terapeut. Hon är lugn harmonisk och fantastiskt duktigt. Varmt rekommenderar.”</p>
+            <footer class="text-sm font-semibold text-[#1B3352]">Fanoula M.</footer>
+          </blockquote>
+          <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-auto sm:shrink rounded-2xl bg-white border border-[#C9A15C]/25 p-5 shadow-sm">
+            <div class="text-[#C9A15C] text-sm tracking-[2px] mb-2" aria-label="5 av 5">★★★★★</div>
+            <p class="text-sm text-body/80 mb-3">”Fantastiskt bemötande och mycket professionell behandling. Jag kände mig trygg och är supernöjd med resultatet. Rekommenderas varmt!”</p>
+            <footer class="text-sm font-semibold text-[#1B3352]">Jasmine P.</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 9. FAQ ============ -->
+    <section aria-labelledby="faq-title" class="bg-stone">
+      <div class="max-w-2xl mx-auto px-5 py-10 md:py-12">
+        <div class="text-center mb-6 lp-fade">
+          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Vanliga frågor</span>
+          <h2 id="faq-title" class="font-serif text-2xl md:text-3xl text-[#1B3352]">Frågor &amp; svar</h2>
+        </div>
+        <div class="divide-y divide-line border-y border-line bg-white rounded-2xl px-1">
+          <div class="lp-faq">
+            <h3>
+              <button type="button" class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 px-3 text-left" aria-expanded="false">
+                <span class="font-semibold text-[#1B3352]">Vad ingår i SkinPen Premium?</span>
+                <span class="lp-faq-icon text-gold text-xl leading-none" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="lp-faq-panel"><p class="pb-4 px-3 text-sm text-body/75">Behandlingen omfattar ansikte, hals och dekolletage för 2 795 kr. Protokollet innehåller rengöring, kemisk peeling, SkinPen®-microneedling med anpassat nåldjup, regenererande cocktail (polynukleotider + hyaluronsyra), bio-cellulose mask och förlängd LED/rödljusterapi. Skinfuse Rescue Calming Complex medföljer hem efter behandlingen.</p></div>
+          </div>
+          <div class="lp-faq">
+            <h3>
+              <button type="button" class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 px-3 text-left" aria-expanded="false">
+                <span class="font-semibold text-[#1B3352]">Ingår hals och dekolletage varje gång, eller bara första besöket?</span>
+                <span class="lp-faq-icon text-gold text-xl leading-none" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="lp-faq-panel"><p class="pb-4 px-3 text-sm text-body/75">Ansikte, hals och dekolletage ingår vid varje behandling i din SkinPen-kur – inte bara vid det första tillfället. Efter din första behandling planerar och bokar vi nästa tid tillsammans, med cirka 4–6 veckors mellanrum.</p></div>
+          </div>
+          <div class="lp-faq">
+            <h3>
+              <button type="button" class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 px-3 text-left" aria-expanded="false">
+                <span class="font-semibold text-[#1B3352]">Varför rekommenderar ni en kur på 4 behandlingar?</span>
+                <span class="lp-faq-icon text-gold text-xl leading-none" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="lp-faq-panel">
+              <p class="pb-2 px-3 text-sm text-body/75">För hudföryngring rekommenderar vi vanligtvis en kur på 4 behandlingar med 4–6 veckors mellanrum. Det ger huden möjlighet att successivt bygga upp ett jämnare, fastare och mer vitalt utseende.</p>
+              <p class="pb-2 px-3 text-sm text-body/75">Vill du arbeta med hudkvaliteten som en återkommande investering kan du göra en kur under vinterhalvåret. För dig som vill arbeta mer intensivt med hudens kvalitet och uppstramning kan vi istället lägga upp två behandlingsomgångar per år – en på hösten och en på våren.</p>
+              <p class="pb-4 px-3 text-sm text-body/75">Det behövs alltså inte behandling året runt. En välplanerad kur räcker.</p>
+            </div>
+          </div>
+          <div class="lp-faq">
+            <h3>
+              <button type="button" class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 px-3 text-left" aria-expanded="false">
+                <span class="font-semibold text-[#1B3352]">Hur många behandlingar behövs vid acneärr?</span>
+                <span class="lp-faq-icon text-gold text-xl leading-none" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="lp-faq-panel"><p class="pb-4 px-3 text-sm text-body/75">Vid behandling av ärr efter acne kan det behövas upp till 6 behandlingar, beroende på utgångsläge och behandlingsmål.</p></div>
+          </div>
+          <div class="lp-faq">
+            <h3>
+              <button type="button" class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 px-3 text-left" aria-expanded="false">
+                <span class="font-semibold text-[#1B3352]">Gör behandlingen ont?</span>
+                <span class="lp-faq-icon text-gold text-xl leading-none" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="lp-faq-panel"><p class="pb-4 px-3 text-sm text-body/75">De flesta upplever en lätt stickande känsla, men behandlingen är väl tolererad. Vi anpassar nåldjupet efter din komfortnivå och kan applicera bedövningskräm vid behov (ingår inte i priset).</p></div>
+          </div>
+          <div class="lp-faq">
+            <h3>
+              <button type="button" class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 px-3 text-left" aria-expanded="false">
+                <span class="font-semibold text-[#1B3352]">Hur ser huden ut efter behandlingen?</span>
+                <span class="lp-faq-icon text-gold text-xl leading-none" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="lp-faq-panel"><p class="pb-4 px-3 text-sm text-body/75">Huden kan vara röd och lätt svullen i 1–3 dagar efter behandlingen.</p></div>
+          </div>
+          <div class="lp-faq">
+            <h3>
+              <button type="button" class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 px-3 text-left" aria-expanded="false">
+                <span class="font-semibold text-[#1B3352]">När börjar jag se resultat?</span>
+                <span class="lp-faq-icon text-gold text-xl leading-none" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="lp-faq-panel"><p class="pb-4 px-3 text-sm text-body/75">Resultatet utvecklas successivt och slutresultatet syns vanligtvis efter 2–4 veckor.</p></div>
+          </div>
+          <div class="lp-faq">
+            <h3>
+              <button type="button" class="lp-faq-btn w-full flex items-center justify-between gap-4 py-4 px-3 text-left" aria-expanded="false">
+                <span class="font-semibold text-[#1B3352]">Vem passar behandlingen för?</span>
+                <span class="lp-faq-icon text-gold text-xl leading-none" aria-hidden="true">+</span>
+              </button>
+            </h3>
+            <div class="lp-faq-panel"><p class="pb-4 px-3 text-sm text-body/75">Du som vill arbeta intensivt med hudstruktur, akneärr, fina linjer och hudförnyelse, och som vill maximera kollagenstimulering och lyster. Ej lämplig vid aktiv akne, eksem eller rosacea i behandlingsområdet, graviditet eller amning, pågående Accutane/isotretinoin-medicinering, blodförtunnande medicin, aktiv herpes simplex (meddela oss i förväg) eller nyligen utförd laserbehandling/kemisk peeling. Vid osäkerhet bedömer vi din hud innan behandling.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 10. PLATS (klinikbild + adress, ingen karta) ============ -->
+    <section aria-labelledby="loc-title" class="bg-white">
+      <div class="max-w-5xl mx-auto px-5 py-10 md:py-14 grid md:grid-cols-2 gap-8 items-center">
+        <div class="lp-fade order-2 md:order-1">
+          <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-2">Hitta hit</span>
+          <h2 id="loc-title" class="font-serif text-2xl md:text-3xl text-[#1B3352] mb-4">Mitt i Stockholm City</h2>
+          <p class="text-lg text-[#1B3352] font-semibold leading-snug mb-1">📍 Your Skin Clinic</p>
+          <p class="text-body/75 mb-4">Gallerian, Stockholm City<br>Hamngatan 37, 111 53 Stockholm</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Your+Skin+Clinic+Hamngatan+37+Gallerian+Stockholm" target="_blank" rel="noopener"
+             class="text-sm font-semibold text-gold underline underline-offset-2 hover:text-[#1B3352]">Vägbeskrivning</a>
+        </div>
+        <div class="lp-fade order-1 md:order-2 rounded-2xl overflow-hidden border border-line shadow-md">
+          <picture>
+            <img src="images/salongrum.webp" alt="Behandlingsrum på Your Skin Clinic i Gallerian, Stockholm"
+                 class="w-full h-56 md:h-64 object-cover" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 11. SLUT-CTA — erbjudandet återkommer en sista gång ============ -->
+    <section aria-labelledby="final-cta-title" class="bg-[#1B3352] text-white">
+      <div class="max-w-3xl mx-auto px-5 py-12 md:py-16 text-center">
+        <span class="inline-block text-xs font-semibold tracking-[0.2em] uppercase text-[#C9A15C] mb-2">SkinPen® Premium</span>
+        <h2 id="final-cta-title" class="font-serif text-3xl md:text-4xl mb-2">Ansikte + hals + dekolletage</h2>
+        <p class="text-3xl font-semibold text-[#C9A15C] mb-5">2 795 kr</p>
+        <p class="text-white/80 max-w-xl mx-auto mb-6">Hals &amp; dekolletage ingår – vid varje behandling i din kur.</p>
+        <button type="button" data-open-popup class="inline-block w-full sm:w-auto rounded-full bg-white px-8 py-4 text-base font-bold uppercase tracking-wide text-[#1B3352] shadow-xl transition hover:bg-stone focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A15C] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1B3352]">
+          Boka din tid
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ MINI FOOTER ============ -->
+  <footer class="bg-[#1B3352] text-white/70">
+    <div class="max-w-6xl mx-auto px-5 py-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
+      <div>
+        <span class="font-serif text-lg text-white">Your Skin Clinic</span>
+        <span class="block text-white/50">Gallerian, Hamngatan 37 · 111 53 Stockholm</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ STICKY MOBILE CTA ============ -->
+  <div class="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-line px-4 py-3" style="padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));">
+    <button type="button" data-open-popup class="block w-full text-center rounded-full bg-[#1B3352] px-6 py-3.5 text-base font-semibold text-white transition hover:bg-[#142840]">
+      Boka din tid
+    </button>
+  </div>
+
+  <!-- ============ LEAD-POPUP (visas en gång efter ~15s) ============ -->
+  <div id="lead-popup" class="hidden fixed inset-0 z-[60] items-start sm:items-center justify-center overflow-y-auto bg-[#1B3352]/60 px-4 py-6 sm:py-10 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+    <div class="relative w-full max-w-md rounded-3xl bg-white p-6 sm:p-8 shadow-2xl">
+      <button type="button" data-popup-close aria-label="Stäng" class="absolute top-3 right-4 text-2xl leading-none text-body/50 hover:text-[#1B3352] focus:outline-none">&times;</button>
+      <span class="inline-block text-[11px] font-bold uppercase tracking-[0.14em] text-gold mb-3">SkinPen® Premium</span>
+      <h2 id="popup-title" class="font-serif text-2xl text-[#1B3352] mb-2">Ta nästa steg mot en föryngrad hud</h2>
+      <p class="text-sm text-body/75 mb-1">Ansikte + hals + dekolletage för 2 795 kr.</p>
+      <p class="text-sm text-body/75 mb-5">Fyll i dina uppgifter för att gå vidare till bokningen.</p>
+
+      <form id="lead-popup-form" name="skinpen_kampanj_lead_popup" novalidate>
+        <div class="absolute left-[-9999px] w-px h-px overflow-hidden" aria-hidden="true">
+          <label>Lämna tomt<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <label for="lf-pop-name" class="sr-only">Förnamn och efternamn</label>
+            <input id="lf-pop-name" name="full_name" type="text" autocomplete="name" placeholder="Förnamn och efternamn" required
+                   class="w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-body outline-none focus:border-[#1B3352] focus:ring-2 focus:ring-[#1B3352]/30">
+          </div>
+          <div>
+            <label for="lf-pop-phone" class="sr-only">Telefon</label>
+            <input id="lf-pop-phone" name="phone" type="tel" autocomplete="tel" placeholder="Telefon" required
+                   class="w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-body outline-none focus:border-[#1B3352] focus:ring-2 focus:ring-[#1B3352]/30">
+          </div>
+          <div>
+            <label for="lf-pop-email" class="sr-only">E-post</label>
+            <input id="lf-pop-email" name="email" type="email" autocomplete="email" placeholder="E-post" required
+                   class="w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-body outline-none focus:border-[#1B3352] focus:ring-2 focus:ring-[#1B3352]/30">
+          </div>
+        </div>
+        <input type="hidden" name="skinpen_campaign_source" value="skinpen_kampanj_html">
+        <button type="submit" id="lead-popup-submit"
+                class="mt-4 w-full rounded-full bg-[#1B3352] px-7 py-4 text-base font-semibold uppercase tracking-wide text-white transition hover:bg-[#142840] focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2">
+          Boka din tid →
+        </button>
+        <p id="lead-popup-msg" class="mt-3 text-sm text-center" role="status" aria-live="polite"></p>
+        <p class="mt-3 text-xs text-body/55 text-center">Ingen betalning online. Du går vidare direkt till bokningen efter att du fyllt i dina uppgifter.</p>
+        <p class="mt-3 text-xs text-body/55 text-center">Dina uppgifter används endast för att hantera din bokning och kontakta dig vid behov. <a href="integritetspolicy.html" class="underline hover:text-[#1B3352]">Integritetspolicy</a>.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============ PAGE SCRIPT (scoped, no globals) ============ -->
+  <script>
+  (function () {
+    'use strict';
+
+    /* LEAD-KONFIGURATION (HighLevel CRM-redo) – enda stället att ändra.
+       webhookUrl tom -> staging (går direkt till tack-steget).
+       webhookUrl satt -> POST:ar lead till HighLevel innan vidareslussning.
+       Samma webhook som laserkampanj.html återanvänds – source-fältet ("skinpen_kampanj")
+       särskiljer SkinPen-leads från laser-leads i CRM:et. */
+    var LEAD_CONFIG = {
+      webhookUrl: 'https://services.leadconnectorhq.com/hooks/hHmtbTFrXPVU21RH813d/webhook-trigger/Ae8WYw5Jmx44fCAl294b',
+      thankYouUrl: 'skinpen-kampanj-tack.html'
+    };
+
+    /* META PIXEL – enda integrationspunkten (events ej aktiva ännu). */
+    window.metaTrack = function (event, params) {
+      if (window.fbq) window.fbq('track', event, params || {});
+      if (window.__DEBUG_META) console.log('[meta]', event, params || {});
+    };
+    metaTrack('ViewContent', { content_name: 'SkinPenKampanj', content_category: 'Premium SkinPen Microneedling' });
+
+    /* Scroll fade-in */
+    var faders = document.querySelectorAll('.lp-fade');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-visible'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      faders.forEach(function (el) { io.observe(el); });
+    } else {
+      faders.forEach(function (el) { el.classList.add('is-visible'); });
+    }
+
+    /* FAQ accordion */
+    var faqBtns = document.querySelectorAll('.lp-faq-btn');
+    faqBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var panel = btn.parentElement.nextElementSibling;
+        var icon = btn.querySelector('.lp-faq-icon');
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        faqBtns.forEach(function (b) {
+          b.setAttribute('aria-expanded', 'false');
+          var p = b.parentElement.nextElementSibling;
+          if (p) p.style.maxHeight = null;
+          var i = b.querySelector('.lp-faq-icon');
+          if (i) i.textContent = '+';
+        });
+        if (!open && panel) {
+          btn.setAttribute('aria-expanded', 'true');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          if (icon) icon.textContent = '–';
+        }
+      });
+    });
+
+    /* LEAD-FLÖDE – delas av huvudformulär OCH popup */
+    function setMsg(msgEl, text, ok) {
+      if (!msgEl) return;
+      msgEl.textContent = text || '';
+      msgEl.style.color = ok ? '#1B3352' : '#9a5a4a';
+    }
+    function collectLead(formEl) {
+      var data = { source: 'meta-skinpenkampanj' };
+      ['full_name', 'phone', 'email'].forEach(function (n) {
+        var el = formEl.querySelector('[name="' + n + '"]');
+        if (el) data[n] = (el.value || '').trim();
+      });
+      return data;
+    }
+    function wireLeadForm(formEl, btnEl, msgEl, label) {
+      if (!formEl || !btnEl) return;
+      formEl.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var honey = formEl.querySelector('input[name="company_website"]');
+        if (honey && honey.value) return;
+        if (!formEl.checkValidity()) { formEl.reportValidity(); return; }
+        setMsg(msgEl, '', true);
+        btnEl.disabled = true;
+        btnEl.textContent = 'Skickar…';
+        var lead = collectLead(formEl);
+        function ok() {
+          metaTrack('Lead', { content_name: 'SkinPenKampanj', area: lead.area_of_interest || '' });
+          setMsg(msgEl, 'Tack! Vi skickar dig vidare till bokningen…', true);
+          window.location.href = LEAD_CONFIG.thankYouUrl;
+        }
+        function err() {
+          setMsg(msgEl, 'Något gick fel. Försök igen eller ring oss direkt.', false);
+          btnEl.disabled = false;
+          btnEl.textContent = label;
+        }
+        if (LEAD_CONFIG.webhookUrl) {
+          fetch(LEAD_CONFIG.webhookUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            keepalive: true,
+            body: JSON.stringify({
+              full_name: lead.full_name,
+              phone: lead.phone,
+              email: lead.email,
+              source: 'skinpen_kampanj'
+            })
+          }).catch(function () {});
+        }
+        ok();
+      });
+    }
+    wireLeadForm(document.getElementById('lead-form'), document.getElementById('lead-submit'), document.getElementById('lead-msg'), 'Boka din tid');
+    wireLeadForm(document.getElementById('lead-popup-form'), document.getElementById('lead-popup-submit'), document.getElementById('lead-popup-msg'), 'Boka din tid →');
+
+    /* LEAD-POPUP – en gång per besökare efter ~15 sekunder */
+    var POPUP_KEY = 'ysc-skinpen-popup-shown';
+    var popup = document.getElementById('lead-popup');
+    function popupAlreadyShown() { try { return localStorage.getItem(POPUP_KEY) === '1'; } catch (e) { return false; } }
+    function markPopupShown() { try { localStorage.setItem(POPUP_KEY, '1'); } catch (e) {} }
+    function openPopup() {
+      if (!popup) return;
+      popup.classList.remove('hidden'); popup.classList.add('flex');
+      markPopupShown();
+      var first = popup.querySelector('input:not([tabindex="-1"])');
+      if (first) first.focus();
+    }
+    function hidePopup() {
+      if (!popup) return;
+      popup.classList.add('hidden'); popup.classList.remove('flex');
+    }
+    if (popup) {
+      // Manuella öppnare (pris-kortens knappar m.fl.)
+      document.querySelectorAll('[data-open-popup]').forEach(function (el) {
+        el.addEventListener('click', function (e) { e.preventDefault(); openPopup(); });
+      });
+      // Stäng (alltid aktivt, även efter manuell öppning)
+      popup.addEventListener('click', function (e) {
+        if (e.target === popup || e.target.closest('[data-popup-close]')) hidePopup();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !popup.classList.contains('hidden')) hidePopup();
+      });
+      // Auto-popup en gång per besökare efter ~15 s
+      if (!popupAlreadyShown()) {
+        setTimeout(function () { if (!popupAlreadyShown()) openPopup(); }, 15000);
+      }
+    }
+  })();
+  </script>
+
+  <!-- HighLevel External Tracking (fångar leads i CRM) -->
+  <script
+    src="https://link.msgsndr.com/js/external-tracking.js"
+    data-tracking-id="tk_86f14889540b463485c75733fec91fa3">
+  </script>
+</body>
+</html>

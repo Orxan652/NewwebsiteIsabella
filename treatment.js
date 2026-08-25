@@ -57,4 +57,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* --- Före & Efter-karusell (ett kundpar i taget, tangentbord + pilar, ingen autoplay) --- */
+  const resultsTrack = document.getElementById('resultsTrack');
+  if (resultsTrack) {
+    const prevBtn = document.getElementById('resultsPrev');
+    const nextBtn = document.getElementById('resultsNext');
+    const pairs = Array.from(resultsTrack.children);
+
+    const scrollToIndex = (i) => {
+      const clamped = Math.max(0, Math.min(pairs.length - 1, i));
+      pairs[clamped].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    };
+
+    const currentIndex = () => {
+      const trackLeft = resultsTrack.scrollLeft;
+      let closest = 0;
+      let closestDist = Infinity;
+      pairs.forEach((pair, i) => {
+        const dist = Math.abs(pair.offsetLeft - trackLeft);
+        if (dist < closestDist) { closestDist = dist; closest = i; }
+      });
+      return closest;
+    };
+
+    const updateArrows = () => {
+      const i = currentIndex();
+      if (prevBtn) prevBtn.disabled = i <= 0;
+      if (nextBtn) nextBtn.disabled = i >= pairs.length - 1;
+    };
+
+    if (nextBtn) nextBtn.addEventListener('click', () => scrollToIndex(currentIndex() + 1));
+    if (prevBtn) prevBtn.addEventListener('click', () => scrollToIndex(currentIndex() - 1));
+
+    resultsTrack.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight') { e.preventDefault(); scrollToIndex(currentIndex() + 1); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); scrollToIndex(currentIndex() - 1); }
+    });
+
+    let resultsIdle;
+    resultsTrack.addEventListener('scroll', () => {
+      clearTimeout(resultsIdle);
+      resultsIdle = setTimeout(updateArrows, 100);
+    }, { passive: true });
+
+    updateArrows();
+    window.addEventListener('resize', () => {
+      clearTimeout(resultsIdle);
+      resultsIdle = setTimeout(updateArrows, 150);
+    });
+  }
+
 });

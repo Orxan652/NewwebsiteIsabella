@@ -1271,6 +1271,13 @@
     width: 100%;
     height: 160px;
   }
+  /* Ankra badgen mot bildens egen övre kant istället för kortets padding-box, så den alltid
+     ligger kvar på fotot och aldrig når ner mot rubriken under. Skopad till behandlingskortet
+     (barn-selektor) så jämförelsetabellens badge, som återanvänder samma klass, inte påverkas. */
+  .behandling-card-vertical > .behandling-card-vertical__badge {
+    top: 1.75rem;
+    right: 1.75rem;
+  }
   .moment-icons {
     gap: 0.4rem;
   }
@@ -1621,4 +1628,116 @@ body.modal-open {
     width: 100%;
     margin-top: 1.5rem;
   }
+}
+
+/* ---- SkinPen info section (microneedling.html) ---- */
+.skinpen-info {
+  padding: var(--section-pad) 0;
+  background: var(--white);
+}
+
+.skinpen-info__content {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.skinpen-info__content h2 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  color: var(--text-heading);
+  margin-bottom: 1.25rem;
+}
+
+.skinpen-info__content p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.skinpen-info__points {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .skinpen-info__points {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skinpen-info__point {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.skinpen-info__point h3 {
+  font-size: .8125rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .5rem;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.skinpen-info__point p {
+  font-size: .9rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ---- SkinPen highlight box (microneedling.html) ---- */
+.skinpen-highlight {
+  padding: 0 0 var(--section-pad);
+  background: var(--white);
+}
+
+.skinpen-highlight__box {
+  max-width: 780px;
+  margin: 0 auto;
+  background: var(--bg-secondary);
+  border: 1px solid var(--gold);
+  border-radius: var(--radius-md);
+  padding: 2rem 2.25rem;
+  text-align: left;
+}
+
+.skinpen-highlight__box h2 {
+  font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+  color: var(--text-heading);
+  margin-bottom: .75rem;
+}
+
+.skinpen-highlight__box p {
+  font-size: .9375rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.skinpen-highlight__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+}
+
+.skinpen-highlight__list li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: .875rem;
+  font-weight: 600;
+  color: var(--text-heading);
+}
+
+.skinpen-highlight__list li::before {
+  content: '★';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: .7rem;
+  top: .15rem;
 }

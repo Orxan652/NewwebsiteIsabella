@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '28289277947326970');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=28289277947326970&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+  <!-- Schedule-event skickas via metaTrack() nedan när bokningskalendern öppnas. -->
+
+  <title>Tack! Boka din SkinPen-tid – Your Skin Clinic</title>
+  <meta name="description" content="Tack för din intresseanmälan till SkinPen® Premium. Slutför din bokning hos Your Skin Clinic.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          forest:'#1B3352','forest-hover':'#142840', ink:'#1B3352', body:'#24302D',
+          stone:'#F4F1EC','stone-2':'#EFE9E2', gold:'#C9A15C', line:'#E8E4DE',
+          navy: '#1B3352', 'navy-2': '#142840', terracotta: '#B77A5C', sand: '#E9D9C9'
+        },
+        fontFamily: { serif:['"DM Serif Display"','Georgia','serif'], sans:['Inter','system-ui','sans-serif'] }
+      } }
+    }
+  </script>
+  <style>body{font-family:'Inter',system-ui,sans-serif}</style>
+</head>
+<body class="bg-stone text-body min-h-screen px-5 py-16">
+  <main class="max-w-lg w-full mx-auto text-center bg-white rounded-3xl border border-line shadow-xl px-6 sm:px-10 py-12">
+    <div class="mx-auto mb-6 h-16 w-16 rounded-full bg-navy text-white flex items-center justify-center">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-8 w-8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+    </div>
+
+    <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-3">Steg 2 av 2</span>
+    <h1 class="font-serif text-3xl sm:text-4xl text-ink mb-4">Tack! Din plats är reserverad.</h1>
+    <p class="text-body/80 mb-1">Ditt erbjudande är reserverat åt dig.</p>
+    <p class="text-body/80 mb-8">Sista steget: boka din tid nedan för att säkra din behandling.</p>
+
+    <!-- Sammanfattning av erbjudandet -->
+    <div class="rounded-2xl border-2 border-gold/40 bg-stone px-6 py-5 text-left">
+      <p class="text-xs font-bold uppercase tracking-[0.18em] text-gold mb-2 text-center">SkinPen® Premium</p>
+      <p class="font-serif text-xl text-ink mb-1 text-center">Ansikte + hals + dekolletage</p>
+      <p class="text-2xl font-semibold text-gold mb-2 text-center">2 795 kr</p>
+      <p class="text-xs text-body/70 text-center">Hals + dekolletage ingår vid varje behandling under hela din kur.</p>
+    </div>
+
+    <p class="mt-5 text-sm font-semibold text-navy">Boka din tid redan nu för att inte missa erbjudandet.</p>
+
+    <p class="mt-8 text-xs text-body/50">Your Skin Clinic · Gallerian, Hamngatan 37, Stockholm</p>
+  </main>
+
+  <!-- Countdown – platsen hålls i 10 min (ren JS, ingen blockering vid 0) -->
+  <section class="max-w-2xl w-full mx-auto mt-8 -mb-2 text-center">
+    <p id="countdown-text" class="text-sm font-medium text-ink mb-3">Din plats hålls i 10 minuter – välj en tid innan tiden går ut.</p>
+    <div class="flex items-center justify-center gap-3 sm:gap-4">
+      <div class="rounded-2xl border border-line bg-white px-4 py-3 min-w-[68px] sm:min-w-[80px]">
+        <span id="cd-hh" class="block font-serif text-3xl sm:text-4xl text-ink leading-none">00</span>
+        <span class="block text-[10px] uppercase tracking-[0.14em] text-body/50 mt-1">timmar</span>
+      </div>
+      <span class="font-serif text-2xl text-gold/60" aria-hidden="true">:</span>
+      <div class="rounded-2xl border border-line bg-white px-4 py-3 min-w-[68px] sm:min-w-[80px]">
+        <span id="cd-mm" class="block font-serif text-3xl sm:text-4xl text-ink leading-none">10</span>
+        <span class="block text-[10px] uppercase tracking-[0.14em] text-body/50 mt-1">minuter</span>
+      </div>
+      <span class="font-serif text-2xl text-gold/60" aria-hidden="true">:</span>
+      <div class="rounded-2xl border border-line bg-white px-4 py-3 min-w-[68px] sm:min-w-[80px]">
+        <span id="cd-ss" class="block font-serif text-3xl sm:text-4xl text-ink leading-none">00</span>
+        <span class="block text-[10px] uppercase tracking-[0.14em] text-body/50 mt-1">sekunder</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Boka SkinPen Premium – enda bokningsalternativet (endast Ansikte, ingen rygg).
+       Länkar direkt till HighLevel-kalendern för SkinPen Premium (samma tekniska mönster som laserkampanjens HighLevel-bokningslänkar). -->
+  <section class="max-w-2xl w-full mx-auto my-8">
+    <div class="text-center mb-6">
+      <span class="inline-block text-xs font-semibold uppercase tracking-[0.18em] text-gold mb-2">SkinPen® Premium</span>
+      <h2 class="font-serif text-2xl sm:text-3xl text-ink mb-2">Boka din tid</h2>
+      <p class="text-sm text-body/70">Ansikte, hals och dekolletage ingår – välj tid i vår bokningskalender.</p>
+      <div class="mt-5 border-t border-line"></div>
+    </div>
+    <div class="grid grid-cols-1">
+
+      <a href="https://api.leadconnectorhq.com/widget/bookings/skinpen-premium"
+         class="group flex items-center justify-between gap-3 rounded-3xl border-2 border-gold/40 bg-white px-5 py-5 shadow-sm transition hover:-translate-y-0.5 hover:border-gold hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2">
+        <span class="min-w-0">
+          <span class="block font-serif text-lg text-ink">Boka SkinPen Premium</span>
+          <span class="block text-sm text-body/70 mt-0.5">Ansikte + hals + dekolletage</span>
+          <span class="block font-semibold text-gold mt-1">2 795 kr <span class="font-normal text-body/60">· 80 min</span></span>
+        </span>
+        <span class="shrink-0 text-gold text-lg transition-transform group-hover:translate-x-0.5" aria-hidden="true">→</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Meta-event: Schedule (bokning påbörjas). Ej aktiv förrän pixeln klistrats in i <head>. -->
+  <script>
+  (function () {
+    'use strict';
+    var BOOKING_URL = 'https://api.leadconnectorhq.com/widget/bookings/skinpen-premium';
+
+    function metaTrack(event, params) {
+      if (window.fbq) window.fbq('track', event, params || {});
+      if (window.__DEBUG_META) console.log('[meta]', event, params || {});
+    }
+
+    // Räkna bokningssteget som påbörjat när tack-sidan visas (lead -> bokning).
+    metaTrack('Schedule', { content_name: 'SkinPenKampanj' });
+
+    // Säkerställ att event hinner skickas innan ev. navigering vid klick.
+    var bookingLinks = document.querySelectorAll('a[href*="leadconnectorhq.com"]');
+    bookingLinks.forEach(function (a) {
+      a.addEventListener('click', function () {
+        metaTrack('Schedule', { content_name: 'SkinPenKampanj', action: 'open_calendar' });
+      });
+    });
+  })();
+  </script>
+
+  <!-- Countdown-timer: startar 10:00, räknar ner, byter text vid 0 (kortet förblir klickbart) -->
+  <script>
+  (function () {
+    'use strict';
+    var hh = document.getElementById('cd-hh'), mm = document.getElementById('cd-mm'),
+        ss = document.getElementById('cd-ss'), txt = document.getElementById('countdown-text');
+    if (!hh || !mm || !ss) return;
+    var total = 10 * 60;
+    function p(n){ return n < 10 ? '0' + n : '' + n; }
+    function render(s){ hh.textContent = p(Math.floor(s/3600)); mm.textContent = p(Math.floor((s%3600)/60)); ss.textContent = p(s%60); }
+    render(total);
+    var t = setInterval(function () {
+      total -= 1;
+      if (total <= 0) { render(0); clearInterval(t);
+        if (txt) txt.textContent = 'Tiden har gått ut – men hinner du fortfarande, boka din tid nedan.';
+        return; }
+      render(total);
+    }, 1000);
+  })();
+  </script>
+</body>
+</html>

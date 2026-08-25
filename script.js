@@ -244,6 +244,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Öppna modal vid klick på kort med data-modal
   document.addEventListener('click', function(e) {
+    // Undantag: låt riktiga länkar till plasmapen.html navigera normalt, även inuti ett data-modal-kort
+    if (e.target.closest('a[href="plasmapen.html"]')) return;
     const trigger = e.target.closest('[data-modal]');
     if (trigger) {
       e.preventDefault();

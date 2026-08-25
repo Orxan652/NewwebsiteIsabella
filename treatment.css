@@ -412,8 +412,15 @@
 .tx-compare-col h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.1rem;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   color: var(--text-heading);
+}
+
+.tx-compare-col__lead {
+  font-size: .875rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .tx-compare-col ul {
@@ -439,6 +446,7 @@
 /* Premium column highlight */
 .tx-compare-col--premium {
   position: relative;
+  padding-top: 3.5rem;
   background: var(--bg-secondary);
   border-color: var(--gold);
 }
@@ -670,3 +678,178 @@
 .tx-accordion--compact .tx-accordion-panel ul { padding: .5rem 0 .35rem; }
 .tx-accordion--compact .tx-accordion-panel li { font-size: .8rem; line-height: 1.55; }
 .tx-accordion--compact .tx-accordion-panel > p { font-size: .8rem; line-height: 1.6; }
+
+/* ---- Före & Efter (microneedling.html) ---- */
+.tx-results {
+  padding: var(--section-pad) 0;
+  background: var(--white);
+}
+
+.tx-results__sub {
+  margin-top: .75rem;
+  color: var(--text-body);
+  font-size: 1rem;
+}
+
+.tx-results__carousel-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.tx-results__track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: .25rem 0;
+  flex: 1;
+  min-width: 0;
+}
+.tx-results__track::-webkit-scrollbar {
+  display: none;
+}
+.tx-results__track:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: var(--radius-md);
+}
+
+.tx-results__pair {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .75rem;
+}
+
+.tx-results__photo {
+  position: relative;
+  margin: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-subtle);
+}
+.tx-results__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.tx-results__photo figcaption {
+  text-align: center;
+  padding: .6rem 0;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-heading);
+  border-top: 1px solid var(--border);
+}
+
+/* Diskret etikett för behandlingsområde per slide */
+.tx-results__area {
+  grid-column: 1 / -1;
+  margin: .6rem 0 0;
+  text-align: center;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--text-body);
+  opacity: .8;
+}
+
+/* Variant: ett redan hopsatt före/efter-foto (t.ex. ben) istället för två separata bilder */
+.tx-results__pair--single {
+  grid-template-columns: 1fr;
+}
+.tx-results__photo--single img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+/* Variant: visa hela originalbilden okapad, utan cover-beskärning (t.ex. Microblading, redan hopsatt före/efter utan 3:2-förhållande) */
+.tx-results__photo--natural img {
+  aspect-ratio: auto;
+  object-fit: initial;
+}
+.tx-results__tag {
+  position: absolute;
+  top: .6rem;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: .25rem .65rem;
+  border-radius: 100px;
+  color: #fff;
+}
+.tx-results__tag--before { left: .6rem; background: rgba(31,45,42,.78); }
+.tx-results__tag--after  { right: .6rem; background: var(--gold); }
+
+/* Diskret integritetsmask över ögonparti på bilder där det behövs */
+.tx-results__eyemask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 34%;
+  height: 12%;
+  background: rgba(31,45,42,.82);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Variant: FÖRE/EFTER staplat (över/under) istället för sida vid sida, för redan hopsatta bilder i vertikalt format */
+.tx-results__tag--after-bottom { top: auto; bottom: .6rem; left: .6rem; right: auto; }
+
+.tx-results__arrow {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  color: var(--text-heading);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+.tx-results__arrow:hover {
+  background: var(--gold);
+  color: var(--white);
+}
+.tx-results__arrow:disabled {
+  opacity: .35;
+  cursor: default;
+  pointer-events: none;
+}
+
+.tx-results__disclaimer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: .8125rem;
+  color: var(--text-body);
+  opacity: .75;
+}
+
+@media (max-width: 640px) {
+  .tx-results__carousel-wrap {
+    gap: .4rem;
+  }
+  .tx-results__pair {
+    gap: .5rem;
+  }
+  .tx-results__arrow {
+    width: 32px;
+    height: 32px;
+  }
+}
