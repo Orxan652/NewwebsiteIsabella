@@ -846,15 +846,18 @@
       if (!formEl || !btnEl) return;
       formEl.addEventListener('submit', function (e) {
         e.preventDefault();
-        var honey = formEl.querySelector('input[name="company_website"]');
-        if (honey && honey.value) return;
         if (!formEl.checkValidity()) { formEl.reportValidity(); return; }
+        /* Honeypot: blockerar endast att spam-data skickas till webhooken/pixeln.
+           Får ALDRIG tysta hela flödet – vissa webbläsare autofyller dolda fält
+           trots autocomplete="off", vilket annars gjorde knappen "död" för riktiga kunder. */
+        var honey = formEl.querySelector('input[name="company_website"]');
+        var isSpam = !!(honey && honey.value);
         setMsg(msgEl, '', true);
         btnEl.disabled = true;
         btnEl.textContent = 'Skickar…';
         var lead = collectLead(formEl);
         function ok() {
-          metaTrack('Lead', { content_name: 'SkinPenKampanj', area: lead.area_of_interest || '' });
+          if (!isSpam) metaTrack('Lead', { content_name: 'SkinPenKampanj', area: lead.area_of_interest || '' });
           setMsg(msgEl, 'Tack! Vi skickar dig vidare till bokningen…', true);
           window.location.href = LEAD_CONFIG.thankYouUrl;
         }
@@ -863,7 +866,7 @@
           btnEl.disabled = false;
           btnEl.textContent = label;
         }
-        if (LEAD_CONFIG.webhookUrl) {
+        if (!isSpam && LEAD_CONFIG.webhookUrl) {
           fetch(LEAD_CONFIG.webhookUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -874,7 +877,7 @@
               email: lead.email,
               source: 'skinpen_kampanj'
             })
-          }).catch(function () {});
+          }).catch(function (fetchErr) { console.error('SkinPen lead-webhook misslyckades:', fetchErr); });
         }
         ok();
       });
@@ -912,7 +915,7 @@
       });
       // Auto-popup en gång per besökare efter ~15 s
       if (!popupAlreadyShown()) {
-        setTimeout(function () { if (!popupAlreadyShown()) openPopup(); }, 15000);
+        setTimeout(function () { if (!popupAlreadyShown()) openPopup(); }, 30000);
       }
     }
   })();
