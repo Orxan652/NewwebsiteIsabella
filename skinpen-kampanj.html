@@ -780,10 +780,9 @@
     /* LEAD-KONFIGURATION (HighLevel CRM-redo) – enda stället att ändra.
        webhookUrl tom -> staging (går direkt till tack-steget).
        webhookUrl satt -> POST:ar lead till HighLevel innan vidareslussning.
-       Samma webhook som laserkampanj.html återanvänds – source-fältet ("skinpen_kampanj")
-       särskiljer SkinPen-leads från laser-leads i CRM:et. */
+       Egen separat SkinPen-webhook/workflow – delar INTE webhook med laserkampanj.html. */
     var LEAD_CONFIG = {
-      webhookUrl: 'https://services.leadconnectorhq.com/hooks/hHmtbTFrXPVU21RH813d/webhook-trigger/Ae8WYw5Jmx44fCAl294b',
+      webhookUrl: 'https://services.leadconnectorhq.com/hooks/hHmtbTFrXPVU21RH813d/webhook-trigger/0364e2ca-ddbb-4bce-8491-666fd8a508d4',
       thankYouUrl: 'skinpen-kampanj-tack.html'
     };
 
@@ -870,7 +869,7 @@
             headers: { 'Content-Type': 'application/json' },
             keepalive: true,
             body: JSON.stringify({
-              full_name: lead.full_name,
+              first_name: lead.full_name,
               phone: lead.phone,
               email: lead.email,
               source: 'skinpen_kampanj'
