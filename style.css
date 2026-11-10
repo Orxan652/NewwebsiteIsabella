@@ -1425,7 +1425,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-brand .logo { margin-bottom: 0; }
 
-.footer-col h4 {
+.footer-col h4,
+.footer-col p.footer-location-label {
   font-family: 'Inter', sans-serif;
   font-size: .7rem;
   font-weight: 600;

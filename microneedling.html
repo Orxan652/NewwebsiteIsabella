@@ -20,10 +20,124 @@
   <meta name="twitter:image" content="https://www.yourskinclinic.se/images/hero1.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="treatment.css">
-  <link rel="stylesheet" href="problem.css">
+
+  <!-- Kritisk CSS för första viewporten (header, nav, hero, trust bar) – exakt kopia av reglerna i style.css/treatment.css,
+       inlinead för att undvika renderingsblockerande CSS-hämtning. De fullständiga filerna laddas asynkront nedan och
+       tar över med identiska regler så snart de är hämtade (ingen visuell skillnad, ingen layoutförskjutning). -->
+  <style>
+    :root{--bg-primary:#F4F1EC;--bg-secondary:#EFE9E2;--white:#FFFFFF;--text-heading:#1F2D2A;--text-body:#24302D;--accent:#1F2D2A;--accent-hover:#2D3F3B;--border:#E8E4DE;--gold:#9A763F;--font-display:'DM Serif Display','Playfair Display',Georgia,serif;--radius-sm:8px;--radius-md:12px;--radius-lg:24px;--shadow-subtle:0 2px 12px rgba(0,0,0,0.04);--shadow-card:0 4px 24px rgba(0,0,0,0.06);--transition:0.3s cubic-bezier(.4,0,.2,1);--max-width:1080px;--section-pad:clamp(3rem, 8vw, 6rem);}
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;font-size:16px;}
+    body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg-primary);color:var(--text-body);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+    img{display:block;max-width:100%;height:auto;}
+    a{text-decoration:none;color:inherit;transition:color var(--transition);}
+    h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',Georgia,serif;color:var(--text-heading);line-height:1.25;font-weight:600;}
+    .container{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 1.25rem;}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.875rem 2rem;font-family:'Inter',sans-serif;font-size:.8125rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border-radius:var(--radius-sm);border:1.5px solid transparent;cursor:pointer;transition:all var(--transition);white-space:nowrap;}
+    .btn-primary{background:var(--accent);color:var(--white);border-color:var(--accent);}
+    .btn-primary:hover{background:var(--accent-hover);border-color:var(--accent-hover);transform:translateY(-1px);box-shadow:0 4px 16px rgba(47,42,38,.18);}
+    .btn-outline{background:transparent;color:var(--accent);border-color:var(--accent);}
+    .btn-outline:hover{background:var(--accent);color:var(--white);transform:translateY(-1px);}
+    .btn-white{background:var(--white);color:var(--accent);border-color:var(--white);}
+    .btn-white:hover{background:rgba(255,255,255,.85);transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,0,0,.12);}
+    .btn-outline-white{background:transparent;color:var(--white);border-color:var(--white);}
+    .btn-outline-white:hover{background:var(--white);color:var(--accent);transform:translateY(-1px);}
+    .btn-sm{padding:.625rem 1.5rem;font-size:.75rem;}
+    .header{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px solid var(--border);}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;height:72px;}
+    .logo{display:flex;flex-direction:column;line-height:1.1;}
+    .logo-img{height:48px;width:auto;display:block;}
+    @media (max-width:768px){.logo-img{height:40px;}}
+    .nav-desktop{display:none;}
+    .nav-desktop ul{display:flex;align-items:center;gap:1.75rem;list-style:none;}
+    .nav-desktop a{font-size:.8rem;font-weight:500;letter-spacing:.05em;color:var(--text-body);text-transform:uppercase;transition:color var(--transition);}
+    .nav-desktop a:hover{color:var(--text-heading);}
+    .nav-dropdown{position:relative;}
+    .nav-dropdown > a{display:flex;align-items:center;gap:.3rem;}
+    .nav-dropdown > a::after{content:'';width:5px;height:5px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-2px;transition:transform var(--transition);}
+    .dropdown-menu{position:absolute;top:calc(100% + .75rem);left:50%;transform:translateX(-50%) translateY(8px);background:var(--white);border:1px solid var(--border);border-radius:var(--radius-md);box-shadow:var(--shadow-card);padding:.75rem 0;min-width:240px;opacity:0;visibility:hidden;pointer-events:none;transition:all var(--transition);transition-delay:.15s;z-index:100;}
+    .dropdown-menu::before{content:'';position:absolute;left:0;right:0;top:-.75rem;height:.75rem;}
+    .nav-dropdown:hover .dropdown-menu,.nav-dropdown.active .dropdown-menu{opacity:1;visibility:visible;pointer-events:all;transform:translateX(-50%) translateY(0);transition-delay:0s;}
+    .nav-dropdown:hover > a::after{transform:rotate(-135deg);}
+    .dropdown-menu a{display:block;padding:.55rem 1.5rem;font-size:.8rem;text-transform:none;color:var(--text-body);}
+    .dropdown-menu a:hover{background:var(--bg-primary);color:var(--text-heading);}
+    .header-cta{display:none;}
+    .hamburger{display:flex;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;z-index:1001;}
+    .hamburger span{width:22px;height:2px;background:var(--text-heading);border-radius:2px;transition:all var(--transition);}
+    .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px, 5px);}
+    .hamburger.active span:nth-child(2){opacity:0;}
+    .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px, -5px);}
+    .mobile-nav{position:fixed;inset:0;background:var(--bg-primary);z-index:999;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:1.25rem;padding:5rem 1.5rem 3rem;height:100vh;height:100dvh;overflow-y:auto;-webkit-overflow-scrolling:touch;opacity:0;visibility:hidden;transition:opacity var(--transition), visibility var(--transition);}
+    .mobile-nav.open{opacity:1;visibility:visible;}
+    .mobile-nav a{font-size:1.125rem;font-weight:500;color:var(--text-heading);letter-spacing:.04em;}
+    .mobile-nav .btn{margin-top:1.5rem;}
+    .mobile-nav a.btn-primary{color:var(--white);}
+    .mobile-nav-toggle,.mobile-nav > a:not(.btn){font-family:'Playfair Display',Georgia,serif;font-size:1.5rem;font-weight:500;color:var(--text-heading);letter-spacing:0;line-height:1.3;}
+    .mobile-nav-group{display:flex;flex-direction:column;align-items:center;width:100%;gap:1rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border);}
+    .mobile-nav > a:not(.btn){width:100%;text-align:center;padding-bottom:1.25rem;border-bottom:1px solid var(--border);}
+    .mobile-nav-toggle{background:none;border:none;padding:0;cursor:pointer;display:inline-flex;align-items:center;gap:.5rem;transition:color .2s ease;}
+    .mobile-nav-toggle[aria-expanded="true"]{color:var(--gold);}
+    .mobile-nav-chev{font-size:.7em;color:var(--gold);transition:transform .2s ease;display:inline-block;}
+    .mobile-nav-toggle[aria-expanded="true"] .mobile-nav-chev{transform:rotate(180deg);}
+    .mobile-nav-sub{display:flex;flex-direction:column;align-items:center;gap:.65rem;padding-top:.5rem;}
+    .mobile-nav-sub[hidden]{display:none;}
+    .mobile-nav-sub a{font-family:'Inter',sans-serif;font-size:.95rem;font-weight:400;color:var(--text-body);letter-spacing:.01em;}
+    .mobile-nav-contact{margin-top:1.5rem;display:flex;flex-direction:column;gap:.4rem;text-align:center;font-family:'Inter',sans-serif;}
+    .mobile-nav-contact a{font-family:'Inter',sans-serif;font-size:.85rem;font-weight:400;color:var(--text-body);letter-spacing:.02em;}
+    @media (min-width:768px){.hamburger{display:none;}.nav-desktop{display:block;}.header-cta{display:inline-flex;}.mobile-nav{display:none !important;}}
+    .fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease;}
+    .fade-in.visible{opacity:1;transform:translateY(0);}
+    .tx-hero{position:relative;min-height:45vh;max-height:480px;display:flex;align-items:center;overflow:hidden;}
+    .tx-hero-bg{position:absolute;inset:0;z-index:0;}
+    .tx-hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center center;}
+    .tx-hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg, rgba(30,26,22,.72) 0%, rgba(30,26,22,.45) 100%);z-index:1;}
+    .tx-hero .container{position:relative;z-index:2;}
+    .tx-hero-content{max-width:640px;padding:clamp(2.5rem, 7vw, 5rem) 0;}
+    .tx-breadcrumb{display:inline-block;font-size:.8rem;font-weight:500;color:rgba(255,255,255,.7);margin-bottom:1.25rem;transition:color var(--transition);}
+    .tx-breadcrumb:hover{color:var(--white);}
+    .tx-hero-content h1{font-size:clamp(2rem, 5vw, 3rem);margin-bottom:.75rem;color:var(--white);}
+    .tx-hero-content p{font-size:1.05rem;color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:1.75rem;}
+    @media (max-width:640px){.tx-hero{min-height:35vh;max-height:360px;}}
+    .tx-hero-btns{display:flex;flex-wrap:wrap;gap:.75rem;}
+    .trust-bar{background:var(--bg-primary);border-bottom:1px solid var(--border);padding:1.5rem 0;}
+    .trust-bar--compact{padding-top:1.25rem;padding-bottom:1.25rem;}
+    .trust-items{display:grid;grid-template-columns:1fr;gap:1.75rem;}
+    .trust-item{display:flex;align-items:center;gap:.875rem;justify-content:center;}
+    .trust-bar--compact .trust-item{font-size:0.9rem;}
+    .trust-icon{width:36px;height:36px;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+    .trust-icon svg{width:24px;height:24px;color:var(--accent);}
+    .trust-bar--compact .trust-icon,.trust-bar--compact .trust-icon svg{width:22px;height:22px;}
+    .trust-icon a{display:flex;align-items:center;justify-content:center;color:inherit;}
+    .trust-stars{display:inline-flex;align-items:center;gap:2px;font-size:1.15rem;line-height:1;flex-shrink:0;}
+    .star{display:inline-block;color:var(--bg-secondary);position:relative;}
+    .star--full{color:var(--gold);}
+    .star--partial{color:var(--bg-secondary);background:linear-gradient(90deg, var(--gold) var(--fill, 90%), var(--bg-secondary) var(--fill, 90%));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+    .trust-text{display:flex;flex-direction:column;}
+    .trust-text strong{font-size:.85rem;font-weight:600;color:var(--text-heading);line-height:1.3;letter-spacing:.01em;}
+    .trust-bar--compact .trust-text strong{font-size:0.85rem;margin-top:0.35rem;}
+    .trust-text a{display:flex;flex-direction:column;color:inherit;text-decoration:none;transition:color var(--transition);}
+    .trust-text a:hover strong{color:var(--gold);}
+    @media (min-width:640px){.trust-items{grid-template-columns:repeat(2, 1fr);}}
+    @media (min-width:768px){.trust-items{grid-template-columns:repeat(4, 1fr);gap:1rem;}.trust-item{flex-direction:column;text-align:center;gap:.5rem;}.trust-text{align-items:center;}.trust-item:not(:last-child){border-right:1px solid var(--border);}.trust-text strong{font-size:.9rem;}}
+    @media (max-width:639px){.trust-items{grid-template-columns:repeat(2, 1fr);gap:1.25rem 0.5rem;}.trust-item{flex-direction:column;text-align:center;gap:0.4rem;}.trust-text{align-items:center;}}
+    @media (max-width:640px){.trust-bar--compact{padding-top:1rem;padding-bottom:1rem;}.trust-bar--compact .trust-item{font-size:0.8rem;}}
+  </style>
+
+  <!-- Google Fonts: laddas asynkront så typsnitts-CSS:en inte blockerar rendering. font-display: swap är redan satt i URL:en (oförändrat typsnitt/utseende). -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet"></noscript>
+
+  <!-- style.css / treatment.css / problem.css: samma filer, laddas asynkront (renderingsblockerar inte). De inlinade reglerna ovan
+       täcker exakt vad som syns i första viewporten, så det blir ingen synlig skillnad när dessa tar över. -->
+  <link rel="preload" as="style" href="style.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="treatment.css" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" as="style" href="problem.css" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="treatment.css">
+    <link rel="stylesheet" href="problem.css">
+  </noscript>
+
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='28' font-size='28'>✦</text></svg>">
   <script type="application/ld+json">
 {
@@ -383,7 +497,7 @@
 
         <div class="trust-item fade-in">
           <div class="trust-icon">
-            <a href="https://www.google.com/maps/search/?api=1&query=Your+Skin+Clinic+Hamngatan+37+Gallerian+Stockholm" target="_blank" rel="noopener">
+            <a href="https://www.google.com/maps/search/?api=1&query=Your+Skin+Clinic+Hamngatan+37+Gallerian+Stockholm" target="_blank" rel="noopener" aria-label="Visa Your Skin Clinic på Google Maps">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="currentColor" fill-opacity="0.15"/><circle cx="12" cy="10" r="2.5" fill="var(--gold)" stroke="none"/></svg>
             </a>
           </div>
@@ -1239,7 +1353,7 @@
         </div>
 
         <div class="footer-col">
-          <h4>Gallerian, Stockholm</h4>
+          <p class="footer-location-label">Gallerian, Stockholm</p>
           <ul>
             <li><a href="https://www.google.com/maps/search/?api=1&query=Your+Skin+Clinic+Hamngatan+37+Gallerian+Stockholm" target="_blank" rel="noopener">Hamngatan 37 (Gallerian)<br>Stockholm City</a></li>
           </ul>

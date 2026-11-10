@@ -440,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bannerEl.innerHTML =
       '<p class="ysc-cc__text">Vi använder cookies för anonym besöksstatistik (Google Analytics) ' +
       'för att förbättra sidan. Inget laddas utan ditt samtycke. ' +
-      '<a href="integritetspolicy.html">Läs mer</a>.</p>' +
+      '<a href="integritetspolicy.html">Läs vår integritetspolicy</a>.</p>' +
       '<div class="ysc-cc__btns">' +
       '<button type="button" class="ysc-cc__btn ysc-cc__btn--decline">Avböj</button>' +
       '<button type="button" class="ysc-cc__btn ysc-cc__btn--accept">Acceptera</button>' +
