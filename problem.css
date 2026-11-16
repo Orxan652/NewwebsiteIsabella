@@ -25,6 +25,23 @@
   margin-bottom: 1rem;
 }
 
+/* Foto i intro-sektion */
+.problem-intro__photo {
+  margin: 1.75rem 0 0;
+}
+.problem-intro__photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+.problem-intro__photo figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--text-body);
+  opacity: 0.75;
+}
+
 /* Disclaimer box */
 .problem-disclaimer {
   display: flex;

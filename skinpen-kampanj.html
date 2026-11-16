@@ -98,74 +98,58 @@
   </header>
 
   <main>
-    <!-- ============ 1. HERO — sammanhängande bakgrundsbild, text som HTML ovanpå ============ -->
+    <!-- ============ 1. HERO — erbjudandet först. Mobil: bild ovanför texten. Desktop: bild till höger. ============ -->
     <section aria-labelledby="hero-title" class="relative bg-stone overflow-hidden">
-      <!-- Bakgrundsbild: skinpenheader4-photo.webp (beskuren ur skinpenheader4.png – endast det rena fotot, ingen inbakad text).
-           Mobil: full-bleed (bilden matchar naturligt en stående mobilyta). Desktop: höger-ankrad box i nära bildens egna proportioner
-           så kompositionen visas naturligt utan att zooma in ansiktet/pennan. -->
-      <div class="absolute inset-0">
-        <!-- Desktop -->
-        <div class="hidden sm:block absolute inset-y-0 right-0 w-[420px] lg:w-[520px]">
-          <img src="images/skinpenheader4-photo.webp"
-               alt="Kvinna får Premium SkinPen Microneedling-behandling hos Your Skin Clinic i Stockholm – den blå SkinPen®-pennan används mot kinden"
-               class="h-full w-full object-cover object-[50%_15%]" fetchpriority="high" decoding="async">
-          <div class="absolute inset-y-0 left-0 w-20 lg:w-28 bg-gradient-to-r from-stone to-transparent"></div>
-        </div>
-        <!-- Mobil -->
-        <div class="sm:hidden absolute inset-0">
-          <img src="images/skinpenheader4-photo.webp"
-               alt="Kvinna får Premium SkinPen Microneedling-behandling hos Your Skin Clinic i Stockholm – den blå SkinPen®-pennan används mot kinden"
-               class="h-full w-full object-cover object-[50%_10%]" fetchpriority="high" decoding="async">
-          <div class="absolute inset-0 bg-gradient-to-r from-stone via-stone/85 to-stone/10"></div>
-        </div>
+      <!-- Desktop: höger-ankrad bild -->
+      <div class="hidden sm:block absolute inset-y-0 right-0 w-[420px] lg:w-[520px]">
+        <img src="images/skinpenheader4-photo.webp"
+             alt="Kvinna får Premium SkinPen Microneedling-behandling hos Your Skin Clinic i Stockholm – den blå SkinPen®-pennan används mot kinden"
+             class="h-full w-full object-cover object-[50%_15%]" fetchpriority="high" decoding="async">
+        <div class="absolute inset-y-0 left-0 w-20 lg:w-28 bg-gradient-to-r from-stone to-transparent"></div>
       </div>
 
-      <div class="relative max-w-6xl mx-auto px-5 sm:px-12 lg:px-16 sm:min-h-[480px] flex flex-col justify-center py-5 sm:py-6">
-        <div class="max-w-xl lp-fade">
-          <span class="inline-block text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.22em] text-terracotta mb-1.5">Exklusiv SkinPen Microneedling-kampanj</span>
+      <!-- Mobil: bilden ligger ovanför texten (inte bakom) -->
+      <div class="sm:hidden">
+        <img src="images/skinpenheader4-photo.webp"
+             alt="Kvinna får Premium SkinPen Microneedling-behandling hos Your Skin Clinic i Stockholm – den blå SkinPen®-pennan används mot kinden"
+             class="block w-full aspect-[4/3] object-cover object-[50%_15%]" fetchpriority="high" decoding="async">
+      </div>
 
-          <h1 id="hero-title" class="leading-[1.1] mb-2">
-            <span class="block font-serif text-2xl sm:text-4xl text-[#1B3352]">När började fina linjer, porer och trött hud</span>
-            <span class="block font-script text-3xl sm:text-5xl leading-tight text-terracotta">synas så mycket?</span>
-          </h1>
+      <div class="relative max-w-6xl mx-auto px-5 sm:px-12 lg:px-16 sm:min-h-[480px] flex flex-col justify-center py-5 sm:py-8">
+        <div class="max-w-xl">
+          <span class="inline-block text-[10px] font-bold uppercase tracking-[0.22em] text-terracotta mb-2">Exklusiv SkinPen Microneedling-kampanj</span>
 
-          <p class="text-xs sm:text-sm leading-snug text-body/75 mb-2 max-w-md">
-            Fina linjer. Synligare porer. En hud som känns mindre spänstig och inte riktigt lika fräsch som tidigare.
-          </p>
-
-          <div class="mb-2.5">
-            <p class="font-serif italic text-sm sm:text-lg text-terracotta mb-0.5">Och halsen?</p>
-            <p class="text-xs sm:text-sm text-body/75">Den är ofta det första som avslöjar att huden förändrats.</p>
+          <!-- 1. Erbjudandet -->
+          <div class="rounded-2xl bg-[#1B3352] border border-[#C9A15C]/40 px-4 sm:px-5 py-4 mb-3 shadow-xl">
+            <h1 id="hero-title" class="leading-tight">
+              <span class="block font-serif text-2xl sm:text-3xl font-semibold text-[#C9A15C]">Hals + kemisk peeling på köpet</span>
+              <span class="block font-serif text-base sm:text-xl text-white mt-1">vid Premium SkinPen® Microneedling</span>
+            </h1>
+            <p class="text-base sm:text-lg font-bold uppercase tracking-wide text-[#C9A15C] mt-2">Värde 1 545 kr</p>
+            <p class="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.12em] text-white/70 mt-1">70 min behandlingstid</p>
           </div>
 
-          <!-- Erbjudandekort: premium SkinPen-navy med champagne/guld-highlights. "Premium SkinPen® Microneedling" och "Ingår vid varje behandling" är visuellt likvärdiga i vikt. -->
-          <div class="rounded-2xl bg-[#1B3352] border border-[#C9A15C]/40 px-4 sm:px-5 py-3 sm:py-4 mb-2.5 shadow-xl">
-            <p class="font-serif text-lg sm:text-2xl font-semibold leading-snug text-white">Premium SkinPen® Microneedling</p>
-            <p class="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.12em] text-[#C9A15C] mt-0.5">80 min behandlingstid</p>
-            <p class="font-serif text-xs sm:text-sm leading-snug text-white mt-1">med <span class="text-[#C9A15C] font-semibold">hals + kemisk peeling på köpet</span></p>
-            <p class="text-base sm:text-lg font-bold uppercase tracking-wide text-[#C9A15C] mt-1.5">Värde 1 545 kr</p>
-
-            <div class="border-t border-[#C9A15C]/30 mt-2 pt-2">
-              <span class="inline-block rounded-full bg-[#C9A15C] px-3.5 py-1.5 text-sm sm:text-lg font-bold uppercase tracking-wide text-[#1B3352]">Ingår vid varje behandling</span>
-              <p class="mt-1 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.12em] text-white/70">Under hela din SkinPen-kur</p>
-            </div>
-          </div>
-
-          <p class="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-terracotta mb-1.5">Missa inte erbjudandet – boka din tid nu!</p>
-
-          <div class="flex items-center gap-3 flex-wrap mb-2.5">
-            <!-- Pris: separat, ljust premiumkort — konkurrerar inte visuellt med erbjudandekortet -->
-            <div class="inline-block rounded-xl border border-gold/40 bg-white/95 backdrop-blur px-4 py-2 shadow-sm">
+          <!-- 2. Pris + boka direkt under -->
+          <div class="flex items-center gap-3 flex-wrap mb-4">
+            <div class="inline-block rounded-xl border border-gold/40 bg-white px-4 py-2 shadow-sm">
               <p class="text-[9px] font-bold uppercase tracking-[0.12em] text-gold leading-none mb-0.5">Du betalar bara för ansiktet</p>
               <p class="font-serif text-xl sm:text-2xl leading-none text-[#1B3352]">2 795 kr</p>
             </div>
-
-            <!-- Dominant CTA (lead-popup, oförändrad funktion/destination) -->
             <button type="button" data-open-popup data-cta="hero-primary"
-               class="inline-flex items-center justify-center rounded-full bg-[#1B3352] px-5 sm:px-6 py-2.5 sm:py-3 text-center font-bold uppercase tracking-wide text-white shadow-xl transition hover:bg-[#142840] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A15C] focus-visible:ring-offset-2">
+               class="inline-flex items-center justify-center rounded-full bg-[#1B3352] px-6 py-3 text-center font-bold uppercase tracking-wide text-white shadow-xl transition hover:bg-[#142840] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C9A15C] focus-visible:ring-offset-2">
               <span class="text-sm sm:text-base">Boka din tid</span>
             </button>
           </div>
+
+          <!-- Kur-löfte: samma pris om man väljer kur efter första besöket -->
+          <div class="flex items-start gap-2 rounded-xl border border-[#C9A15C]/50 bg-white px-4 py-3 mb-4 max-w-md">
+            <span class="text-[#C9A15C] font-bold leading-6" aria-hidden="true">✓</span>
+            <p class="text-sm leading-snug text-[#1B3352]"><strong>Väljer du en kur efter ditt första besök?</strong> Då behåller du samma pris, 2 795 kr per behandling – med hals + kemisk peeling på köpet varje gång.</p>
+          </div>
+
+          <!-- 3. Därefter budskapet -->
+          <p class="font-serif text-xl sm:text-2xl leading-snug text-[#1B3352]">När började fina linjer, porer och trött hud <span class="font-script text-2xl sm:text-3xl text-terracotta">synas så mycket?</span></p>
+          <p class="text-sm leading-snug text-body/75 mt-1.5 max-w-md">Fina linjer. Synligare porer. En hud som känns mindre spänstig. Och halsen är ofta det första som avslöjar att huden förändrats.</p>
         </div>
       </div>
 
@@ -174,7 +158,7 @@
         <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-8 gap-y-1 text-xs sm:text-sm text-body/70">
           <span><span class="lp-stars--gold" aria-hidden="true">★★★★★</span> <strong class="text-[#1B3352]">4,9/5</strong></span>
           <span class="text-body/40" aria-hidden="true">·</span>
-          <span><strong class="text-[#1B3352]">640+</strong> omdömen</span>
+          <span><strong class="text-[#1B3352]">670+</strong> omdömen</span>
           <span class="text-body/40" aria-hidden="true">·</span>
           <span><strong class="text-[#1B3352]">1300+</strong> behandlade</span>
         </div>
@@ -195,12 +179,12 @@
           <figure class="lp-fade rounded-2xl overflow-hidden border border-line bg-white shadow-md">
             <div class="grid grid-cols-2">
               <div class="relative">
-                <img src="images/IMG_2463.jpg" alt="Microneedling-behandling – hud direkt efter nålning, kundresultat"
+                <img src="images/IMG_2463.webp" width="800" height="1067" alt="Microneedling-behandling – hud direkt efter nålning, kundresultat"
                      class="w-full aspect-[1/2] object-cover" loading="lazy" decoding="async">
                 <span class="absolute top-3 left-3 rounded-full bg-[#1B3352]/80 text-white text-xs font-semibold tracking-wide px-3 py-1">Före</span>
               </div>
               <div class="relative">
-                <img src="images/skinpene2.jpg" alt="Microneedling-behandling – hud efter läkning, kundresultat"
+                <img src="images/skinpene2.webp" width="800" height="1043" alt="Microneedling-behandling – hud efter läkning, kundresultat"
                      class="w-full aspect-[1/2] object-cover" loading="lazy" decoding="async">
                 <span class="absolute top-3 right-3 rounded-full bg-gold text-[#1B3352] text-xs font-semibold tracking-wide px-3 py-1">Efter</span>
               </div>
@@ -359,10 +343,10 @@
           <p class="text-sm sm:text-base text-body/75 text-center max-w-xl mx-auto">Här stannar behandlingen inte vid själva microneedlingen. Vi arbetar med huden som vid en professionell ansiktsbehandling – från rengöring och förberedelse till aktiva ingredienser, microneedling, mask, LED/rödljus och eftervård.</p>
         </div>
 
-        <!-- Behandlingstid: 80 min – ansikte + hals -->
+        <!-- Behandlingstid: 70 min – ansikte + hals -->
         <div class="max-w-xs mx-auto mb-8 lp-fade">
           <div class="rounded-2xl bg-[#1B3352] px-6 py-6 text-center">
-            <p class="font-serif text-4xl sm:text-5xl text-white">80 min</p>
+            <p class="font-serif text-4xl sm:text-5xl text-white">70 min</p>
             <p class="text-xs sm:text-sm text-[#C9A15C] mt-1 uppercase tracking-wide">Ansikte + hals</p>
           </div>
         </div>
@@ -554,13 +538,14 @@
     <section aria-labelledby="about-title" class="bg-stone">
       <div class="max-w-3xl mx-auto px-5 py-8 md:py-10">
         <div class="lp-fade flex items-center gap-5 rounded-2xl border border-line bg-white p-5 sm:p-6">
-          <img src="images/isabellany.webp" alt="Isabella, CIDESCO-certifierad hudterapeut på Your Skin Clinic"
+          <img src="images/isabellany.webp" alt="Isabella, SHR-auktoriserad hudterapeut på Your Skin Clinic"
                class="shrink-0 h-20 w-20 sm:h-24 sm:w-24 rounded-full object-cover shadow" loading="lazy" decoding="async">
           <div>
             <span class="block text-[11px] font-semibold uppercase tracking-[0.14em] text-gold mb-1">Din behandlare</span>
             <h2 id="about-title" class="sr-only">Din behandlare Isabella</h2>
-            <p class="text-sm sm:text-base text-body/85 mb-3">SkinPen Premium utförs av Isabella, CIDESCO-certifierad hudterapeut med lång erfarenhet av estetiska behandlingar.</p>
+            <p class="text-sm sm:text-base text-body/85 mb-3">SkinPen Premium utförs av Isabella, SHR-auktoriserad hudterapeut med gesällbrev och internationell CIDESCO-examen – med lång erfarenhet av avancerad hudvård.</p>
             <div class="flex flex-wrap gap-1.5 text-[11px]">
+              <span class="rounded-full bg-stone border border-line px-2.5 py-1 text-body/70">SHR-auktoriserad</span>
               <span class="rounded-full bg-stone border border-line px-2.5 py-1 text-body/70">CIDESCO</span>
               <span class="rounded-full bg-stone border border-line px-2.5 py-1 text-body/70">SkinPen®</span>
               <span class="rounded-full bg-stone border border-line px-2.5 py-1 text-body/70">Säker Klinik</span>
@@ -576,41 +561,41 @@
         <div class="text-center mb-8 lp-fade">
           <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-[#C9A15C] mb-2">Omdömen</span>
           <h2 id="rev-title" class="font-serif text-2xl md:text-3xl text-[#1B3352] mb-2">Det säger våra kunder</h2>
-          <p class="text-sm text-body/70 mb-1">Över 640 kunder har lämnat sitt omdöme om oss.</p>
-          <p class="text-sm text-body/70"><span class="lp-stars--gold" aria-hidden="true">★★★★★</span> 4,9/5 · 640+ omdömen</p>
+          <p class="text-sm text-body/70 mb-1">Över 670 kunder har betygsatt oss på Bokadirekt.</p>
+          <p class="text-sm text-body/70"><span class="lp-stars--gold" aria-hidden="true">★★★★★</span> 4,9/5 · 670+ omdömen</p>
         </div>
 
         <!-- Mobil: horisontell swipe. Desktop: 3 kolumner × 2 rader. -->
         <div class="lp-reviews flex gap-4 overflow-x-auto pb-3 snap-x sm:grid sm:grid-cols-3 sm:gap-5 sm:overflow-visible sm:pb-0">
           <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-auto sm:shrink rounded-2xl bg-white border border-[#C9A15C]/25 p-5 shadow-sm">
             <div class="text-[#C9A15C] text-sm tracking-[2px] mb-2" aria-label="5 av 5">★★★★★</div>
-            <p class="text-sm text-body/80 mb-3">”Isabella genomförde en microneedling-kur på 4 behandlingar. Huden känns fastare, fylligare och jag upplever mindre synliga rynkor. Väldigt nöjd och kommer definitivt tillbaka!”</p>
-            <footer class="text-sm font-semibold text-[#1B3352]">Lisa Nyqvist</footer>
+            <p class="text-sm text-body/80 mb-3">”Isa är superlyhörd och kunnig, jag litar på hennes rådgivning gällande vilken behandling jag behöver! Känner mig så fin när jag går från salongen!”</p>
+            <footer class="text-sm font-semibold text-[#1B3352]">Virginia M. <span class="block text-xs font-normal text-body/50">Microneedling – ansikte &amp; hals · via Bokadirekt</span></footer>
           </blockquote>
           <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-auto sm:shrink rounded-2xl bg-white border border-[#C9A15C]/25 p-5 shadow-sm">
             <div class="text-[#C9A15C] text-sm tracking-[2px] mb-2" aria-label="5 av 5">★★★★★</div>
-            <p class="text-sm text-body/80 mb-3">”Isa var professionell och trevlig – fick en så fin lyster i huden efter behandlingen. Skulle definitivt komma tillbaka.”</p>
-            <footer class="text-sm font-semibold text-[#1B3352]">Leyla P.</footer>
+            <p class="text-sm text-body/80 mb-3">”Isabella är proffsig, lyhörd och på topp av det väldigt trevligt! Jag kände mig trygg under behandlingen och är nöjd efter min första microneedling.”</p>
+            <footer class="text-sm font-semibold text-[#1B3352]">Anna L. <span class="block text-xs font-normal text-body/50">Microneedling – ansikte · via Bokadirekt</span></footer>
           </blockquote>
           <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-auto sm:shrink rounded-2xl bg-white border border-[#C9A15C]/25 p-5 shadow-sm">
             <div class="text-[#C9A15C] text-sm tracking-[2px] mb-2" aria-label="5 av 5">★★★★★</div>
-            <p class="text-sm text-body/80 mb-3">”Isabella känns rak, tydlig och effektiv. Kunnig på sitt område. Stort plus att hon var ärlig om biverkningar och återhämtning i förväg, vilket många 'glömmer' – så man vet att behandlingen passar i tid. Kommer gärna tillbaka.”</p>
-            <footer class="text-sm font-semibold text-[#1B3352]">Johnny K.</footer>
+            <p class="text-sm text-body/80 mb-3">”Isa är underbar, så härlig behandling och grym på Microneedling samt rådgivning kring andra behandlingar. Kommer komma tillbaka!”</p>
+            <footer class="text-sm font-semibold text-[#1B3352]">Fanny N. <span class="block text-xs font-normal text-body/50">Microneedling + peeling · via Bokadirekt</span></footer>
           </blockquote>
           <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-auto sm:shrink rounded-2xl bg-white border border-[#C9A15C]/25 p-5 shadow-sm">
             <div class="text-[#C9A15C] text-sm tracking-[2px] mb-2" aria-label="5 av 5">★★★★★</div>
-            <p class="text-sm text-body/80 mb-3">”Isa är bäst! Förutom att hon är supertrevlig så är hon professionell uti fingerspetsarna. Det arbete hon gjort är overkligt bra. Rekommenderar Isa mycket varmt!”</p>
-            <footer class="text-sm font-semibold text-[#1B3352]">Maria H.</footer>
+            <p class="text-sm text-body/80 mb-3">”Isabelle är professionell gällande allt som gäller hudvårdsbehandlingar, varit på olika salonger men hon gör ett fantastiskt jobb samtidigt som hon lyssnar på kunden!”</p>
+            <footer class="text-sm font-semibold text-[#1B3352]">Anitha S. <span class="block text-xs font-normal text-body/50">Ansiktsbehandling · via Bokadirekt</span></footer>
           </blockquote>
           <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-auto sm:shrink rounded-2xl bg-white border border-[#C9A15C]/25 p-5 shadow-sm">
             <div class="text-[#C9A15C] text-sm tracking-[2px] mb-2" aria-label="5 av 5">★★★★★</div>
-            <p class="text-sm text-body/80 mb-3">”Isabella är världsklass terapeut. Hon är lugn harmonisk och fantastiskt duktigt. Varmt rekommenderar.”</p>
-            <footer class="text-sm font-semibold text-[#1B3352]">Fanoula M.</footer>
+            <p class="text-sm text-body/80 mb-3">”Isa var mycket proffesionell och trevlig, fick en sån fin lyster i huden efter behandlingen. Skulle definitivt komma tillbaka 💕.”</p>
+            <footer class="text-sm font-semibold text-[#1B3352]">Leyla P. <span class="block text-xs font-normal text-body/50">Glowbehandling med peeling · via Bokadirekt</span></footer>
           </blockquote>
           <blockquote class="lp-fade snap-center shrink-0 w-[85%] sm:w-auto sm:shrink rounded-2xl bg-white border border-[#C9A15C]/25 p-5 shadow-sm">
             <div class="text-[#C9A15C] text-sm tracking-[2px] mb-2" aria-label="5 av 5">★★★★★</div>
-            <p class="text-sm text-body/80 mb-3">”Fantastiskt bemötande och mycket professionell behandling. Jag kände mig trygg och är supernöjd med resultatet. Rekommenderas varmt!”</p>
-            <footer class="text-sm font-semibold text-[#1B3352]">Jasmine P.</footer>
+            <p class="text-sm text-body/80 mb-3">”Isabella känns rak, tydlig och effektiv. Kunnig på sitt område. Stort plus för mig att Isabella var ärlig med biverkningar och down-time på behandlingen jag gjorde, vilket många andra utövare kan ”glömma” att meddela om.”</p>
+            <footer class="text-sm font-semibold text-[#1B3352]">Johnny K. <span class="block text-xs font-normal text-body/50">Hudbehandling · via Bokadirekt</span></footer>
           </blockquote>
         </div>
       </div>
