@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '28289277947326970');
+  fbq('track', 'PageView');
+  // Bokning klar -> Schedule (en gång per besök)
+  try { if (!sessionStorage.getItem('yscScheduled')) { fbq('track', 'Schedule', { content_name: 'SkinPenKampanj', value: 1795, currency: 'SEK' }); sessionStorage.setItem('yscScheduled','1'); } }
+  catch (e) { fbq('track', 'Schedule', { content_name: 'SkinPenKampanj', value: 1795, currency: 'SEK' }); }
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=28289277947326970&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
+  <title>Din tid är bokad – Your Skin Clinic</title>
+  <meta name="description" content="Din tid för Premium SkinPen® Elite hos Your Skin Clinic är bokad.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          forest:'#1B3352','forest-hover':'#142840', ink:'#1B3352', body:'#24302D',
+          stone:'#F4F1EC','stone-2':'#EFE9E2', gold:'#C9A15C', line:'#E8E4DE',
+          navy: '#1B3352', 'navy-2': '#142840', terracotta: '#B77A5C', sand: '#E9D9C9'
+        },
+        fontFamily: { serif:['"DM Serif Display"','Georgia','serif'], sans:['Inter','system-ui','sans-serif'] }
+      } }
+    }
+  </script>
+  <style>body{font-family:'Inter',system-ui,sans-serif}</style>
+</head>
+<body class="bg-stone text-body min-h-screen px-5 py-16">
+  <main class="max-w-2xl w-full mx-auto text-center bg-white rounded-3xl border border-line shadow-xl px-6 sm:px-10 py-12">
+    <div class="mx-auto mb-6 h-16 w-16 rounded-full bg-navy text-white flex items-center justify-center">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" class="h-8 w-8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>
+    </div>
+    <span class="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-gold mb-3">Bokning klar</span>
+    <h1 class="font-serif text-3xl sm:text-4xl text-navy mb-4">Tack! Din tid är bokad.</h1>
+    <p class="text-body/80 text-[17px] sm:text-lg leading-[1.55] mb-8">Du får en bekräftelse via sms och e-post. Jag ser fram emot att träffa dig!</p>
+
+    <div class="rounded-2xl border-2 border-gold/40 bg-stone px-6 py-5 text-left mb-8">
+      <p class="font-serif text-xl text-navy mb-1 text-center">Premium SkinPen® Elite ansikte</p>
+      <p class="text-center mb-4"><span class="text-base text-body/60">60 min</span><span class="text-body/40 mx-1.5">·</span><span class="text-base text-body/50 line-through mr-1">2 795 kr</span><span class="text-2xl font-bold text-gold">1 795 kr</span></p>
+      <p class="text-sm text-body/80 text-center"><strong class="text-navy">Your Skin Clinic</strong><br>Hamngatan 37, Gallerian (inne i Salong ZAX City)<br>111 53 Stockholm</p>
+    </div>
+
+    <ul class="text-left text-[15px] text-body/80 space-y-2 max-w-md mx-auto mb-8">
+      <li>✓ Betala på plats efter behandlingen.</li>
+      <li>✓ Behöver du ändra tiden? Svara på bekräftelse-sms:et.</li>
+    </ul>
+
+    <p class="text-sm text-body/60">Varma hälsningar<br><span class="font-serif text-lg text-navy">Isabella</span><br>Auktoriserad hudterapeut</p>
+  </main>
+</body>
+</html>
